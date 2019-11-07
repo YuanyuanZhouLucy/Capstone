@@ -1,0 +1,595 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		16CFA1A42374ADD00022C95F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16CFA1A32374ADD00022C95F /* AppDelegate.swift */; };
+		16CFA1A62374ADD00022C95F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16CFA1A52374ADD00022C95F /* SceneDelegate.swift */; };
+		16CFA1A82374ADD00022C95F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16CFA1A72374ADD00022C95F /* ViewController.swift */; };
+		16CFA1AB2374ADD00022C95F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 16CFA1A92374ADD00022C95F /* Main.storyboard */; };
+		16CFA1AD2374ADD20022C95F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 16CFA1AC2374ADD20022C95F /* Assets.xcassets */; };
+		16CFA1B02374ADD20022C95F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 16CFA1AE2374ADD20022C95F /* LaunchScreen.storyboard */; };
+		16CFA1BB2374ADD20022C95F /* Aphasia_AppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16CFA1BA2374ADD20022C95F /* Aphasia_AppTests.swift */; };
+		16CFA1C62374ADD20022C95F /* Aphasia_AppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16CFA1C52374ADD20022C95F /* Aphasia_AppUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		16CFA1B72374ADD20022C95F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 16CFA1982374ADD00022C95F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 16CFA19F2374ADD00022C95F;
+			remoteInfo = "Aphasia App";
+		};
+		16CFA1C22374ADD20022C95F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 16CFA1982374ADD00022C95F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 16CFA19F2374ADD00022C95F;
+			remoteInfo = "Aphasia App";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		16CFA1A02374ADD00022C95F /* Aphasia App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Aphasia App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		16CFA1A32374ADD00022C95F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		16CFA1A52374ADD00022C95F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		16CFA1A72374ADD00022C95F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		16CFA1AA2374ADD00022C95F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		16CFA1AC2374ADD20022C95F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		16CFA1AF2374ADD20022C95F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		16CFA1B12374ADD20022C95F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		16CFA1B62374ADD20022C95F /* Aphasia AppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Aphasia AppTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		16CFA1BA2374ADD20022C95F /* Aphasia_AppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Aphasia_AppTests.swift; sourceTree = "<group>"; };
+		16CFA1BC2374ADD20022C95F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		16CFA1C12374ADD20022C95F /* Aphasia AppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Aphasia AppUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		16CFA1C52374ADD20022C95F /* Aphasia_AppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Aphasia_AppUITests.swift; sourceTree = "<group>"; };
+		16CFA1C72374ADD20022C95F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		16CFA19D2374ADD00022C95F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		16CFA1B32374ADD20022C95F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		16CFA1BE2374ADD20022C95F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		16CFA1972374ADD00022C95F = {
+			isa = PBXGroup;
+			children = (
+				16CFA1A22374ADD00022C95F /* Aphasia App */,
+				16CFA1B92374ADD20022C95F /* Aphasia AppTests */,
+				16CFA1C42374ADD20022C95F /* Aphasia AppUITests */,
+				16CFA1A12374ADD00022C95F /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		16CFA1A12374ADD00022C95F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				16CFA1A02374ADD00022C95F /* Aphasia App.app */,
+				16CFA1B62374ADD20022C95F /* Aphasia AppTests.xctest */,
+				16CFA1C12374ADD20022C95F /* Aphasia AppUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		16CFA1A22374ADD00022C95F /* Aphasia App */ = {
+			isa = PBXGroup;
+			children = (
+				16CFA1A32374ADD00022C95F /* AppDelegate.swift */,
+				16CFA1A52374ADD00022C95F /* SceneDelegate.swift */,
+				16CFA1A72374ADD00022C95F /* ViewController.swift */,
+				16CFA1A92374ADD00022C95F /* Main.storyboard */,
+				16CFA1AC2374ADD20022C95F /* Assets.xcassets */,
+				16CFA1AE2374ADD20022C95F /* LaunchScreen.storyboard */,
+				16CFA1B12374ADD20022C95F /* Info.plist */,
+			);
+			path = "Aphasia App";
+			sourceTree = "<group>";
+		};
+		16CFA1B92374ADD20022C95F /* Aphasia AppTests */ = {
+			isa = PBXGroup;
+			children = (
+				16CFA1BA2374ADD20022C95F /* Aphasia_AppTests.swift */,
+				16CFA1BC2374ADD20022C95F /* Info.plist */,
+			);
+			path = "Aphasia AppTests";
+			sourceTree = "<group>";
+		};
+		16CFA1C42374ADD20022C95F /* Aphasia AppUITests */ = {
+			isa = PBXGroup;
+			children = (
+				16CFA1C52374ADD20022C95F /* Aphasia_AppUITests.swift */,
+				16CFA1C72374ADD20022C95F /* Info.plist */,
+			);
+			path = "Aphasia AppUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		16CFA19F2374ADD00022C95F /* Aphasia App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 16CFA1CA2374ADD20022C95F /* Build configuration list for PBXNativeTarget "Aphasia App" */;
+			buildPhases = (
+				16CFA19C2374ADD00022C95F /* Sources */,
+				16CFA19D2374ADD00022C95F /* Frameworks */,
+				16CFA19E2374ADD00022C95F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Aphasia App";
+			productName = "Aphasia App";
+			productReference = 16CFA1A02374ADD00022C95F /* Aphasia App.app */;
+			productType = "com.apple.product-type.application";
+		};
+		16CFA1B52374ADD20022C95F /* Aphasia AppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 16CFA1CD2374ADD20022C95F /* Build configuration list for PBXNativeTarget "Aphasia AppTests" */;
+			buildPhases = (
+				16CFA1B22374ADD20022C95F /* Sources */,
+				16CFA1B32374ADD20022C95F /* Frameworks */,
+				16CFA1B42374ADD20022C95F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				16CFA1B82374ADD20022C95F /* PBXTargetDependency */,
+			);
+			name = "Aphasia AppTests";
+			productName = "Aphasia AppTests";
+			productReference = 16CFA1B62374ADD20022C95F /* Aphasia AppTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		16CFA1C02374ADD20022C95F /* Aphasia AppUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 16CFA1D02374ADD20022C95F /* Build configuration list for PBXNativeTarget "Aphasia AppUITests" */;
+			buildPhases = (
+				16CFA1BD2374ADD20022C95F /* Sources */,
+				16CFA1BE2374ADD20022C95F /* Frameworks */,
+				16CFA1BF2374ADD20022C95F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				16CFA1C32374ADD20022C95F /* PBXTargetDependency */,
+			);
+			name = "Aphasia AppUITests";
+			productName = "Aphasia AppUITests";
+			productReference = 16CFA1C12374ADD20022C95F /* Aphasia AppUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		16CFA1982374ADD00022C95F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1120;
+				LastUpgradeCheck = 1120;
+				ORGANIZATIONNAME = "Yuanyuan Zhou";
+				TargetAttributes = {
+					16CFA19F2374ADD00022C95F = {
+						CreatedOnToolsVersion = 11.2;
+					};
+					16CFA1B52374ADD20022C95F = {
+						CreatedOnToolsVersion = 11.2;
+						TestTargetID = 16CFA19F2374ADD00022C95F;
+					};
+					16CFA1C02374ADD20022C95F = {
+						CreatedOnToolsVersion = 11.2;
+						TestTargetID = 16CFA19F2374ADD00022C95F;
+					};
+				};
+			};
+			buildConfigurationList = 16CFA19B2374ADD00022C95F /* Build configuration list for PBXProject "Aphasia App" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 16CFA1972374ADD00022C95F;
+			productRefGroup = 16CFA1A12374ADD00022C95F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				16CFA19F2374ADD00022C95F /* Aphasia App */,
+				16CFA1B52374ADD20022C95F /* Aphasia AppTests */,
+				16CFA1C02374ADD20022C95F /* Aphasia AppUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		16CFA19E2374ADD00022C95F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				16CFA1B02374ADD20022C95F /* LaunchScreen.storyboard in Resources */,
+				16CFA1AD2374ADD20022C95F /* Assets.xcassets in Resources */,
+				16CFA1AB2374ADD00022C95F /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		16CFA1B42374ADD20022C95F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		16CFA1BF2374ADD20022C95F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		16CFA19C2374ADD00022C95F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				16CFA1A82374ADD00022C95F /* ViewController.swift in Sources */,
+				16CFA1A42374ADD00022C95F /* AppDelegate.swift in Sources */,
+				16CFA1A62374ADD00022C95F /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		16CFA1B22374ADD20022C95F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				16CFA1BB2374ADD20022C95F /* Aphasia_AppTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		16CFA1BD2374ADD20022C95F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				16CFA1C62374ADD20022C95F /* Aphasia_AppUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		16CFA1B82374ADD20022C95F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 16CFA19F2374ADD00022C95F /* Aphasia App */;
+			targetProxy = 16CFA1B72374ADD20022C95F /* PBXContainerItemProxy */;
+		};
+		16CFA1C32374ADD20022C95F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 16CFA19F2374ADD00022C95F /* Aphasia App */;
+			targetProxy = 16CFA1C22374ADD20022C95F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		16CFA1A92374ADD00022C95F /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				16CFA1AA2374ADD00022C95F /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		16CFA1AE2374ADD20022C95F /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				16CFA1AF2374ADD20022C95F /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		16CFA1C82374ADD20022C95F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		16CFA1C92374ADD20022C95F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		16CFA1CB2374ADD20022C95F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = K8X5DF3A3A;
+				INFOPLIST_FILE = "Aphasia App/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "-019079.Aphasia-App";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		16CFA1CC2374ADD20022C95F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = K8X5DF3A3A;
+				INFOPLIST_FILE = "Aphasia App/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "-019079.Aphasia-App";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		16CFA1CE2374ADD20022C95F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = K8X5DF3A3A;
+				INFOPLIST_FILE = "Aphasia AppTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "-019079.Aphasia-AppTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Aphasia App.app/Aphasia App";
+			};
+			name = Debug;
+		};
+		16CFA1CF2374ADD20022C95F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = K8X5DF3A3A;
+				INFOPLIST_FILE = "Aphasia AppTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "-019079.Aphasia-AppTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Aphasia App.app/Aphasia App";
+			};
+			name = Release;
+		};
+		16CFA1D12374ADD20022C95F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = K8X5DF3A3A;
+				INFOPLIST_FILE = "Aphasia AppUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "-019079.Aphasia-AppUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Aphasia App";
+			};
+			name = Debug;
+		};
+		16CFA1D22374ADD20022C95F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = K8X5DF3A3A;
+				INFOPLIST_FILE = "Aphasia AppUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "-019079.Aphasia-AppUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Aphasia App";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		16CFA19B2374ADD00022C95F /* Build configuration list for PBXProject "Aphasia App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				16CFA1C82374ADD20022C95F /* Debug */,
+				16CFA1C92374ADD20022C95F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		16CFA1CA2374ADD20022C95F /* Build configuration list for PBXNativeTarget "Aphasia App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				16CFA1CB2374ADD20022C95F /* Debug */,
+				16CFA1CC2374ADD20022C95F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		16CFA1CD2374ADD20022C95F /* Build configuration list for PBXNativeTarget "Aphasia AppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				16CFA1CE2374ADD20022C95F /* Debug */,
+				16CFA1CF2374ADD20022C95F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		16CFA1D02374ADD20022C95F /* Build configuration list for PBXNativeTarget "Aphasia AppUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				16CFA1D12374ADD20022C95F /* Debug */,
+				16CFA1D22374ADD20022C95F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 16CFA1982374ADD00022C95F /* Project object */;
+}
