@@ -7,14 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		161AAF72237B5E5E00D505E7 /* ThirdPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 161AAF71237B5E5D00D505E7 /* ThirdPage.swift */; };
+		161AAF74237B7F5800D505E7 /* button.png in Resources */ = {isa = PBXBuildFile; fileRef = 161AAF73237B7F5800D505E7 /* button.png */; };
 		16CFA1A42374ADD00022C95F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16CFA1A32374ADD00022C95F /* AppDelegate.swift */; };
 		16CFA1A62374ADD00022C95F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16CFA1A52374ADD00022C95F /* SceneDelegate.swift */; };
-		16CFA1A82374ADD00022C95F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16CFA1A72374ADD00022C95F /* ViewController.swift */; };
 		16CFA1AB2374ADD00022C95F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 16CFA1A92374ADD00022C95F /* Main.storyboard */; };
 		16CFA1AD2374ADD20022C95F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 16CFA1AC2374ADD20022C95F /* Assets.xcassets */; };
 		16CFA1B02374ADD20022C95F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 16CFA1AE2374ADD20022C95F /* LaunchScreen.storyboard */; };
 		16CFA1BB2374ADD20022C95F /* Aphasia_AppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16CFA1BA2374ADD20022C95F /* Aphasia_AppTests.swift */; };
 		16CFA1C62374ADD20022C95F /* Aphasia_AppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16CFA1C52374ADD20022C95F /* Aphasia_AppUITests.swift */; };
+		16CFA1D62374B0C50022C95F /* background2.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 16CFA1D52374B0C50022C95F /* background2.jpeg */; };
+		16CFA1D82374B6600022C95F /* Title.png in Resources */ = {isa = PBXBuildFile; fileRef = 16CFA1D72374B6600022C95F /* Title.png */; };
+		16CFA1E42374C7CC0022C95F /* FirstPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16CFA1E32374C7CC0022C95F /* FirstPage.swift */; };
+		16F57C8623804DC800ED7422 /* background.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 16F57C8523804DC800ED7422 /* background.jpeg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,10 +40,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		161AAF71237B5E5D00D505E7 /* ThirdPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdPage.swift; sourceTree = "<group>"; };
+		161AAF73237B7F5800D505E7 /* button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = button.png; sourceTree = "<group>"; };
 		16CFA1A02374ADD00022C95F /* Aphasia App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Aphasia App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		16CFA1A32374ADD00022C95F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		16CFA1A52374ADD00022C95F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		16CFA1A72374ADD00022C95F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		16CFA1AA2374ADD00022C95F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		16CFA1AC2374ADD20022C95F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		16CFA1AF2374ADD20022C95F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -49,6 +55,10 @@
 		16CFA1C12374ADD20022C95F /* Aphasia AppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Aphasia AppUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		16CFA1C52374ADD20022C95F /* Aphasia_AppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Aphasia_AppUITests.swift; sourceTree = "<group>"; };
 		16CFA1C72374ADD20022C95F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		16CFA1D52374B0C50022C95F /* background2.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = background2.jpeg; sourceTree = "<group>"; };
+		16CFA1D72374B6600022C95F /* Title.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Title.png; sourceTree = "<group>"; };
+		16CFA1E32374C7CC0022C95F /* FirstPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstPage.swift; sourceTree = "<group>"; };
+		16F57C8523804DC800ED7422 /* background.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = background.jpeg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,9 +109,14 @@
 		16CFA1A22374ADD00022C95F /* Aphasia App */ = {
 			isa = PBXGroup;
 			children = (
+				16CFA1D52374B0C50022C95F /* background2.jpeg */,
+				16F57C8523804DC800ED7422 /* background.jpeg */,
+				16CFA1D72374B6600022C95F /* Title.png */,
+				161AAF73237B7F5800D505E7 /* button.png */,
 				16CFA1A32374ADD00022C95F /* AppDelegate.swift */,
 				16CFA1A52374ADD00022C95F /* SceneDelegate.swift */,
-				16CFA1A72374ADD00022C95F /* ViewController.swift */,
+				16CFA1E32374C7CC0022C95F /* FirstPage.swift */,
+				161AAF71237B5E5D00D505E7 /* ThirdPage.swift */,
 				16CFA1A92374ADD00022C95F /* Main.storyboard */,
 				16CFA1AC2374ADD20022C95F /* Assets.xcassets */,
 				16CFA1AE2374ADD20022C95F /* LaunchScreen.storyboard */,
@@ -233,8 +248,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				16CFA1B02374ADD20022C95F /* LaunchScreen.storyboard in Resources */,
+				16F57C8623804DC800ED7422 /* background.jpeg in Resources */,
+				161AAF74237B7F5800D505E7 /* button.png in Resources */,
 				16CFA1AD2374ADD20022C95F /* Assets.xcassets in Resources */,
+				16CFA1D62374B0C50022C95F /* background2.jpeg in Resources */,
 				16CFA1AB2374ADD00022C95F /* Main.storyboard in Resources */,
+				16CFA1D82374B6600022C95F /* Title.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -259,9 +278,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				16CFA1A82374ADD00022C95F /* ViewController.swift in Sources */,
+				161AAF72237B5E5E00D505E7 /* ThirdPage.swift in Sources */,
 				16CFA1A42374ADD00022C95F /* AppDelegate.swift in Sources */,
 				16CFA1A62374ADD00022C95F /* SceneDelegate.swift in Sources */,
+				16CFA1E42374C7CC0022C95F /* FirstPage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -437,6 +457,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = K8X5DF3A3A;
 				INFOPLIST_FILE = "Aphasia App/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -455,6 +476,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = K8X5DF3A3A;
 				INFOPLIST_FILE = "Aphasia App/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
