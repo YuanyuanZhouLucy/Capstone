@@ -2,11 +2,205 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15509"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Camera Image Controller-->
+        <scene sceneID="Umx-ZO-TwH">
+            <objects>
+                <viewController id="lqm-tz-eCN" customClass="CameraImageController" customModule="Aphasia_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="6xS-wY-ynG">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1kW-UV-is8">
+                                <rect key="frame" x="38" y="20" width="336" height="655"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IUr-5s-Sys">
+                                <rect key="frame" x="126.5" y="725" width="161" height="53"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
+                                <state key="normal" title="Take Photo"/>
+                                <connections>
+                                    <segue destination="B1J-qO-c9c" kind="show" id="rYS-Bp-ZPI"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="IUr-5s-Sys" firstAttribute="centerX" secondItem="6xS-wY-ynG" secondAttribute="centerX" id="K0h-Wf-bsw"/>
+                            <constraint firstItem="JNR-py-q76" firstAttribute="bottom" secondItem="IUr-5s-Sys" secondAttribute="bottom" constant="30" id="gVQ-fb-wMJ"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="JNR-py-q76"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Qu1-b6-5xv"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Sah-PV-LSI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-52.173913043478265" y="-683.03571428571422"/>
+        </scene>
+        <!--Manage Images View Controller-->
+        <scene sceneID="QtN-yE-aHs">
+            <objects>
+                <viewController id="JRe-ut-e3t" customClass="ManageImagesViewController" customModule="Aphasia_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Bzg-Sg-B5A">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5yk-rR-tNK">
+                                <rect key="frame" x="71" y="128" width="281" height="424"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nrk-Oo-eeG">
+                                <rect key="frame" x="171" y="608" width="72" height="36"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
+                                <state key="normal" title="Rename"/>
+                                <connections>
+                                    <segue destination="AM4-6a-fdI" kind="show" id="1ZP-rP-Jjm"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OMQ-UW-K57">
+                                <rect key="frame" x="178" y="737" width="58" height="36"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
+                                <state key="normal" title="Return"/>
+                                <connections>
+                                    <segue destination="Pcn-Nu-4fx" kind="show" id="lYL-A8-tRw"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Lt-f6-SX8">
+                                <rect key="frame" x="178.5" y="673" width="57" height="36"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
+                                <state key="normal" title="Delete"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="OMQ-UW-K57" firstAttribute="top" secondItem="7Lt-f6-SX8" secondAttribute="bottom" constant="28" id="1Jx-P6-5Vm"/>
+                            <constraint firstItem="OMQ-UW-K57" firstAttribute="centerX" secondItem="Bzg-Sg-B5A" secondAttribute="centerX" id="6AD-gN-yFa"/>
+                            <constraint firstItem="Nrk-Oo-eeG" firstAttribute="top" secondItem="5yk-rR-tNK" secondAttribute="bottom" constant="56" id="95a-mo-KZ8"/>
+                            <constraint firstItem="Nrk-Oo-eeG" firstAttribute="centerX" secondItem="Bzg-Sg-B5A" secondAttribute="centerX" id="UbD-1a-JeR"/>
+                            <constraint firstItem="5yk-rR-tNK" firstAttribute="centerX" secondItem="Bzg-Sg-B5A" secondAttribute="centerX" id="UwT-ve-hPz"/>
+                            <constraint firstItem="7Lt-f6-SX8" firstAttribute="centerX" secondItem="Bzg-Sg-B5A" secondAttribute="centerX" id="ayY-JR-9q8"/>
+                            <constraint firstItem="7Lt-f6-SX8" firstAttribute="top" secondItem="Nrk-Oo-eeG" secondAttribute="bottom" constant="29" id="lfM-F9-Ori"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="IPt-Tg-LHC"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="U3I-7W-eEC"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wlG-Et-6B6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1881" y="-683"/>
+        </scene>
+        <!--Rename Image View Controller-->
+        <scene sceneID="fSE-qs-KyR">
+            <objects>
+                <viewController id="AM4-6a-fdI" customClass="RenameImageViewController" customModule="Aphasia_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="AL6-JB-Sgp">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="t9M-6d-zpM">
+                                <rect key="frame" x="67" y="169" width="281" height="424"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Enter a new name for the image:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qjf-LU-AGS">
+                                <rect key="frame" x="83.5" y="653" width="247" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="w7W-yM-0vJ">
+                                <rect key="frame" x="30" y="682" width="354" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2OH-3R-2cc">
+                                <rect key="frame" x="301" y="757" width="43" height="36"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
+                                <state key="normal" title="Save"/>
+                                <connections>
+                                    <segue destination="JRe-ut-e3t" kind="show" id="Lmf-nV-rtC"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nde-az-uPf">
+                                <rect key="frame" x="70" y="757" width="61" height="36"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
+                                <state key="normal" title="Cancel"/>
+                                <connections>
+                                    <segue destination="JRe-ut-e3t" kind="show" id="Uc0-Lk-lKo"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="w7W-yM-0vJ" firstAttribute="top" secondItem="Qjf-LU-AGS" secondAttribute="bottom" constant="8" id="6oY-1v-96b"/>
+                            <constraint firstItem="nde-az-uPf" firstAttribute="top" secondItem="w7W-yM-0vJ" secondAttribute="bottom" constant="41" id="Irh-ei-hDP"/>
+                            <constraint firstItem="ZlT-Ik-gB2" firstAttribute="trailing" secondItem="w7W-yM-0vJ" secondAttribute="trailing" constant="30" id="PYR-6D-k2g"/>
+                            <constraint firstItem="ZlT-Ik-gB2" firstAttribute="trailing" secondItem="2OH-3R-2cc" secondAttribute="trailing" constant="70" id="VYE-jj-pog"/>
+                            <constraint firstItem="w7W-yM-0vJ" firstAttribute="centerX" secondItem="AL6-JB-Sgp" secondAttribute="centerX" id="iAO-fa-2rS"/>
+                            <constraint firstItem="w7W-yM-0vJ" firstAttribute="leading" secondItem="ZlT-Ik-gB2" secondAttribute="leading" constant="30" id="ih7-wg-sGp"/>
+                            <constraint firstItem="Qjf-LU-AGS" firstAttribute="centerX" secondItem="AL6-JB-Sgp" secondAttribute="centerX" id="joE-rP-UtQ"/>
+                            <constraint firstItem="Qjf-LU-AGS" firstAttribute="top" secondItem="t9M-6d-zpM" secondAttribute="bottom" constant="60" id="xW6-Pw-iVf"/>
+                            <constraint firstItem="nde-az-uPf" firstAttribute="leading" secondItem="ZlT-Ik-gB2" secondAttribute="leading" constant="70" id="yvW-Cw-Vau"/>
+                            <constraint firstItem="2OH-3R-2cc" firstAttribute="top" secondItem="w7W-yM-0vJ" secondAttribute="bottom" constant="41" id="yyB-EU-DFn"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="ZlT-Ik-gB2"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="hqn-xy-yQE"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0WP-lJ-GrY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2600" y="-674.33035714285711"/>
+        </scene>
+        <!--Add New Image View Controller-->
+        <scene sceneID="WOZ-ef-2Ly">
+            <objects>
+                <viewController id="B1J-qO-c9c" customClass="AddNewImageViewController" customModule="Aphasia_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ZOJ-yg-NOo">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MVc-GW-KXP">
+                                <rect key="frame" x="71" y="128" width="281" height="424"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Name of image" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Uc-vm-aqW">
+                                <rect key="frame" x="116" y="638" width="182" height="21"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G3x-3A-h0y">
+                                <rect key="frame" x="40" y="754" width="72" height="36"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
+                                <state key="normal" title="Rename"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XIu-0V-Bg4">
+                                <rect key="frame" x="224" y="756" width="150" height="36"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
+                                <state key="normal" title="Add to Collection"/>
+                                <connections>
+                                    <segue destination="Pcn-Nu-4fx" kind="show" id="q0m-s2-T2G"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="G3x-3A-h0y" firstAttribute="leading" secondItem="GgZ-5H-7xd" secondAttribute="leading" constant="40" id="Ijk-4b-k4b"/>
+                            <constraint firstItem="XIu-0V-Bg4" firstAttribute="leading" secondItem="G3x-3A-h0y" secondAttribute="trailing" constant="112" id="Iqu-95-les"/>
+                            <constraint firstItem="XIu-0V-Bg4" firstAttribute="top" secondItem="9Uc-vm-aqW" secondAttribute="bottom" constant="90" id="QWz-KH-FAd"/>
+                            <constraint firstItem="GgZ-5H-7xd" firstAttribute="trailing" secondItem="XIu-0V-Bg4" secondAttribute="trailing" constant="40" id="YKu-cg-Ym7"/>
+                            <constraint firstItem="9Uc-vm-aqW" firstAttribute="centerX" secondItem="ZOJ-yg-NOo" secondAttribute="centerX" id="bX8-Fu-VxR"/>
+                            <constraint firstItem="MVc-GW-KXP" firstAttribute="centerX" secondItem="ZOJ-yg-NOo" secondAttribute="centerX" id="mQi-hJ-g4b"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="GgZ-5H-7xd"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="6cc-JR-Wnj"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5WO-RO-772" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="917" y="-671"/>
+        </scene>
         <!--First Page-->
         <scene sceneID="tne-QT-ifu">
             <objects>
@@ -99,6 +293,9 @@
                                 <state key="normal" title="Take Photo">
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                 </state>
+                                <connections>
+                                    <segue destination="lqm-tz-eCN" kind="show" id="CIX-zz-xYg"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lrO-bK-Ktl" colorLabel="IBBuiltInLabel-Red">
                                 <rect key="frame" x="75" y="152" width="293" height="79"/>
@@ -120,6 +317,9 @@
                                 <state key="normal" title="Manage Photos">
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                 </state>
+                                <connections>
+                                    <segue destination="JRe-ut-e3t" kind="show" id="5IP-G0-Grg"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -518,6 +718,8 @@
         <image name="background.jpeg" width="523" height="515"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="aae-1L-Q76"/>
+        <segue reference="1ZP-rP-Jjm"/>
+        <segue reference="lYL-A8-tRw"/>
+        <segue reference="Lmf-nV-rtC"/>
     </inferredMetricsTieBreakers>
 </document>
