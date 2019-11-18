@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		161AAF72237B5E5E00D505E7 /* ThirdPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 161AAF71237B5E5D00D505E7 /* ThirdPage.swift */; };
+		16A985312380E3C2000C92E6 /* play.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 16A9852D2380E3C2000C92E6 /* play.jpeg */; };
+		16A985322380E3C2000C92E6 /* dog.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 16A9852E2380E3C2000C92E6 /* dog.jpeg */; };
+		16A985332380E3C2000C92E6 /* microphone.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 16A9852F2380E3C2000C92E6 /* microphone.jpeg */; };
+		16A985342380E3C2000C92E6 /* spaker.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 16A985302380E3C2000C92E6 /* spaker.jpeg */; };
 		16CFA1A42374ADD00022C95F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16CFA1A32374ADD00022C95F /* AppDelegate.swift */; };
 		16CFA1A62374ADD00022C95F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16CFA1A52374ADD00022C95F /* SceneDelegate.swift */; };
 		16CFA1AB2374ADD00022C95F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 16CFA1A92374ADD00022C95F /* Main.storyboard */; };
@@ -38,6 +42,10 @@
 
 /* Begin PBXFileReference section */
 		161AAF71237B5E5D00D505E7 /* ThirdPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdPage.swift; sourceTree = "<group>"; };
+		16A9852D2380E3C2000C92E6 /* play.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = play.jpeg; sourceTree = "<group>"; };
+		16A9852E2380E3C2000C92E6 /* dog.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = dog.jpeg; sourceTree = "<group>"; };
+		16A9852F2380E3C2000C92E6 /* microphone.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = microphone.jpeg; sourceTree = "<group>"; };
+		16A985302380E3C2000C92E6 /* spaker.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = spaker.jpeg; sourceTree = "<group>"; };
 		16CFA1A02374ADD00022C95F /* Aphasia App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Aphasia App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		16CFA1A32374ADD00022C95F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		16CFA1A52374ADD00022C95F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -104,6 +112,10 @@
 			isa = PBXGroup;
 			children = (
 				16F57C8523804DC800ED7422 /* background.jpeg */,
+				16A9852E2380E3C2000C92E6 /* dog.jpeg */,
+				16A9852F2380E3C2000C92E6 /* microphone.jpeg */,
+				16A985302380E3C2000C92E6 /* spaker.jpeg */,
+				16A9852D2380E3C2000C92E6 /* play.jpeg */,
 				16CFA1A32374ADD00022C95F /* AppDelegate.swift */,
 				16CFA1A52374ADD00022C95F /* SceneDelegate.swift */,
 				16CFA1E32374C7CC0022C95F /* FirstPage.swift */,
@@ -241,7 +253,11 @@
 				16CFA1B02374ADD20022C95F /* LaunchScreen.storyboard in Resources */,
 				16F57C8623804DC800ED7422 /* background.jpeg in Resources */,
 				16CFA1AD2374ADD20022C95F /* Assets.xcassets in Resources */,
+				16A985312380E3C2000C92E6 /* play.jpeg in Resources */,
+				16A985322380E3C2000C92E6 /* dog.jpeg in Resources */,
 				16CFA1AB2374ADD00022C95F /* Main.storyboard in Resources */,
+				16A985332380E3C2000C92E6 /* microphone.jpeg in Resources */,
+				16A985342380E3C2000C92E6 /* spaker.jpeg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
