@@ -29,7 +29,7 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="IUr-5s-Sys" firstAttribute="centerX" secondItem="6xS-wY-ynG" secondAttribute="centerX" id="K0h-Wf-bsw"/>
                             <constraint firstItem="JNR-py-q76" firstAttribute="bottom" secondItem="IUr-5s-Sys" secondAttribute="bottom" constant="30" id="gVQ-fb-wMJ"/>
@@ -948,7 +948,9 @@
         <image name="spaker.jpeg" width="350" height="392"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="1ZP-rP-Jjm"/>
         <segue reference="k5C-GP-A6d"/>
-        <segue reference="Z9L-mZ-Hf0"/>
+        <segue reference="lYL-A8-tRw"/>
+        <segue reference="Lmf-nV-rtC"/>
     </inferredMetricsTieBreakers>
 </document>
