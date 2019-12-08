@@ -8,20 +8,30 @@
 
 import UIKit
 import MapKit
+import CoreLocation
 
-class ThirdPage: UIViewController {
+class LocationPage: UIViewController, CLLocationManagerDelegate {
     
        @IBOutlet weak var mapView: MKMapView!
        fileprivate let locationManager:CLLocationManager =  CLLocationManager()
         
         override func viewDidLoad() {
             super.viewDidLoad()
+            locationManager.delegate = self
             locationManager.requestWhenInUseAuthorization()
             locationManager.desiredAccuracy = kCLLocationAccuracyBest
             locationManager.distanceFilter=kCLDistanceFilterNone
             locationManager.startUpdatingLocation()
-            
-                //  mapView.showsUserLocation = true
-        }
+    }
      
+    func locationManager (_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        let locValue:CLLocationCoordinate2D = locationManager.location!.coordinate
+         locationManager.requestWhenInUseAuthorization()
+        print("locations: \(locValue.latitude)")
+      // mapView.showsUserLocation = true
+        
+        
+        
+        
+    }
 }
