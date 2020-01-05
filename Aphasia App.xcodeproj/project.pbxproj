@@ -23,16 +23,18 @@
 		16CFA1BB2374ADD20022C95F /* Aphasia_AppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16CFA1BA2374ADD20022C95F /* Aphasia_AppTests.swift */; };
 		16CFA1C62374ADD20022C95F /* Aphasia_AppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16CFA1C52374ADD20022C95F /* Aphasia_AppUITests.swift */; };
 		16CFA1E42374C7CC0022C95F /* FirstPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16CFA1E32374C7CC0022C95F /* FirstPage.swift */; };
-		16EEACC22395B72C00C09534 /* ExerciseB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16EEACC12395B72C00C09534 /* ExerciseB.swift */; };
 		16F57C8623804DC800ED7422 /* background.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 16F57C8523804DC800ED7422 /* background.jpeg */; };
 		16FE530A23864219009FC96F /* ExerciseA.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16FE530923864219009FC96F /* ExerciseA.swift */; };
 		16FE530E2386553B009FC96F /* ExerciseATableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16FE530D2386553B009FC96F /* ExerciseATableViewCell.swift */; };
 		16FE531223876C08009FC96F /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16FE531123876C08009FC96F /* Question.swift */; };
 		16FE531423876C98009FC96F /* QuestionBank.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16FE531323876C98009FC96F /* QuestionBank.swift */; };
+		1B753F710F670A0777C3C96C /* Pods_Aphasia_App_Aphasia_AppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F654AB6213C229F88E8BB9E8 /* Pods_Aphasia_App_Aphasia_AppUITests.framework */; };
 		3902C0C697C9C5C64F43C341 /* Pods_Aphasia_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C68B2F741E1C85DB5B3A32DF /* Pods_Aphasia_App.framework */; };
 		51114ABC2383B29F0023788F /* tree.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 51114ABB2383B29F0023788F /* tree.jpeg */; };
 		51114ABE2383B4630023788F /* map.png in Resources */ = {isa = PBXBuildFile; fileRef = 51114ABD2383B4630023788F /* map.png */; };
 		51114AC02383B9C50023788F /* bench.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 51114ABF2383B9C50023788F /* bench.jpeg */; };
+		B7BE683C4378451E6D0C5912 /* Pods_Aphasia_AppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82E6136F28581B98374719AB /* Pods_Aphasia_AppTests.framework */; };
+		D5B9DECC23C0E324004B2B53 /* ExerciseB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16EEACC12395B72C00C09534 /* ExerciseB.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -76,17 +78,23 @@
 		16CFA1C52374ADD20022C95F /* Aphasia_AppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Aphasia_AppUITests.swift; sourceTree = "<group>"; };
 		16CFA1C72374ADD20022C95F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		16CFA1E32374C7CC0022C95F /* FirstPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstPage.swift; sourceTree = "<group>"; };
-		16EEACC12395B72C00C09534 /* ExerciseB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ExerciseB.swift; path = "/Users/yuanyuanzhou/Desktop/AphasiaApp/Aphasia App/ExerciseB.swift"; sourceTree = "<absolute>"; };
+		16EEACC12395B72C00C09534 /* ExerciseB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseB.swift; sourceTree = "<group>"; };
 		16F57C8523804DC800ED7422 /* background.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = background.jpeg; sourceTree = "<group>"; };
 		16FE530923864219009FC96F /* ExerciseA.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseA.swift; sourceTree = "<group>"; };
 		16FE530D2386553B009FC96F /* ExerciseATableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseATableViewCell.swift; sourceTree = "<group>"; };
 		16FE531123876C08009FC96F /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
 		16FE531323876C98009FC96F /* QuestionBank.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionBank.swift; sourceTree = "<group>"; };
+		18D1189B5E4A5CA56CFF6FA3 /* Pods-Aphasia AppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Aphasia AppTests.debug.xcconfig"; path = "Target Support Files/Pods-Aphasia AppTests/Pods-Aphasia AppTests.debug.xcconfig"; sourceTree = "<group>"; };
+		3D600BC820655AF79D4858E2 /* Pods-Aphasia AppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Aphasia AppTests.release.xcconfig"; path = "Target Support Files/Pods-Aphasia AppTests/Pods-Aphasia AppTests.release.xcconfig"; sourceTree = "<group>"; };
 		51114ABB2383B29F0023788F /* tree.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = tree.jpeg; sourceTree = "<group>"; };
 		51114ABD2383B4630023788F /* map.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = map.png; sourceTree = "<group>"; };
 		51114ABF2383B9C50023788F /* bench.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bench.jpeg; sourceTree = "<group>"; };
+		636BE746E4BC251B396BCD6F /* Pods-Aphasia App-Aphasia AppUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Aphasia App-Aphasia AppUITests.debug.xcconfig"; path = "Target Support Files/Pods-Aphasia App-Aphasia AppUITests/Pods-Aphasia App-Aphasia AppUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		82E6136F28581B98374719AB /* Pods_Aphasia_AppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Aphasia_AppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9179C6DB168130C1EF2E53DE /* Pods-Aphasia App.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Aphasia App.debug.xcconfig"; path = "Target Support Files/Pods-Aphasia App/Pods-Aphasia App.debug.xcconfig"; sourceTree = "<group>"; };
+		9F1B600DB353BC75CA312F1F /* Pods-Aphasia App-Aphasia AppUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Aphasia App-Aphasia AppUITests.release.xcconfig"; path = "Target Support Files/Pods-Aphasia App-Aphasia AppUITests/Pods-Aphasia App-Aphasia AppUITests.release.xcconfig"; sourceTree = "<group>"; };
 		C68B2F741E1C85DB5B3A32DF /* Pods_Aphasia_App.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Aphasia_App.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F654AB6213C229F88E8BB9E8 /* Pods_Aphasia_App_Aphasia_AppUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Aphasia_App_Aphasia_AppUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +110,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B7BE683C4378451E6D0C5912 /* Pods_Aphasia_AppTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -109,6 +118,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1B753F710F670A0777C3C96C /* Pods_Aphasia_App_Aphasia_AppUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -191,6 +201,10 @@
 			children = (
 				9179C6DB168130C1EF2E53DE /* Pods-Aphasia App.debug.xcconfig */,
 				008FB648340D3E1F6BE69F62 /* Pods-Aphasia App.release.xcconfig */,
+				636BE746E4BC251B396BCD6F /* Pods-Aphasia App-Aphasia AppUITests.debug.xcconfig */,
+				9F1B600DB353BC75CA312F1F /* Pods-Aphasia App-Aphasia AppUITests.release.xcconfig */,
+				18D1189B5E4A5CA56CFF6FA3 /* Pods-Aphasia AppTests.debug.xcconfig */,
+				3D600BC820655AF79D4858E2 /* Pods-Aphasia AppTests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -199,6 +213,8 @@
 			isa = PBXGroup;
 			children = (
 				C68B2F741E1C85DB5B3A32DF /* Pods_Aphasia_App.framework */,
+				F654AB6213C229F88E8BB9E8 /* Pods_Aphasia_App_Aphasia_AppUITests.framework */,
+				82E6136F28581B98374719AB /* Pods_Aphasia_AppTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -229,6 +245,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 16CFA1CD2374ADD20022C95F /* Build configuration list for PBXNativeTarget "Aphasia AppTests" */;
 			buildPhases = (
+				70B090A7AA81C3A432904104 /* [CP] Check Pods Manifest.lock */,
 				16CFA1B22374ADD20022C95F /* Sources */,
 				16CFA1B32374ADD20022C95F /* Frameworks */,
 				16CFA1B42374ADD20022C95F /* Resources */,
@@ -247,9 +264,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 16CFA1D02374ADD20022C95F /* Build configuration list for PBXNativeTarget "Aphasia AppUITests" */;
 			buildPhases = (
+				AD2E9AE7D9F40ED799E3497F /* [CP] Check Pods Manifest.lock */,
 				16CFA1BD2374ADD20022C95F /* Sources */,
 				16CFA1BE2374ADD20022C95F /* Frameworks */,
 				16CFA1BF2374ADD20022C95F /* Resources */,
+				A2D64C50C56573BFB45E070B /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -364,6 +383,28 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		70B090A7AA81C3A432904104 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Aphasia AppTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
 		8BFD14A0870F6E2538F447E1 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -381,6 +422,45 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Aphasia App/Pods-Aphasia App-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		A2D64C50C56573BFB45E070B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Aphasia App-Aphasia AppUITests/Pods-Aphasia App-Aphasia AppUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Aphasia App-Aphasia AppUITests/Pods-Aphasia App-Aphasia AppUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Aphasia App-Aphasia AppUITests/Pods-Aphasia App-Aphasia AppUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AD2E9AE7D9F40ED799E3497F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Aphasia App-Aphasia AppUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -388,6 +468,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D5B9DECC23C0E324004B2B53 /* ExerciseB.swift in Sources */,
 				161AAF72237B5E5E00D505E7 /* LocationPage.swift in Sources */,
 				16FE531423876C98009FC96F /* QuestionBank.swift in Sources */,
 				16A0F9C22388CA9B00EF86BD /* CameraPageController.swift in Sources */,
@@ -396,7 +477,6 @@
 				16FE530E2386553B009FC96F /* ExerciseATableViewCell.swift in Sources */,
 				16FE530A23864219009FC96F /* ExerciseA.swift in Sources */,
 				16CFA1E42374C7CC0022C95F /* FirstPage.swift in Sources */,
-				16EEACC22395B72C00C09534 /* ExerciseB.swift in Sources */,
 				16FE531223876C08009FC96F /* Question.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -608,6 +688,7 @@
 		};
 		16CFA1CE2374ADD20022C95F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 18D1189B5E4A5CA56CFF6FA3 /* Pods-Aphasia AppTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -630,6 +711,7 @@
 		};
 		16CFA1CF2374ADD20022C95F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3D600BC820655AF79D4858E2 /* Pods-Aphasia AppTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -652,6 +734,7 @@
 		};
 		16CFA1D12374ADD20022C95F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 636BE746E4BC251B396BCD6F /* Pods-Aphasia App-Aphasia AppUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -672,6 +755,7 @@
 		};
 		16CFA1D22374ADD20022C95F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9F1B600DB353BC75CA312F1F /* Pods-Aphasia App-Aphasia AppUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
