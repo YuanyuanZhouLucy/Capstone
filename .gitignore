@@ -29,3 +29,8 @@ DerivedData/
 # other
 */.DS_Store
 .DS_Store
+
+#Pod stuff
+Pods/
+Podfile.lock
+*.xcworkspace
