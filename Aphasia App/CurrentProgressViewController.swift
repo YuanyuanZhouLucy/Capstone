@@ -27,11 +27,9 @@ class CurrentProgressViewController: UIViewController, MFMailComposeViewControll
         self.present(composeVC, animated: true, completion: nil)
     }
     
-    func mailComposeController(controller: MFMailComposeViewController,
-                               didFinishWithResult result: MFMailComposeResult, error: NSError?) {
-        // Check the result or perform other tasks.
-        
-        // Dismiss the mail compose view controller.
+    func mailComposeController(_ controller: MFMailComposeViewController,
+                               didFinishWith result: MFMailComposeResult,
+                               error: Swift.Error?) {
         controller.dismiss(animated: true, completion: nil)
     }
     /*
