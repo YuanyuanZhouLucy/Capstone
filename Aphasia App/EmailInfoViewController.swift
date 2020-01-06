@@ -9,7 +9,7 @@
 import UIKit
 import MessageUI
 
-class EmailInfoViewController: UIViewController, MFMailComposeViewControllerDelegate {
+class EmailInfoViewController: UIViewController, MFMailComposeViewControllerDelegate, UITextFieldDelegate {
 
     @IBOutlet weak var clientNameTextField: UITextField!
     @IBOutlet weak var slpNameTextField: UITextField!
@@ -18,10 +18,19 @@ class EmailInfoViewController: UIViewController, MFMailComposeViewControllerDele
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        clientNameTextField.delegate = self
+        slpNameTextField.delegate = self
+        slpEmailTextField.delegate = self
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        //hide keyboard
+        textField.resignFirstResponder()
+        return true
     }
     
     @IBAction func sendEmail(_ sender: UIButton) {
+
         if !MFMailComposeViewController.canSendMail() {
             print("Mail services are not available")
             return
@@ -29,9 +38,9 @@ class EmailInfoViewController: UIViewController, MFMailComposeViewControllerDele
         let composeVC = MFMailComposeViewController()
         composeVC.mailComposeDelegate = self
         
-        composeVC.setToRecipients(["address@example.com"])
-        composeVC.setSubject("Is this working?")
-        composeVC.setMessageBody("Sample body text", isHTML: false)
+        composeVC.setToRecipients([slpEmailTextField.text!])
+        composeVC.setSubject("Progress Report of Client \(clientNameTextField.text!) ")
+        composeVC.setMessageBody("Dear \(slpNameTextField.text!), Your client \(clientNameTextField.text!) has completed work", isHTML: false)
         
         self.present(composeVC, animated: true, completion: nil)
     }
@@ -41,14 +50,5 @@ class EmailInfoViewController: UIViewController, MFMailComposeViewControllerDele
                                error: Swift.Error?) {
         controller.dismiss(animated: true, completion: nil)
     }
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }
