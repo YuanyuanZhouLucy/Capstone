@@ -48,7 +48,16 @@ class EmailInfoViewController: UIViewController, MFMailComposeViewControllerDele
     func mailComposeController(_ controller: MFMailComposeViewController,
                                didFinishWith result: MFMailComposeResult,
                                error: Swift.Error?) {
+  
         controller.dismiss(animated: true, completion: nil)
+        
+        if result.rawValue == 2 {
+            print("Email sent")
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            let controller = storyboard.instantiateViewController(withIdentifier: "SaveInfo")
+            self.present(controller, animated: true, completion: nil)
+        }
+        
     }
 
 }
