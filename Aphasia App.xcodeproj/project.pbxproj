@@ -35,7 +35,7 @@
 		51114AC02383B9C50023788F /* bench.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 51114ABF2383B9C50023788F /* bench.jpeg */; };
 		B7BE683C4378451E6D0C5912 /* Pods_Aphasia_AppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82E6136F28581B98374719AB /* Pods_Aphasia_AppTests.framework */; };
 		D5B9DECC23C0E324004B2B53 /* ExerciseB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16EEACC12395B72C00C09534 /* ExerciseB.swift */; };
-		D5DDC1F223C1F1AC00839740 /* CurrentProgressViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5DDC1F123C1F1AC00839740 /* CurrentProgressViewController.swift */; };
+		D5DDC1F423C2D35B00839740 /* EmailInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5DDC1F323C2D35B00839740 /* EmailInfoViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -95,7 +95,7 @@
 		9179C6DB168130C1EF2E53DE /* Pods-Aphasia App.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Aphasia App.debug.xcconfig"; path = "Target Support Files/Pods-Aphasia App/Pods-Aphasia App.debug.xcconfig"; sourceTree = "<group>"; };
 		9F1B600DB353BC75CA312F1F /* Pods-Aphasia App-Aphasia AppUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Aphasia App-Aphasia AppUITests.release.xcconfig"; path = "Target Support Files/Pods-Aphasia App-Aphasia AppUITests/Pods-Aphasia App-Aphasia AppUITests.release.xcconfig"; sourceTree = "<group>"; };
 		C68B2F741E1C85DB5B3A32DF /* Pods_Aphasia_App.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Aphasia_App.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		D5DDC1F123C1F1AC00839740 /* CurrentProgressViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentProgressViewController.swift; sourceTree = "<group>"; };
+		D5DDC1F323C2D35B00839740 /* EmailInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailInfoViewController.swift; sourceTree = "<group>"; };
 		F654AB6213C229F88E8BB9E8 /* Pods_Aphasia_App_Aphasia_AppUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Aphasia_App_Aphasia_AppUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -153,7 +153,7 @@
 			isa = PBXGroup;
 			children = (
 				16CFA1A92374ADD00022C95F /* Main.storyboard */,
-				D5DDC1F123C1F1AC00839740 /* CurrentProgressViewController.swift */,
+				D5DDC1F323C2D35B00839740 /* EmailInfoViewController.swift */,
 				16CFA1E32374C7CC0022C95F /* FirstPage.swift */,
 				161AAF71237B5E5D00D505E7 /* LocationPage.swift */,
 				16FE530923864219009FC96F /* ExerciseA.swift */,
@@ -477,11 +477,11 @@
 				16A0F9C22388CA9B00EF86BD /* CameraPageController.swift in Sources */,
 				16CFA1A42374ADD00022C95F /* AppDelegate.swift in Sources */,
 				16CFA1A62374ADD00022C95F /* SceneDelegate.swift in Sources */,
-				D5DDC1F223C1F1AC00839740 /* CurrentProgressViewController.swift in Sources */,
 				16FE530E2386553B009FC96F /* ExerciseATableViewCell.swift in Sources */,
 				16FE530A23864219009FC96F /* ExerciseA.swift in Sources */,
 				16CFA1E42374C7CC0022C95F /* FirstPage.swift in Sources */,
 				16FE531223876C08009FC96F /* Question.swift in Sources */,
+				D5DDC1F423C2D35B00839740 /* EmailInfoViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -586,7 +586,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -640,7 +640,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -656,14 +656,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = K8X5DF3A3A;
+				DEVELOPMENT_TEAM = A4T87VULK7;
 				INFOPLIST_FILE = "Aphasia App/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.AphasiaApp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.AphasiaApp2019079;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -676,14 +676,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = K8X5DF3A3A;
+				DEVELOPMENT_TEAM = A4T87VULK7;
 				INFOPLIST_FILE = "Aphasia App/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.AphasiaApp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.AphasiaApp2019079;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
