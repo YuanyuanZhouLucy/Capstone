@@ -54,8 +54,13 @@ class EmailInfoViewController: UIViewController, MFMailComposeViewControllerDele
         if result.rawValue == 2 {
             print("Email sent")
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
-            let controller = storyboard.instantiateViewController(withIdentifier: "SaveInfo")
-            self.present(controller, animated: true, completion: nil)
+            let vc = storyboard.instantiateViewController(withIdentifier: "SaveInfo") as! SaveInformationViewController
+            
+            vc.clientName = clientNameTextField.text!
+            vc.slpName = slpNameTextField.text!
+            vc.slpEmail = slpEmailTextField.text!
+            
+            self.present(vc, animated: true, completion: nil)
         }
         
     }

@@ -1238,7 +1238,7 @@
                                 </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WQA-uX-VLt">
-                                <rect key="frame" x="48" y="533" width="97" height="34"/>
+                                <rect key="frame" x="48" y="533" width="284" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -1258,10 +1258,10 @@
             </objects>
             <point key="canvasLocation" x="1734.7826086956522" y="1456.4732142857142"/>
         </scene>
-        <!--View Controller-->
+        <!--Save Information View Controller-->
         <scene sceneID="ViX-YX-qsW">
             <objects>
-                <viewController storyboardIdentifier="SaveInfo" id="V0A-ZO-1Ds" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SaveInfo" id="V0A-ZO-1Ds" customClass="SaveInformationViewController" customModule="Aphasia_App" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="nfZ-mr-TPP">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1273,17 +1273,20 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HcH-gJ-GFu">
-                                <rect key="frame" x="171" y="388" width="30" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Yes"/>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Al3-jp-PpW">
                                 <rect key="frame" x="171" y="433" width="30" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="No"/>
                                 <connections>
                                     <segue destination="uRs-WK-vRf" kind="show" id="V85-ha-84E"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HcH-gJ-GFu">
+                                <rect key="frame" x="171" y="381" width="30" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Yes"/>
+                                <connections>
+                                    <action selector="saveClientInformation:" destination="V0A-ZO-1Ds" eventType="touchUpInside" id="aHi-ii-6nm"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -1308,7 +1311,7 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="Age-O3-usl"/>
-        <segue reference="jXU-9A-MSx"/>
+        <segue reference="V85-ha-84E"/>
         <segue reference="NTr-mo-lmx"/>
         <segue reference="aae-1L-Q76"/>
         <segue reference="5IP-G0-Grg"/>

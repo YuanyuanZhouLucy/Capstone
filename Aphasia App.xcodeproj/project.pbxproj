@@ -36,6 +36,7 @@
 		B7BE683C4378451E6D0C5912 /* Pods_Aphasia_AppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82E6136F28581B98374719AB /* Pods_Aphasia_AppTests.framework */; };
 		D5B9DECC23C0E324004B2B53 /* ExerciseB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16EEACC12395B72C00C09534 /* ExerciseB.swift */; };
 		D5DDC1F423C2D35B00839740 /* EmailInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5DDC1F323C2D35B00839740 /* EmailInfoViewController.swift */; };
+		D5DDC1F623C3326600839740 /* SaveInformationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5DDC1F523C3326600839740 /* SaveInformationViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -96,6 +97,7 @@
 		9F1B600DB353BC75CA312F1F /* Pods-Aphasia App-Aphasia AppUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Aphasia App-Aphasia AppUITests.release.xcconfig"; path = "Target Support Files/Pods-Aphasia App-Aphasia AppUITests/Pods-Aphasia App-Aphasia AppUITests.release.xcconfig"; sourceTree = "<group>"; };
 		C68B2F741E1C85DB5B3A32DF /* Pods_Aphasia_App.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Aphasia_App.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D5DDC1F323C2D35B00839740 /* EmailInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailInfoViewController.swift; sourceTree = "<group>"; };
+		D5DDC1F523C3326600839740 /* SaveInformationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveInformationViewController.swift; sourceTree = "<group>"; };
 		F654AB6213C229F88E8BB9E8 /* Pods_Aphasia_App_Aphasia_AppUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Aphasia_App_Aphasia_AppUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -154,6 +156,7 @@
 			children = (
 				16CFA1A92374ADD00022C95F /* Main.storyboard */,
 				D5DDC1F323C2D35B00839740 /* EmailInfoViewController.swift */,
+				D5DDC1F523C3326600839740 /* SaveInformationViewController.swift */,
 				16CFA1E32374C7CC0022C95F /* FirstPage.swift */,
 				161AAF71237B5E5D00D505E7 /* LocationPage.swift */,
 				16FE530923864219009FC96F /* ExerciseA.swift */,
@@ -481,6 +484,7 @@
 				16FE530A23864219009FC96F /* ExerciseA.swift in Sources */,
 				16CFA1E42374C7CC0022C95F /* FirstPage.swift in Sources */,
 				16FE531223876C08009FC96F /* Question.swift in Sources */,
+				D5DDC1F623C3326600839740 /* SaveInformationViewController.swift in Sources */,
 				D5DDC1F423C2D35B00839740 /* EmailInfoViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
