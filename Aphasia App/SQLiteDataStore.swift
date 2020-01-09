@@ -16,6 +16,14 @@ class SQLiteDataStore {
     private let slpName = Expression<String>("slpName")
     private let slpEmail = Expression<String>("slpEmail")
     
+    private let progress = Table("progress")
+    private let sessionid = Expression<Int64>("sessionid")
+    private let sessionTime = Expression<Date?>("sessionTime")
+    private let numExerciseAAttempted = Expression<Int>("numExerciseAAttempted")
+    private let numExerciseACorrect = Expression<Int>("numExerciseACorrect")
+    private let numExerciseBAttempted = Expression<Int>("numExerciseBAttempted")
+    private let numExerciseBCorrect = Expression<Int>("numExerciseBCorrect")
+    
     static let instance = SQLiteDataStore()
     private let db: Connection?
     
@@ -43,12 +51,20 @@ class SQLiteDataStore {
                 table.column(slpName)
                 table.column(slpEmail)
                 })
+            try db!.run(progress.create(ifNotExists: true) { table in
+                table.column(sessionid, primaryKey: true)
+                table.column(sessionTime)
+                table.column(numExerciseAAttempted)
+                table.column(numExerciseACorrect)
+                table.column(numExerciseBAttempted)
+                table.column(numExerciseBCorrect)
+                })
         } catch {
             print("Unable to create table")
         }
     }
     
-    
+    //TODO - make User class
     func addUser(cuserName: String, cslpName: String, cslpEmail: String) -> Int64? {
         do {
             let insert = users.insert(userName <- cuserName, slpName <- cslpName, slpEmail <- cslpEmail)
@@ -98,5 +114,43 @@ class SQLiteDataStore {
     
     func deleteUser() -> Bool {
         return self.updateUser(newUserName: "", newSlpName: "", newSlpEmail: "")
+    }
+    
+    //TODO: Make Progress class
+    func addSessionProgress(cSessionTime:Date, cNumExerciseAAttempted:Int, cNumExerciseACorrect:Int, cNumExerciseBAttempted:Int, cNumExerciseBCorrect:Int) -> Int64? {
+        do {
+            let insert = progress.insert(sessionTime <- cSessionTime, numExerciseAAttempted <- cNumExerciseAAttempted, numExerciseACorrect <- cNumExerciseACorrect, numExerciseBAttempted <- cNumExerciseBAttempted, numExerciseBCorrect <- cNumExerciseBCorrect)
+            let sessionid = try db!.run(insert)
+            
+            return sessionid
+        } catch {
+            print("Insert failed")
+            return nil
+        }
+    }
+    
+    func getProgressData() -> [SessionProgess] {
+        var progressData = [SessionProgess]()
+        
+        do {
+            for session in try db!.prepare(self.progress) {
+                progressData.append(SessionProgess(
+                    sessionTime: session[sessionTime]!,
+                    numExerciseAAttempted: session[numExerciseAAttempted],
+                    numExerciseACorrect: session[numExerciseACorrect],
+                    numExerciseBAttempted: session[numExerciseBAttempted],
+                    numExerciseBCorrect: session[numExerciseBCorrect]))
+            }
+        } catch {
+            print("Select failed")
+        }
+        
+        return progressData
+    }
+    
+    func deleteOldProgressData() -> Bool {
+        //TODO: keeps only 30 records
+        
+        return true
     }
 }

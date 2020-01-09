@@ -39,6 +39,7 @@
 		D5DDC1F823C75D9500839740 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5DDC1F723C75D9500839740 /* User.swift */; };
 		D5DDC1FA23C7664A00839740 /* SQLiteDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5DDC1F923C7664A00839740 /* SQLiteDataStore.swift */; };
 		D5DDC1FC23C7778400839740 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D5DDC1FB23C7778400839740 /* GoogleService-Info.plist */; };
+		D5DDC1FE23C7859400839740 /* SessionProgress.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5DDC1FD23C7859400839740 /* SessionProgress.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -102,6 +103,7 @@
 		D5DDC1F723C75D9500839740 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		D5DDC1F923C7664A00839740 /* SQLiteDataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SQLiteDataStore.swift; sourceTree = "<group>"; };
 		D5DDC1FB23C7778400839740 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		D5DDC1FD23C7859400839740 /* SessionProgress.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionProgress.swift; sourceTree = "<group>"; };
 		F654AB6213C229F88E8BB9E8 /* Pods_Aphasia_App_Aphasia_AppUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Aphasia_App_Aphasia_AppUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -186,6 +188,7 @@
 				16CFA1B12374ADD20022C95F /* Info.plist */,
 				D5DDC1F723C75D9500839740 /* User.swift */,
 				D5DDC1F923C7664A00839740 /* SQLiteDataStore.swift */,
+				D5DDC1FD23C7859400839740 /* SessionProgress.swift */,
 			);
 			path = "Aphasia App";
 			sourceTree = "<group>";
@@ -480,6 +483,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D5DDC1FE23C7859400839740 /* SessionProgress.swift in Sources */,
 				D5DDC1F823C75D9500839740 /* User.swift in Sources */,
 				D5B9DECC23C0E324004B2B53 /* ExerciseB.swift in Sources */,
 				161AAF72237B5E5E00D505E7 /* LocationPage.swift in Sources */,
