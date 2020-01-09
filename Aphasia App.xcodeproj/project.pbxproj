@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		161AAF72237B5E5E00D505E7 /* LocationPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 161AAF71237B5E5D00D505E7 /* LocationPage.swift */; };
 		161CB39A23949AF80083A0CF /* BackgroundSky.png in Resources */ = {isa = PBXBuildFile; fileRef = 161CB39923949AF70083A0CF /* BackgroundSky.png */; };
+		163C9DF0AB672059E064F336 /* Pods_Aphasia_App_Aphasia_AppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 29203CF61AF0994C8EA286FB /* Pods_Aphasia_App_Aphasia_AppUITests.framework */; };
 		16A0F9C22388CA9B00EF86BD /* CameraPageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16A0F9C02388CA9400EF86BD /* CameraPageController.swift */; };
 		16A985312380E3C2000C92E6 /* play.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 16A9852D2380E3C2000C92E6 /* play.jpeg */; };
 		16A985322380E3C2000C92E6 /* dog.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 16A9852E2380E3C2000C92E6 /* dog.jpeg */; };
@@ -22,23 +23,23 @@
 		16CFA1BB2374ADD20022C95F /* Aphasia_AppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16CFA1BA2374ADD20022C95F /* Aphasia_AppTests.swift */; };
 		16CFA1C62374ADD20022C95F /* Aphasia_AppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16CFA1C52374ADD20022C95F /* Aphasia_AppUITests.swift */; };
 		16CFA1E42374C7CC0022C95F /* FirstPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16CFA1E32374C7CC0022C95F /* FirstPage.swift */; };
+		16D0E48423A1359C00BAEC8C /* GooglePlace.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16D0E48323A1359C00BAEC8C /* GooglePlace.swift */; };
 		16F57C8623804DC800ED7422 /* background.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 16F57C8523804DC800ED7422 /* background.jpeg */; };
 		16FE530A23864219009FC96F /* ExerciseA.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16FE530923864219009FC96F /* ExerciseA.swift */; };
 		16FE530E2386553B009FC96F /* ExerciseATableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16FE530D2386553B009FC96F /* ExerciseATableViewCell.swift */; };
 		16FE531223876C08009FC96F /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16FE531123876C08009FC96F /* Question.swift */; };
 		16FE531423876C98009FC96F /* QuestionBank.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16FE531323876C98009FC96F /* QuestionBank.swift */; };
-		1B753F710F670A0777C3C96C /* Pods_Aphasia_App_Aphasia_AppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F654AB6213C229F88E8BB9E8 /* Pods_Aphasia_App_Aphasia_AppUITests.framework */; };
-		3902C0C697C9C5C64F43C341 /* Pods_Aphasia_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C68B2F741E1C85DB5B3A32DF /* Pods_Aphasia_App.framework */; };
 		51114ABC2383B29F0023788F /* tree.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 51114ABB2383B29F0023788F /* tree.jpeg */; };
 		51114ABE2383B4630023788F /* map.png in Resources */ = {isa = PBXBuildFile; fileRef = 51114ABD2383B4630023788F /* map.png */; };
 		51114AC02383B9C50023788F /* bench.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 51114ABF2383B9C50023788F /* bench.jpeg */; };
-		B7BE683C4378451E6D0C5912 /* Pods_Aphasia_AppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82E6136F28581B98374719AB /* Pods_Aphasia_AppTests.framework */; };
+		C08E79140BEF58B916C99F18 /* Pods_Aphasia_AppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C36096C432D3EF4B99100B1F /* Pods_Aphasia_AppTests.framework */; };
 		D5B9DECC23C0E324004B2B53 /* ExerciseB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16EEACC12395B72C00C09534 /* ExerciseB.swift */; };
 		D5DDC1F423C2D35B00839740 /* EmailInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5DDC1F323C2D35B00839740 /* EmailInfoViewController.swift */; };
 		D5DDC1F623C3326600839740 /* SaveInformationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5DDC1F523C3326600839740 /* SaveInformationViewController.swift */; };
 		D5DDC1F823C75D9500839740 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5DDC1F723C75D9500839740 /* User.swift */; };
 		D5DDC1FA23C7664A00839740 /* SQLiteDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5DDC1F923C7664A00839740 /* SQLiteDataStore.swift */; };
 		D5DDC1FC23C7778400839740 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D5DDC1FB23C7778400839740 /* GoogleService-Info.plist */; };
+		E600C603AB1B5A40149B4FC4 /* Pods_Aphasia_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 64CD7E222D5AE8546E9991C9 /* Pods_Aphasia_App.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -81,28 +82,29 @@
 		16CFA1C52374ADD20022C95F /* Aphasia_AppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Aphasia_AppUITests.swift; sourceTree = "<group>"; };
 		16CFA1C72374ADD20022C95F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		16CFA1E32374C7CC0022C95F /* FirstPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstPage.swift; sourceTree = "<group>"; };
-		16EEACC12395B72C00C09534 /* ExerciseB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseB.swift; sourceTree = "<group>"; };
+		16D0E48323A1359C00BAEC8C /* GooglePlace.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GooglePlace.swift; sourceTree = "<group>"; };
+		16EEACC12395B72C00C09534 /* ExerciseB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ExerciseB.swift; path = "/Users/yuanyuanzhou/Desktop/AphasiaApp/Aphasia App/ExerciseB.swift"; sourceTree = "<absolute>"; };
 		16F57C8523804DC800ED7422 /* background.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = background.jpeg; sourceTree = "<group>"; };
 		16FE530923864219009FC96F /* ExerciseA.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseA.swift; sourceTree = "<group>"; };
 		16FE530D2386553B009FC96F /* ExerciseATableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseATableViewCell.swift; sourceTree = "<group>"; };
 		16FE531123876C08009FC96F /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
 		16FE531323876C98009FC96F /* QuestionBank.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionBank.swift; sourceTree = "<group>"; };
 		18D1189B5E4A5CA56CFF6FA3 /* Pods-Aphasia AppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Aphasia AppTests.debug.xcconfig"; path = "Target Support Files/Pods-Aphasia AppTests/Pods-Aphasia AppTests.debug.xcconfig"; sourceTree = "<group>"; };
+		29203CF61AF0994C8EA286FB /* Pods_Aphasia_App_Aphasia_AppUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Aphasia_App_Aphasia_AppUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3D600BC820655AF79D4858E2 /* Pods-Aphasia AppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Aphasia AppTests.release.xcconfig"; path = "Target Support Files/Pods-Aphasia AppTests/Pods-Aphasia AppTests.release.xcconfig"; sourceTree = "<group>"; };
 		51114ABB2383B29F0023788F /* tree.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = tree.jpeg; sourceTree = "<group>"; };
 		51114ABD2383B4630023788F /* map.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = map.png; sourceTree = "<group>"; };
 		51114ABF2383B9C50023788F /* bench.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bench.jpeg; sourceTree = "<group>"; };
 		636BE746E4BC251B396BCD6F /* Pods-Aphasia App-Aphasia AppUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Aphasia App-Aphasia AppUITests.debug.xcconfig"; path = "Target Support Files/Pods-Aphasia App-Aphasia AppUITests/Pods-Aphasia App-Aphasia AppUITests.debug.xcconfig"; sourceTree = "<group>"; };
-		82E6136F28581B98374719AB /* Pods_Aphasia_AppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Aphasia_AppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		64CD7E222D5AE8546E9991C9 /* Pods_Aphasia_App.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Aphasia_App.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9179C6DB168130C1EF2E53DE /* Pods-Aphasia App.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Aphasia App.debug.xcconfig"; path = "Target Support Files/Pods-Aphasia App/Pods-Aphasia App.debug.xcconfig"; sourceTree = "<group>"; };
 		9F1B600DB353BC75CA312F1F /* Pods-Aphasia App-Aphasia AppUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Aphasia App-Aphasia AppUITests.release.xcconfig"; path = "Target Support Files/Pods-Aphasia App-Aphasia AppUITests/Pods-Aphasia App-Aphasia AppUITests.release.xcconfig"; sourceTree = "<group>"; };
-		C68B2F741E1C85DB5B3A32DF /* Pods_Aphasia_App.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Aphasia_App.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C36096C432D3EF4B99100B1F /* Pods_Aphasia_AppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Aphasia_AppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D5DDC1F323C2D35B00839740 /* EmailInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailInfoViewController.swift; sourceTree = "<group>"; };
 		D5DDC1F523C3326600839740 /* SaveInformationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveInformationViewController.swift; sourceTree = "<group>"; };
 		D5DDC1F723C75D9500839740 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		D5DDC1F923C7664A00839740 /* SQLiteDataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SQLiteDataStore.swift; sourceTree = "<group>"; };
 		D5DDC1FB23C7778400839740 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
-		F654AB6213C229F88E8BB9E8 /* Pods_Aphasia_App_Aphasia_AppUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Aphasia_App_Aphasia_AppUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,7 +112,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3902C0C697C9C5C64F43C341 /* Pods_Aphasia_App.framework in Frameworks */,
+				E600C603AB1B5A40149B4FC4 /* Pods_Aphasia_App.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -118,7 +120,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B7BE683C4378451E6D0C5912 /* Pods_Aphasia_AppTests.framework in Frameworks */,
+				C08E79140BEF58B916C99F18 /* Pods_Aphasia_AppTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -126,7 +128,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1B753F710F670A0777C3C96C /* Pods_Aphasia_App_Aphasia_AppUITests.framework in Frameworks */,
+				163C9DF0AB672059E064F336 /* Pods_Aphasia_App_Aphasia_AppUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -159,6 +161,7 @@
 			isa = PBXGroup;
 			children = (
 				16CFA1A92374ADD00022C95F /* Main.storyboard */,
+				16D0E48323A1359C00BAEC8C /* GooglePlace.swift */,
 				D5DDC1F323C2D35B00839740 /* EmailInfoViewController.swift */,
 				D5DDC1F523C3326600839740 /* SaveInformationViewController.swift */,
 				16CFA1E32374C7CC0022C95F /* FirstPage.swift */,
@@ -224,9 +227,9 @@
 		BF3A0B5B7858296F59F90F43 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				C68B2F741E1C85DB5B3A32DF /* Pods_Aphasia_App.framework */,
-				F654AB6213C229F88E8BB9E8 /* Pods_Aphasia_App_Aphasia_AppUITests.framework */,
-				82E6136F28581B98374719AB /* Pods_Aphasia_AppTests.framework */,
+				64CD7E222D5AE8546E9991C9 /* Pods_Aphasia_App.framework */,
+				29203CF61AF0994C8EA286FB /* Pods_Aphasia_App_Aphasia_AppUITests.framework */,
+				C36096C432D3EF4B99100B1F /* Pods_Aphasia_AppTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -242,7 +245,8 @@
 				16CFA19C2374ADD00022C95F /* Sources */,
 				16CFA19D2374ADD00022C95F /* Frameworks */,
 				16CFA19E2374ADD00022C95F /* Resources */,
-				8BFD14A0870F6E2538F447E1 /* [CP] Embed Pods Frameworks */,
+				89CF66B077DB55991BEBBA20 /* [CP] Copy Pods Resources */,
+				5A19EFD76B27515F242997E3 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -280,7 +284,8 @@
 				16CFA1BD2374ADD20022C95F /* Sources */,
 				16CFA1BE2374ADD20022C95F /* Frameworks */,
 				16CFA1BF2374ADD20022C95F /* Resources */,
-				A2D64C50C56573BFB45E070B /* [CP] Embed Pods Frameworks */,
+				882CC7E10C872F2D164EDC6F /* [CP] Copy Pods Resources */,
+				363DE83924E3A2604BB1B285 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -373,6 +378,40 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		363DE83924E3A2604BB1B285 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Aphasia App-Aphasia AppUITests/Pods-Aphasia App-Aphasia AppUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Aphasia App-Aphasia AppUITests/Pods-Aphasia App-Aphasia AppUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Aphasia App-Aphasia AppUITests/Pods-Aphasia App-Aphasia AppUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5A19EFD76B27515F242997E3 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Aphasia App/Pods-Aphasia App-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Aphasia App/Pods-Aphasia App-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Aphasia App/Pods-Aphasia App-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		6E3DA255EC609D1962C6C2B7 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -417,38 +456,38 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		8BFD14A0870F6E2538F447E1 /* [CP] Embed Pods Frameworks */ = {
+		882CC7E10C872F2D164EDC6F /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Aphasia App/Pods-Aphasia App-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-Aphasia App-Aphasia AppUITests/Pods-Aphasia App-Aphasia AppUITests-resources-${CONFIGURATION}-input-files.xcfilelist",
 			);
-			name = "[CP] Embed Pods Frameworks";
+			name = "[CP] Copy Pods Resources";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Aphasia App/Pods-Aphasia App-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-Aphasia App-Aphasia AppUITests/Pods-Aphasia App-Aphasia AppUITests-resources-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Aphasia App/Pods-Aphasia App-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Aphasia App-Aphasia AppUITests/Pods-Aphasia App-Aphasia AppUITests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		A2D64C50C56573BFB45E070B /* [CP] Embed Pods Frameworks */ = {
+		89CF66B077DB55991BEBBA20 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Aphasia App-Aphasia AppUITests/Pods-Aphasia App-Aphasia AppUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-Aphasia App/Pods-Aphasia App-resources-${CONFIGURATION}-input-files.xcfilelist",
 			);
-			name = "[CP] Embed Pods Frameworks";
+			name = "[CP] Copy Pods Resources";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Aphasia App-Aphasia AppUITests/Pods-Aphasia App-Aphasia AppUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-Aphasia App/Pods-Aphasia App-resources-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Aphasia App-Aphasia AppUITests/Pods-Aphasia App-Aphasia AppUITests-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Aphasia App/Pods-Aphasia App-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		AD2E9AE7D9F40ED799E3497F /* [CP] Check Pods Manifest.lock */ = {
@@ -484,6 +523,7 @@
 				D5B9DECC23C0E324004B2B53 /* ExerciseB.swift in Sources */,
 				161AAF72237B5E5E00D505E7 /* LocationPage.swift in Sources */,
 				16FE531423876C98009FC96F /* QuestionBank.swift in Sources */,
+				16D0E48423A1359C00BAEC8C /* GooglePlace.swift in Sources */,
 				16A0F9C22388CA9B00EF86BD /* CameraPageController.swift in Sources */,
 				16CFA1A42374ADD00022C95F /* AppDelegate.swift in Sources */,
 				16CFA1A62374ADD00022C95F /* SceneDelegate.swift in Sources */,

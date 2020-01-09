@@ -10,7 +10,10 @@ target 'Aphasia App' do
   pod 'Firebase/Database'
   pod 'Firebase/Storage'
   pod 'SQLite.swift'
-  
+  pod 'GoogleMaps'
+  pod 'GooglePlaces'
+  pod 'SwiftyJSON', '~> 4.0'
+
 
   target 'Aphasia AppTests' do
     inherit! :search_paths
