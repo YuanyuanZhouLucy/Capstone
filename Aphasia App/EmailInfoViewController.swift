@@ -15,12 +15,18 @@ class EmailInfoViewController: UIViewController, MFMailComposeViewControllerDele
     @IBOutlet weak var slpNameTextField: UITextField!
     @IBOutlet weak var slpEmailTextField: UITextField!
     
+    private var user: User?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         clientNameTextField.delegate = self
         slpNameTextField.delegate = self
         slpEmailTextField.delegate = self
+        
+        user = SQLiteDataStore.instance.getUser()
+        print("User info --------------", user!.userName)
+        
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {

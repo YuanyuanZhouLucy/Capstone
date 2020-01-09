@@ -18,21 +18,16 @@ class SaveInformationViewController: UIViewController {
         super.viewDidLoad()
 
     }
-    
 
     @IBAction func saveClientInformation(_ sender: UIButton) {
-        print("Client name", clientName)
-        print("slp name", slpName)
-        print("slp email", slpEmail)
+        SQLiteDataStore.instance.updateUser(newUserName: clientName, newSlpName: slpName, newSlpEmail: slpEmail)
+        self.returnToProgressReport()
     }
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    
+    func returnToProgressReport() {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "ProgressReportHome")
+        self.present(vc, animated: true, completion: nil)
     }
-    */
 
 }

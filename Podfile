@@ -9,6 +9,7 @@ target 'Aphasia App' do
   pod 'Firebase/Core'
   pod 'Firebase/Database'
   pod 'Firebase/Storage'
+  pod 'SQLite.swift'
   
 
   target 'Aphasia AppTests' do
