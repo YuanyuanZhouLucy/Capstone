@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		160396CA2386310D00A6DEB7 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 160396C92386310D00A6DEB7 /* GoogleService-Info.plist */; };
 		161AAF72237B5E5E00D505E7 /* LocationPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 161AAF71237B5E5D00D505E7 /* LocationPage.swift */; };
 		161CB39A23949AF80083A0CF /* BackgroundSky.png in Resources */ = {isa = PBXBuildFile; fileRef = 161CB39923949AF70083A0CF /* BackgroundSky.png */; };
 		16A0F9C22388CA9B00EF86BD /* CameraPageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16A0F9C02388CA9400EF86BD /* CameraPageController.swift */; };
@@ -39,6 +38,7 @@
 		D5DDC1F623C3326600839740 /* SaveInformationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5DDC1F523C3326600839740 /* SaveInformationViewController.swift */; };
 		D5DDC1F823C75D9500839740 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5DDC1F723C75D9500839740 /* User.swift */; };
 		D5DDC1FA23C7664A00839740 /* SQLiteDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5DDC1F923C7664A00839740 /* SQLiteDataStore.swift */; };
+		D5DDC1FC23C7778400839740 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D5DDC1FB23C7778400839740 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,7 +60,6 @@
 
 /* Begin PBXFileReference section */
 		008FB648340D3E1F6BE69F62 /* Pods-Aphasia App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Aphasia App.release.xcconfig"; path = "Target Support Files/Pods-Aphasia App/Pods-Aphasia App.release.xcconfig"; sourceTree = "<group>"; };
-		160396C92386310D00A6DEB7 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		161AAF71237B5E5D00D505E7 /* LocationPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationPage.swift; sourceTree = "<group>"; };
 		161CB39923949AF70083A0CF /* BackgroundSky.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = BackgroundSky.png; sourceTree = "<group>"; };
 		16A0F9C02388CA9400EF86BD /* CameraPageController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CameraPageController.swift; path = "Aphasia App/CameraPageController.swift"; sourceTree = SOURCE_ROOT; };
@@ -102,6 +101,7 @@
 		D5DDC1F523C3326600839740 /* SaveInformationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveInformationViewController.swift; sourceTree = "<group>"; };
 		D5DDC1F723C75D9500839740 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		D5DDC1F923C7664A00839740 /* SQLiteDataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SQLiteDataStore.swift; sourceTree = "<group>"; };
+		D5DDC1FB23C7778400839740 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		F654AB6213C229F88E8BB9E8 /* Pods_Aphasia_App_Aphasia_AppUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Aphasia_App_Aphasia_AppUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -181,8 +181,8 @@
 				16CFA1A32374ADD00022C95F /* AppDelegate.swift */,
 				16CFA1A52374ADD00022C95F /* SceneDelegate.swift */,
 				16CFA1AC2374ADD20022C95F /* Assets.xcassets */,
+				D5DDC1FB23C7778400839740 /* GoogleService-Info.plist */,
 				16CFA1AE2374ADD20022C95F /* LaunchScreen.storyboard */,
-				160396C92386310D00A6DEB7 /* GoogleService-Info.plist */,
 				16CFA1B12374ADD20022C95F /* Info.plist */,
 				D5DDC1F723C75D9500839740 /* User.swift */,
 				D5DDC1F923C7664A00839740 /* SQLiteDataStore.swift */,
@@ -340,13 +340,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D5DDC1FC23C7778400839740 /* GoogleService-Info.plist in Resources */,
 				16CFA1B02374ADD20022C95F /* LaunchScreen.storyboard in Resources */,
 				16F57C8623804DC800ED7422 /* background.jpeg in Resources */,
 				16CFA1AD2374ADD20022C95F /* Assets.xcassets in Resources */,
 				16A985312380E3C2000C92E6 /* play.jpeg in Resources */,
 				161CB39A23949AF80083A0CF /* BackgroundSky.png in Resources */,
 				51114ABE2383B4630023788F /* map.png in Resources */,
-				160396CA2386310D00A6DEB7 /* GoogleService-Info.plist in Resources */,
 				16A985322380E3C2000C92E6 /* dog.jpeg in Resources */,
 				51114AC02383B9C50023788F /* bench.jpeg in Resources */,
 				16CFA1AB2374ADD00022C95F /* Main.storyboard in Resources */,
