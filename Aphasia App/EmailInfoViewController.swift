@@ -25,8 +25,10 @@ class EmailInfoViewController: UIViewController, MFMailComposeViewControllerDele
         slpEmailTextField.delegate = self
         
         user = SQLiteDataStore.instance.getUser()
-        print("User info --------------", user!.userName)
         
+        clientNameTextField.text = user?.userName
+        slpNameTextField.text = user?.slpName
+        slpEmailTextField.text = user?.slpEmail
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
