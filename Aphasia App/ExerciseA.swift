@@ -65,6 +65,10 @@ class ExerciseA: UIViewController, UITableViewDelegate, AVAudioRecorderDelegate,
         button3.setTitle(allQuestions.list[questionNumber].optionC, for: UIControl.State.normal)
         button4.setTitle(allQuestions.list[questionNumber].optionD, for: UIControl.State.normal)
         cueButton.setTitle("Cues", for: UIControl.State.normal)
+        cueButton2.setTitle("Cues", for: UIControl.State.normal)
+        cueButton3.setTitle("Cues", for: UIControl.State.normal)
+        cueButton4.setTitle("Cues", for: UIControl.State.normal)
+        
         selectedAnswer = allQuestions.list[questionNumber].correctAnswer
         cue1 = allQuestions.list[questionNumber].cue1
         cue2 = allQuestions.list[questionNumber].cue2

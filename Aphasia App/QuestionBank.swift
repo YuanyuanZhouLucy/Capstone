@@ -11,10 +11,24 @@ import FirebaseDatabase
 
 class QuestionBank {
     var list = [Question] ()
+    var category = ""
     let ref = Database.database().reference()
     
     init() {
-        ref.child("Cafe").observeSingleEvent(of: .value, with:{(snapshot) in
+        let locationType = locationTypeGV
+        print("the location i got is:")
+        print(locationType)
+        if(locationTypeGV == "electronics_store" || locationTypeGV == "restaurant" || locationTypeGV == "cafe"){
+            category = "Cafe"
+        }
+        else if(locationTypeGV == "grocery_or_supermarket"){
+            category = "Grocery Store"
+        }
+        else{
+            category = ""}
+        print("the category is:")
+        print(category)
+        ref.child(category).observeSingleEvent(of: .value, with:{(snapshot) in
             let value  = snapshot.value as? NSDictionary
             let value2  = snapshot.value as? NSDictionary
             let value3  = snapshot.value as? NSDictionary

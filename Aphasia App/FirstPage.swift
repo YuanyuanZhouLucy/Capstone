@@ -30,19 +30,19 @@ class FirstPage: UIViewController {
         //    ref.updateChildValues(updates)
         
         //to upload to firebase storage
-        let storageRef = Storage.storage().reference().child("userDefinedImages/dog.jpg")
-        let image = UIImage(named: "dog.jpeg")
+       // let storageRef = Storage.storage().reference().child("userDefinedImages/dog.jpg")
+       // let image = UIImage(named: "dog.jpeg")
    
                 
-        storageRef.putData(((image?.jpegData(compressionQuality: 1.0)!)!) , metadata: nil){ (image,error) in
-            if error == nil {
-                print("upload success")
-            }
-            else{
-                print(error?.localizedDescription)
-            }
+        //storageRef.putData(((image?.jpegData(compressionQuality: 1.0)!)!) , metadata: nil){ (image,error) in
+         //   if error == nil {
+         //       print("upload success")
+         //   }
+         //   else{
+         //       print(error?.localizedDescription)
+        //    }
             
-        }
+        //}
         
         
         
