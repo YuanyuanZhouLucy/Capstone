@@ -16,6 +16,7 @@ class EmailInfoViewController: UIViewController, MFMailComposeViewControllerDele
     @IBOutlet weak var slpEmailTextField: UITextField!
     
     private var user: User?
+    private var progress = [SessionProgess]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,6 +26,7 @@ class EmailInfoViewController: UIViewController, MFMailComposeViewControllerDele
         slpEmailTextField.delegate = self
         
         user = SQLiteDataStore.instance.getUser()
+        progress = SQLiteDataStore.instance.getProgressData()
         
         clientNameTextField.text = user?.userName
         slpNameTextField.text = user?.slpName
@@ -48,7 +50,7 @@ class EmailInfoViewController: UIViewController, MFMailComposeViewControllerDele
         
         composeVC.setToRecipients([slpEmailTextField.text!])
         composeVC.setSubject("Progress Report of Client \(clientNameTextField.text!) ")
-        composeVC.setMessageBody("Dear \(slpNameTextField.text!), Your client \(clientNameTextField.text!) has completed work", isHTML: false)
+        composeVC.setMessageBody(self.composeEmail(slpName: slpNameTextField.text!, clientName: clientNameTextField.text!, progess: progress), isHTML: false)
         
         self.present(composeVC, animated: true, completion: nil)
     }
@@ -71,6 +73,21 @@ class EmailInfoViewController: UIViewController, MFMailComposeViewControllerDele
             self.present(vc, animated: true, completion: nil)
         }
         
+    }
+    
+    func exerciseProgressValues(progress: [SessionProgess]) -> [String] {
+        if progress.count > 0 {
+            let recentSession = progress.last
+            let exerciseAProgess = "\(String(describing: recentSession!.numExerciseACorrect ))/\(String(describing: recentSession!.numExerciseAAttempted ))"
+            let exerciseBProgess = "\(String(describing: recentSession!.numExerciseBCorrect ))/\(String(describing: recentSession!.numExerciseBAttempted ))"
+            return [exerciseAProgess, exerciseBProgess]
+        }
+        return ["0/0", "0/0"]
+    }
+    
+    func composeEmail(slpName: String, clientName: String, progess: [SessionProgess]) -> String {
+        let exerciseLabels = self.exerciseProgressValues(progress: progress)
+        return "Dear \(slpName), Your client \(clientName) has gotten \(exerciseLabels[0]) on Exercise A and \(exerciseLabels[1]) on Exercise B."
     }
 
 }
