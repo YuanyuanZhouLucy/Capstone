@@ -22,7 +22,7 @@ class ProgressReportViewController: UIViewController {
         sessions = SQLiteDataStore.instance.getProgressData()
         
         if sessions.count > 0 {
-            lastSession = sessions[0]
+            lastSession = sessions.last
             exerciseALabel.text = makeProgressString(numSucessful: lastSession?.numExerciseAAttempted ?? 0 , numAttempted: lastSession?.numExerciseACorrect ?? 0)
             exerciseBLabel.text = makeProgressString(numSucessful: lastSession?.numExerciseBAttempted ?? 0, numAttempted: lastSession?.numExerciseBCorrect ?? 0)
         }

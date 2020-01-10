@@ -41,6 +41,7 @@ class SQLiteDataStore {
         }
         
         self.addUser(cuserName: "default", cslpName: "", cslpEmail: "")
+        self.addSessionProgress(cSessionTime: Date(), cNumExerciseAAttempted: 1, cNumExerciseACorrect: 3, cNumExerciseBAttempted: 5, cNumExerciseBCorrect: 6)
 
     }
     
