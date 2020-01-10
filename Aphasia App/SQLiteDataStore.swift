@@ -41,6 +41,7 @@ class SQLiteDataStore {
         }
         
         self.addUser(cuserName: "default", cslpName: "", cslpEmail: "")
+
     }
     
     func createTable() {

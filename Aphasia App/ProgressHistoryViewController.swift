@@ -18,6 +18,8 @@ class ProgressHistoryViewController: UIViewController, UITableViewDataSource, UI
         super.viewDidLoad()
         progressTableView.dataSource = self
         progressTableView.delegate = self
+        
+        sessions = SQLiteDataStore.instance.getProgressData()
     }
     
     //MARK: TableView functions
@@ -27,35 +29,23 @@ class ProgressHistoryViewController: UIViewController, UITableViewDataSource, UI
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: "ContactCell")!
-        var label: UILabel?
+        let cell = tableView.dequeueReusableCell(withIdentifier: "SessionCell", for: indexPath) as! SessionProgessTableViewCell
         
         let exerciseADisplay = "\(sessions[indexPath.row].numExerciseAAttempted) \\ \(sessions[indexPath.row].numExerciseACorrect)"
+        
+        print("----------", exerciseADisplay)
+
         let exerciseBDisplay = "\(sessions[indexPath.row].numExerciseBAttempted) \\ \(sessions[indexPath.row].numExerciseBCorrect)"
+        
         let df = DateFormatter()
         df.dateFormat = "yyyy-MM-dd hh:mm:ss"
+        print(df.string(from: sessions[indexPath.row].sessionTime))
         
-        label = cell.viewWithTag(1) as? UILabel // Date label
-        label?.text = df.string(from: sessions[indexPath.row].sessionTime)
-        
-        label = cell.viewWithTag(2) as? UILabel // Exercise A label
-        label?.text = exerciseADisplay
-        
-        label = cell.viewWithTag(3) as? UILabel // Exercise B label
-        label?.text = exerciseBDisplay
+        cell.dateLabel.text = df.string(from: sessions[indexPath.row].sessionTime)
+        cell.exerciseALabel.text = exerciseADisplay
+        cell.exerciseBLabel.text = exerciseBDisplay
         
         return cell
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

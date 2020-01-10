@@ -550,10 +550,10 @@
             </objects>
             <point key="canvasLocation" x="2506" y="108"/>
         </scene>
-        <!--View Controller-->
+        <!--Progress Report View Controller-->
         <scene sceneID="fV2-nJ-khZ">
             <objects>
-                <viewController storyboardIdentifier="ProgressReportHome" id="uRs-WK-vRf" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ProgressReportHome" id="uRs-WK-vRf" customClass="ProgressReportViewController" customModule="Aphasia_App" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="m7p-vN-rdg">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -632,6 +632,10 @@
                         <viewLayoutGuide key="safeArea" id="itD-hb-OVl"/>
                     </view>
                     <navigationItem key="navigationItem" id="Oal-Ni-8KD"/>
+                    <connections>
+                        <outlet property="exerciseALabel" destination="T0a-ML-whN" id="026-hE-emg"/>
+                        <outlet property="exerciseBLabel" destination="NYz-G8-pvV" id="7hq-LZ-8db"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bIB-MQ-Pos" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -672,16 +676,18 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="BXi-8q-k5g">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="SessionCell" id="BXi-8q-k5g" customClass="SessionProgessTableViewCell" customModule="Aphasia_App" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="328" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="BXi-8q-k5g" id="DTa-8l-Ld6">
                                             <rect key="frame" x="0.0" y="0.0" width="328" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Datetime" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C86-oq-1Xf">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Datetime" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C86-oq-1Xf">
                                                     <rect key="frame" x="20" y="11" width="70" height="21"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="70" id="HjJ-rA-Hct"/>
+                                                    </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -702,6 +708,11 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="dateLabel" destination="C86-oq-1Xf" id="tqn-VD-D9Z"/>
+                                            <outlet property="exerciseALabel" destination="dVJ-eb-1jL" id="yf5-TL-2Jb"/>
+                                            <outlet property="exerciseBLabel" destination="MAV-WO-pCj" id="F2i-nj-m0n"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
@@ -1257,7 +1268,7 @@
         <image name="spaker.jpeg" width="350" height="392"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Age-O3-usl"/>
+        <segue reference="p4V-2L-48W"/>
         <segue reference="F1W-fL-hJq"/>
         <segue reference="NTr-mo-lmx"/>
         <segue reference="aae-1L-Q76"/>
