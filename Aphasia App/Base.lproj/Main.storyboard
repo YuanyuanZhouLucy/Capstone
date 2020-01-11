@@ -572,6 +572,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.60000002384185791" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="BackgroundSky.png" translatesAutoresizingMaskIntoConstraints="NO" id="yeb-bc-s0R">
+                                <rect key="frame" x="-173" y="-120" width="893" height="1094"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Exercises B" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lon-mp-g1c">
                                 <rect key="frame" x="57" y="443" width="214" height="53"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -618,10 +622,6 @@
                                     <segue destination="S32-6g-l5Y" kind="show" id="B0A-qF-Xyd"/>
                                 </connections>
                             </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.60000002384185791" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="BackgroundSky.png" translatesAutoresizingMaskIntoConstraints="NO" id="yeb-bc-s0R">
-                                <rect key="frame" x="-173" y="-120" width="893" height="1094"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mWo-FK-raV">
                                 <rect key="frame" x="-163" y="10" width="99" height="58"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -659,6 +659,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.60000002384185791" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="BackgroundSky.png" translatesAutoresizingMaskIntoConstraints="NO" id="GSF-6f-RX6">
+                                <rect key="frame" x="-287" y="-250" width="962" height="1282"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="4/10" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NGC-dh-mfE">
                                 <rect key="frame" x="220" y="335" width="55" height="33"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -796,10 +800,6 @@
                                     <segue destination="Pcn-Nu-4fx" kind="show" id="aae-1L-Q76"/>
                                 </connections>
                             </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.60000002384185791" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="BackgroundSky.png" translatesAutoresizingMaskIntoConstraints="NO" id="GSF-6f-RX6">
-                                <rect key="frame" x="-287" y="-250" width="962" height="1282"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="zja-kJ-TL5"/>
@@ -1325,8 +1325,9 @@
     <inferredMetricsTieBreakers>
         <segue reference="Age-O3-usl"/>
         <segue reference="F1W-fL-hJq"/>
-        <segue reference="NTr-mo-lmx"/>
-        <segue reference="Z9L-mZ-Hf0"/>
+
+        <segue reference="SVC-su-jJT"/>
+        <segue reference="aae-1L-Q76"/>
         <segue reference="5IP-G0-Grg"/>
     </inferredMetricsTieBreakers>
 </document>
