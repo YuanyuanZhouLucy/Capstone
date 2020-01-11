@@ -12,6 +12,7 @@ import SQLite
 class SQLiteDataStore {
     private let users = Table("users")
     private let id = Expression<Int64>("id")
+    private let uploadId = Expression<Int>("uploadId")
     private let userName = Expression<String?>("userName")
     private let slpName = Expression<String>("slpName")
     private let slpEmail = Expression<String>("slpEmail")
@@ -26,6 +27,7 @@ class SQLiteDataStore {
         
         do {
             db = try Connection("\(path)/aphasiaUserData.sqlite3")
+            //deleteUserTable() - run this line if you're getting a seg fault
             createTable()
         } catch {
             db = nil
@@ -39,6 +41,7 @@ class SQLiteDataStore {
         do {
             try db!.run(users.create(ifNotExists: true) { table in
                 table.column(id, primaryKey: true)
+                table.column(uploadId, unique: true)
                 table.column(userName)
                 table.column(slpName)
                 table.column(slpEmail)
@@ -48,10 +51,18 @@ class SQLiteDataStore {
         }
     }
     
+    func deleteUserTable() {
+        do {
+            try db!.run(users.drop(ifExists: true))
+        } catch {
+            print("Unable to delete users table")
+        }
+    }
     
     func addUser(cuserName: String, cslpName: String, cslpEmail: String) -> Int64? {
         do {
-            let insert = users.insert(userName <- cuserName, slpName <- cslpName, slpEmail <- cslpEmail)
+            let cuploadId = Int.random(in: 10 ... 10000)
+            let insert = users.insert(uploadId <- cuploadId, userName <- cuserName, slpName <- cslpName, slpEmail <- cslpEmail)
             let id = try db!.run(insert)
             
             return id
@@ -67,6 +78,7 @@ class SQLiteDataStore {
         do {
             for user in try db!.prepare(self.users) {
                 user_list.append(User(
+                    uploadId: user[uploadId],
                     userName: user[userName]!,
                     slpName: user[slpName],
                     slpEmail: user[slpEmail]))
@@ -76,6 +88,11 @@ class SQLiteDataStore {
         }
         
         return user_list[0]
+    }
+    
+    func getUserUploadId() -> Int {
+        let user = getUser()
+        return user.uploadId
     }
     
     func updateUser(newUserName: String, newSlpName: String, newSlpEmail: String) -> Bool {

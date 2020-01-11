@@ -175,6 +175,8 @@
 				16FE531323876C98009FC96F /* QuestionBank.swift */,
 				16FE530D2386553B009FC96F /* ExerciseATableViewCell.swift */,
 				16A0F9C02388CA9400EF86BD /* CameraPageController.swift */,
+				D5DDC1F723C75D9500839740 /* User.swift */,
+				D5DDC1F923C7664A00839740 /* SQLiteDataStore.swift */,
 				16F57C8523804DC800ED7422 /* background.jpeg */,
 				161CB39923949AF70083A0CF /* BackgroundSky.png */,
 				51114ABF2383B9C50023788F /* bench.jpeg */,
@@ -190,8 +192,6 @@
 				D5DDC1FB23C7778400839740 /* GoogleService-Info.plist */,
 				16CFA1AE2374ADD20022C95F /* LaunchScreen.storyboard */,
 				16CFA1B12374ADD20022C95F /* Info.plist */,
-				D5DDC1F723C75D9500839740 /* User.swift */,
-				D5DDC1F923C7664A00839740 /* SQLiteDataStore.swift */,
 			);
 			path = "Aphasia App";
 			sourceTree = "<group>";

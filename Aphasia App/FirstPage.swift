@@ -25,6 +25,10 @@ class FirstPage: UIViewController {
         self.exerciseButton.layer.cornerRadius = 20
         
         let ref = Database.database().reference()
+        
+        //create user
+        SQLiteDataStore.instance.getUserUploadId()
+        
         // to update database
         //   let updates = ["Exercise1/Location" : "bookstore"]
         //    ref.updateChildValues(updates)
@@ -54,18 +58,5 @@ class FirstPage: UIViewController {
             print(URL)
             
         })
-        // Do any additional setup after loading the view.
     }
-    
-    
-    /*
-     // MARK: - Navigation
-     
-     // In a storyboard-based application, you will often want to do a little preparation before navigation
-     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-     // Get the new view controller using segue.destination.
-     // Pass the selected object to the new view controller.
-     }
-     */
-    
 }
