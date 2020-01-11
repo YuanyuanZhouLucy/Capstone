@@ -33,6 +33,7 @@
 		51114ABC2383B29F0023788F /* tree.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 51114ABB2383B29F0023788F /* tree.jpeg */; };
 		51114ABE2383B4630023788F /* map.png in Resources */ = {isa = PBXBuildFile; fileRef = 51114ABD2383B4630023788F /* map.png */; };
 		51114AC02383B9C50023788F /* bench.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 51114ABF2383B9C50023788F /* bench.jpeg */; };
+		51F1BDED23C3FD23001136AD /* UIUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51F1BDEC23C3FD23001136AD /* UIUtilities.swift */; };
 		B7BE683C4378451E6D0C5912 /* Pods_Aphasia_AppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82E6136F28581B98374719AB /* Pods_Aphasia_AppTests.framework */; };
 		D5B9DECC23C0E324004B2B53 /* ExerciseB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16EEACC12395B72C00C09534 /* ExerciseB.swift */; };
 /* End PBXBuildFile section */
@@ -89,6 +90,7 @@
 		51114ABB2383B29F0023788F /* tree.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = tree.jpeg; sourceTree = "<group>"; };
 		51114ABD2383B4630023788F /* map.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = map.png; sourceTree = "<group>"; };
 		51114ABF2383B9C50023788F /* bench.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bench.jpeg; sourceTree = "<group>"; };
+		51F1BDEC23C3FD23001136AD /* UIUtilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIUtilities.swift; sourceTree = "<group>"; };
 		636BE746E4BC251B396BCD6F /* Pods-Aphasia App-Aphasia AppUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Aphasia App-Aphasia AppUITests.debug.xcconfig"; path = "Target Support Files/Pods-Aphasia App-Aphasia AppUITests/Pods-Aphasia App-Aphasia AppUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		82E6136F28581B98374719AB /* Pods_Aphasia_AppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Aphasia_AppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9179C6DB168130C1EF2E53DE /* Pods-Aphasia App.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Aphasia App.debug.xcconfig"; path = "Target Support Files/Pods-Aphasia App/Pods-Aphasia App.debug.xcconfig"; sourceTree = "<group>"; };
@@ -159,6 +161,7 @@
 				16FE531323876C98009FC96F /* QuestionBank.swift */,
 				16FE530D2386553B009FC96F /* ExerciseATableViewCell.swift */,
 				16A0F9C02388CA9400EF86BD /* CameraPageController.swift */,
+				51F1BDEC23C3FD23001136AD /* UIUtilities.swift */,
 				16F57C8523804DC800ED7422 /* background.jpeg */,
 				161CB39923949AF70083A0CF /* BackgroundSky.png */,
 				51114ABF2383B9C50023788F /* bench.jpeg */,
@@ -476,6 +479,7 @@
 				16CFA1A62374ADD00022C95F /* SceneDelegate.swift in Sources */,
 				16FE530E2386553B009FC96F /* ExerciseATableViewCell.swift in Sources */,
 				16FE530A23864219009FC96F /* ExerciseA.swift in Sources */,
+				51F1BDED23C3FD23001136AD /* UIUtilities.swift in Sources */,
 				16CFA1E42374C7CC0022C95F /* FirstPage.swift in Sources */,
 				16FE531223876C08009FC96F /* Question.swift in Sources */,
 			);

@@ -9,7 +9,8 @@ target 'Aphasia App' do
   pod 'Firebase/Core'
   pod 'Firebase/Database'
   pod 'Firebase/Storage'
-  
+  pod 'Firebase/Analytics'
+  pod 'Firebase/MLVision'
 
   target 'Aphasia AppTests' do
     inherit! :search_paths

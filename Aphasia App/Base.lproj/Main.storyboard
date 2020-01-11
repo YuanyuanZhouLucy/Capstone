@@ -20,16 +20,50 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="G2A-zJ-NJ4">
-                                <rect key="frame" x="71" y="41" width="281" height="613"/>
+                                <rect key="frame" x="71" y="61" width="277" height="525"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Scy-0z-5Uu">
-                                <rect key="frame" x="152" y="682" width="110" height="40"/>
+                                <rect key="frame" x="152" y="714" width="110" height="40"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="23"/>
                                 <state key="normal" title="Take Photo"/>
                                 <connections>
-                                    <action selector="uploadPhoto:" destination="lqm-tz-eCN" eventType="touchUpInside" id="1Wd-er-pZR"/>
+                                    <action selector="takePhoto:" destination="lqm-tz-eCN" eventType="touchUpInside" id="kYc-Xj-jD8"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yaD-5Q-ash">
+                                <rect key="frame" x="48" y="615" width="85" height="59"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Detect"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fWM-4q-1Sd">
+                                <rect key="frame" x="313" y="629" width="41" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Name"/>
+                                <connections>
+                                    <action selector="namePhoto:" destination="lqm-tz-eCN" eventType="touchUpInside" id="WXL-v7-u1t"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Name of Object in Photo" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eSf-np-CfX">
+                                <rect key="frame" x="80" y="680" width="268" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Name of object" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dzC-HT-Ror">
+                                <rect key="frame" x="155" y="653" width="118" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nD2-h9-1Ga">
+                                <rect key="frame" x="190" y="762" width="34" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Save"/>
+                                <connections>
+                                    <action selector="saveDatabase:" destination="lqm-tz-eCN" eventType="touchUpInside" id="pzT-61-Jnb"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -38,8 +72,13 @@
                     </view>
                     <navigationItem key="navigationItem" id="Qu1-b6-5xv"/>
                     <connections>
-                        <outlet property="imageView" destination="G2A-zJ-NJ4" id="JHI-AZ-Dai"/>
-                        <outletCollection property="uploadPhoto" destination="Scy-0z-5Uu" id="g1k-Ul-zcn"/>
+                        <outlet property="detectButton" destination="yaD-5Q-ash" id="Ozx-gp-huu"/>
+                        <outlet property="imageView" destination="G2A-zJ-NJ4" id="dZW-ld-Rhl"/>
+                        <outlet property="nameButton" destination="fWM-4q-1Sd" id="cg3-4N-iNc"/>
+                        <outlet property="nameObjectLabel" destination="dzC-HT-Ror" id="fAi-8T-N4e"/>
+                        <outlet property="nameOfPhoto" destination="eSf-np-CfX" id="wGI-sM-gug"/>
+                        <outlet property="saveButton" destination="nD2-h9-1Ga" id="XjC-C7-zLX"/>
+                        <outlet property="takePhotoButton" destination="Scy-0z-5Uu" id="w1X-cg-fqp"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Sah-PV-LSI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -322,7 +361,7 @@
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                 </state>
                                 <connections>
-                                    <segue destination="lqm-tz-eCN" kind="show" id="CIX-zz-xYg"/>
+                                    <segue destination="lqm-tz-eCN" kind="show" id="uhy-kg-bDg"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xVJ-hj-W4W">
@@ -1172,9 +1211,9 @@
         <image name="spaker.jpeg" width="350" height="392"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="p4V-2L-48W"/>
+        <segue reference="Age-O3-usl"/>
         <segue reference="NTr-mo-lmx"/>
         <segue reference="q0m-s2-T2G"/>
-        <segue reference="Lmf-nV-rtC"/>
+        <segue reference="5IP-G0-Grg"/>
     </inferredMetricsTieBreakers>
 </document>
