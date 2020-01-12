@@ -603,10 +603,10 @@
             </objects>
             <point key="canvasLocation" x="2505.7971014492755" y="107.8125"/>
         </scene>
-        <!--View Controller-->
+        <!--Progress Report View Controller-->
         <scene sceneID="fV2-nJ-khZ">
             <objects>
-                <viewController storyboardIdentifier="ProgressReportHome" id="uRs-WK-vRf" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ProgressReportHome" id="uRs-WK-vRf" customClass="ProgressReportViewController" customModule="Aphasia_App" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="m7p-vN-rdg">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -685,6 +685,10 @@
                         <viewLayoutGuide key="safeArea" id="itD-hb-OVl"/>
                     </view>
                     <navigationItem key="navigationItem" id="ueP-2X-L70"/>
+                    <connections>
+                        <outlet property="exerciseALabel" destination="T0a-ML-whN" id="j68-LV-cRf"/>
+                        <outlet property="exerciseBLabel" destination="NYz-G8-pvV" id="GmS-lZ-hvL"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bIB-MQ-Pos" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1368,7 +1372,7 @@
         <segue reference="Age-O3-usl"/>
         <segue reference="Dwz-CW-fih"/>
         <segue reference="NTr-mo-lmx"/>
-        <segue reference="Z9L-mZ-Hf0"/>
+        <segue reference="aae-1L-Q76"/>
         <segue reference="5IP-G0-Grg"/>
     </inferredMetricsTieBreakers>
 </document>

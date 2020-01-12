@@ -43,6 +43,7 @@
 		D5DDC20723CBA16600839740 /* UsersHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5DDC20623CBA16600839740 /* UsersHelper.swift */; };
 		D5DDC20923CBAA2C00839740 /* SessionProgressHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5DDC20823CBAA2C00839740 /* SessionProgressHelper.swift */; };
 		D5DDC20B23CBAD6100839740 /* SessionProgress.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5DDC20A23CBAD6100839740 /* SessionProgress.swift */; };
+		D5DDC20D23CBDD3400839740 /* ProgressReportViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5DDC20C23CBDD3400839740 /* ProgressReportViewController.swift */; };
 		E600C603AB1B5A40149B4FC4 /* Pods_Aphasia_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 64CD7E222D5AE8546E9991C9 /* Pods_Aphasia_App.framework */; };
 /* End PBXBuildFile section */
 
@@ -113,6 +114,7 @@
 		D5DDC20623CBA16600839740 /* UsersHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersHelper.swift; sourceTree = "<group>"; };
 		D5DDC20823CBAA2C00839740 /* SessionProgressHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionProgressHelper.swift; sourceTree = "<group>"; };
 		D5DDC20A23CBAD6100839740 /* SessionProgress.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionProgress.swift; sourceTree = "<group>"; };
+		D5DDC20C23CBDD3400839740 /* ProgressReportViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressReportViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -186,6 +188,7 @@
 				D5DDC1F923C7664A00839740 /* SQLiteDataStore.swift */,
 				D5DDC20A23CBAD6100839740 /* SessionProgress.swift */,
 				D5DDC20823CBAA2C00839740 /* SessionProgressHelper.swift */,
+				D5DDC20C23CBDD3400839740 /* ProgressReportViewController.swift */,
 				16F57C8523804DC800ED7422 /* background.jpeg */,
 				161CB39923949AF70083A0CF /* BackgroundSky.png */,
 				51114ABF2383B9C50023788F /* bench.jpeg */,
@@ -544,6 +547,7 @@
 				16CFA1A42374ADD00022C95F /* AppDelegate.swift in Sources */,
 				16CFA1A62374ADD00022C95F /* SceneDelegate.swift in Sources */,
 				16FE530E2386553B009FC96F /* ExerciseATableViewCell.swift in Sources */,
+				D5DDC20D23CBDD3400839740 /* ProgressReportViewController.swift in Sources */,
 				16FE530A23864219009FC96F /* ExerciseA.swift in Sources */,
 				16CFA1E42374C7CC0022C95F /* FirstPage.swift in Sources */,
 				D5DDC1FA23C7664A00839740 /* SQLiteDataStore.swift in Sources */,
