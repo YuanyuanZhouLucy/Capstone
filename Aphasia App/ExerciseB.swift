@@ -21,6 +21,20 @@ class ExerciseB: UIViewController{
     var totalScore = 0
     var wrongOption = Int()
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        hide()
+        button1.layer.cornerRadius = 30
+        button2.layer.cornerRadius = 30
+        button3.layer.cornerRadius = 30
+        button4.layer.cornerRadius = 30
+        button1.setTitle("Begin", for: UIControl.State.normal)
+        button2.setTitle("Begin", for: UIControl.State.normal)
+        button3.setTitle("Begin", for: UIControl.State.normal)
+        button4.setTitle("Begin", for: UIControl.State.normal)
+    }
+    
+    
     func updateQuestion (){
     if let url = URL (string:allQuestions.list[questionNumber].questionImage) {
         DispatchQueue.main.async {
@@ -142,35 +156,12 @@ class ExerciseB: UIViewController{
         }
     }
     
-    
-    
-    
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        hide()
-        button1.layer.cornerRadius = 30
-        button2.layer.cornerRadius = 30
-        button3.layer.cornerRadius = 30
-        button4.layer.cornerRadius = 30
-        button1.setTitle("Begin", for: UIControl.State.normal)
-        button2.setTitle("Begin", for: UIControl.State.normal)
-        button3.setTitle("Begin", for: UIControl.State.normal)
-        button4.setTitle("Begin", for: UIControl.State.normal)
-        
-
-        // Do any additional setup after loading the view.
+    @IBAction func homeButton(_ sender: Any) {
+        let id = SQLiteDataStore.instance.addExerciseBSession(date: Date(), exercisesAttempted: questionNumber, exercisesCorrect: totalScore)
+        if id! == nil {
+            print("Add to session information to exercise B database failed" )
+        }
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

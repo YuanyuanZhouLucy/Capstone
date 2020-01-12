@@ -1002,6 +1002,7 @@
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                 </state>
                                 <connections>
+                                    <action selector="homeButton:" destination="hek-tG-wFt" eventType="touchUpInside" id="IAT-4K-SyO"/>
                                     <segue destination="Pcn-Nu-4fx" kind="show" id="Z9L-mZ-Hf0"/>
                                 </connections>
                             </button>
@@ -1130,6 +1131,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="29"/>
                                 <state key="normal" title="Next Exercise"/>
                                 <connections>
+                                    <action selector="nextExerciseButton:" destination="hek-tG-wFt" eventType="touchUpInside" id="n7T-e6-UL8"/>
                                     <segue destination="nuc-qc-SU7" kind="show" id="Age-O3-usl"/>
                                 </connections>
                             </button>
@@ -1182,6 +1184,7 @@
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                 </state>
                                 <connections>
+                                    <action selector="homeButton:" destination="nuc-qc-SU7" eventType="touchUpInside" id="kDe-QL-iBJ"/>
                                     <segue destination="lcO-d1-bLy" kind="show" id="NTr-mo-lmx"/>
                                 </connections>
                             </button>
@@ -1365,7 +1368,7 @@
         <segue reference="Age-O3-usl"/>
         <segue reference="Dwz-CW-fih"/>
         <segue reference="NTr-mo-lmx"/>
-        <segue reference="q0m-s2-T2G"/>
+        <segue reference="Z9L-mZ-Hf0"/>
         <segue reference="5IP-G0-Grg"/>
     </inferredMetricsTieBreakers>
 </document>
