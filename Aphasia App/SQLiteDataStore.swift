@@ -21,7 +21,7 @@ class SQLiteDataStore {
         do {
             db = try Connection("\(path)/aphasiaUserData.sqlite3")
             //run this line if you're getting a seg fault
-            deleteTables()
+            //deleteTables()
             createTable()
         } catch {
             db = nil
