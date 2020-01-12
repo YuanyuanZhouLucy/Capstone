@@ -13,7 +13,8 @@ target 'Aphasia App' do
   pod 'GoogleMaps'
   pod 'GooglePlaces'
   pod 'SwiftyJSON', '~> 4.0'
-
+  pod 'Firebase/Analytics'
+  pod 'Firebase/MLVision'
 
   target 'Aphasia AppTests' do
     inherit! :search_paths
