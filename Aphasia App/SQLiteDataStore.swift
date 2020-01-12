@@ -27,17 +27,26 @@ class SQLiteDataStore {
         
         do {
             db = try Connection("\(path)/aphasiaUserData.sqlite3")
-            //deleteUserTable() - run this line if you're getting a seg fault
+            //run this line if you're getting a seg fault
+            //deleteUserTable()
             createTable()
         } catch {
             db = nil
             print ("Unable to open database")
         }
-        
-        self.addUser(cuserName: "default", cslpName: "", cslpEmail: "")
     }
     
     func createTable() {
+        
+        var firstTime = false
+        
+        do {
+            try db!.scalar(users.exists)
+        }
+        catch {
+            firstTime = true
+        }
+        
         do {
             try db!.run(users.create(ifNotExists: true) { table in
                 table.column(id, primaryKey: true)
@@ -46,6 +55,9 @@ class SQLiteDataStore {
                 table.column(slpName)
                 table.column(slpEmail)
                 })
+            if firstTime {
+                self.addUser(cuserName: "default", cslpName: "", cslpEmail: "")
+            }
         } catch {
             print("Unable to create table")
         }
