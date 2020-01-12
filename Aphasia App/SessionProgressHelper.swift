@@ -28,7 +28,6 @@ class ExerciseAProgressHelper {
         } catch {
             print("Unable to create Exercise A table")
         }
-        
     }
     
     static func insertSession(db: Connection?, date:Date, cexercisesAttempted: Int, cexercisesCorrect: Int) -> Int64? {
