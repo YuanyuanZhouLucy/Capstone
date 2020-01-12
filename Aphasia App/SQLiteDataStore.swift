@@ -10,13 +10,6 @@ import Foundation
 import SQLite
 
 class SQLiteDataStore {
-    private let users = Table("users")
-    private let id = Expression<Int64>("id")
-    private let uploadId = Expression<Int>("uploadId")
-    private let userName = Expression<String?>("userName")
-    private let slpName = Expression<String>("slpName")
-    private let slpEmail = Expression<String>("slpEmail")
-    
     static let instance = SQLiteDataStore()
     private let db: Connection?
     
@@ -28,7 +21,7 @@ class SQLiteDataStore {
         do {
             db = try Connection("\(path)/aphasiaUserData.sqlite3")
             //run this line if you're getting a seg fault
-            //deleteUserTable()
+            deleteTables()
             createTable()
         } catch {
             db = nil
@@ -40,15 +33,11 @@ class SQLiteDataStore {
         UsersHelper.createTable(db: db)
     }
     
-    //MARK: User functions
-    func deleteUserTable() {
-        do {
-            try db!.run(users.drop(ifExists: true))
-        } catch {
-            print("Unable to delete users table")
-        }
+    func deleteTables() {
+        UsersHelper.deleteUserTable(db: db)
     }
     
+    //MARK: User functions
     func addUser(cuserName: String, cslpName: String, cslpEmail: String) -> Int64? {
         return UsersHelper.addUser(db: db, cuserName: cuserName, cslpName: cslpName, cslpEmail: cslpEmail)
     }

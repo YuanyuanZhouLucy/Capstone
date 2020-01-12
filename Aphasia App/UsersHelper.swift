@@ -93,5 +93,13 @@ class UsersHelper {
         
         return false
     }
+    
+    static func deleteUserTable(db: Connection?) {
+        do {
+            try db!.run(users.drop(ifExists: true))
+        } catch {
+            print("Unable to delete users table")
+        }
+    }
 
 }
