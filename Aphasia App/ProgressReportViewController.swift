@@ -35,6 +35,14 @@ class ProgressReportViewController: UIViewController {
             let destinationVC = segue.destination as! ProjectHistoryViewController
             destinationVC.whichExercise = "B"
         }
+        else if segue.identifier == "ExerciseAEmail"{
+            let destinationVC = segue.destination as! EmailInfoViewController
+            destinationVC.whichExercise = "A"
+        }
+        else if segue.identifier == "ExerciseBEmail"{
+            let destinationVC = segue.destination as! EmailInfoViewController
+            destinationVC.whichExercise = " B"
+        }
     }
     
     func resultFormatter(session: SessionProgress) -> String {
