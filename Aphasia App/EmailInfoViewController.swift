@@ -16,6 +16,7 @@ class EmailInfoViewController: UIViewController, MFMailComposeViewControllerDele
     @IBOutlet weak var slpEmailTextField: UITextField!
     
     private var user: User?
+    var whichExercise = "A"
     
     override func viewDidLoad() {
         super.viewDidLoad()

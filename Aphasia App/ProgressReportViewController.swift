@@ -26,12 +26,13 @@ class ProgressReportViewController: UIViewController {
         self.modifyText(session: lastExerciseBSession, label: exerciseBLabel)
     }
     
-    func prepare(segue: UIStoryboardSegue, sender: Any?) {
-        let destinationVC = segue.destination as! ProjectHistoryViewController
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "ExerciseAHistorySegue"{
+            let destinationVC = segue.destination as! ProjectHistoryViewController
             destinationVC.whichExercise = "A"
         }
         else if segue.identifier == "ExerciseBHistorySegue"{
+            let destinationVC = segue.destination as! ProjectHistoryViewController
             destinationVC.whichExercise = "B"
         }
     }

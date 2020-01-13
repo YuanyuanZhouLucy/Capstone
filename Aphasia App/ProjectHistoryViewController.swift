@@ -43,7 +43,7 @@ class ProjectHistoryViewController: UIViewController, UITableViewDataSource, UIT
         let exerciseDisplay = "\(sessions[indexPath.row].exercisesCorrect)/ \(sessions[indexPath.row].exercisesAttempted)"
 
         let df = DateFormatter()
-        df.dateFormat = "yyyy-MM-dd hh:mm:ss"
+        df.dateFormat = "MM/dd hh:mm"
 
         cell.dateLabel.text = df.string(from: sessions[indexPath.row].sessionEndTime)
         cell.resultLabel.text = exerciseDisplay
