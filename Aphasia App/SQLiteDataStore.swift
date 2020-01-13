@@ -31,6 +31,8 @@ class SQLiteDataStore {
 
     func createTable() {
         UsersHelper.createTable(db: db)
+        ExerciseAProgressHelper.createTable(db: db)
+        ExerciseBProgressHelper.createTable(db: db)
     }
     
     func deleteTables() {
@@ -57,5 +59,30 @@ class SQLiteDataStore {
     
     func deleteUser() -> Bool {
         return self.updateUser(newUserName: "", newSlpName: "", newSlpEmail: "")
+    }
+    
+    //MARK: Session progress function
+    func getExerciseASessionProgress() -> [SessionProgress] {
+        return ExerciseAProgressHelper.getAllSession(db: db)
+    }
+    
+    func getExerciseALatestSessionProgress() -> SessionProgress? {
+        return ExerciseAProgressHelper.getLastSession(db: db)
+    }
+    
+    func addExerciseASession(date:Date, exercisesAttempted:Int, exercisesCorrect:Int) -> Int64? {
+        return ExerciseAProgressHelper.insertSession(db: db, date: date, cexercisesAttempted: exercisesAttempted, cexercisesCorrect:exercisesCorrect)
+    }
+    
+    func getExerciseBSessionProgress() -> [SessionProgress] {
+        return ExerciseBProgressHelper.getAllSession(db: db)
+    }
+    
+    func getExerciseBLatestSessionProgress() -> SessionProgress? {
+        return ExerciseBProgressHelper.getLastSession(db:db)
+    }
+    
+    func addExerciseBSession(date:Date, exercisesAttempted:Int, exercisesCorrect:Int) -> Int64? {
+        return ExerciseBProgressHelper.insertSession(db: db, date: date, cexercisesAttempted: exercisesAttempted, cexercisesCorrect:exercisesCorrect)
     }
 }
