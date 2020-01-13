@@ -75,7 +75,7 @@ class QuestionBank {
             let cue12 = Exercise?["Cue2"] as? String ?? ""
             let cue13 = Exercise?["Cue3"] as? String ?? ""
             let cue14 = Exercise?["Cue4"] as? String ?? ""
-            let r11 = self.nonRelatedWord[randomNonRelatedWordPicker]
+            let r11 = Exercise?["Opt1"] as? String ?? ""
             let r12 = Exercise?["Opt2"] as? String ?? ""
             let r13 = Exercise?["Opt3"] as? String ?? ""
             let r14 = Exercise?["Opt4"] as? String ?? ""
