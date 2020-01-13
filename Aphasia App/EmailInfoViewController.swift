@@ -80,13 +80,14 @@ class EmailInfoViewController: UIViewController, MFMailComposeViewControllerDele
         var progress:String
         
         let df = DateFormatter()
-        df.dateFormat = "yyyy/MM/dd hh:mm"
+        df.timeZone = .current
+        df.dateFormat = "yyyy-MM-dd HH:mm:ss"
         
         if (latestSession != nil){
             sessionEndTime = latestSession!.sessionEndTime
             progress = "\(latestSession!.exercisesCorrect)/\(latestSession!.exercisesAttempted)"
             
-            return "Dear \(slpNameTextField.text!), Your client \(clientNameTextField.text!) performed exercise \(whichExercise) to on \(df.string(from: sessionEndTime!)). They received a score of \(progress)."
+            return "Dear \(slpNameTextField.text!), Your client \(clientNameTextField.text!) performed exercise \(whichExercise) on \(df.string(from: sessionEndTime!)). They received a score of \(progress)."
         }
         
         return "Dear \(slpNameTextField.text!), Your client \(clientNameTextField.text!) has not completed exercise\(whichExercise) to date."
