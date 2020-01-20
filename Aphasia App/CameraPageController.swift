@@ -75,7 +75,7 @@ class CameraPageController: UIViewController, UIImagePickerControllerDelegate, U
         let image = imageView.image
         let text: String = nameObjectLabel.text!
 //        let text = "randdd333"
-        let uid = 1
+        let uid = SQLiteDataStore.instance.getUserUploadId()
         let location = "cafe"
         
         
@@ -96,8 +96,12 @@ class CameraPageController: UIViewController, UIImagePickerControllerDelegate, U
               return
             }
             let ref = Database.database().reference()
-            ref.child("userDefinedEx").child("uid\(uid)").child("\(location)").child("Exercise1").child("imageURL").setValue(downloadURL.absoluteString)
-            ref.child("userDefinedEx").child("uid\(uid)").child("\(location)").child("Exercise1").child("Name").setValue(text)
+            let dict:[String: Any] = [
+                "imageURL": downloadURL.absoluteString,
+                "Name": text
+                ]
+            
+            ref.child("userDefinedEx").child("uid\(uid)").child("\(location)").childByAutoId().setValue(dict)
             print("upload \(text)")
           }
  
