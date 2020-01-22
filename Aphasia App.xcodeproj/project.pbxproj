@@ -44,6 +44,13 @@
 		D5DDC1F623C3326600839740 /* SaveInformationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5DDC1F523C3326600839740 /* SaveInformationViewController.swift */; };
 		D5DDC1F823C75D9500839740 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5DDC1F723C75D9500839740 /* User.swift */; };
 		D5DDC1FA23C7664A00839740 /* SQLiteDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5DDC1F923C7664A00839740 /* SQLiteDataStore.swift */; };
+		D5DDC1FC23C7778400839740 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D5DDC1FB23C7778400839740 /* GoogleService-Info.plist */; };
+		D5DDC20723CBA16600839740 /* UsersHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5DDC20623CBA16600839740 /* UsersHelper.swift */; };
+		D5DDC20923CBAA2C00839740 /* SessionProgressHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5DDC20823CBAA2C00839740 /* SessionProgressHelper.swift */; };
+		D5DDC20B23CBAD6100839740 /* SessionProgress.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5DDC20A23CBAD6100839740 /* SessionProgress.swift */; };
+		D5DDC20D23CBDD3400839740 /* ProgressReportViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5DDC20C23CBDD3400839740 /* ProgressReportViewController.swift */; };
+		D5DDC20F23CBE3EF00839740 /* ProjectHistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5DDC20E23CBE3EF00839740 /* ProjectHistoryViewController.swift */; };
+		D5DDC21123CBE57F00839740 /* HistoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5DDC21023CBE57F00839740 /* HistoryTableViewCell.swift */; };
 		E600C603AB1B5A40149B4FC4 /* Pods_Aphasia_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 64CD7E222D5AE8546E9991C9 /* Pods_Aphasia_App.framework */; };
 /* End PBXBuildFile section */
 
@@ -115,6 +122,13 @@
 		D5DDC1F523C3326600839740 /* SaveInformationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveInformationViewController.swift; sourceTree = "<group>"; };
 		D5DDC1F723C75D9500839740 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		D5DDC1F923C7664A00839740 /* SQLiteDataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SQLiteDataStore.swift; sourceTree = "<group>"; };
+		D5DDC1FB23C7778400839740 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		D5DDC20623CBA16600839740 /* UsersHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersHelper.swift; sourceTree = "<group>"; };
+		D5DDC20823CBAA2C00839740 /* SessionProgressHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionProgressHelper.swift; sourceTree = "<group>"; };
+		D5DDC20A23CBAD6100839740 /* SessionProgress.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionProgress.swift; sourceTree = "<group>"; };
+		D5DDC20C23CBDD3400839740 /* ProgressReportViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressReportViewController.swift; sourceTree = "<group>"; };
+		D5DDC20E23CBE3EF00839740 /* ProjectHistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectHistoryViewController.swift; sourceTree = "<group>"; };
+		D5DDC21023CBE57F00839740 /* HistoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -189,7 +203,13 @@
 				16FE530D2386553B009FC96F /* ExerciseATableViewCell.swift */,
 				16A0F9C02388CA9400EF86BD /* CameraPageController.swift */,
 				D5DDC1F723C75D9500839740 /* User.swift */,
+				D5DDC20623CBA16600839740 /* UsersHelper.swift */,
 				D5DDC1F923C7664A00839740 /* SQLiteDataStore.swift */,
+				D5DDC20A23CBAD6100839740 /* SessionProgress.swift */,
+				D5DDC20823CBAA2C00839740 /* SessionProgressHelper.swift */,
+				D5DDC20C23CBDD3400839740 /* ProgressReportViewController.swift */,
+				D5DDC20E23CBE3EF00839740 /* ProjectHistoryViewController.swift */,
+				D5DDC21023CBE57F00839740 /* HistoryTableViewCell.swift */,
 				16F57C8523804DC800ED7422 /* background.jpeg */,
 				161CB39923949AF70083A0CF /* BackgroundSky.png */,
 				51114ABF2383B9C50023788F /* bench.jpeg */,
@@ -535,17 +555,22 @@
 			buildActionMask = 2147483647;
 			files = (
 				51CF582F23CBD3EE0098D64F /* ImageData.swift in Sources */,
+				D5DDC20B23CBAD6100839740 /* SessionProgress.swift in Sources */,
 				D5DDC1F823C75D9500839740 /* User.swift in Sources */,
+				D5DDC20923CBAA2C00839740 /* SessionProgressHelper.swift in Sources */,
 				D5B9DECC23C0E324004B2B53 /* ExerciseB.swift in Sources */,
 				163E1DBE23C7F78F00CCC02C /* LocateMePageController.swift in Sources */,
 				161AAF72237B5E5E00D505E7 /* LocationPage.swift in Sources */,
 				16FE531423876C98009FC96F /* QuestionBank.swift in Sources */,
+				D5DDC20723CBA16600839740 /* UsersHelper.swift in Sources */,
+				D5DDC21123CBE57F00839740 /* HistoryTableViewCell.swift in Sources */,
 				16D0E48423A1359C00BAEC8C /* GooglePlace.swift in Sources */,
 				51CFF37623D4C86B001C9654 /* PhotoDetailController.swift in Sources */,
 				16A0F9C22388CA9B00EF86BD /* CameraPageController.swift in Sources */,
 				16CFA1A42374ADD00022C95F /* AppDelegate.swift in Sources */,
 				16CFA1A62374ADD00022C95F /* SceneDelegate.swift in Sources */,
 				16FE530E2386553B009FC96F /* ExerciseATableViewCell.swift in Sources */,
+				D5DDC20D23CBDD3400839740 /* ProgressReportViewController.swift in Sources */,
 				16FE530A23864219009FC96F /* ExerciseA.swift in Sources */,
 				16CFA1E42374C7CC0022C95F /* FirstPage.swift in Sources */,
 				D5DDC1FA23C7664A00839740 /* SQLiteDataStore.swift in Sources */,
@@ -554,6 +579,7 @@
 				D5DDC1F623C3326600839740 /* SaveInformationViewController.swift in Sources */,
 				519487AE23CB8BD700C9B052 /* myCell.swift in Sources */,
 				D5DDC1F423C2D35B00839740 /* EmailInfoViewController.swift in Sources */,
+				D5DDC20F23CBE3EF00839740 /* ProjectHistoryViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

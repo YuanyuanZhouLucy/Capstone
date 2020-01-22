@@ -43,6 +43,32 @@ class ExerciseA: UIViewController, UITableViewDelegate, AVAudioRecorderDelegate,
     var pictureURL: String?
     var picture: UIImage?
     var dog = "dog.jpeg"
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        hide()
+        setupRecorder()
+       
+        playButton.isEnabled = false
+        nextButton.layer.cornerRadius = 30
+        button1.layer.cornerRadius = 30
+        button2.layer.cornerRadius = 30
+        button3.layer.cornerRadius = 30
+        button4.layer.cornerRadius = 30
+        cueButton.layer.cornerRadius = 30
+        cueButton2.layer.cornerRadius = 30
+        cueButton3.layer.cornerRadius = 30
+        cueButton4.layer.cornerRadius = 30
+        button1.setTitle("Begin", for: UIControl.State.normal)
+        button2.setTitle("Begin", for: UIControl.State.normal)
+        button3.setTitle("Begin", for: UIControl.State.normal)
+        button4.setTitle("Begin", for: UIControl.State.normal)
+        cueButton.setTitle("Cues", for:UIControl.State.normal)
+        cueButton2.setTitle("Cues", for:UIControl.State.normal)
+        cueButton3.setTitle("Cues", for:UIControl.State.normal)
+        cueButton4.setTitle("Cues", for:UIControl.State.normal)
+
+    }
   
     func updateQuestion (){
         if let url = URL (string:allQuestions.list[questionNumber].questionImage) {
@@ -250,29 +276,19 @@ class ExerciseA: UIViewController, UITableViewDelegate, AVAudioRecorderDelegate,
             recordButton.isEnabled = false
         }
     }
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        hide()
-        setupRecorder()
-       
-        playButton.isEnabled = false
-        nextButton.layer.cornerRadius = 30
-        button1.layer.cornerRadius = 30
-        button2.layer.cornerRadius = 30
-        button3.layer.cornerRadius = 30
-        button4.layer.cornerRadius = 30
-        cueButton.layer.cornerRadius = 30
-        cueButton2.layer.cornerRadius = 30
-        cueButton3.layer.cornerRadius = 30
-        cueButton4.layer.cornerRadius = 30
-        button1.setTitle("Begin", for: UIControl.State.normal)
-        button2.setTitle("Begin", for: UIControl.State.normal)
-        button3.setTitle("Begin", for: UIControl.State.normal)
-        button4.setTitle("Begin", for: UIControl.State.normal)
-        cueButton.setTitle("Cues", for:UIControl.State.normal)
-        cueButton2.setTitle("Cues", for:UIControl.State.normal)
-        cueButton3.setTitle("Cues", for:UIControl.State.normal)
-        cueButton4.setTitle("Cues", for:UIControl.State.normal)
 
+    @IBAction func homeButton(_ sender: Any) {
+        self.addSessionProgress()
+    }
+    
+    @IBAction func nextExerciseButton(_ sender: Any) {
+        self.addSessionProgress()
+    }
+    
+    func addSessionProgress() {
+        let id = SQLiteDataStore.instance.addExerciseASession(date: Date(), exercisesAttempted: questionNumber, exercisesCorrect: totalScore)
+        if id! == nil {
+            print("Add to session information to exercise A database failed" )
+        }
     }
 }
