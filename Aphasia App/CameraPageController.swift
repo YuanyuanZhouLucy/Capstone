@@ -25,7 +25,6 @@ class CameraPageController: UIViewController, UIImagePickerControllerDelegate, U
     @IBOutlet weak var takePhotoButton: UIButton!
     
     
-    @IBOutlet weak var choosePhotoButton: UIButton!
     @IBOutlet weak var nameOfPhoto: UITextField!
     
     @IBOutlet weak var nameObjectLabel: UILabel!
@@ -76,7 +75,7 @@ class CameraPageController: UIViewController, UIImagePickerControllerDelegate, U
         let image = imageView.image
         let text: String = nameObjectLabel.text!
 //        let text = "randdd333"
-        let uid = SQLiteDataStore.instance.getUserUploadId()
+        let uid = 1
         let location = "cafe"
         
         
@@ -97,12 +96,8 @@ class CameraPageController: UIViewController, UIImagePickerControllerDelegate, U
               return
             }
             let ref = Database.database().reference()
-            let dict:[String: Any] = [
-                "imageURL": downloadURL.absoluteString,
-                "Name": text
-                ]
-            
-            ref.child("userDefinedEx").child("uid\(uid)").child("\(location)").childByAutoId().setValue(dict)
+            ref.child("userDefinedEx").child("uid\(uid)").child("\(location)").child("Exercise1").child("imageURL").setValue(downloadURL.absoluteString)
+            ref.child("userDefinedEx").child("uid\(uid)").child("\(location)").child("Exercise1").child("Name").setValue(text)
             print("upload \(text)")
           }
  
@@ -124,14 +119,9 @@ class CameraPageController: UIViewController, UIImagePickerControllerDelegate, U
         
         
     }
-    @IBAction func choosePhoto(_ sender: Any) {
-        imagePicker.allowsEditing = false
-        imagePicker.sourceType = .photoLibrary
-        present(imagePicker, animated: true, completion: nil)
-    }
     @IBAction func takePhoto(_ sender: Any) {
         imagePicker.allowsEditing = false
-        imagePicker.sourceType = .camera
+        imagePicker.sourceType = .photoLibrary
         present(imagePicker, animated: true, completion: nil)
     }
     
@@ -169,7 +159,6 @@ class CameraPageController: UIViewController, UIImagePickerControllerDelegate, U
         }
         dismiss(animated: true, completion: nil)
         takePhotoButton.isHidden = true
-        choosePhotoButton.isHidden = true
         detectButton.isHidden = false
         nameButton.isHidden = false
     }

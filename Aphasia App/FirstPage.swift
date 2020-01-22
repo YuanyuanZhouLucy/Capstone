@@ -19,7 +19,6 @@ class FirstPage: UIViewController {
     @IBOutlet weak var letsBeginButton: UIButton!
     
     override func viewDidLoad() {
-        print("first page")
         super.viewDidLoad()
         self.letsBeginButton.layer.cornerRadius = 20
         self.appRehabButton.layer.cornerRadius = 20
@@ -28,7 +27,7 @@ class FirstPage: UIViewController {
         let ref = Database.database().reference()
         
         //create user
-        let up_id = SQLiteDataStore.instance.getUserUploadId()
+        SQLiteDataStore.instance.getUserUploadId()
         
         // to update database
         //   let updates = ["Exercise1/Location" : "bookstore"]
