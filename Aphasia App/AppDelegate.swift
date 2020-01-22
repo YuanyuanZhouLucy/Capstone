@@ -1,3 +1,11 @@
+//
+//  AppDelegate.swift
+//  Aphasia App
+//
+//  Created by Yuanyuan Zhou on 2019-11-07.
+//  Copyright © 2019 Yuanyuan Zhou. All rights reserved.
+//
+
 import UIKit
 import Firebase
 import GoogleMaps
@@ -16,7 +24,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         GMSServices.provideAPIKey("AIzaSyD18JvVwjVzLoVIpjinovKlTiT_1_V7BQg")
         GMSPlacesClient.provideAPIKey("AIzaSyD18JvVwjVzLoVIpjinovKlTiT_1_V7BQg")
-        Database.database().isPersistenceEnabled = false
         
         return true
     }
@@ -37,3 +44,4 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     
 }
+
