@@ -16,6 +16,7 @@ class EmailInfoViewController: UIViewController, MFMailComposeViewControllerDele
     @IBOutlet weak var slpEmailTextField: UITextField!
     
     private var user: User?
+    var whichExercise = "A"
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -48,7 +49,7 @@ class EmailInfoViewController: UIViewController, MFMailComposeViewControllerDele
         
         composeVC.setToRecipients([slpEmailTextField.text!])
         composeVC.setSubject("Progress Report of Client \(clientNameTextField.text!) ")
-        composeVC.setMessageBody("Dear \(slpNameTextField.text!), Your client \(clientNameTextField.text!) has completed work", isHTML: false)
+        composeVC.setMessageBody(self.emailText(), isHTML: false)
         
         self.present(composeVC, animated: true, completion: nil)
     }
@@ -72,5 +73,31 @@ class EmailInfoViewController: UIViewController, MFMailComposeViewControllerDele
         }
         
     }
-
+    
+    func emailText() -> String {
+        let latestSession = self.progressInfo()
+        var sessionEndTime: Date?
+        var progress:String
+        
+        let df = DateFormatter()
+        df.timeZone = .current
+        df.dateFormat = "yyyy-MM-dd HH:mm:ss"
+        
+        if (latestSession != nil){
+            sessionEndTime = latestSession!.sessionEndTime
+            progress = "\(latestSession!.exercisesCorrect)/\(latestSession!.exercisesAttempted)"
+            
+            return "Dear \(slpNameTextField.text!), Your client \(clientNameTextField.text!) performed exercise \(whichExercise) on \(df.string(from: sessionEndTime!)). They received a score of \(progress)."
+        }
+        
+        return "Dear \(slpNameTextField.text!), Your client \(clientNameTextField.text!) has not completed exercise\(whichExercise) to date."
+    }
+    
+    func progressInfo() -> SessionProgress? {
+        if whichExercise == "B"{
+            return SQLiteDataStore.instance.getExerciseBLatestSessionProgress()
+        }
+        return SQLiteDataStore.instance.getExerciseALatestSessionProgress()
+    }
+    
 }
