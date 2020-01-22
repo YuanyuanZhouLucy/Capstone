@@ -25,7 +25,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Scy-0z-5Uu">
-                                <rect key="frame" x="152" y="714" width="110" height="40"/>
+                                <rect key="frame" x="55" y="714" width="110" height="40"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="23"/>
                                 <state key="normal" title="Take Photo"/>
@@ -75,12 +75,24 @@
                                     <segue destination="Pcn-Nu-4fx" kind="show" id="Gwf-X0-uLB"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vwo-nA-Fhs">
+                                <rect key="frame" x="230" y="707" width="147" height="53"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                <state key="normal" title="Choose Photo">
+                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="default"/>
+                                </state>
+                                <connections>
+                                    <action selector="choosePhoto:" destination="lqm-tz-eCN" eventType="touchUpInside" id="63x-O7-Z0s"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <viewLayoutGuide key="safeArea" id="JNR-py-q76"/>
                     </view>
                     <navigationItem key="navigationItem" id="Qu1-b6-5xv"/>
                     <connections>
+                        <outlet property="choosePhotoButton" destination="vwo-nA-Fhs" id="Gef-76-h0c"/>
                         <outlet property="detectButton" destination="yaD-5Q-ash" id="Ozx-gp-huu"/>
                         <outlet property="imageView" destination="G2A-zJ-NJ4" id="dZW-ld-Rhl"/>
                         <outlet property="nameButton" destination="fWM-4q-1Sd" id="cg3-4N-iNc"/>
@@ -1504,7 +1516,7 @@
         <segue reference="Age-O3-usl"/>
         <segue reference="F1W-fL-hJq"/>
         <segue reference="NTr-mo-lmx"/>
-        <segue reference="F6h-jz-xi2"/>
+        <segue reference="Gwf-X0-uLB"/>
         <segue reference="Uc0-Lk-lKo"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -25,6 +25,7 @@ class CameraPageController: UIViewController, UIImagePickerControllerDelegate, U
     @IBOutlet weak var takePhotoButton: UIButton!
     
     
+    @IBOutlet weak var choosePhotoButton: UIButton!
     @IBOutlet weak var nameOfPhoto: UITextField!
     
     @IBOutlet weak var nameObjectLabel: UILabel!
@@ -123,9 +124,14 @@ class CameraPageController: UIViewController, UIImagePickerControllerDelegate, U
         
         
     }
-    @IBAction func takePhoto(_ sender: Any) {
+    @IBAction func choosePhoto(_ sender: Any) {
         imagePicker.allowsEditing = false
         imagePicker.sourceType = .photoLibrary
+        present(imagePicker, animated: true, completion: nil)
+    }
+    @IBAction func takePhoto(_ sender: Any) {
+        imagePicker.allowsEditing = false
+        imagePicker.sourceType = .camera
         present(imagePicker, animated: true, completion: nil)
     }
     
@@ -163,6 +169,7 @@ class CameraPageController: UIViewController, UIImagePickerControllerDelegate, U
         }
         dismiss(animated: true, completion: nil)
         takePhotoButton.isHidden = true
+        choosePhotoButton.isHidden = true
         detectButton.isHidden = false
         nameButton.isHidden = false
     }
