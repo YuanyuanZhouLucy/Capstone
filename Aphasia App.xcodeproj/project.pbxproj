@@ -33,9 +33,10 @@
 		51114ABC2383B29F0023788F /* tree.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 51114ABB2383B29F0023788F /* tree.jpeg */; };
 		51114ABE2383B4630023788F /* map.png in Resources */ = {isa = PBXBuildFile; fileRef = 51114ABD2383B4630023788F /* map.png */; };
 		51114AC02383B9C50023788F /* bench.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 51114ABF2383B9C50023788F /* bench.jpeg */; };
-		5163119523CBAAC5007A84D9 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5163119423CBAAC4007A84D9 /* GoogleService-Info.plist */; };
+		5163119523CBAAC5007A84D9 /* (null) in Resources */ = {isa = PBXBuildFile; };
 		519487AA23CB699B00C9B052 /* PhotoManageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 519487A923CB699B00C9B052 /* PhotoManageController.swift */; };
 		519487AE23CB8BD700C9B052 /* myCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 519487AD23CB8BD700C9B052 /* myCell.swift */; };
+		519FD86523D8E22B00C25DC5 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 519FD86423D8E22B00C25DC5 /* GoogleService-Info.plist */; };
 		51CF582F23CBD3EE0098D64F /* ImageData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51CF582E23CBD3EE0098D64F /* ImageData.swift */; };
 		51CFF37623D4C86B001C9654 /* PhotoDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51CFF37523D4C86B001C9654 /* PhotoDetailController.swift */; };
 		C08E79140BEF58B916C99F18 /* Pods_Aphasia_AppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C36096C432D3EF4B99100B1F /* Pods_Aphasia_AppTests.framework */; };
@@ -44,7 +45,6 @@
 		D5DDC1F623C3326600839740 /* SaveInformationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5DDC1F523C3326600839740 /* SaveInformationViewController.swift */; };
 		D5DDC1F823C75D9500839740 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5DDC1F723C75D9500839740 /* User.swift */; };
 		D5DDC1FA23C7664A00839740 /* SQLiteDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5DDC1F923C7664A00839740 /* SQLiteDataStore.swift */; };
-		D5DDC1FC23C7778400839740 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D5DDC1FB23C7778400839740 /* GoogleService-Info.plist */; };
 		D5DDC20723CBA16600839740 /* UsersHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5DDC20623CBA16600839740 /* UsersHelper.swift */; };
 		D5DDC20923CBAA2C00839740 /* SessionProgressHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5DDC20823CBAA2C00839740 /* SessionProgressHelper.swift */; };
 		D5DDC20B23CBAD6100839740 /* SessionProgress.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5DDC20A23CBAD6100839740 /* SessionProgress.swift */; };
@@ -110,6 +110,7 @@
 		51114ABF2383B9C50023788F /* bench.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bench.jpeg; sourceTree = "<group>"; };
 		519487A923CB699B00C9B052 /* PhotoManageController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoManageController.swift; sourceTree = "<group>"; };
 		519487AD23CB8BD700C9B052 /* myCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = myCell.swift; sourceTree = "<group>"; };
+		519FD86423D8E22B00C25DC5 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		51CF582E23CBD3EE0098D64F /* ImageData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageData.swift; sourceTree = "<group>"; };
 		51CFF37523D4C86B001C9654 /* PhotoDetailController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoDetailController.swift; sourceTree = "<group>"; };
 		636BE746E4BC251B396BCD6F /* Pods-Aphasia App-Aphasia AppUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Aphasia App-Aphasia AppUITests.debug.xcconfig"; path = "Target Support Files/Pods-Aphasia App-Aphasia AppUITests/Pods-Aphasia App-Aphasia AppUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -121,14 +122,12 @@
 		D5DDC1F523C3326600839740 /* SaveInformationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveInformationViewController.swift; sourceTree = "<group>"; };
 		D5DDC1F723C75D9500839740 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		D5DDC1F923C7664A00839740 /* SQLiteDataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SQLiteDataStore.swift; sourceTree = "<group>"; };
-		D5DDC1FB23C7778400839740 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		D5DDC20623CBA16600839740 /* UsersHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersHelper.swift; sourceTree = "<group>"; };
 		D5DDC20823CBAA2C00839740 /* SessionProgressHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionProgressHelper.swift; sourceTree = "<group>"; };
 		D5DDC20A23CBAD6100839740 /* SessionProgress.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionProgress.swift; sourceTree = "<group>"; };
 		D5DDC20C23CBDD3400839740 /* ProgressReportViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressReportViewController.swift; sourceTree = "<group>"; };
 		D5DDC20E23CBE3EF00839740 /* ProjectHistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectHistoryViewController.swift; sourceTree = "<group>"; };
 		D5DDC21023CBE57F00839740 /* HistoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryTableViewCell.swift; sourceTree = "<group>"; };
-
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -195,7 +194,6 @@
 				16EEACC12395B72C00C09534 /* ExerciseB.swift */,
 				16FE531123876C08009FC96F /* Question.swift */,
 				16FE531323876C98009FC96F /* QuestionBank.swift */,
-				5163119423CBAAC4007A84D9 /* GoogleService-Info.plist */,
 				519487A923CB699B00C9B052 /* PhotoManageController.swift */,
 				51CFF37523D4C86B001C9654 /* PhotoDetailController.swift */,
 				51CF582E23CBD3EE0098D64F /* ImageData.swift */,
@@ -223,6 +221,7 @@
 				16CFA1A52374ADD00022C95F /* SceneDelegate.swift */,
 				16CFA1AC2374ADD20022C95F /* Assets.xcassets */,
 				16CFA1AE2374ADD20022C95F /* LaunchScreen.storyboard */,
+				519FD86423D8E22B00C25DC5 /* GoogleService-Info.plist */,
 				16CFA1B12374ADD20022C95F /* Info.plist */,
 			);
 			path = "Aphasia App";
@@ -380,7 +379,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5163119523CBAAC5007A84D9 /* GoogleService-Info.plist in Resources */,
+				5163119523CBAAC5007A84D9 /* (null) in Resources */,
 				16CFA1B02374ADD20022C95F /* LaunchScreen.storyboard in Resources */,
 				16F57C8623804DC800ED7422 /* background.jpeg in Resources */,
 				16CFA1AD2374ADD20022C95F /* Assets.xcassets in Resources */,
@@ -393,6 +392,7 @@
 				16A985332380E3C2000C92E6 /* microphone.jpeg in Resources */,
 				16A985342380E3C2000C92E6 /* spaker.jpeg in Resources */,
 				51114ABC2383B29F0023788F /* tree.jpeg in Resources */,
+				519FD86523D8E22B00C25DC5 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
