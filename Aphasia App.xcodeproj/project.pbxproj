@@ -33,9 +33,10 @@
 		51114ABC2383B29F0023788F /* tree.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 51114ABB2383B29F0023788F /* tree.jpeg */; };
 		51114ABE2383B4630023788F /* map.png in Resources */ = {isa = PBXBuildFile; fileRef = 51114ABD2383B4630023788F /* map.png */; };
 		51114AC02383B9C50023788F /* bench.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 51114ABF2383B9C50023788F /* bench.jpeg */; };
-		5163119523CBAAC5007A84D9 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5163119423CBAAC4007A84D9 /* GoogleService-Info.plist */; };
+		5163119523CBAAC5007A84D9 /* (null) in Resources */ = {isa = PBXBuildFile; };
 		519487AA23CB699B00C9B052 /* PhotoManageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 519487A923CB699B00C9B052 /* PhotoManageController.swift */; };
 		519487AE23CB8BD700C9B052 /* myCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 519487AD23CB8BD700C9B052 /* myCell.swift */; };
+		519FD86523D8E22B00C25DC5 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 519FD86423D8E22B00C25DC5 /* GoogleService-Info.plist */; };
 		51CF582F23CBD3EE0098D64F /* ImageData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51CF582E23CBD3EE0098D64F /* ImageData.swift */; };
 		51CFF37623D4C86B001C9654 /* PhotoDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51CFF37523D4C86B001C9654 /* PhotoDetailController.swift */; };
 		C08E79140BEF58B916C99F18 /* Pods_Aphasia_AppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C36096C432D3EF4B99100B1F /* Pods_Aphasia_AppTests.framework */; };
@@ -108,9 +109,9 @@
 		51114ABB2383B29F0023788F /* tree.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = tree.jpeg; sourceTree = "<group>"; };
 		51114ABD2383B4630023788F /* map.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = map.png; sourceTree = "<group>"; };
 		51114ABF2383B9C50023788F /* bench.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bench.jpeg; sourceTree = "<group>"; };
-		5163119423CBAAC4007A84D9 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		519487A923CB699B00C9B052 /* PhotoManageController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoManageController.swift; sourceTree = "<group>"; };
 		519487AD23CB8BD700C9B052 /* myCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = myCell.swift; sourceTree = "<group>"; };
+		519FD86423D8E22B00C25DC5 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		51CF582E23CBD3EE0098D64F /* ImageData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageData.swift; sourceTree = "<group>"; };
 		51CFF37523D4C86B001C9654 /* PhotoDetailController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoDetailController.swift; sourceTree = "<group>"; };
 		636BE746E4BC251B396BCD6F /* Pods-Aphasia App-Aphasia AppUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Aphasia App-Aphasia AppUITests.debug.xcconfig"; path = "Target Support Files/Pods-Aphasia App-Aphasia AppUITests/Pods-Aphasia App-Aphasia AppUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -195,7 +196,6 @@
 				16EEACC12395B72C00C09534 /* ExerciseB.swift */,
 				16FE531123876C08009FC96F /* Question.swift */,
 				16FE531323876C98009FC96F /* QuestionBank.swift */,
-				5163119423CBAAC4007A84D9 /* GoogleService-Info.plist */,
 				519487A923CB699B00C9B052 /* PhotoManageController.swift */,
 				51CFF37523D4C86B001C9654 /* PhotoDetailController.swift */,
 				51CF582E23CBD3EE0098D64F /* ImageData.swift */,
@@ -223,6 +223,7 @@
 				16CFA1A52374ADD00022C95F /* SceneDelegate.swift */,
 				16CFA1AC2374ADD20022C95F /* Assets.xcassets */,
 				16CFA1AE2374ADD20022C95F /* LaunchScreen.storyboard */,
+				519FD86423D8E22B00C25DC5 /* GoogleService-Info.plist */,
 				16CFA1B12374ADD20022C95F /* Info.plist */,
 			);
 			path = "Aphasia App";
@@ -380,7 +381,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5163119523CBAAC5007A84D9 /* GoogleService-Info.plist in Resources */,
+				5163119523CBAAC5007A84D9 /* (null) in Resources */,
 				16CFA1B02374ADD20022C95F /* LaunchScreen.storyboard in Resources */,
 				16F57C8623804DC800ED7422 /* background.jpeg in Resources */,
 				16CFA1AD2374ADD20022C95F /* Assets.xcassets in Resources */,
@@ -393,6 +394,7 @@
 				16A985332380E3C2000C92E6 /* microphone.jpeg in Resources */,
 				16A985342380E3C2000C92E6 /* spaker.jpeg in Resources */,
 				51114ABC2383B29F0023788F /* tree.jpeg in Resources */,
+				519FD86523D8E22B00C25DC5 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -68,8 +68,9 @@ class PhotoManageController: UIViewController, UICollectionViewDataSource, UICol
         
            
             //Put code here to load songArray from the FireBase returned data
+            let up_id = SQLiteDataStore.instance.getUserUploadId()
         
-            let userRef = ref.child("userDefinedEx").child("uid3017").child("cafe")
+            let userRef = ref.child("userDefinedEx").child("uid\(up_id)").child("cafe")
         
         DispatchQueue.main.async {
  
