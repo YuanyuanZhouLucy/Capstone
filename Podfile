@@ -15,6 +15,7 @@ target 'Aphasia App' do
   pod 'SwiftyJSON', '~> 4.0'
   pod 'Firebase/Analytics'
   pod 'Firebase/MLVision'
+  pod 'FirebaseUI/Storage'
 
   target 'Aphasia AppTests' do
     inherit! :search_paths
