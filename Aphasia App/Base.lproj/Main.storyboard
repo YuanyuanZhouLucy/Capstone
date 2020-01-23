@@ -1134,6 +1134,7 @@
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                 </state>
                                 <connections>
+                                    <action selector="homeButton:" destination="hek-tG-wFt" eventType="touchUpInside" id="DpQ-hh-Rea"/>
                                     <segue destination="Pcn-Nu-4fx" kind="show" id="Z9L-mZ-Hf0"/>
                                 </connections>
                             </button>
@@ -1255,14 +1256,12 @@
                                     <action selector="cueButtonAction4:" destination="hek-tG-wFt" eventType="touchUpInside" id="5yb-aR-xnC"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M9I-q8-ice">
-                                <rect key="frame" x="98" y="754" width="218" height="54"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jsu-FC-793">
+                                <rect key="frame" x="157" y="778" width="98" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="29"/>
-                                <state key="normal" title="Next Exercise"/>
+                                <state key="normal" title="Next Question"/>
                                 <connections>
-                                    <segue destination="nuc-qc-SU7" kind="show" id="Age-O3-usl"/>
+                                    <action selector="nextButtonAction:" destination="hek-tG-wFt" eventType="touchUpInside" id="Ncr-LD-J9L"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -1281,7 +1280,7 @@
                         <outlet property="cueButton4" destination="j6m-9U-WS6" id="dFb-NP-ffC"/>
                         <outlet property="imageView" destination="TLh-bH-c6l" id="N5u-tE-htU"/>
                         <outlet property="labelEnd" destination="l1t-mr-nj3" id="6e7-al-4xj"/>
-                        <outlet property="nextButton" destination="M9I-q8-ice" id="lKB-gF-vKP"/>
+                        <outlet property="nextButton" destination="jsu-FC-793" id="OMb-Eo-nre"/>
                         <outlet property="playButton" destination="UWL-ql-wvV" id="fPu-LN-uYA"/>
                         <outlet property="recordButton" destination="5i8-lp-d0W" id="My7-Ps-j5h"/>
                     </connections>
@@ -1314,6 +1313,7 @@
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                 </state>
                                 <connections>
+                                    <action selector="homeButton:" destination="nuc-qc-SU7" eventType="touchUpInside" id="g6B-GN-i5l"/>
                                     <segue destination="lcO-d1-bLy" kind="show" id="NTr-mo-lmx"/>
                                 </connections>
                             </button>
@@ -1324,10 +1324,10 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RL1-bY-e5H">
                                 <rect key="frame" x="39" y="551" width="337" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <state key="normal" title="Leaf">
-                                    <color key="titleColor" systemColor="secondarySystemBackgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                 </state>
                                 <connections>
                                     <action selector="button2Action:" destination="nuc-qc-SU7" eventType="touchUpInside" id="CMH-mx-D4G"/>
@@ -1336,10 +1336,10 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IRa-dJ-7qt">
                                 <rect key="frame" x="39" y="631" width="337" height="45"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="26"/>
                                 <state key="normal" title="Leaf">
-                                    <color key="titleColor" systemColor="secondarySystemBackgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                 </state>
                                 <connections>
                                     <action selector="button3Action:" destination="nuc-qc-SU7" eventType="touchUpInside" id="7AH-Bp-PBC"/>
@@ -1348,10 +1348,10 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OBO-yw-o0J">
                                 <rect key="frame" x="39" y="702" width="337" height="47"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <state key="normal" title="Leaf">
-                                    <color key="titleColor" systemColor="secondarySystemBackgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                 </state>
                                 <connections>
                                     <action selector="button4Action:" destination="nuc-qc-SU7" eventType="touchUpInside" id="fFb-51-hXA"/>
@@ -1372,13 +1372,21 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zW6-Qm-3gU">
                                 <rect key="frame" x="39" y="472" width="337" height="52"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <state key="normal" title="Leaf">
-                                    <color key="titleColor" systemColor="secondarySystemBackgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                 </state>
                                 <connections>
                                     <action selector="button1Action:" destination="nuc-qc-SU7" eventType="touchUpInside" id="YUy-4F-E2f"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qVW-gS-KZW">
+                                <rect key="frame" x="142" y="778" width="137" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="nextButtonAction:" destination="nuc-qc-SU7" eventType="touchUpInside" id="s4e-0z-gs9"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -1393,6 +1401,7 @@
                         <outlet property="button4" destination="OBO-yw-o0J" id="Nfr-i2-LdV"/>
                         <outlet property="imageView" destination="oaX-8K-fFe" id="upN-hf-Acv"/>
                         <outlet property="label" destination="IdM-4X-eMa" id="HFO-k0-lt1"/>
+                        <outlet property="nextButton" destination="qVW-gS-KZW" id="7D5-0x-nBc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lfk-bz-yxH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -1513,10 +1522,9 @@
         <image name="spaker.jpeg" width="350" height="392"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Age-O3-usl"/>
         <segue reference="F1W-fL-hJq"/>
         <segue reference="NTr-mo-lmx"/>
-        <segue reference="Gwf-X0-uLB"/>
+        <segue reference="aae-1L-Q76"/>
         <segue reference="Uc0-Lk-lKo"/>
     </inferredMetricsTieBreakers>
 </document>
