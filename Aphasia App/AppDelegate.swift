@@ -3,6 +3,7 @@ import Firebase
 import GoogleMaps
 import GooglePlaces
 var locationTypeGV = "hello"
+var previousAnswer = "N/A"
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
