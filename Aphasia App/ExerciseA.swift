@@ -28,9 +28,9 @@ class ExerciseA: UIViewController, UITableViewDelegate, AVAudioRecorderDelegate,
     @IBOutlet weak var button2: UIButton!
     @IBOutlet weak var button4: UIButton!
     @IBOutlet weak var button3: UIButton!
-
-    @IBOutlet weak var labelEnd: UILabel!
     @IBOutlet weak var nextButton: UIButton!
+    
+    @IBOutlet weak var labelEnd: UILabel!
     var allQuestions = QuestionBank()
     var questionNumber = 0
     var selectedAnswer = 0
@@ -50,7 +50,6 @@ class ExerciseA: UIViewController, UITableViewDelegate, AVAudioRecorderDelegate,
         setupRecorder()
        
         playButton.isEnabled = false
-        nextButton.layer.cornerRadius = 30
         button1.layer.cornerRadius = 30
         button2.layer.cornerRadius = 30
         button3.layer.cornerRadius = 30
@@ -59,18 +58,20 @@ class ExerciseA: UIViewController, UITableViewDelegate, AVAudioRecorderDelegate,
         cueButton2.layer.cornerRadius = 30
         cueButton3.layer.cornerRadius = 30
         cueButton4.layer.cornerRadius = 30
-        button1.setTitle("Begin", for: UIControl.State.normal)
-        button2.setTitle("Begin", for: UIControl.State.normal)
-        button3.setTitle("Begin", for: UIControl.State.normal)
-        button4.setTitle("Begin", for: UIControl.State.normal)
-        cueButton.setTitle("Cues", for:UIControl.State.normal)
-        cueButton2.setTitle("Cues", for:UIControl.State.normal)
-        cueButton3.setTitle("Cues", for:UIControl.State.normal)
-        cueButton4.setTitle("Cues", for:UIControl.State.normal)
+        button1.setTitle("Begin Now", for: UIControl.State.normal)
+        button2.setTitle("Begin Now", for: UIControl.State.normal)
+        button3.setTitle("Begin Now", for: UIControl.State.normal)
+        button4.setTitle("Begin Now", for: UIControl.State.normal)
+        cueButton.setTitle("Click 'Begin Now' to Start", for:UIControl.State.normal)
+        cueButton2.setTitle("Select the Option", for:UIControl.State.normal)
+        cueButton3.setTitle("that Best Describes ", for:UIControl.State.normal)
+        cueButton4.setTitle("the Picture", for:UIControl.State.normal)
+        nextButton.setTitle("Next Question", for: UIControl.State.normal)
 
     }
   
     func updateQuestion (){
+        hide()
         if let url = URL (string:allQuestions.list[questionNumber].questionImage) {
             DispatchQueue.main.async {
                 do {
@@ -90,6 +91,12 @@ class ExerciseA: UIViewController, UITableViewDelegate, AVAudioRecorderDelegate,
         button2.setTitle(allQuestions.list[questionNumber].optionB, for: UIControl.State.normal)
         button3.setTitle(allQuestions.list[questionNumber].optionC, for: UIControl.State.normal)
         button4.setTitle(allQuestions.list[questionNumber].optionD, for: UIControl.State.normal)
+        
+         button1.setTitleColor(.blue, for: .normal)
+         button2.setTitleColor(.blue, for: .normal)
+         button3.setTitleColor(.blue, for: .normal)
+         button4.setTitleColor(.blue, for: .normal)
+        
         cueButton.setTitle("Cues", for: UIControl.State.normal)
         cueButton2.setTitle("Cues", for: UIControl.State.normal)
         cueButton3.setTitle("Cues", for: UIControl.State.normal)
@@ -101,80 +108,172 @@ class ExerciseA: UIViewController, UITableViewDelegate, AVAudioRecorderDelegate,
         cue3 = allQuestions.list[questionNumber].cue3
         cue4 = allQuestions.list[questionNumber].cue4
         print("for this question \(questionNumber), the cue is \(cue1)")
+        if(questionNumber != 0 ){
+            if( allQuestions.list[questionNumber].correctAnswer  == 1){
+                  previousAnswer = allQuestions.list[questionNumber].optionA
+              }
+              else if(allQuestions.list[questionNumber].correctAnswer  == 2){
+                  previousAnswer = allQuestions.list[questionNumber].optionB
+              }
+              else if(allQuestions.list[questionNumber].correctAnswer  == 3){
+                  previousAnswer = allQuestions.list[questionNumber].optionC
+              }
+              else if (allQuestions.list[questionNumber].correctAnswer  == 4){
+                  previousAnswer = allQuestions.list[questionNumber].optionD
+              }
+        }
+        else{
+            if( allQuestions.list[0].correctAnswer  == 1){
+                previousAnswer = allQuestions.list[0].optionA
+            }
+            else if(allQuestions.list[0].correctAnswer  == 2){
+                previousAnswer = allQuestions.list[0].optionB
+            }
+            else if(allQuestions.list[0].correctAnswer  == 3){
+                previousAnswer = allQuestions.list[0].optionC
+            }
+            else if (allQuestions.list[0].correctAnswer  == 4){
+                previousAnswer = allQuestions.list[0].optionD
+            }
+        }
         questionNumber += 1
     }
     
     @IBAction func button1Action(_ sender: AnyObject) {
         unHide()
         print("clicked1")
+        
+        if(questionNumber == 0){
+            updateQuestion()
+        }
+        else{
+        
         if(selectedAnswer == 1 && questionNumber != 0){
-            labelEnd.text = ("You got the previous one correct")
+             button1.setTitleColor(.green, for: .normal)
+            labelEnd.text = ("You got this one correct")
             totalScore += 1
         } else if (questionNumber != 0){
-            labelEnd.text =  ("You got the previous one wrong")
+            labelEnd.text =  ("You got this one wrong \(previousAnswer) is the answer")
+            if (selectedAnswer == 1){
+                button1.setTitleColor(.green, for: .normal)
+            }
+            else if (selectedAnswer == 2){
+                button2.setTitleColor(.green, for: .normal)
+            }
+            else if (selectedAnswer == 3){
+                button3.setTitleColor(.green, for: .normal)
+            }
+            else if (selectedAnswer == 4){
+                button4.setTitleColor(.green, for: .normal)
+            }
         } else {
             hide()
         }
-        if(questionNumber < 5){
-        updateQuestion()
         }
-         else{
-            labelEnd.text =  ("Your total score is \(totalScore). End of the Exercise")
-               }
+       
     }
     
     
     @IBAction func button2Action(_ sender: AnyObject) {
         unHide()
         print("clicked2")
+        
+        if(questionNumber == 0){
+                   updateQuestion()
+               }
+               else{
         if(selectedAnswer == 2){
-              labelEnd.text =  ("You got the previous one correct")
+             button2.setTitleColor(.green, for: .normal)
+              labelEnd.text =  ("You got this one correct")
                totalScore += 1
               } else if (questionNumber != 0) {
-                  labelEnd.text =  ("You got the previous one wrong")
+                  labelEnd.text =  ("You got this one wrong \(previousAnswer) is the answer")
+                if (selectedAnswer == 1){
+                         button1.setTitleColor(.green, for: .normal)
+                     }
+                     else if (selectedAnswer == 2){
+                         button2.setTitleColor(.green, for: .normal)
+                     }
+                     else if (selectedAnswer == 3){
+                         button3.setTitleColor(.green, for: .normal)
+                     }
+                     else if (selectedAnswer == 4){
+                         button4.setTitleColor(.green, for: .normal)
+                     }
               }else {
                   hide()
               }
-        if(questionNumber < 5){
-        updateQuestion()
         }
-        else{
-            labelEnd.text =  ("Your total score is \(totalScore). End of the Exercise")
-        }
+       
     }
     
     @IBAction func button3Action(_ sender: AnyObject) {
         unHide()
         print("clicked3")
-        
+        if(questionNumber == 0){
+                   updateQuestion()
+               }
+               else{
         if(selectedAnswer == 3 && questionNumber != 0){
-            labelEnd.text = ("You got the previous one correct")
+            button3.setTitleColor(.green, for: .normal)
+            labelEnd.text = ("You got this one correct")
             totalScore += 1
         } else if (questionNumber != 0){
-            labelEnd.text =  ("You got the previous one wrong")
+            labelEnd.text =  ("You got this one wrong \(previousAnswer) is the answer")
+            if (selectedAnswer == 1){
+                         button1.setTitleColor(.green, for: .normal)
+                     }
+                     else if (selectedAnswer == 2){
+                         button2.setTitleColor(.green, for: .normal)
+                     }
+                     else if (selectedAnswer == 3){
+                         button3.setTitleColor(.green, for: .normal)
+                     }
+                     else if (selectedAnswer == 4){
+                         button4.setTitleColor(.green, for: .normal)
+                     }
         } else {
             hide()
         }
-        if(questionNumber < 5){
-        updateQuestion()
         }
-         else{
-            labelEnd.text =  ("Your total score is \(totalScore). End of the Exercise")
-               }
+      
     }
     
     
     @IBAction func button4Action(_ sender: AnyObject) {
         unHide()
-        print("clicked4")
+        
+        if(questionNumber == 0){
+                   updateQuestion()
+               }
+               else{
         if(selectedAnswer == 4 && questionNumber != 0){
-            labelEnd.text = ("You got the previous one correct")
+            button4.setTitleColor(.green, for: .normal)
+            labelEnd.text = ("You got this one correct")
             totalScore += 1
         } else if (questionNumber != 0){
-            labelEnd.text =  ("You got the previous one wrong")
+           labelEnd.text =  ("You got this one wrong \(previousAnswer) is the answer")
+            if (selectedAnswer == 1){
+                         button1.setTitleColor(.green, for: .normal)
+                     }
+                     else if (selectedAnswer == 2){
+                         button2.setTitleColor(.green, for: .normal)
+                     }
+                     else if (selectedAnswer == 3){
+                         button3.setTitleColor(.green, for: .normal)
+                     }
+                     else if (selectedAnswer == 4){
+                         button4.setTitleColor(.green, for: .normal)
+                     }
         } else {
             hide()
         }
+        }
+       
+    }
+    
+    
+    @IBAction func nextButtonAction(_ sender: UIButton) {
         if(questionNumber < 5){
             updateQuestion()
         }
@@ -202,11 +301,9 @@ class ExerciseA: UIViewController, UITableViewDelegate, AVAudioRecorderDelegate,
     
     func hide() {
         labelEnd.isHidden = true
-        nextButton.isHidden = true
     }
     func unHide() {
         labelEnd.isHidden = false
-        nextButton.isHidden = false
     }
     func getDocumentsDirector() -> URL {
         let paths = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
