@@ -59,14 +59,14 @@ class ExerciseA: UIViewController, UITableViewDelegate, AVAudioRecorderDelegate,
         cueButton2.layer.cornerRadius = 30
         cueButton3.layer.cornerRadius = 30
         cueButton4.layer.cornerRadius = 30
-        button1.setTitle("Begin Now", for: UIControl.State.normal)
-        button2.setTitle("Begin Now", for: UIControl.State.normal)
-        button3.setTitle("Begin Now", for: UIControl.State.normal)
-        button4.setTitle("Begin Now", for: UIControl.State.normal)
-        cueButton.setTitle("Click 'Begin Now' to Start", for:UIControl.State.normal)
-        cueButton2.setTitle("Select the Option", for:UIControl.State.normal)
-        cueButton3.setTitle("that Best Describes ", for:UIControl.State.normal)
-        cueButton4.setTitle("the Picture", for:UIControl.State.normal)
+        button1.setTitle("Begin", for: UIControl.State.normal)
+        button2.setTitle("Begin", for: UIControl.State.normal)
+        button3.setTitle("Begin", for: UIControl.State.normal)
+        button4.setTitle("Begin", for: UIControl.State.normal)
+        cueButton.setTitle("Cues", for:UIControl.State.normal)
+        cueButton2.setTitle("Cues", for:UIControl.State.normal)
+        cueButton3.setTitle("Cues", for:UIControl.State.normal)
+        cueButton4.setTitle("Cues", for:UIControl.State.normal)
 
     }
   
@@ -101,34 +101,6 @@ class ExerciseA: UIViewController, UITableViewDelegate, AVAudioRecorderDelegate,
         cue3 = allQuestions.list[questionNumber].cue3
         cue4 = allQuestions.list[questionNumber].cue4
         print("for this question \(questionNumber), the cue is \(cue1)")
-        if(questionNumber != 0 ){
-            if( allQuestions.list[questionNumber].correctAnswer  == 1){
-                  previousAnswer = allQuestions.list[questionNumber].optionA
-              }
-              else if(allQuestions.list[questionNumber].correctAnswer  == 2){
-                  previousAnswer = allQuestions.list[questionNumber].optionB
-              }
-              else if(allQuestions.list[questionNumber].correctAnswer  == 3){
-                  previousAnswer = allQuestions.list[questionNumber].optionC
-              }
-              else if (allQuestions.list[questionNumber].correctAnswer  == 4){
-                  previousAnswer = allQuestions.list[questionNumber].optionD
-              }
-        }
-        else{
-            if( allQuestions.list[0].correctAnswer  == 1){
-                previousAnswer = allQuestions.list[0].optionA
-            }
-            else if(allQuestions.list[0].correctAnswer  == 2){
-                previousAnswer = allQuestions.list[0].optionB
-            }
-            else if(allQuestions.list[0].correctAnswer  == 3){
-                previousAnswer = allQuestions.list[0].optionC
-            }
-            else if (allQuestions.list[0].correctAnswer  == 4){
-                previousAnswer = allQuestions.list[0].optionD
-            }
-        }
         questionNumber += 1
     }
     
@@ -139,8 +111,7 @@ class ExerciseA: UIViewController, UITableViewDelegate, AVAudioRecorderDelegate,
             labelEnd.text = ("You got the previous one correct")
             totalScore += 1
         } else if (questionNumber != 0){
-            
-            labelEnd.text =  ("You got the previous one wrong \(previousAnswer) is the answer")
+            labelEnd.text =  ("You got the previous one wrong")
         } else {
             hide()
         }
@@ -160,7 +131,7 @@ class ExerciseA: UIViewController, UITableViewDelegate, AVAudioRecorderDelegate,
               labelEnd.text =  ("You got the previous one correct")
                totalScore += 1
               } else if (questionNumber != 0) {
-                  labelEnd.text =  ("You got the previous one wrong \(previousAnswer) is the answer")
+                  labelEnd.text =  ("You got the previous one wrong")
               }else {
                   hide()
               }
@@ -180,7 +151,7 @@ class ExerciseA: UIViewController, UITableViewDelegate, AVAudioRecorderDelegate,
             labelEnd.text = ("You got the previous one correct")
             totalScore += 1
         } else if (questionNumber != 0){
-            labelEnd.text =  ("You got the previous one wrong \(previousAnswer) is the answer")
+            labelEnd.text =  ("You got the previous one wrong")
         } else {
             hide()
         }
@@ -200,7 +171,7 @@ class ExerciseA: UIViewController, UITableViewDelegate, AVAudioRecorderDelegate,
             labelEnd.text = ("You got the previous one correct")
             totalScore += 1
         } else if (questionNumber != 0){
-           labelEnd.text =  ("You got the previous one wrong \(previousAnswer) is the answer")
+            labelEnd.text =  ("You got the previous one wrong")
         } else {
             hide()
         }

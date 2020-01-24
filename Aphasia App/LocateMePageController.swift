@@ -20,7 +20,7 @@ class LocateMePageController: UIViewController {
         locationTypeGV = "park"
     }
     @IBAction func libraryButtonAction(_ sender: UIButton) {
-        locationTypeGV="hospital"
+        locationTypeGV="library"
     }
     @IBAction func groceryButtonAction(_ sender: UIButton) {
         locationTypeGV="grocery_or_supermarket"
@@ -32,7 +32,7 @@ class LocateMePageController: UIViewController {
 
         restaurantButton.setTitle("Restaurant", for: UIControl.State.normal)
         parkButton.setTitle("Park", for: UIControl.State.normal)
-        libraryButton.setTitle("Hospital", for: UIControl.State.normal)
-        groceryButton.setTitle("Grocery Store", for: UIControl.State.normal)
+        libraryButton.setTitle("Library", for: UIControl.State.normal)
+        groceryButton.setTitle("Grocery Stores", for: UIControl.State.normal)
     }
 }
