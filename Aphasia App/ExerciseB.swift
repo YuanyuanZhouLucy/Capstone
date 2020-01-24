@@ -28,10 +28,10 @@ class ExerciseB: UIViewController{
         button2.layer.cornerRadius = 30
         button3.layer.cornerRadius = 30
         button4.layer.cornerRadius = 30
-        button1.setTitle("Click Here to Start ", for: UIControl.State.normal)
-        button2.setTitle("Select the Option", for: UIControl.State.normal)
-        button3.setTitle("That Does Not", for: UIControl.State.normal)
-        button4.setTitle("Describe the Picture", for: UIControl.State.normal)
+        button1.setTitle("Begin", for: UIControl.State.normal)
+        button2.setTitle("Begin", for: UIControl.State.normal)
+        button3.setTitle("Begin", for: UIControl.State.normal)
+        button4.setTitle("Begin", for: UIControl.State.normal)
     }
     
     

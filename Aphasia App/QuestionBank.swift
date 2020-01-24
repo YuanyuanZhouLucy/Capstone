@@ -24,16 +24,13 @@ class QuestionBank {
             category = "Cafe"
         }
         else if(locationTypeGV == "grocery_or_supermarket"){
-            category = "GroceryStore"
+            category = "Grocery Store"
         }
-            else if(locationTypeGV == "park"){
-                      category = "Park"
-                  }
         else{
             category = ""}
         print("the category is:")
         print(category)
-        ref.child(category).observeSingleEvent(of: .value, with:{(snapshot) in
+        ref.child("Cafe").observeSingleEvent(of: .value, with:{(snapshot) in
             let value  = snapshot.value as? NSDictionary
             let value2  = snapshot.value as? NSDictionary
             let value3  = snapshot.value as? NSDictionary
@@ -43,9 +40,9 @@ class QuestionBank {
             func makeList(_ n: Int) -> [Int] {
                 return (0..<n).map { _ in .random(in: 1...5) }
             }
-            var randomNumbers = makeList(10)
+            var randomNumbers = makeList(5)
             //uncomment for testing
-          
+            randomNumbers = [1,2,3,4,5]
             print("all random numbers")
             print(randomNumbers)
             
