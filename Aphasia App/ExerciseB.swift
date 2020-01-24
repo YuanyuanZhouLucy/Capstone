@@ -88,7 +88,10 @@ class ExerciseB: UIViewController{
             if(wrongOption == 1 && questionNumber != 0){
                 button1.setTitleColor(.green, for: .normal)
                 label.text = ("You got this one correct")
-                totalScore += 1
+                if(questionNumber < 5){
+                    totalScore += 1
+                }
+               
             } else if (questionNumber != 0){
                 label.text =  ("You got this one wrong")
                 if (wrongOption == 1){
@@ -121,7 +124,9 @@ class ExerciseB: UIViewController{
             if(wrongOption == 2 && questionNumber != 0){
                 button2.setTitleColor(.green, for: .normal)
                 label.text = ("You got this one correct")
-                totalScore += 1
+                 if(questionNumber < 5){
+                                 totalScore += 1
+                             }
             } else if (questionNumber != 0){
                 label.text =  ("You got this one wrong")
                 if (wrongOption == 1){
@@ -153,7 +158,9 @@ class ExerciseB: UIViewController{
             if(wrongOption == 3 && questionNumber != 0){
                 button3.setTitleColor(.green, for: .normal)
                 label.text = ("You got this one correct")
-                totalScore += 1
+                  if(questionNumber < 5){
+                                 totalScore += 1
+                             }
             } else if (questionNumber != 0){
                 label.text =  ("You got this one wrong")
                 if (wrongOption == 1){
@@ -186,7 +193,9 @@ class ExerciseB: UIViewController{
             if(wrongOption == 4 && questionNumber != 0){
                 button4.setTitleColor(.green, for: .normal)
                 label.text = ("You got this one correct")
-                totalScore += 1
+                  if(questionNumber < 5){
+                                 totalScore += 1
+                             }
             } else if (questionNumber != 0){
                 label.text =  ("You got this one wrong")
                 if (wrongOption == 1){
