@@ -1217,8 +1217,16 @@
                                     <action selector="cueButtonAction4:" destination="hek-tG-wFt" eventType="touchUpInside" id="5yb-aR-xnC"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eaW-3A-YXH">
+                                <rect key="frame" x="317" y="770" width="76" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Question B"/>
+                                <connections>
+                                    <segue destination="nuc-qc-SU7" kind="show" id="HCo-lk-zff"/>
+                                </connections>
+                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M9I-q8-ice">
-                                <rect key="frame" x="98" y="754" width="218" height="54"/>
+                                <rect key="frame" x="49" y="754" width="218" height="54"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="29"/>
@@ -1486,6 +1494,7 @@
         <image name="spaker.jpeg" width="350" height="392"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="HCo-lk-zff"/>
         <segue reference="YGE-xh-zCx"/>
         <segue reference="95M-mF-G8K"/>
         <segue reference="F1W-fL-hJq"/>

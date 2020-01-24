@@ -211,7 +211,7 @@ class ExerciseB: UIViewController{
     
     
     @IBAction func nextButtonAction(_ sender: Any) {
-        if(questionNumber < 10){
+        if(questionNumber < 5){
             updateQuestion()
         }
         else{
