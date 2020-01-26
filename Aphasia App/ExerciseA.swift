@@ -151,7 +151,9 @@ class ExerciseA: UIViewController, UITableViewDelegate, AVAudioRecorderDelegate,
         if(selectedAnswer == 1 && questionNumber != 0){
              button1.setTitleColor(.green, for: .normal)
             labelEnd.text = ("You got this one correct")
-            totalScore += 1
+              if(questionNumber < 5){
+                             totalScore += 1
+                         }
         } else if (questionNumber != 0){
             labelEnd.text =  ("You got this one wrong \(previousAnswer) is the answer")
             if (selectedAnswer == 1){
@@ -185,7 +187,9 @@ class ExerciseA: UIViewController, UITableViewDelegate, AVAudioRecorderDelegate,
         if(selectedAnswer == 2){
              button2.setTitleColor(.green, for: .normal)
               labelEnd.text =  ("You got this one correct")
-               totalScore += 1
+                  if(questionNumber < 5){
+                                totalScore += 1
+                            }
               } else if (questionNumber != 0) {
                   labelEnd.text =  ("You got this one wrong \(previousAnswer) is the answer")
                 if (selectedAnswer == 1){
@@ -217,7 +221,9 @@ class ExerciseA: UIViewController, UITableViewDelegate, AVAudioRecorderDelegate,
         if(selectedAnswer == 3 && questionNumber != 0){
             button3.setTitleColor(.green, for: .normal)
             labelEnd.text = ("You got this one correct")
-            totalScore += 1
+               if(questionNumber < 5){
+                             totalScore += 1
+                         }
         } else if (questionNumber != 0){
             labelEnd.text =  ("You got this one wrong \(previousAnswer) is the answer")
             if (selectedAnswer == 1){
@@ -250,7 +256,9 @@ class ExerciseA: UIViewController, UITableViewDelegate, AVAudioRecorderDelegate,
         if(selectedAnswer == 4 && questionNumber != 0){
             button4.setTitleColor(.green, for: .normal)
             labelEnd.text = ("You got this one correct")
-            totalScore += 1
+            if(questionNumber < 5){
+                             totalScore += 1
+                         }
         } else if (questionNumber != 0){
            labelEnd.text =  ("You got this one wrong \(previousAnswer) is the answer")
             if (selectedAnswer == 1){
