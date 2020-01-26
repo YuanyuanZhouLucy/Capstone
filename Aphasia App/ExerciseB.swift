@@ -23,6 +23,8 @@ class ExerciseB: UIViewController{
     var totalScore = 0
     var wrongOption = Int()
     
+    let correct_colour = UIColor.systemGreen
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         hide()
@@ -87,24 +89,24 @@ class ExerciseB: UIViewController{
         else{
             if(wrongOption == 1 && questionNumber != 0){
                 button1.setTitleColor(.green, for: .normal)
-                label.text = ("You got this one correct")
+                label.text = ("You got this one correct.")
                 if(questionNumber < 5){
                     totalScore += 1
                 }
                
             } else if (questionNumber != 0){
-                label.text =  ("You got this one wrong")
+                label.text =  ("You got this one wrong.")
                 if (wrongOption == 1){
-                    button1.setTitleColor(.green, for: .normal)
+                    button1.setTitleColor(correct_colour, for: .normal)
                 }
                 else if (wrongOption == 2){
-                    button2.setTitleColor(.green, for: .normal)
+                    button2.setTitleColor(correct_colour, for: .normal)
                 }
                 else if (wrongOption == 3){
-                    button3.setTitleColor(.green, for: .normal)
+                    button3.setTitleColor(correct_colour, for: .normal)
                 }
                 else if (wrongOption == 4){
-                    button4.setTitleColor(.green, for: .normal)
+                    button4.setTitleColor(correct_colour, for: .normal)
                 }
             } else {
                 hide()
@@ -123,23 +125,23 @@ class ExerciseB: UIViewController{
         else{
             if(wrongOption == 2 && questionNumber != 0){
                 button2.setTitleColor(.green, for: .normal)
-                label.text = ("You got this one correct")
+                label.text = ("You got this one correct.")
                  if(questionNumber < 5){
                                  totalScore += 1
                              }
             } else if (questionNumber != 0){
-                label.text =  ("You got this one wrong")
+                label.text =  ("You got this one wrong.")
                 if (wrongOption == 1){
-                    button1.setTitleColor(.green, for: .normal)
+                    button1.setTitleColor(correct_colour, for: .normal)
                 }
                 else if (wrongOption == 2){
-                    button2.setTitleColor(.green, for: .normal)
+                    button2.setTitleColor(correct_colour, for: .normal)
                 }
                 else if (wrongOption == 3){
-                    button3.setTitleColor(.green, for: .normal)
+                    button3.setTitleColor(correct_colour, for: .normal)
                 }
                 else if (wrongOption == 4){
-                    button4.setTitleColor(.green, for: .normal)
+                    button4.setTitleColor(correct_colour, for: .normal)
                 }
             } else {
                 hide()
@@ -157,23 +159,23 @@ class ExerciseB: UIViewController{
         else{
             if(wrongOption == 3 && questionNumber != 0){
                 button3.setTitleColor(.green, for: .normal)
-                label.text = ("You got this one correct")
+                label.text = ("You got this one correct.")
                   if(questionNumber < 5){
                                  totalScore += 1
                              }
             } else if (questionNumber != 0){
-                label.text =  ("You got this one wrong")
+                label.text =  ("You got this one wrong.")
                 if (wrongOption == 1){
-                    button1.setTitleColor(.green, for: .normal)
+                    button1.setTitleColor(correct_colour, for: .normal)
                 }
                 else if (wrongOption == 2){
-                    button2.setTitleColor(.green, for: .normal)
+                    button2.setTitleColor(correct_colour, for: .normal)
                 }
                 else if (wrongOption == 3){
-                    button3.setTitleColor(.green, for: .normal)
+                    button3.setTitleColor(correct_colour, for: .normal)
                 }
                 else if (wrongOption == 4){
-                    button4.setTitleColor(.green, for: .normal)
+                    button4.setTitleColor(correct_colour, for: .normal)
                 }
             } else {
                 hide()
@@ -192,23 +194,23 @@ class ExerciseB: UIViewController{
         else{
             if(wrongOption == 4 && questionNumber != 0){
                 button4.setTitleColor(.green, for: .normal)
-                label.text = ("You got this one correct")
+                label.text = ("You got this one correct.")
                   if(questionNumber < 5){
                                  totalScore += 1
                              }
             } else if (questionNumber != 0){
-                label.text =  ("You got this one wrong")
+                label.text =  ("You got this one wrong.")
                 if (wrongOption == 1){
-                    button1.setTitleColor(.green, for: .normal)
+                    button1.setTitleColor(correct_colour, for: .normal)
                 }
                 else if (wrongOption == 2){
-                    button2.setTitleColor(.green, for: .normal)
+                    button2.setTitleColor(correct_colour, for: .normal)
                 }
                 else if (wrongOption == 3){
-                    button3.setTitleColor(.green, for: .normal)
+                    button3.setTitleColor(correct_colour, for: .normal)
                 }
                 else if (wrongOption == 4){
-                    button4.setTitleColor(.green, for: .normal)
+                    button4.setTitleColor(correct_colour, for: .normal)
                 }
             } else {
                 hide()
