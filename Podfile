@@ -16,6 +16,7 @@ target 'Aphasia App' do
   pod 'Firebase/Analytics'
   pod 'Firebase/MLVision'
   pod 'FirebaseUI/Storage'
+  pod 'Firebase/MLVisionLabelModel'
 
   target 'Aphasia AppTests' do
     inherit! :search_paths
