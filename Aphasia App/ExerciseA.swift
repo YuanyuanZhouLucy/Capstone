@@ -44,6 +44,8 @@ class ExerciseA: UIViewController, UITableViewDelegate, AVAudioRecorderDelegate,
     var picture: UIImage?
     var dog = "dog.jpeg"
     
+    let correct_colour = UIColor.systemGreen
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         hide()
@@ -149,22 +151,24 @@ class ExerciseA: UIViewController, UITableViewDelegate, AVAudioRecorderDelegate,
         else{
         
         if(selectedAnswer == 1 && questionNumber != 0){
-             button1.setTitleColor(.green, for: .normal)
+             button1.setTitleColor(correct_colour, for: .normal)
             labelEnd.text = ("You got this one correct")
-            totalScore += 1
+              if(questionNumber < 5){
+                             totalScore += 1
+                         }
         } else if (questionNumber != 0){
-            labelEnd.text =  ("You got this one wrong \(previousAnswer) is the answer")
+            labelEnd.text =  ("You got this one wrong. \(previousAnswer) is the answer")
             if (selectedAnswer == 1){
-                button1.setTitleColor(.green, for: .normal)
+                button1.setTitleColor(correct_colour, for: .normal)
             }
             else if (selectedAnswer == 2){
-                button2.setTitleColor(.green, for: .normal)
+                button2.setTitleColor(correct_colour, for: .normal)
             }
             else if (selectedAnswer == 3){
-                button3.setTitleColor(.green, for: .normal)
+                button3.setTitleColor(correct_colour, for: .normal)
             }
             else if (selectedAnswer == 4){
-                button4.setTitleColor(.green, for: .normal)
+                button4.setTitleColor(correct_colour, for: .normal)
             }
         } else {
             hide()
@@ -184,21 +188,23 @@ class ExerciseA: UIViewController, UITableViewDelegate, AVAudioRecorderDelegate,
                else{
         if(selectedAnswer == 2){
              button2.setTitleColor(.green, for: .normal)
-              labelEnd.text =  ("You got this one correct")
-               totalScore += 1
+              labelEnd.text =  ("You got this one correct.")
+                  if(questionNumber < 5){
+                                totalScore += 1
+                            }
               } else if (questionNumber != 0) {
-                  labelEnd.text =  ("You got this one wrong \(previousAnswer) is the answer")
+                  labelEnd.text =  ("You got this one wrong. \(previousAnswer) is the answer")
                 if (selectedAnswer == 1){
-                         button1.setTitleColor(.green, for: .normal)
+                         button1.setTitleColor(correct_colour, for: .normal)
                      }
                      else if (selectedAnswer == 2){
-                         button2.setTitleColor(.green, for: .normal)
+                         button2.setTitleColor(correct_colour, for: .normal)
                      }
                      else if (selectedAnswer == 3){
-                         button3.setTitleColor(.green, for: .normal)
+                         button3.setTitleColor(correct_colour, for: .normal)
                      }
                      else if (selectedAnswer == 4){
-                         button4.setTitleColor(.green, for: .normal)
+                         button4.setTitleColor(correct_colour, for: .normal)
                      }
               }else {
                   hide()
@@ -216,21 +222,23 @@ class ExerciseA: UIViewController, UITableViewDelegate, AVAudioRecorderDelegate,
                else{
         if(selectedAnswer == 3 && questionNumber != 0){
             button3.setTitleColor(.green, for: .normal)
-            labelEnd.text = ("You got this one correct")
-            totalScore += 1
+            labelEnd.text = ("You got this one correct.")
+               if(questionNumber < 5){
+                             totalScore += 1
+                         }
         } else if (questionNumber != 0){
-            labelEnd.text =  ("You got this one wrong \(previousAnswer) is the answer")
+            labelEnd.text =  ("You got this one wrong. \(previousAnswer) is the answer")
             if (selectedAnswer == 1){
-                         button1.setTitleColor(.green, for: .normal)
+                         button1.setTitleColor(correct_colour, for: .normal)
                      }
                      else if (selectedAnswer == 2){
-                         button2.setTitleColor(.green, for: .normal)
+                         button2.setTitleColor(correct_colour, for: .normal)
                      }
                      else if (selectedAnswer == 3){
-                         button3.setTitleColor(.green, for: .normal)
+                         button3.setTitleColor(correct_colour, for: .normal)
                      }
                      else if (selectedAnswer == 4){
-                         button4.setTitleColor(.green, for: .normal)
+                         button4.setTitleColor(correct_colour, for: .normal)
                      }
         } else {
             hide()
@@ -249,21 +257,23 @@ class ExerciseA: UIViewController, UITableViewDelegate, AVAudioRecorderDelegate,
                else{
         if(selectedAnswer == 4 && questionNumber != 0){
             button4.setTitleColor(.green, for: .normal)
-            labelEnd.text = ("You got this one correct")
-            totalScore += 1
+            labelEnd.text = ("You got this one correct.")
+            if(questionNumber < 5){
+                             totalScore += 1
+                         }
         } else if (questionNumber != 0){
-           labelEnd.text =  ("You got this one wrong \(previousAnswer) is the answer")
+           labelEnd.text =  ("You got this one wrong. \(previousAnswer) is the answer")
             if (selectedAnswer == 1){
-                         button1.setTitleColor(.green, for: .normal)
+                         button1.setTitleColor(correct_colour, for: .normal)
                      }
                      else if (selectedAnswer == 2){
-                         button2.setTitleColor(.green, for: .normal)
+                         button2.setTitleColor(correct_colour, for: .normal)
                      }
                      else if (selectedAnswer == 3){
-                         button3.setTitleColor(.green, for: .normal)
+                         button3.setTitleColor(correct_colour, for: .normal)
                      }
                      else if (selectedAnswer == 4){
-                         button4.setTitleColor(.green, for: .normal)
+                         button4.setTitleColor(correct_colour, for: .normal)
                      }
         } else {
             hide()
