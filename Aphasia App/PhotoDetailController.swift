@@ -51,8 +51,8 @@ class PhotoDetailController: UIViewController, UITextFieldDelegate
 //           saveButton.isHidden = false
         
             let ref = Database.database().reference()
-
-            var refRename = ref.child("userDefinedEx").child("uid3017").child("cafe").child(self.image.fb_key)
+            let up_id = SQLiteDataStore.instance.getUserUploadId()
+            var refRename = ref.child("userDefinedEx").child("uid\(up_id)").child("cafe").child(self.image.fb_key)
 
             refRename.updateChildValues(["Name": rename_textf.text])
             rename_textf.isHidden = true
@@ -77,8 +77,9 @@ class PhotoDetailController: UIViewController, UITextFieldDelegate
             // File deleted successfully
             
             let ref = Database.database().reference()
-
-            let refDel = ref.child("userDefinedEx").child("uid3017").child("cafe").child(self.image.fb_key)
+            
+            let up_id = SQLiteDataStore.instance.getUserUploadId()
+            let refDel = ref.child("userDefinedEx").child("uid\(up_id)").child("cafe").child(self.image.fb_key)
 
             refDel.removeValue { error, _ in
 
