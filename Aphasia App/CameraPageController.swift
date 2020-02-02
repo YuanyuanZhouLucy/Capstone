@@ -34,7 +34,8 @@ class CameraPageController: UIViewController, UIImagePickerControllerDelegate, U
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var resultView: UITextView!
     let imagePicker = UIImagePickerController()
-    let options = VisionCloudDetectorOptions()
+//    let options = VisionCloudImageLabelerOptions()
+    let options = VisionOnDeviceImageLabelerOptions()
     lazy var vision = Vision.vision()
     
     
@@ -42,8 +43,7 @@ class CameraPageController: UIViewController, UIImagePickerControllerDelegate, U
     override func viewDidLoad() {
         super.viewDidLoad()
         imagePicker.delegate = self
-        options.modelType = .latest
-        options.maxResults = 5
+        options.confidenceThreshold = 0.7
         
         detectButton.isHidden = true
         nameButton.isHidden = true
@@ -72,6 +72,15 @@ class CameraPageController: UIViewController, UIImagePickerControllerDelegate, U
     
     
     @IBAction func saveDatabase(_ sender: Any) {
+        if nameObjectLabel.text == "Image Saved!"{
+            let alertController = UIAlertController(title: "", message:
+                "You saved this image already", preferredStyle: .alert)
+            alertController.addAction(UIAlertAction(title: "Dismiss", style: .default))
+
+            self.present(alertController, animated: true, completion: nil)
+            
+            return
+        }
         
         let image = imageView.image
         let text: String = nameObjectLabel.text!
@@ -104,6 +113,7 @@ class CameraPageController: UIViewController, UIImagePickerControllerDelegate, U
             
             ref.child("userDefinedEx").child("uid\(uid)").child("\(location)").childByAutoId().setValue(dict)
             print("upload \(text)")
+            self.nameObjectLabel.text = "Image Saved!"
           }
  
         }
@@ -140,32 +150,60 @@ class CameraPageController: UIViewController, UIImagePickerControllerDelegate, U
         // Dispose of any resources that can be recreated.
     }
     
+    @IBAction func detectObject(_ sender: Any) {
+//        let landmarkDetector = vision.cloudImageLabeler(options: options)
+        let landmarkDetector = vision.onDeviceImageLabeler(options: options)
+        let visionImage = VisionImage(image: imageView.image!)
+                    
+//                    self.resultView.text = "Done"
+        landmarkDetector.process(visionImage) { (landmarks, error) in
+            print("in detect")
+        
+        
+            guard error == nil else{
+                
+                print("theres errir!!!!!!!!!!!!!")
+                print(error)
+                print(landmarks)
+                return
+                
+            }
+            
+            if let landmarks = landmarks, !landmarks.isEmpty {
+                for label in landmarks {
+                   let labelText = label.text
+                    let entityId = label.entityID
+                    let confidence = label.confidence
+                    
+                    
+                    print(labelText)
+                    print(entityId)
+                    print(confidence)
+//                   self.resultView.text = self.resultView.text + "\(landmarkDesc) - \(confidence * 100.0)%\n\n"
+//                   print( self.resultView.text)
+               }
+                self.nameObjectLabel.text = landmarks[0].text
+                self.nameObjectLabel.isHidden = false
+                self.saveButton.isHidden = false
+                return
+                
+//                    self.dismiss(animated: true, completion: nil)
+            }
+            print("nothing detected")
+            self.nameObjectLabel.text = "nothing detected"
+            self.nameObjectLabel.isHidden = false
+            
+            return
+           
+        }
+
+
+    }
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         if let pickedImage = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {
             imageView.image = pickedImage
             
-            let landmarkDetector = vision.cloudLandmarkDetector(options: options)
-            let visionImage = VisionImage(image: pickedImage)
             
-//            self.resultView.text = "Done"
-//            landmarkDetector.detect(in: visionImage) { (landmarks, error) in
-//                print("in detect")
-//
-//
-//                guard error == nil, let landmarks = landmarks, !landmarks.isEmpty else {
-//                    self.resultView.text = "No landmarks detected"
-//                    print(self.resultView.text)
-////                    self.dismiss(animated: true, completion: nil)
-//                    return
-//                }
-//
-//                for landmark in landmarks {
-//                    let landmarkDesc = landmark.landmark!
-//                    let confidence = Float(truncating: landmark.confidence!)
-//                    self.resultView.text = self.resultView.text + "\(landmarkDesc) - \(confidence * 100.0)%\n\n"
-//                    print( self.resultView.text)
-//                }
-//            }
         }
         dismiss(animated: true, completion: nil)
         takePhotoButton.isHidden = true
