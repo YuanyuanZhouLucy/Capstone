@@ -17,20 +17,27 @@ class QuestionBank {
     let wrongAnswer = ["plastic bag", "pencase", "bottle","water","phone","bookstore"]
     
     init() {
+        
         let locationType = locationTypeGV
         print("the location i got is:")
         print(locationType)
-        if(locationTypeGV == "electronics_store" || locationTypeGV == "restaurant" || locationTypeGV == "cafe"){
-            category = "Cafe"
-        }
-        else if(locationTypeGV == "grocery_or_supermarket"){
-            category = "Grocery Store"
-        }
-        else{
-            category = ""}
-        print("the category is:")
-        print(category)
-        ref.child("Cafe").observeSingleEvent(of: .value, with:{(snapshot) in
+         if(locationTypeGV == "food" || locationTypeGV == "restaurant" || locationTypeGV == "cafe"){
+                  category = "Cafe"
+              }
+              else if(locationTypeGV == "grocery_or_supermarket"){
+                  category = "Grocery Store"
+              }
+              else if(locationTypeGV == "hospital"){
+                  category = "Hospital"
+              }
+              else if(locationTypeGV == "park"){
+                  category = "Park"
+              }
+              else{
+                  category = ""}
+              print("the category is:")
+              print(category)
+              ref.child(category).observeSingleEvent(of: .value, with:{(snapshot) in
             let value  = snapshot.value as? NSDictionary
             let value2  = snapshot.value as? NSDictionary
             let value3  = snapshot.value as? NSDictionary
