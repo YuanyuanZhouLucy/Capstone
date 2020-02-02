@@ -25,7 +25,7 @@ class QuestionBank {
                   category = "Cafe"
               }
               else if(locationTypeGV == "grocery_or_supermarket"){
-                  category = "Grocery Store"
+                  category = "GroceryStore"
               }
               else if(locationTypeGV == "hospital"){
                   category = "Hospital"
