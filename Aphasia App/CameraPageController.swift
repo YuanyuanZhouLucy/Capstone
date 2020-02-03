@@ -222,10 +222,14 @@ class CameraPageController: UIViewController, UIImagePickerControllerDelegate, U
     
     func findDissimilar(word:String) -> [String] {
         let embedding = NLEmbedding.wordEmbedding(for: NLLanguage.english)
-        let neighbours = embedding?.neighbors(for: word, maximumCount: 1000)
+        let neighbours = embedding?.neighbors(for: word, maximumCount: 100)
+        let furthestNeighbour = neighbours!.last!.0
+        let furtherNeighbours = embedding?.neighbors(for: furthestNeighbour, maximumCount: 100)
+        let furthestNeighbour2 = furtherNeighbours!.last!.0
+        let furtherNeighbours2 = embedding?.neighbors(for: furthestNeighbour2, maximumCount: 100)
         var dissimilarWords = [String]()
         
-        neighbours!.enumerated().forEach { (arg) in
+        furtherNeighbours2!.enumerated().forEach { (arg) in
             let (_, value) = arg
             dissimilarWords.append(value.0)
         }
