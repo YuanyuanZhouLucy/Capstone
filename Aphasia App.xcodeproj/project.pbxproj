@@ -27,7 +27,6 @@
 		16D0E48423A1359C00BAEC8C /* GooglePlace.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16D0E48323A1359C00BAEC8C /* GooglePlace.swift */; };
 		16F57C8623804DC800ED7422 /* background.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 16F57C8523804DC800ED7422 /* background.jpeg */; };
 		16FE530A23864219009FC96F /* ExerciseA.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16FE530923864219009FC96F /* ExerciseA.swift */; };
-		16FE530E2386553B009FC96F /* ExerciseATableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16FE530D2386553B009FC96F /* ExerciseATableViewCell.swift */; };
 		16FE531223876C08009FC96F /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16FE531123876C08009FC96F /* Question.swift */; };
 		16FE531423876C98009FC96F /* QuestionBank.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16FE531323876C98009FC96F /* QuestionBank.swift */; };
 		51114ABC2383B29F0023788F /* tree.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 51114ABB2383B29F0023788F /* tree.jpeg */; };
@@ -99,7 +98,6 @@
 		16EEACC12395B72C00C09534 /* ExerciseB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseB.swift; sourceTree = "<group>"; };
 		16F57C8523804DC800ED7422 /* background.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = background.jpeg; sourceTree = "<group>"; };
 		16FE530923864219009FC96F /* ExerciseA.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseA.swift; sourceTree = "<group>"; };
-		16FE530D2386553B009FC96F /* ExerciseATableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseATableViewCell.swift; sourceTree = "<group>"; };
 		16FE531123876C08009FC96F /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
 		16FE531323876C98009FC96F /* QuestionBank.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionBank.swift; sourceTree = "<group>"; };
 		18D1189B5E4A5CA56CFF6FA3 /* Pods-Aphasia AppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Aphasia AppTests.debug.xcconfig"; path = "Target Support Files/Pods-Aphasia AppTests/Pods-Aphasia AppTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -198,7 +196,6 @@
 				51CFF37523D4C86B001C9654 /* PhotoDetailController.swift */,
 				51CF582E23CBD3EE0098D64F /* ImageData.swift */,
 				519487AD23CB8BD700C9B052 /* myCell.swift */,
-				16FE530D2386553B009FC96F /* ExerciseATableViewCell.swift */,
 				16A0F9C02388CA9400EF86BD /* CameraPageController.swift */,
 				D5DDC1F723C75D9500839740 /* User.swift */,
 				D5DDC20623CBA16600839740 /* UsersHelper.swift */,
@@ -569,7 +566,6 @@
 				16A0F9C22388CA9B00EF86BD /* CameraPageController.swift in Sources */,
 				16CFA1A42374ADD00022C95F /* AppDelegate.swift in Sources */,
 				16CFA1A62374ADD00022C95F /* SceneDelegate.swift in Sources */,
-				16FE530E2386553B009FC96F /* ExerciseATableViewCell.swift in Sources */,
 				D5DDC20D23CBDD3400839740 /* ProgressReportViewController.swift in Sources */,
 				16FE530A23864219009FC96F /* ExerciseA.swift in Sources */,
 				16CFA1E42374C7CC0022C95F /* FirstPage.swift in Sources */,

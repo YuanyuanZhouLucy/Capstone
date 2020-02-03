@@ -9,16 +9,9 @@
 import UIKit
 import Firebase
 import FirebaseDatabase
-
-
-
+import NaturalLanguage
 
 class CameraPageController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UITextFieldDelegate{
-    
-    
-     
-    
-    
 
     @IBOutlet weak var detectButton: UIButton!
     @IBOutlet weak var nameButton: UIButton!
@@ -50,11 +43,8 @@ class CameraPageController: UIViewController, UIImagePickerControllerDelegate, U
         nameObjectLabel.isHidden = true
         nameOfPhoto.isHidden = true
         saveButton.isHidden = true
-        
-        
-        
+
         nameOfPhoto.delegate = self
-        // Do any additional setup after loading the view.
     }
     
      func textFieldShouldReturn(_ textField: UITextField) -> Bool {
@@ -117,12 +107,7 @@ class CameraPageController: UIViewController, UIImagePickerControllerDelegate, U
           }
  
         }
-         
-             
-             
-             
         
-                
         
     }
     
@@ -196,9 +181,14 @@ class CameraPageController: UIViewController, UIImagePickerControllerDelegate, U
             return
            
         }
-
-
     }
+    
+    func findSemanticNeighbours(word: String) -> [[(String, NLDistance)]] {
+        let embedding = NLEmbedding.wordEmbedding(for: NLLanguage.english)
+        let neighbours = embedding?.neighbors(for: word, maximumCount: 4)
+        return [neighbours ?? []]
+    }
+    
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         if let pickedImage = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {
             imageView.image = pickedImage
