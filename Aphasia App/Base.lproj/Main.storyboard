@@ -700,7 +700,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="077-vl-xqK">
-                                <rect key="frame" x="179" y="755" width="65" height="30"/>
+                                <rect key="frame" x="179" y="775" width="65" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Exercises"/>
                                 <connections>
@@ -722,6 +722,38 @@
                                     <action selector="locateButtonAction:" destination="97g-j6-szU" eventType="touchUpInside" id="GxZ-jg-Txd"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vo3-xK-pBq">
+                                <rect key="frame" x="25" y="743" width="75" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Restaurant"/>
+                                <connections>
+                                    <action selector="restaurantAct:" destination="97g-j6-szU" eventType="touchUpInside" id="JMf-cV-aXO"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C7y-3m-oFF">
+                                <rect key="frame" x="154" y="743" width="31" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Park"/>
+                                <connections>
+                                    <action selector="parkAct:" destination="97g-j6-szU" eventType="touchUpInside" id="Ui1-Vx-CLL"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Fn-yW-pID">
+                                <rect key="frame" x="218" y="743" width="96" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Grocery Store"/>
+                                <connections>
+                                    <action selector="groceryAct:" destination="97g-j6-szU" eventType="touchUpInside" id="199-lk-GBT"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dae-Mt-AUY">
+                                <rect key="frame" x="343" y="743" width="57" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Hospital"/>
+                                <connections>
+                                    <action selector="hospitalAct:" destination="97g-j6-szU" eventType="touchUpInside" id="G5q-i3-eUq"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
@@ -733,9 +765,13 @@
                     <navigationItem key="navigationItem" id="ewb-oG-g7X"/>
                     <connections>
                         <outlet property="addressLabel" destination="f8V-DQ-He4" id="1HA-fh-8X1"/>
+                        <outlet property="groceryButton" destination="3Fn-yW-pID" id="kun-9n-Ggd"/>
+                        <outlet property="hospitalButton" destination="dae-Mt-AUY" id="oeh-om-9sm"/>
                         <outlet property="locateButton" destination="tbU-7n-R5b" id="FiH-97-ZW7"/>
                         <outlet property="mapView" destination="zdr-tK-oQf" id="HpO-d8-aks"/>
                         <outlet property="nameLabel" destination="UGq-rP-Q4R" id="qXy-1n-xzD"/>
+                        <outlet property="parkButton" destination="C7y-3m-oFF" id="hsb-b4-giw"/>
+                        <outlet property="restaurantButton" destination="Vo3-xK-pBq" id="qzM-gB-b7e"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dgn-BK-xox" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -1510,7 +1546,7 @@
         <segue reference="hVP-kl-bgW"/>
         <segue reference="B0A-qF-Xyd"/>
         <segue reference="F1W-fL-hJq"/>
-        <segue reference="YUH-K9-cH2"/>
+        <segue reference="SVC-su-jJT"/>
         <segue reference="idU-7z-TcR"/>
         <segue reference="Uc0-Lk-lKo"/>
     </inferredMetricsTieBreakers>

@@ -25,9 +25,17 @@ class LocationPage: UIViewController {
     var locationType: String = ""
     var address: String = ""
     
+    @IBOutlet weak var restaurantButton: UIButton!
+    @IBOutlet weak var parkButton: UIButton!
+    @IBOutlet weak var groceryButton: UIButton!
+    @IBOutlet weak var hospitalButton: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        restaurantButton.isHidden = true
+        parkButton.isHidden = true
+        groceryButton.isHidden = true
+        hospitalButton.isHidden = true
         locationManager = CLLocationManager()
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
         locationManager.requestAlwaysAuthorization()
@@ -63,11 +71,37 @@ class LocationPage: UIViewController {
                     print("address")
                     print(self.address)
                     locationTypeGV = self.locationType
+                    
+                  //  locationTypeGV = "me"
+                    if locationTypeGV !=  "food" && locationTypeGV != "restaurant" && locationTypeGV != "cafe" && locationTypeGV != "hospital"  && locationTypeGV != "grocery_or_supermarket" && locationTypeGV != "park"{
+                        self.restaurantButton.isHidden = false
+                        self.parkButton.isHidden = false
+                        self.groceryButton.isHidden = false
+                        self.hospitalButton.isHidden = false
+                    }
                 }
             }
         })
     }
+    
+    
+    @IBAction func restaurantAct(_ sender: UIButton) {
+     locationTypeGV = "restaurant"
+    }
+    @IBAction func parkAct(_ sender: UIButton) {
+        locationTypeGV = "park"
+    }
+    
+    @IBAction func groceryAct(_ sender: UIButton) {
+        locationTypeGV="grocery_or_supermarket"
+    }
+    
+    @IBAction func hospitalAct(_ sender: UIButton) {
+          locationTypeGV="hospital"
+    }
 }
+
+
 
 extension LocationPage: CLLocationManagerDelegate {
     
