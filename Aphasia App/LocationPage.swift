@@ -19,6 +19,8 @@ class LocationPage: UIViewController {
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var addressLabel: UILabel!
     
+    @IBOutlet weak var defaultRequestLabel: UILabel!
+    
     var locationManager = CLLocationManager()
     var currentLocation: CLLocation?
     var zoomLevel: Float = 15.0
@@ -36,6 +38,7 @@ class LocationPage: UIViewController {
         parkButton.isHidden = true
         groceryButton.isHidden = true
         hospitalButton.isHidden = true
+        defaultRequestLabel.isHidden = true
         locationManager = CLLocationManager()
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
         locationManager.requestAlwaysAuthorization()
@@ -72,8 +75,10 @@ class LocationPage: UIViewController {
                     print(self.address)
                     locationTypeGV = self.locationType
                     
-                  //  locationTypeGV = "me"
+                    locationTypeGV = "me"
                     if locationTypeGV !=  "food" && locationTypeGV != "restaurant" && locationTypeGV != "cafe" && locationTypeGV != "hospital"  && locationTypeGV != "grocery_or_supermarket" && locationTypeGV != "park"{
+                        
+                        self.defaultRequestLabel.isHidden = false
                         self.restaurantButton.isHidden = false
                         self.parkButton.isHidden = false
                         self.groceryButton.isHidden = false

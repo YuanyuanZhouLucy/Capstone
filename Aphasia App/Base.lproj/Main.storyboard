@@ -754,6 +754,13 @@
                                     <action selector="hospitalAct:" destination="97g-j6-szU" eventType="touchUpInside" id="G5q-i3-eUq"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Please select which category you want:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m5W-4t-2cg">
+                                <rect key="frame" x="28" y="722" width="301" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
@@ -765,6 +772,7 @@
                     <navigationItem key="navigationItem" id="ewb-oG-g7X"/>
                     <connections>
                         <outlet property="addressLabel" destination="f8V-DQ-He4" id="1HA-fh-8X1"/>
+                        <outlet property="defaultRequestLabel" destination="m5W-4t-2cg" id="l0V-g9-8ro"/>
                         <outlet property="groceryButton" destination="3Fn-yW-pID" id="kun-9n-Ggd"/>
                         <outlet property="hospitalButton" destination="dae-Mt-AUY" id="oeh-om-9sm"/>
                         <outlet property="locateButton" destination="tbU-7n-R5b" id="FiH-97-ZW7"/>
