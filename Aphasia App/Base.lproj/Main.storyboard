@@ -1357,10 +1357,6 @@
                                     <action selector="button4Action:" destination="nuc-qc-SU7" eventType="touchUpInside" id="fFb-51-hXA"/>
                                 </connections>
                             </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="spaker.jpeg" translatesAutoresizingMaskIntoConstraints="NO" id="Ik0-4r-qZg">
-                                <rect key="frame" x="191" y="107" width="33" height="37"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IdM-4X-eMa">
                                 <rect key="frame" x="3" y="49" width="409" height="35"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -1377,14 +1373,6 @@
                                     <action selector="nextButtonAction:" destination="nuc-qc-SU7" eventType="touchUpInside" id="YSV-pf-eRJ"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qod-cL-Jvw">
-                                <rect key="frame" x="170" y="152" width="74" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Pronounce"/>
-                                <connections>
-                                    <action selector="pronounceAct:" destination="nuc-qc-SU7" eventType="touchUpInside" id="fzG-8I-kGh"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="dQA-aH-FXf"/>
@@ -1398,7 +1386,6 @@
                         <outlet property="imageView" destination="oaX-8K-fFe" id="upN-hf-Acv"/>
                         <outlet property="label" destination="IdM-4X-eMa" id="HFO-k0-lt1"/>
                         <outlet property="nextButton" destination="6y8-2y-pff" id="oEB-Kp-fkn"/>
-                        <outlet property="pronounceButton" destination="qod-cL-Jvw" id="VCd-Kh-rTV"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lfk-bz-yxH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

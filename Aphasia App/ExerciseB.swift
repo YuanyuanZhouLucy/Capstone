@@ -18,7 +18,6 @@ class ExerciseB: UIViewController{
     @IBOutlet weak var label: UILabel!
     
     @IBOutlet weak var nextButton: UIButton!
-    @IBOutlet weak var pronounceButton: UIButton!
     
     var allQuestions = QuestionBank()
     var questionNumber = 0
@@ -261,15 +260,7 @@ class ExerciseB: UIViewController{
     }
     
     
-    @IBAction func pronounceAct(_ sender: UIButton) {
-        let utterance = AVSpeechUtterance(string: previousAnswer)
-               utterance.voice = AVSpeechSynthesisVoice(language: "en-GB")
-               utterance.rate = 0.1
-
-               let synthesizer = AVSpeechSynthesizer()
-               synthesizer.speak(utterance)
-        
-    }
+  
     
     @IBAction func homeButton(_ sender: Any) {
         let id = SQLiteDataStore.instance.addExerciseBSession(date: Date(), exercisesAttempted: questionNumber, exercisesCorrect: totalScore)

@@ -338,7 +338,8 @@ class ExerciseA: UIViewController, UITableViewDelegate, AVAudioRecorderDelegate,
             soundRecorder = try AVAudioRecorder(url:audioFileName,settings:recordSetting)
             soundRecorder.delegate = self
             soundRecorder.prepareToRecord()
-            
+        
+            print("done recording")
         } catch {
             print(error)
         }
@@ -371,6 +372,7 @@ class ExerciseA: UIViewController, UITableViewDelegate, AVAudioRecorderDelegate,
     @IBAction func recordAct(_ sender: Any) {
         if recordButton.titleLabel?.text == "Record" {
             soundRecorder.record()
+            print("done recording")
             recordButton.setTitle("Stop", for: .normal)
             playButton.isEnabled = false
         }
