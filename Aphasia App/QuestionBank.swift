@@ -34,7 +34,7 @@ class QuestionBank {
                   category = "Park"
               }
               else{
-                  category = ""}
+                  category = "Customized"}
               print("the category is:")
               print(category)
               ref.child(category).observeSingleEvent(of: .value, with:{(snapshot) in

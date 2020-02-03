@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import AVFoundation
 
 class ExerciseB: UIViewController{
     
@@ -66,7 +67,34 @@ class ExerciseB: UIViewController{
           button2.setTitleColor(.blue, for: .normal)
           button3.setTitleColor(.blue, for: .normal)
           button4.setTitleColor(.blue, for: .normal)
-        
+        if(questionNumber != 0 ){
+            if( allQuestions.list[questionNumber].correctAnswer  == 1){
+                  previousAnswer = allQuestions.list[questionNumber].optionA
+              }
+              else if(allQuestions.list[questionNumber].correctAnswer  == 2){
+                  previousAnswer = allQuestions.list[questionNumber].optionB
+              }
+              else if(allQuestions.list[questionNumber].correctAnswer  == 3){
+                  previousAnswer = allQuestions.list[questionNumber].optionC
+              }
+              else if (allQuestions.list[questionNumber].correctAnswer  == 4){
+                  previousAnswer = allQuestions.list[questionNumber].optionD
+              }
+        }
+        else{
+            if( allQuestions.list[0].correctAnswer  == 1){
+                previousAnswer = allQuestions.list[0].optionA
+            }
+            else if(allQuestions.list[0].correctAnswer  == 2){
+                previousAnswer = allQuestions.list[0].optionB
+            }
+            else if(allQuestions.list[0].correctAnswer  == 3){
+                previousAnswer = allQuestions.list[0].optionC
+            }
+            else if (allQuestions.list[0].correctAnswer  == 4){
+                previousAnswer = allQuestions.list[0].optionD
+            }
+        }
         questionNumber += 1
     }
     
@@ -90,7 +118,7 @@ class ExerciseB: UIViewController{
             if(wrongOption == 1 && questionNumber != 0){
                 button1.setTitleColor(.green, for: .normal)
                 label.text = ("You got this one correct.")
-                if(questionNumber < 5){
+                if(questionNumber < 6){
                     totalScore += 1
                 }
                
@@ -126,7 +154,7 @@ class ExerciseB: UIViewController{
             if(wrongOption == 2 && questionNumber != 0){
                 button2.setTitleColor(.green, for: .normal)
                 label.text = ("You got this one correct.")
-                 if(questionNumber < 5){
+                 if(questionNumber < 6){
                                  totalScore += 1
                              }
             } else if (questionNumber != 0){
@@ -160,7 +188,7 @@ class ExerciseB: UIViewController{
             if(wrongOption == 3 && questionNumber != 0){
                 button3.setTitleColor(.green, for: .normal)
                 label.text = ("You got this one correct.")
-                  if(questionNumber < 5){
+                  if(questionNumber < 6){
                                  totalScore += 1
                              }
             } else if (questionNumber != 0){
@@ -195,7 +223,7 @@ class ExerciseB: UIViewController{
             if(wrongOption == 4 && questionNumber != 0){
                 button4.setTitleColor(.green, for: .normal)
                 label.text = ("You got this one correct.")
-                  if(questionNumber < 5){
+                  if(questionNumber < 6){
                                  totalScore += 1
                              }
             } else if (questionNumber != 0){
@@ -230,6 +258,9 @@ class ExerciseB: UIViewController{
            }
         
     }
+    
+    
+  
     
     @IBAction func homeButton(_ sender: Any) {
         let id = SQLiteDataStore.instance.addExerciseBSession(date: Date(), exercisesAttempted: questionNumber, exercisesCorrect: totalScore)
