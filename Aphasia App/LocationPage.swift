@@ -75,7 +75,7 @@ class LocationPage: UIViewController {
                     print(self.address)
                     locationTypeGV = self.locationType
                     
-                    locationTypeGV = "me"
+                   // locationTypeGV = "me"
                     if locationTypeGV !=  "food" && locationTypeGV != "restaurant" && locationTypeGV != "cafe" && locationTypeGV != "hospital"  && locationTypeGV != "grocery_or_supermarket" && locationTypeGV != "park"{
                         
                         self.defaultRequestLabel.isHidden = false
