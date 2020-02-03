@@ -9,16 +9,9 @@
 import UIKit
 import Firebase
 import FirebaseDatabase
-
-
-
+import NaturalLanguage
 
 class CameraPageController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UITextFieldDelegate{
-    
-    
-     
-    
-    
 
     @IBOutlet weak var detectButton: UIButton!
     @IBOutlet weak var nameButton: UIButton!
@@ -50,11 +43,8 @@ class CameraPageController: UIViewController, UIImagePickerControllerDelegate, U
         nameObjectLabel.isHidden = true
         nameOfPhoto.isHidden = true
         saveButton.isHidden = true
-        
-        
-        
+
         nameOfPhoto.delegate = self
-        // Do any additional setup after loading the view.
     }
     
      func textFieldShouldReturn(_ textField: UITextField) -> Bool {
@@ -87,7 +77,13 @@ class CameraPageController: UIViewController, UIImagePickerControllerDelegate, U
 //        let text = "randdd333"
         let uid = SQLiteDataStore.instance.getUserUploadId()
         let location = "cafe"
-        
+        let existsInModel = self.inEmbeddingModel(word: text.lowercased())
+        var exerciseBSimilar = [String]()
+        var exerciseBDissimilar = [String]()
+        if existsInModel {
+            exerciseBSimilar = self.findSemanticNeighbours(word: text.lowercased())
+            exerciseBDissimilar = self.findDissimilar(word: text.lowercased())
+        }
         
         let storageRef = Storage.storage().reference().child("userDefinedImages/\(text).jpg")
        
@@ -106,10 +102,28 @@ class CameraPageController: UIViewController, UIImagePickerControllerDelegate, U
               return
             }
             let ref = Database.database().reference()
-            let dict:[String: Any] = [
-                "imageURL": downloadURL.absoluteString,
-                "Name": text
-                ]
+            var dict = [String:Any]()
+            if existsInModel {
+                 dict = [
+                    "imageURL": downloadURL.absoluteString,
+                    "Name": text,
+                    "hasCues": existsInModel,
+                    "Opt1": exerciseBSimilar[0],
+                    "Opt2": exerciseBSimilar[1],
+                    "Opt3": exerciseBSimilar[2],
+                    "Opt4": exerciseBSimilar[3],
+                    "Wrong1": exerciseBDissimilar[0],
+                    "Wrong2": exerciseBDissimilar[1],
+                    "Wrong3": exerciseBDissimilar[2],
+                    ]
+            }
+            else {
+                dict = [
+                   "imageURL": downloadURL.absoluteString,
+                   "Name": text,
+                   "hasCues": existsInModel,
+                   ]
+            }
             
             ref.child("userDefinedEx").child("uid\(uid)").child("\(location)").childByAutoId().setValue(dict)
             print("upload \(text)")
@@ -117,12 +131,7 @@ class CameraPageController: UIViewController, UIImagePickerControllerDelegate, U
           }
  
         }
-         
-             
-             
-             
         
-                
         
     }
     
@@ -159,10 +168,9 @@ class CameraPageController: UIViewController, UIImagePickerControllerDelegate, U
         landmarkDetector.process(visionImage) { (landmarks, error) in
             print("in detect")
         
-        
             guard error == nil else{
                 
-                print("theres errir!!!!!!!!!!!!!")
+                print("Error in detect object:")
                 print(error)
                 print(landmarks)
                 return
@@ -196,14 +204,47 @@ class CameraPageController: UIViewController, UIImagePickerControllerDelegate, U
             return
            
         }
-
-
     }
+    
+    func findSemanticNeighbours(word: String) -> [String] {
+        let embedding = NLEmbedding.wordEmbedding(for: NLLanguage.english)
+        let neighbours = embedding?.neighbors(for: word, maximumCount: 4)
+        print("Neighbours:", neighbours ?? [])
+        
+        var similarWords = [String]()
+        
+        neighbours!.enumerated().forEach { (arg) in
+            let (_, value) = arg
+            similarWords.append(value.0)
+        }
+        return similarWords
+    }
+    
+    func findDissimilar(word:String) -> [String] {
+        let embedding = NLEmbedding.wordEmbedding(for: NLLanguage.english)
+        let neighbours = embedding?.neighbors(for: word, maximumCount: 100)
+        let furthestNeighbour = neighbours!.last!.0
+        let furtherNeighbours = embedding?.neighbors(for: furthestNeighbour, maximumCount: 100)
+        let furthestNeighbour2 = furtherNeighbours!.last!.0
+        let furtherNeighbours2 = embedding?.neighbors(for: furthestNeighbour2, maximumCount: 100)
+        var dissimilarWords = [String]()
+        
+        furtherNeighbours2!.enumerated().forEach { (arg) in
+            let (_, value) = arg
+            dissimilarWords.append(value.0)
+        }
+        print("Most dissimilar", dissimilarWords.suffix(3))
+        return dissimilarWords.suffix(3)
+    }
+    
+    func inEmbeddingModel(word:String) -> Bool {
+        let embedding = NLEmbedding.wordEmbedding(for: NLLanguage.english)
+        return embedding!.contains(word)
+    }
+    
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         if let pickedImage = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {
             imageView.image = pickedImage
-            
-            
         }
         dismiss(animated: true, completion: nil)
         takePhotoButton.isHidden = true
