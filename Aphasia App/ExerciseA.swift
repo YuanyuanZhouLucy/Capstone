@@ -16,6 +16,8 @@ class ExerciseA: UIViewController, UITableViewDelegate, AVAudioRecorderDelegate,
     @IBOutlet weak var recordButton: UIButton!
     @IBOutlet weak var playButton: UIButton!
     
+    @IBOutlet weak var pronounceButton: UIButton!
+    
     @IBOutlet weak var cueButton: UIButton!
     @IBOutlet weak var cueButton2: UIButton!
     @IBOutlet weak var cueButton3: UIButton!
@@ -153,7 +155,7 @@ class ExerciseA: UIViewController, UITableViewDelegate, AVAudioRecorderDelegate,
         if(selectedAnswer == 1 && questionNumber != 0){
              button1.setTitleColor(correct_colour, for: .normal)
             labelEnd.text = ("You got this one correct")
-              if(questionNumber < 5){
+              if(questionNumber < 6){
                              totalScore += 1
                          }
         } else if (questionNumber != 0){
@@ -189,7 +191,7 @@ class ExerciseA: UIViewController, UITableViewDelegate, AVAudioRecorderDelegate,
         if(selectedAnswer == 2){
              button2.setTitleColor(.green, for: .normal)
               labelEnd.text =  ("You got this one correct.")
-                  if(questionNumber < 5){
+                  if(questionNumber < 6){
                                 totalScore += 1
                             }
               } else if (questionNumber != 0) {
@@ -223,7 +225,7 @@ class ExerciseA: UIViewController, UITableViewDelegate, AVAudioRecorderDelegate,
         if(selectedAnswer == 3 && questionNumber != 0){
             button3.setTitleColor(.green, for: .normal)
             labelEnd.text = ("You got this one correct.")
-               if(questionNumber < 5){
+               if(questionNumber < 6){
                              totalScore += 1
                          }
         } else if (questionNumber != 0){
@@ -258,7 +260,7 @@ class ExerciseA: UIViewController, UITableViewDelegate, AVAudioRecorderDelegate,
         if(selectedAnswer == 4 && questionNumber != 0){
             button4.setTitleColor(.green, for: .normal)
             labelEnd.text = ("You got this one correct.")
-            if(questionNumber < 5){
+            if(questionNumber < 6){
                              totalScore += 1
                          }
         } else if (questionNumber != 0){
@@ -315,12 +317,18 @@ class ExerciseA: UIViewController, UITableViewDelegate, AVAudioRecorderDelegate,
     func unHide() {
         labelEnd.isHidden = false
     }
-    func getDocumentsDirector() -> URL {
-        let paths = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
+    
+    
+    
+    func getDocumentsDirectory() -> URL {
+       let paths = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
         return paths [0]
     }
     func setupRecorder(){
-        let audioFileName = getDocumentsDirector().appendingPathComponent(fileName)
+        print("getDocumentsDirectory")
+        print(getDocumentsDirectory())
+        
+        let audioFileName = getDocumentsDirectory().appendingPathComponent(fileName)
         let recordSetting = [AVFormatIDKey: kAudioFormatAppleLossless,
                              AVEncoderAudioQualityKey: AVAudioQuality.max.rawValue,
                              AVEncoderBitRateKey:320000,
@@ -337,8 +345,11 @@ class ExerciseA: UIViewController, UITableViewDelegate, AVAudioRecorderDelegate,
     }
     
     func setupPlayer() {
-        let audioFilename = getDocumentsDirector().appendingPathComponent(fileName)
+        let audioFilename = getDocumentsDirectory().appendingPathComponent(fileName)
         do{
+            print("audio file name ")
+            print(audioFilename)
+            
             soundPlayer = try AVAudioPlayer(contentsOf: audioFilename)
             soundPlayer.delegate = self
             soundPlayer.prepareToPlay()
@@ -384,6 +395,17 @@ class ExerciseA: UIViewController, UITableViewDelegate, AVAudioRecorderDelegate,
         }
     }
 
+    
+    @IBAction func pronounceAct(_ sender: UIButton) {
+        
+        let utterance = AVSpeechUtterance(string: previousAnswer)
+        utterance.voice = AVSpeechSynthesisVoice(language: "en-GB")
+        utterance.rate = 0.1
+
+        let synthesizer = AVSpeechSynthesizer()
+        synthesizer.speak(utterance)
+        
+    }
     @IBAction func homeButton(_ sender: Any) {
         self.addSessionProgress()
     }
