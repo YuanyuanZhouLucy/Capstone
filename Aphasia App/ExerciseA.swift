@@ -25,7 +25,7 @@ class ExerciseA: UIViewController, UITableViewDelegate, AVAudioRecorderDelegate,
     
     var soundRecorder : AVAudioRecorder!
     var soundPlayer : AVAudioPlayer!
-    var fileName:String = "audioFile.m4a"
+    var fileName:String = "1.m4a"
     @IBOutlet weak var button1: UIButton!
     @IBOutlet weak var button2: UIButton!
     @IBOutlet weak var button4: UIButton!
@@ -329,10 +329,10 @@ class ExerciseA: UIViewController, UITableViewDelegate, AVAudioRecorderDelegate,
         print(getDocumentsDirectory())
         
         let audioFileName = getDocumentsDirectory().appendingPathComponent(fileName)
-        let recordSetting = [AVFormatIDKey: kAudioFormatAppleLossless,
-                             AVEncoderAudioQualityKey: AVAudioQuality.max.rawValue,
-                             AVEncoderBitRateKey:320000,
-                             AVNumberOfChannelsKey:2,
+        let recordSetting = [AVFormatIDKey: Int(kAudioFormatAppleLossless),
+                             AVEncoderAudioQualityKey: AVAudioQuality.high.rawValue,
+                             //AVEncoderBitRateKey:320000,
+                             AVNumberOfChannelsKey:1,
                              AVSampleRateKey : 44100.2] as [String: Any]
         do {
             soundRecorder = try AVAudioRecorder(url:audioFileName,settings:recordSetting)
