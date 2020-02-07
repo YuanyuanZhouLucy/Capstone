@@ -477,19 +477,8 @@
                                 <rect key="frame" x="-263" y="-137" width="917" height="1152"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9tw-s1-l2O">
-                                <rect key="frame" x="34" y="239" width="368" height="79"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="53"/>
-                                <state key="normal" title="Progress Report">
-                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
-                                </state>
-                                <connections>
-                                    <segue destination="uRs-WK-vRf" kind="showDetail" id="F1W-fL-hJq"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BiF-aF-oEm">
-                                <rect key="frame" x="61" y="597" width="307" height="75"/>
+                                <rect key="frame" x="65" y="589" width="307" height="75"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="53"/>
                                 <state key="normal" title="Take Photo">
@@ -518,7 +507,29 @@
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                 </state>
                                 <connections>
-                                    <segue destination="ECI-DZ-kPG" kind="show" id="1Ht-Vq-kOW"/>
+                                    <segue destination="ECI-DZ-kPG" kind="show" id="XqX-aZ-oVw"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rUa-Io-nD2">
+                                <rect key="frame" x="78" y="91" width="276" height="76"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="53"/>
+                                <state key="normal" title="My Location">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="ECI-DZ-kPG" kind="show" id="FhZ-cz-iUG"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9tw-s1-l2O">
+                                <rect key="frame" x="31" y="239" width="368" height="79"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="53"/>
+                                <state key="normal" title="Progress Report">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                                <connections>
+                                    <segue destination="uRs-WK-vRf" kind="showDetail" id="F1W-fL-hJq"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -700,7 +711,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="077-vl-xqK">
-                                <rect key="frame" x="179" y="775" width="65" height="30"/>
+                                <rect key="frame" x="96" y="781" width="65" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Exercises"/>
                                 <connections>
@@ -761,6 +772,14 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZhC-3b-eVF">
+                                <rect key="frame" x="234" y="781" width="84" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Take Photos"/>
+                                <connections>
+                                    <segue destination="lqm-tz-eCN" kind="show" id="WMu-oL-fpx"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
@@ -1550,12 +1569,15 @@
         <image name="spaker.jpeg" width="350" height="392"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="uCd-HY-EwV"/>
         <segue reference="p4V-2L-48W"/>
         <segue reference="hVP-kl-bgW"/>
         <segue reference="B0A-qF-Xyd"/>
         <segue reference="F1W-fL-hJq"/>
+        <segue reference="FhZ-cz-iUG"/>
         <segue reference="SVC-su-jJT"/>
-        <segue reference="idU-7z-TcR"/>
+        <segue reference="S8J-Dk-F33"/>
         <segue reference="Uc0-Lk-lKo"/>
+        <segue reference="WMu-oL-fpx"/>
     </inferredMetricsTieBreakers>
 </document>
