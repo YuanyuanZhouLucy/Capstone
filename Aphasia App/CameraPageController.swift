@@ -256,4 +256,11 @@ class CameraPageController: UIViewController, UIImagePickerControllerDelegate, U
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
         dismiss(animated: true, completion: nil)
     }
+    
+    func generate_cue_ex1(){
+        
+        
+        
+        
+    }
 }
