@@ -30,6 +30,7 @@ class CameraPageController: UIViewController, UIImagePickerControllerDelegate, U
 //    let options = VisionCloudImageLabelerOptions()
     let options = VisionOnDeviceImageLabelerOptions()
     lazy var vision = Vision.vision()
+    var cue_dic : [String: String] = [:]
     
     
     
@@ -71,6 +72,8 @@ class CameraPageController: UIViewController, UIImagePickerControllerDelegate, U
             
             return
         }
+        
+        print(self.cue_dic)
         
         let image = imageView.image
         let text: String = nameObjectLabel.text!
@@ -187,12 +190,15 @@ class CameraPageController: UIViewController, UIImagePickerControllerDelegate, U
                     print(labelText)
                     print(entityId)
                     print(confidence)
+                   
 //                   self.resultView.text = self.resultView.text + "\(landmarkDesc) - \(confidence * 100.0)%\n\n"
 //                   print( self.resultView.text)
                }
                 self.nameObjectLabel.text = landmarks[0].text
                 self.nameObjectLabel.isHidden = false
                 self.saveButton.isHidden = false
+                let cue_dic_tmp = self.generate_cue_ex1(word: landmarks[0].text )
+                
                 return
                 
 //                    self.dismiss(animated: true, completion: nil)
@@ -257,10 +263,112 @@ class CameraPageController: UIViewController, UIImagePickerControllerDelegate, U
         dismiss(animated: true, completion: nil)
     }
     
-    func generate_cue_ex1(){
+    func generate_cue_ex1(word: String) -> [String: String]{
         
         
+
+                let headers = [
+                    "x-rapidapi-host": "wordsapiv1.p.rapidapi.com",
+                    "x-rapidapi-key": "fcceaaaa83msh794a5625b58ed61p10b214jsne604f93cb0db"
+                ]
+
+                let request = NSMutableURLRequest(url: NSURL(string: "https://wordsapiv1.p.rapidapi.com/words/\(word)")! as URL,
+                                                        cachePolicy: .useProtocolCachePolicy,
+                                                    timeoutInterval: 10.0)
+                request.httpMethod = "GET"
+                request.allHTTPHeaderFields = headers
+
+                let session = URLSession.shared
+                let dataTask = session.dataTask(with: request as URLRequest, completionHandler: { (data, response, error) -> Void in
+                    if (error != nil) {
+                        print(error)
+                    } else {
+                        let httpResponse = response as? HTTPURLResponse
+        //                print(httpResponse)
+                         if let json = try? JSONSerialization.jsonObject(with: data!, options: []) {
+                             print("------success----")
+                             print(json)
+        //                     print("------end----")
+                             if let dictionary = json as? [String: Any] {
+                        
+                                 if let nestedDictionary = dictionary["results"] as? Array<Dictionary<String, Any>> {
+                                     for resul in nestedDictionary {
+                                         if let POS = resul["partOfSpeech"] as? [Any] {
+                                             if POS[0] == "noun" {
+                                                 //print(resul["definition"] ?? "") // this works resul[]- but need to selection the one correspond to noun
+                                                if let def = resul["definition"] as? [Any] {
+                                                    self.cue_dic["definition"] = def
+                                                }
+                                                 if let egs = resul["examples"] as? [String] {
+                                                     //print(egs[0])
+                                                    self.cue_dic["examples"] = egs[0]
+                                                     
+                                                 }
+                                                 
+                                                 
+                                             }
+                                             
+                                         }
+                                     }
+                                 }
+                                 if let syl = dictionary["syllables"] as? [String: Any] {
+                                     if let count = syl["count"] as? Int {
+                                         //print(count)
+                                        self.cue_dic["count"] = String(count)
+                                     
+                                     }
+                                 }
+                                            
+                             }
+                        
+                         }
+                    }
+                })
+
+                dataTask.resume()
+                 print("--------------------------------print json------------------------------------------------")
+                
+                
+                let request2 = NSMutableURLRequest(url: NSURL(string: "https://wordsapiv1.p.rapidapi.com/words/\(word)/rhymes")! as URL,
+                                                cachePolicy: .useProtocolCachePolicy,
+                                            timeoutInterval: 10.0)
+                request2.httpMethod = "GET"
+                request2.allHTTPHeaderFields = headers
+
+                let session2 = URLSession.shared
+                let dataTask2 = session2.dataTask(with: request2 as URLRequest, completionHandler: { (data, response, error) -> Void in
+                    if (error != nil) {
+                        print("---fail2----")
+                        print(error)
+                    } else {
+                        let httpResponse = response as? HTTPURLResponse
+                        print("-----success2----")
+                        if let json = try? JSONSerialization.jsonObject(with: data!, options: []) {
+                            print("------start----")
+                            //print(json)
+                            print("------end----")
+                            if let dictionary = json as? [String: Any] {
+                                if let nestedDictionary = dictionary["rhymes"] as? Dictionary<String, Any>{
+                                   
+                                        if let r_words = nestedDictionary["all"] as? [String] {
+                                            self.cue_dic["rhymes"] = r_words[0]
+                                            
+                                        }
+                                            
+                                    
+                                }
+                            }
+                
+                                    
+                        }
+                                            
+                    }
+                })
+
+                dataTask2.resume()
+                 
         
+        return self.cue_dic
         
     }
 }
