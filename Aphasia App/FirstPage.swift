@@ -22,8 +22,16 @@ class FirstPage: UIViewController {
         print("first page")
         super.viewDidLoad()
         self.letsBeginButton.layer.cornerRadius = 20
-        self.appRehabButton.layer.cornerRadius = 20
-        self.exerciseButton.layer.cornerRadius = 20
+        self.letsBeginButton.clipsToBounds = true
+        
+        letsBeginButton.layer.shadowColor = UIColor.black.cgColor
+        letsBeginButton.layer.shadowOffset = CGSize(width: 10, height: 10)
+        letsBeginButton.layer.shadowRadius = 10
+        letsBeginButton.layer.shadowOpacity = 10.0
+        letsBeginButton.layer.shadowOpacity = 10.0
+    
+        //self.appRehabButton.layer.cornerRadius = 20
+        //self.exerciseButton.layer.cornerRadius = 20
         
         let ref = Database.database().reference()
         
