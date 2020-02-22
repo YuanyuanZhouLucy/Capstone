@@ -8,6 +8,10 @@
 import UIKit
 
 class LocateMePageController: UIViewController {
+    
+    //background color
+    
+    
 
     @IBOutlet weak var restaurantButton: UIButton!
     @IBOutlet weak var parkButton: UIButton!
