@@ -72,22 +72,35 @@ class CameraPageController: UIViewController, UIImagePickerControllerDelegate, U
             
             return
         }
+       
+       
         
-        print(self.cue_dic)
+        
         
         let image = imageView.image
         let text: String = nameObjectLabel.text!
 //        let text = "randdd333"
         let uid = SQLiteDataStore.instance.getUserUploadId()
-        let location = "cafe"
+        
+        let isWord = self.checkName(word: text)
         let existsInModel = self.inEmbeddingModel(word: text.lowercased())
         var exerciseBSimilar = [String]()
         var exerciseBDissimilar = [String]()
-        if existsInModel {
-            exerciseBSimilar = self.findSemanticNeighbours(word: text.lowercased())
-            exerciseBDissimilar = self.findDissimilar(word: text.lowercased())
-        }
+               
+       if isWord && existsInModel {
+           
+           exerciseBSimilar = self.findSemanticNeighbours(word: text.lowercased())
+           exerciseBDissimilar = self.findDissimilar(word: text.lowercased())
+         
+           self.generate_cue_ex1(word: nameObjectLabel.text! )
+           self.getRhyme(word: nameObjectLabel.text! )
+           print("there will be CUES")
+           print(self.cue_dic)
+           
+       }
+               
         
+        let location = "cafe"
         let storageRef = Storage.storage().reference().child("userDefinedImages/\(text).jpg")
        
         
@@ -106,18 +119,24 @@ class CameraPageController: UIViewController, UIImagePickerControllerDelegate, U
             }
             let ref = Database.database().reference()
             var dict = [String:Any]()
-            if existsInModel {
+            if existsInModel && !self.cue_dic.isEmpty {
+                
                  dict = [
                     "imageURL": downloadURL.absoluteString,
                     "Name": text,
                     "hasCues": existsInModel,
-                    "Opt1": exerciseBSimilar[0],
+                    "Cue1": self.cue_dic["count"],
+                    "Cue2": self.cue_dic["definition"],
+                    "Cue3": self.cue_dic["example"],
+                    "Cue4": self.cue_dic["rhymes"],
+                    "Opt1": exerciseBDissimilar[0],
                     "Opt2": exerciseBSimilar[1],
                     "Opt3": exerciseBSimilar[2],
                     "Opt4": exerciseBSimilar[3],
                     "Wrong1": exerciseBDissimilar[0],
                     "Wrong2": exerciseBDissimilar[1],
                     "Wrong3": exerciseBDissimilar[2],
+                    "WrongOpt": 1
                     ]
             }
             else {
@@ -197,7 +216,6 @@ class CameraPageController: UIViewController, UIImagePickerControllerDelegate, U
                 self.nameObjectLabel.text = landmarks[0].text
                 self.nameObjectLabel.isHidden = false
                 self.saveButton.isHidden = false
-                let cue_dic_tmp = self.generate_cue_ex1(word: landmarks[0].text )
                 
                 return
                 
@@ -263,6 +281,25 @@ class CameraPageController: UIViewController, UIImagePickerControllerDelegate, U
         dismiss(animated: true, completion: nil)
     }
     
+    func checkName(word: String) -> Bool{
+        var isWord = true
+        let text = word
+        let tagger = NSLinguisticTagger(tagSchemes: [.nameType], options: 0)
+        tagger.string = text
+        let range = NSRange(location:0, length: text.utf16.count)
+        let options: NSLinguisticTagger.Options = [.omitPunctuation, .omitWhitespace, .joinNames]
+        let tags: [NSLinguisticTag] = [.personalName, .placeName, .organizationName]
+        tagger.enumerateTags(in: range, unit: .word, scheme: .nameType, options: options) { tag, tokenRange, stop in
+            if let tag = tag, tags.contains(tag) {
+                isWord = false
+                let name = (text as NSString).substring(with: tokenRange)
+                print("\(name): \(tag)")
+            }
+        }
+        return isWord
+        
+    }
+    
     func generate_cue_ex1(word: String) -> [String: String]{
         
         
@@ -287,34 +324,40 @@ class CameraPageController: UIViewController, UIImagePickerControllerDelegate, U
         //                print(httpResponse)
                          if let json = try? JSONSerialization.jsonObject(with: data!, options: []) {
                              print("------success----")
-                             print(json)
+//                             print(json)
         //                     print("------end----")
                              if let dictionary = json as? [String: Any] {
                         
                                  if let nestedDictionary = dictionary["results"] as? Array<Dictionary<String, Any>> {
                                      for resul in nestedDictionary {
-                                         if let POS = resul["partOfSpeech"] as? [Any] {
-                                             if POS[0] == "noun" {
+                                         if let POS = resul["partOfSpeech"] as? String {
+                                             if POS == "noun" {
                                                  //print(resul["definition"] ?? "") // this works resul[]- but need to selection the one correspond to noun
-                                                if let def = resul["definition"] as? [Any] {
-                                                    self.cue_dic["definition"] = def
+                                                if let def = resul["definition"] as? String {
+//                                                    if let def0 = def[0] as? String {
+                                                        self.cue_dic["definition"] = def
+//                                                    }
+                                                    
                                                 }
-                                                 if let egs = resul["examples"] as? [String] {
-                                                     //print(egs[0])
-                                                    self.cue_dic["examples"] = egs[0]
-                                                     
-                                                 }
+                                                  if let eg = resul["examples"] as? [Any] {
+                                                        if let eg0 = eg[0] as? String {
+                                                            let newString = eg0.replacingOccurrences(of: word, with: "___")
+                                                            self.cue_dic["example"] = newString
+                                                            break
+                                                        }
+                                                        
+                                                    }
                                                  
                                                  
                                              }
-                                             
+//
                                          }
                                      }
                                  }
                                  if let syl = dictionary["syllables"] as? [String: Any] {
                                      if let count = syl["count"] as? Int {
                                          //print(count)
-                                        self.cue_dic["count"] = String(count)
+                                        self.cue_dic["count"] = String(count) + " Syllables"
                                      
                                      }
                                  }
@@ -329,46 +372,54 @@ class CameraPageController: UIViewController, UIImagePickerControllerDelegate, U
                  print("--------------------------------print json------------------------------------------------")
                 
                 
-                let request2 = NSMutableURLRequest(url: NSURL(string: "https://wordsapiv1.p.rapidapi.com/words/\(word)/rhymes")! as URL,
-                                                cachePolicy: .useProtocolCachePolicy,
-                                            timeoutInterval: 10.0)
-                request2.httpMethod = "GET"
-                request2.allHTTPHeaderFields = headers
-
-                let session2 = URLSession.shared
-                let dataTask2 = session2.dataTask(with: request2 as URLRequest, completionHandler: { (data, response, error) -> Void in
-                    if (error != nil) {
-                        print("---fail2----")
-                        print(error)
-                    } else {
-                        let httpResponse = response as? HTTPURLResponse
-                        print("-----success2----")
-                        if let json = try? JSONSerialization.jsonObject(with: data!, options: []) {
-                            print("------start----")
-                            //print(json)
-                            print("------end----")
-                            if let dictionary = json as? [String: Any] {
-                                if let nestedDictionary = dictionary["rhymes"] as? Dictionary<String, Any>{
-                                   
-                                        if let r_words = nestedDictionary["all"] as? [String] {
-                                            self.cue_dic["rhymes"] = r_words[0]
-                                            
-                                        }
-                                            
-                                    
-                                }
-                            }
-                
-                                    
-                        }
-                                            
-                    }
-                })
-
-                dataTask2.resume()
+               
                  
         
         return self.cue_dic
         
+    }
+    
+    func getRhyme(word: String){
+        let headers = [
+            "x-rapidapi-host": "wordsapiv1.p.rapidapi.com",
+            "x-rapidapi-key": "fcceaaaa83msh794a5625b58ed61p10b214jsne604f93cb0db"
+        ]
+        let request2 = NSMutableURLRequest(url: NSURL(string: "https://wordsapiv1.p.rapidapi.com/words/\(word)/rhymes")! as URL,
+                                                       cachePolicy: .useProtocolCachePolicy,
+                                                   timeoutInterval: 10.0)
+                       request2.httpMethod = "GET"
+                       request2.allHTTPHeaderFields = headers
+
+                       let session2 = URLSession.shared
+                       let dataTask2 = session2.dataTask(with: request2 as URLRequest, completionHandler: { (data, response, error) -> Void in
+                           if (error != nil) {
+                               print("---fail2----")
+                               print(error)
+                           } else {
+                               let httpResponse = response as? HTTPURLResponse
+                               print("-----success2----")
+                               if let json = try? JSONSerialization.jsonObject(with: data!, options: []) {
+                                   print("------start----")
+                                   //print(json)
+                                   print("------end----")
+                                   if let dictionary = json as? [String: Any] {
+                                       if let nestedDictionary = dictionary["rhymes"] as? Dictionary<String, Any>{
+                                          
+                                               if let r_words = nestedDictionary["all"] as? [String] {
+                                                   self.cue_dic["rhymes"] = "Rhymes with " + r_words[0]
+                                                   
+                                               }
+                                                   
+                                           
+                                       }
+                                   }
+                       
+                                           
+                               }
+                                                   
+                           }
+                       })
+
+                       dataTask2.resume()
     }
 }

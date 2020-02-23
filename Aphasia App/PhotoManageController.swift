@@ -48,7 +48,7 @@ class PhotoManageController: UIViewController, UICollectionViewDataSource, UICol
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated) // No need for semicolon
-        loadFromFireBase()
+//        loadFromFireBase()
         print("load again")
     }
         
@@ -98,6 +98,7 @@ class PhotoManageController: UIViewController, UICollectionViewDataSource, UICol
             
 
     }
+   
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -115,7 +116,11 @@ class PhotoManageController: UIViewController, UICollectionViewDataSource, UICol
 //        }
         return self.img_arr.count
     }
-    
+    func populateImages(){
+        
+        var images : [UIImage] = []
+        
+    }
   //Populate view
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell
     {
@@ -126,20 +131,38 @@ class PhotoManageController: UIViewController, UICollectionViewDataSource, UICol
         let image_url = img_arr[indexPath.row].img_url
         print(image_url)
         print(img_arr[indexPath.row].img_name)
-        if let url = URL (string:image_url) {
-                          DispatchQueue.main.async {
-                              do {
-                                  let data = try Data(contentsOf: url)
-                                   cell.myImageView.image = UIImage(data: data)
-                                cell.myImageView.contentMode = .scaleAspectFill
-                                cell.clipsToBounds = true
-                                    self.img_arr[indexPath.row].img = UIImage(data: data)
-//                                  cell.myImageView.setNeedsDisplay()
-                              }catch let err {
-                                  print("error")
-                              }
-                          }
-                      }
+        
+         cell.myImageView.image = UIImage()
+         if let url = URL (string:image_url) {
+                DispatchQueue.global().async {
+                    let data = try? Data(contentsOf: url)
+                    
+                    if let data = data, let image = UIImage(data: data) {
+                        DispatchQueue.main.async {
+                            cell.myImageView.image = UIImage(data: data)
+                            cell.myImageView.contentMode = .scaleAspectFill
+                            cell.clipsToBounds = true
+                                self.img_arr[indexPath.row].img = UIImage(data: data)
+                            
+                        }
+                    }
+                }
+        }
+        
+//        if let url = URL (string:image_url) {
+//                          DispatchQueue.main.async {
+//                              do {
+//                                  let data = try Data(contentsOf: url)
+//                                   cell.myImageView.image = UIImage(data: data)
+//                                cell.myImageView.contentMode = .scaleAspectFill
+//                                cell.clipsToBounds = true
+//                                    self.img_arr[indexPath.row].img = UIImage(data: data)
+////                                  cell.myImageView.setNeedsDisplay()
+//                              }catch let err {
+//                                  print("error")
+//                              }
+//                          }
+//                      }
         
        
         return cell
