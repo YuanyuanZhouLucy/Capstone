@@ -30,7 +30,7 @@ class CameraPageController: UIViewController, UIImagePickerControllerDelegate, U
 //    let options = VisionCloudImageLabelerOptions()
     let options = VisionOnDeviceImageLabelerOptions()
     lazy var vision = Vision.vision()
-    
+    var category = ""
     
     
     override func viewDidLoad() {
@@ -45,6 +45,20 @@ class CameraPageController: UIViewController, UIImagePickerControllerDelegate, U
         saveButton.isHidden = true
 
         nameOfPhoto.delegate = self
+        
+        
+        if(locationTypeGV == "food" || locationTypeGV == "restaurant" || locationTypeGV == "cafe"){
+            category = "Cafe"
+        }
+        else if(locationTypeGV == "grocery_or_supermarket"){
+            category = "GroceryStore"
+        }
+        else if(locationTypeGV == "hospital"){
+            category = "Hospital"
+        }
+        else if(locationTypeGV == "park"){
+            category = "Park"
+        }
     }
     
      func textFieldShouldReturn(_ textField: UITextField) -> Bool {
@@ -76,7 +90,7 @@ class CameraPageController: UIViewController, UIImagePickerControllerDelegate, U
         let text: String = nameObjectLabel.text!
 //        let text = "randdd333"
         let uid = SQLiteDataStore.instance.getUserUploadId()
-        let location = "cafe"
+        let location = category
         let existsInModel = self.inEmbeddingModel(word: text.lowercased())
         var exerciseBSimilar = [String]()
         var exerciseBDissimilar = [String]()
@@ -105,8 +119,8 @@ class CameraPageController: UIViewController, UIImagePickerControllerDelegate, U
             var dict = [String:Any]()
             if existsInModel {
                  dict = [
-                    "imageURL": downloadURL.absoluteString,
-                    "Name": text,
+                    "ImageURL": downloadURL.absoluteString,
+                    "Answer": text,
                     "hasCues": existsInModel,
                     "Opt1": exerciseBSimilar[0],
                     "Opt2": exerciseBSimilar[1],
