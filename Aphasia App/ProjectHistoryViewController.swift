@@ -51,4 +51,10 @@ class ProjectHistoryViewController: UIViewController, UITableViewDataSource, UIT
 
         return cell
     }
+    
+    // Locking orientation.
+     override open var supportedInterfaceOrientations: UIInterfaceOrientationMask {
+    return .portrait
+    }
+    
 }

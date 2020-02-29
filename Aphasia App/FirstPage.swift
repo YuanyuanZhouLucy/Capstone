@@ -69,4 +69,10 @@ class FirstPage: UIViewController {
             
         })
     }
+    
+    // Locking orientation.
+     override open var supportedInterfaceOrientations: UIInterfaceOrientationMask {
+    return .portrait
+    }
+    
 }

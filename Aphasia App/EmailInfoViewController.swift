@@ -99,5 +99,8 @@ class EmailInfoViewController: UIViewController, MFMailComposeViewControllerDele
         }
         return SQLiteDataStore.instance.getExerciseALatestSessionProgress()
     }
-    
+ // Locking orientation.
+     override open var supportedInterfaceOrientations: UIInterfaceOrientationMask {
+    return .portrait
+    }
 }

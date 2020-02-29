@@ -36,4 +36,6 @@ class GooglePlace {
     }
       placeType = foundType
   }
+    
+    
 }

@@ -256,4 +256,9 @@ class CameraPageController: UIViewController, UIImagePickerControllerDelegate, U
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
         dismiss(animated: true, completion: nil)
     }
+    // Locking orientation.
+     override open var supportedInterfaceOrientations: UIInterfaceOrientationMask {
+    return .portrait
+    }
+    
 }

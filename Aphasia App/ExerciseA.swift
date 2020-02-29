@@ -422,4 +422,10 @@ class ExerciseA: UIViewController, UITableViewDelegate, AVAudioRecorderDelegate,
             print("Add to session information to exercise A database failed" )
         }
     }
+    
+    // Locking orientation.
+     override open var supportedInterfaceOrientations: UIInterfaceOrientationMask {
+    return .portrait
+    }
+    
 }

@@ -269,5 +269,9 @@ class ExerciseB: UIViewController{
         }
     }
     
+    // Locking orientation.
+     override open var supportedInterfaceOrientations: UIInterfaceOrientationMask {
+    return .portrait
+    }
 
 }

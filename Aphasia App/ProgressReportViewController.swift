@@ -60,4 +60,10 @@ class ProgressReportViewController: UIViewController {
         }
         label.text = "0/0"
     }
+    
+    // Locking orientation.
+     override open var supportedInterfaceOrientations: UIInterfaceOrientationMask {
+    return .portrait
+    }
+    
 }
