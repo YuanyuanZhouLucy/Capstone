@@ -155,7 +155,7 @@ class ExerciseA: UIViewController, UITableViewDelegate, AVAudioRecorderDelegate,
         if(selectedAnswer == 1 && questionNumber != 0){
              button1.setTitleColor(correct_colour, for: .normal)
             labelEnd.text = ("You got this one correct")
-              if(questionNumber < 6){
+            if(questionNumber < ( 1+self.allQuestions.size)){
                              totalScore += 1
                          }
         } else if (questionNumber != 0){
@@ -191,7 +191,7 @@ class ExerciseA: UIViewController, UITableViewDelegate, AVAudioRecorderDelegate,
         if(selectedAnswer == 2){
              button2.setTitleColor(correct_colour, for: .normal)
               labelEnd.text =  ("You got this one correct.")
-                  if(questionNumber < 6){
+            if(questionNumber < (1+self.allQuestions.size)){
                                 totalScore += 1
                             }
               } else if (questionNumber != 0) {
@@ -225,7 +225,7 @@ class ExerciseA: UIViewController, UITableViewDelegate, AVAudioRecorderDelegate,
         if(selectedAnswer == 3 && questionNumber != 0){
             button3.setTitleColor(correct_colour, for: .normal)
             labelEnd.text = ("You got this one correct.")
-               if(questionNumber < 6){
+               if(questionNumber < (1+self.allQuestions.size)){
                              totalScore += 1
                          }
         } else if (questionNumber != 0){
@@ -260,7 +260,7 @@ class ExerciseA: UIViewController, UITableViewDelegate, AVAudioRecorderDelegate,
         if(selectedAnswer == 4 && questionNumber != 0){
             button4.setTitleColor(correct_colour, for: .normal)
             labelEnd.text = ("You got this one correct.")
-            if(questionNumber < 6){
+            if(questionNumber < (1+self.allQuestions.size)){
                              totalScore += 1
                          }
         } else if (questionNumber != 0){
@@ -286,7 +286,8 @@ class ExerciseA: UIViewController, UITableViewDelegate, AVAudioRecorderDelegate,
     
     
     @IBAction func nextButtonAction(_ sender: UIButton) {
-        if(questionNumber < 5){
+        
+        if(questionNumber < self.allQuestions.size){
             updateQuestion()
         }
         else{

@@ -15,14 +15,18 @@ class QuestionBank {
     let ref = Database.database().reference()
     let nonRelatedWord = ["Caffeine", "Brandywine", "Chesapeake"]
     let wrongAnswer = ["plastic bag", "pencase", "bottle","water","phone","bookstore"]
+    let uid = SQLiteDataStore.instance.getUserUploadId()
+    var size = 0
     
     init() {
         
         let locationType = locationTypeGV
+        print("locationTypeGV")
+        print(locationTypeGV)
         print("the location i got is:")
         print(locationType)
          if(locationTypeGV == "food" || locationTypeGV == "restaurant" || locationTypeGV == "cafe"){
-                  category = "Cafe"
+                    category = "Cafe"
               }
               else if(locationTypeGV == "grocery_or_supermarket"){
                   category = "GroceryStore"
@@ -33,8 +37,6 @@ class QuestionBank {
               else if(locationTypeGV == "park"){
                   category = "Park"
               }
-              else{
-                  category = "Customized"}
               print("the category is:")
               print(category)
               ref.child(category).observeSingleEvent(of: .value, with:{(snapshot) in
@@ -138,6 +140,7 @@ class QuestionBank {
             let r44 = Exercise4?["Opt4"] as? String ?? ""
             let wrongOpt4 = Exercise4?["WrongOpt"] as? Int ?? 1
             
+                
             let Exercise5 = value5?["Exercise" + String(randomNumbers[4])] as? NSDictionary
             let imageURL5 = Exercise5?["ImageURL"] as? String ?? ""
             let answer5 = Exercise5?["Answer"] as? String ?? ""
@@ -159,8 +162,39 @@ class QuestionBank {
             self.list.append(Question(image: imageURL3, optA: answer3, optB: wrong31,optC:wrong32,optD:wrong33, answer: 1,q1:cue31,q2:cue32,q3:cue33,q4:cue34,r1:r31,r2:r32,r3:r33,r4:r34,wrongOption: wrongOpt3))
             self.list.append(Question(image: imageURL4, optA: wrong41, optB: answer4,optC:wrong42,optD:wrong43, answer: 2,q1:cue41,q2:cue42,q3:cue43,q4:cue44,r1:r41,r2:r42,r3:r43,r4:r44, wrongOption: wrongOpt4))
             self.list.append(Question(image: imageURL5, optA: answer5, optB:wrong51,optC:wrong52,optD:wrong53, answer: 1,q1:cue51,q2:cue52,q3:cue53,q4:cue54,r1:r51,r2:r52,r3:r53,r4:r54,wrongOption: wrongOpt5))
-            
+                self.size = 5
             
         })
+        
+      
+        ref.child("userDefinedEx").child("uid\(uid)").observeSingleEvent(of: .value, with: {(snapshot1)in
+            if snapshot1.hasChild(self.category){
+                self.ref.child("userDefinedEx").child("uid\(self.uid)").child(self.category).observeSingleEvent(of: .value, with:{(snapshot) in
+                    for individualSnap in snapshot.children{
+                        let snap = individualSnap as! DataSnapshot
+                        print(snap)
+                        let imageURL = (snap.value as? NSDictionary)?["ImageURL"] as? String ?? ""
+                        let answer = (snap.value as? NSDictionary)?["Answer"] as? String ?? ""
+                        let wrong11=(snap.value as? NSDictionary)?["Wrong1"] as? String ?? ""
+                        let wrong12=(snap.value as? NSDictionary)?["Wrong2"] as? String ?? ""
+                        let wrong13=(snap.value as? NSDictionary)?["Wrong3"] as? String ?? ""
+                        let cue11 = (snap.value as? NSDictionary)?["Cue1"] as? String ?? ""
+                        let cue12 = (snap.value as? NSDictionary)?["Cue2"] as? String ?? ""
+                        let cue13 = (snap.value as? NSDictionary)?["Cue3"] as? String ?? ""
+                        let cue14 = (snap.value as? NSDictionary)?["Cue4"] as? String ?? ""
+                        let r11 = (snap.value as? NSDictionary)?["Opt1"] as? String ?? ""
+                        let r12 = (snap.value as? NSDictionary)?["Opt2"] as? String ?? ""
+                        let r13 = (snap.value as? NSDictionary)?["Opt3"] as? String ?? ""
+                        let r14 = (snap.value as? NSDictionary)?["Opt4"] as? String ?? ""
+                        let wrongOpt1 = (snap.value as? NSDictionary)?["WrongOpt"] as? Int ?? 1
+                          self.list.append(Question(image: imageURL, optA: answer, optB: wrong11,optC:wrong12,optD:wrong13, answer: 1,q1:cue11,q2:cue12,q3:cue13,q4:cue14,r1:r11,r2:r12,r3:r13,r4:r14,wrongOption: wrongOpt1))
+                        
+                        self.size = 6
+                    }
+                })
+            }
+        })
+        
+        
     }
 }

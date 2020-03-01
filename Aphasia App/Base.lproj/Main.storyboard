@@ -562,6 +562,7 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BiF-aF-oEm">
                                 <rect key="frame" x="60" y="376" width="300" height="65"/>
+
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemGroupedBackgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="40"/>
@@ -608,6 +609,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
+
                                     <segue destination="uRs-WK-vRf" kind="showDetail" id="F1W-fL-hJq"/>
                                 </connections>
                             </button>
@@ -908,6 +910,7 @@
                                     <action selector="locateButtonAction:" destination="97g-j6-szU" eventType="touchUpInside" id="GxZ-jg-Txd"/>
                                 </connections>
                             </button>
+
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ecF-bP-Iw3">
                                 <rect key="frame" x="320" y="0.0" width="77" height="96"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -926,6 +929,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+
                         </subviews>
                         <color key="backgroundColor" red="0.90845070422535212" green="0.95070422535211263" blue="0.77464788732394363" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <color key="tintColor" red="0.91549295774647887" green="0.94366197183098588" blue="0.77464788732394363" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -938,9 +942,14 @@
                     <navigationItem key="navigationItem" id="ewb-oG-g7X"/>
                     <connections>
                         <outlet property="addressLabel" destination="f8V-DQ-He4" id="1HA-fh-8X1"/>
+                        <outlet property="defaultRequestLabel" destination="m5W-4t-2cg" id="l0V-g9-8ro"/>
+                        <outlet property="groceryButton" destination="3Fn-yW-pID" id="kun-9n-Ggd"/>
+                        <outlet property="hospitalButton" destination="dae-Mt-AUY" id="oeh-om-9sm"/>
                         <outlet property="locateButton" destination="tbU-7n-R5b" id="FiH-97-ZW7"/>
                         <outlet property="mapView" destination="zdr-tK-oQf" id="HpO-d8-aks"/>
                         <outlet property="nameLabel" destination="UGq-rP-Q4R" id="qXy-1n-xzD"/>
+                        <outlet property="parkButton" destination="C7y-3m-oFF" id="hsb-b4-giw"/>
+                        <outlet property="restaurantButton" destination="Vo3-xK-pBq" id="qzM-gB-b7e"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dgn-BK-xox" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -2218,5 +2227,6 @@ My4gVGhlIGNvcnJlY3QgYW5zd2VyIHdpbGwgYmUgCA
         <segue reference="9pj-5F-1UY"/>
         <segue reference="xCf-zj-QOY"/>
         <segue reference="Uc0-Lk-lKo"/>
+        <segue reference="WMu-oL-fpx"/>
     </inferredMetricsTieBreakers>
 </document>

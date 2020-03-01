@@ -20,6 +20,8 @@ class LocateMePageController: UIViewController {
     @IBAction func restaurantButtonAction(_ sender: UIButton) {
         locationTypeGV = "restaurant"
     }
+    
+    
     @IBAction func parkButtonAction(_ sender: UIButton) {
         locationTypeGV = "park"
     }
