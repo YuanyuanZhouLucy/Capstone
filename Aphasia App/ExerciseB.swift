@@ -17,8 +17,10 @@ class ExerciseB: UIViewController{
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var label: UILabel!
     
+    @IBOutlet weak var beginButton: UIButton!
     @IBOutlet weak var nextButton: UIButton!
     
+    @IBOutlet weak var finishButton: UIButton!
     var allQuestions = QuestionBank()
     var questionNumber = 0
     var totalScore = 0
@@ -38,11 +40,30 @@ class ExerciseB: UIViewController{
         button3.setTitle("That Does Not", for: UIControl.State.normal)
         button4.setTitle("Describe the Picture", for: UIControl.State.normal)
         nextButton.setTitle("Next Question", for: UIControl.State.normal)
+        
+        button1.isHidden = true
+            button2.isHidden = true
+            button3.isHidden = true
+            button4.isHidden = true
+            nextButton.isHidden = true
+            finishButton.isHidden = true
+            
     }
     
+    @IBAction func beginButtonAction(_ sender: UIButton) {
+        unHide()
+        updateQuestion()
+    }
     
     func updateQuestion (){
         hide()
+        beginButton.isHidden = true
+         finishButton.isHidden = false
+         button1.isHidden = false
+         button2.isHidden = false
+                button3.isHidden = false
+                button4.isHidden = false
+                nextButton.isHidden = false
     if let url = URL (string:allQuestions.list[questionNumber].questionImage) {
         DispatchQueue.main.async {
             do {
