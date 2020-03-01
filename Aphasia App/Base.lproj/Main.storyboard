@@ -2217,16 +2217,6 @@ My4gVGhlIGNvcnJlY3QgYW5zd2VyIHdpbGwgYmUgCA
         <image name="speaker.3.fill" catalog="system" width="64" height="44"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="6Rb-Yk-dh5"/>
-        <segue reference="hVP-kl-bgW"/>
-        <segue reference="95M-mF-G8K"/>
-        <segue reference="Dwz-CW-fih"/>
-        <segue reference="x6i-3h-dsD"/>
-        <segue reference="Qjy-ye-R4t"/>
-        <segue reference="8BQ-Gp-cD6"/>
-        <segue reference="9pj-5F-1UY"/>
-        <segue reference="xCf-zj-QOY"/>
-        <segue reference="Uc0-Lk-lKo"/>
-        <segue reference="WMu-oL-fpx"/>
+     
     </inferredMetricsTieBreakers>
 </document>
