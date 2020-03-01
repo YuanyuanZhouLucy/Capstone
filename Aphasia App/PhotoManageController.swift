@@ -144,6 +144,7 @@ class PhotoManageController: UIViewController, UICollectionViewDataSource, UICol
                             cell.clipsToBounds = true
                                 self.img_arr[indexPath.row].img = UIImage(data: data)
                             
+                            
                         }
                     }
                 }
@@ -181,16 +182,42 @@ class PhotoManageController: UIViewController, UICollectionViewDataSource, UICol
        
 //        let image = UIImage(named: img_arr[indexPath.row].img_name)
         
-        self.performSegue(withIdentifier: seg_id, sender: image)
+        self.performSegue(withIdentifier: seg_id, sender: indexPath.row)
     }
-    
+    func delete(_ id: Int){
+        
+        
+        let url = self.img_arr[id].img_url
+        
+        for (i, element) in img_arr.enumerated().reversed(){
+            if img_arr[i].img_url == url {
+                
+                let ref = Database.database().reference()
+                
+                let up_id = SQLiteDataStore.instance.getUserUploadId()
+                let refDel = ref.child("userDefinedEx").child("uid\(up_id)").child("cafe").child(img_arr[i].fb_key)
+                
+                refDel.removeValue { error, _ in
+                    print("deleted from db error")
+                }
+                img_arr.remove(at: i)
+            }
+          
+        }
+        
+        self.img_arr.remove(at: id)
+        self.myCollectionView.reloadData()
+    }
     // MARK: - Navigation
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?)
     {
         if segue.identifier == seg_id{
+            let id = sender as! Int
             let detailVC = segue.destination as! PhotoDetailController
-            detailVC.image = sender as! ImageData
+            detailVC.image = self.img_arr[id] as! ImageData
+            detailVC.imageId = id
+            detailVC.photoManageController = self
             
         }
     }

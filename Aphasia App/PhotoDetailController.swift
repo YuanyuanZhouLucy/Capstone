@@ -20,6 +20,8 @@ class PhotoDetailController: UIViewController, UITextFieldDelegate
 //    @IBOutlet weak var nav: UINavigationItem!
 //    @IBOutlet weak var title: UINavigationItem!
     var image: ImageData!
+    var photoManageController:PhotoManageController?
+    var imageId: Int = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -86,7 +88,7 @@ class PhotoDetailController: UIViewController, UITextFieldDelegate
                 print("deleted from db error")
             }
             
-            
+            self.photoManageController?.delete(self.imageId)
             
           }
         }
