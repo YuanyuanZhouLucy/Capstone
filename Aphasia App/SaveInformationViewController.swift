@@ -30,4 +30,9 @@ class SaveInformationViewController: UIViewController {
         self.present(vc, animated: true, completion: nil)
     }
 
+    // Locking orientation.
+     override open var supportedInterfaceOrientations: UIInterfaceOrientationMask {
+    return .portrait
+    }
+    
 }

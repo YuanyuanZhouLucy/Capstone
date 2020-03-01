@@ -189,7 +189,7 @@ class ExerciseA: UIViewController, UITableViewDelegate, AVAudioRecorderDelegate,
                }
                else{
         if(selectedAnswer == 2){
-             button2.setTitleColor(.green, for: .normal)
+             button2.setTitleColor(correct_colour, for: .normal)
               labelEnd.text =  ("You got this one correct.")
             if(questionNumber < (1+self.allQuestions.size)){
                                 totalScore += 1
@@ -223,7 +223,7 @@ class ExerciseA: UIViewController, UITableViewDelegate, AVAudioRecorderDelegate,
                }
                else{
         if(selectedAnswer == 3 && questionNumber != 0){
-            button3.setTitleColor(.green, for: .normal)
+            button3.setTitleColor(correct_colour, for: .normal)
             labelEnd.text = ("You got this one correct.")
                if(questionNumber < (1+self.allQuestions.size)){
                              totalScore += 1
@@ -258,7 +258,7 @@ class ExerciseA: UIViewController, UITableViewDelegate, AVAudioRecorderDelegate,
                }
                else{
         if(selectedAnswer == 4 && questionNumber != 0){
-            button4.setTitleColor(.green, for: .normal)
+            button4.setTitleColor(correct_colour, for: .normal)
             labelEnd.text = ("You got this one correct.")
             if(questionNumber < (1+self.allQuestions.size)){
                              totalScore += 1
@@ -423,4 +423,10 @@ class ExerciseA: UIViewController, UITableViewDelegate, AVAudioRecorderDelegate,
             print("Add to session information to exercise A database failed" )
         }
     }
+    
+    // Locking orientation.
+     override open var supportedInterfaceOrientations: UIInterfaceOrientationMask {
+    return .portrait
+    }
+    
 }

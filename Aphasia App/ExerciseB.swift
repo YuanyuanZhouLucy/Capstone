@@ -116,7 +116,7 @@ class ExerciseB: UIViewController{
         }
         else{
             if(wrongOption == 1 && questionNumber != 0){
-                button1.setTitleColor(.green, for: .normal)
+                button1.setTitleColor(correct_colour, for: .normal)
                 label.text = ("You got this one correct.")
                 if(questionNumber < 1+self.allQuestions.size){
                     totalScore += 1
@@ -152,7 +152,7 @@ class ExerciseB: UIViewController{
         }
         else{
             if(wrongOption == 2 && questionNumber != 0){
-                button2.setTitleColor(.green, for: .normal)
+                button2.setTitleColor(correct_colour, for: .normal)
                 label.text = ("You got this one correct.")
                  if(questionNumber < 1+self.allQuestions.size){
                                  totalScore += 1
@@ -186,7 +186,7 @@ class ExerciseB: UIViewController{
         }
         else{
             if(wrongOption == 3 && questionNumber != 0){
-                button3.setTitleColor(.green, for: .normal)
+                button3.setTitleColor(correct_colour, for: .normal)
                 label.text = ("You got this one correct.")
                   if(questionNumber < 1+self.allQuestions.size){
                                  totalScore += 1
@@ -221,7 +221,7 @@ class ExerciseB: UIViewController{
         }
         else{
             if(wrongOption == 4 && questionNumber != 0){
-                button4.setTitleColor(.green, for: .normal)
+                button4.setTitleColor(correct_colour, for: .normal)
                 label.text = ("You got this one correct.")
                   if(questionNumber < 1+self.allQuestions.size){
                                  totalScore += 1
@@ -269,5 +269,9 @@ class ExerciseB: UIViewController{
         }
     }
     
+    // Locking orientation.
+     override open var supportedInterfaceOrientations: UIInterfaceOrientationMask {
+    return .portrait
+    }
 
 }

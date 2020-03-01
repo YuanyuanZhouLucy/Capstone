@@ -91,5 +91,9 @@ class PhotoDetailController: UIViewController, UITextFieldDelegate
           }
         }
     }
+    // Locking orientation.
+     override open var supportedInterfaceOrientations: UIInterfaceOrientationMask {
+    return .portrait
+    }
 
 }
