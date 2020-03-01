@@ -46,6 +46,11 @@ class CameraPageController: UIViewController, UIImagePickerControllerDelegate, U
         saveButton.isHidden = true
 
         nameOfPhoto.delegate = self
+        
+        
+        
+        //test
+        get_elementry_defi("flower")
     }
     
      func textFieldShouldReturn(_ textField: UITextField) -> Bool {
@@ -58,6 +63,57 @@ class CameraPageController: UIViewController, UIImagePickerControllerDelegate, U
         nameObjectLabel.text = nameOfPhoto.text
         nameOfPhoto.isHidden = true
         saveButton.isHidden = false
+        
+    }
+    
+    func get_elementry_defi(_ word: String){
+        ///test dic
+//        https://www.dictionaryapi.com/api/v3/references/sd2/json/school?key=your-api-key
+        
+        
+        let headers = [
+//            "x-rapidapi-host": "wordsapiv1.p.rapidapi.com",
+            "key": "277f4daf-2de0-4c65-ad30-14490832baa9"
+        ]
+        let request2 = NSMutableURLRequest(url: NSURL(string: "https://dictionaryapi.com/api/v3/references/sd2/json/\(word)?key=277f4daf-2de0-4c65-ad30-14490832baa9")! as URL,
+                                                       cachePolicy: .useProtocolCachePolicy,
+                                                   timeoutInterval: 10.0)
+       request2.httpMethod = "GET"
+//       request2.allHTTPHeaderFields = headers
+
+       let session2 = URLSession.shared
+       let dataTask2 = session2.dataTask(with: request2 as URLRequest, completionHandler: { (data, response, error) -> Void in
+           if (error != nil) {
+               print("---fail2----")
+               print(error)
+           } else {
+               let httpResponse = response as? HTTPURLResponse
+               print("-----success2 new ----")
+                print(data)
+            if let json = try? JSONSerialization.jsonObject(with: data!, options: []) {
+                //                    print(json)
+                print("got it")
+                
+                if let dictionary = json as? [String: Any] {
+                    if let ssefs = dictionary["def"] as? [String: Any]{
+                     if let nestedDictionary = ssefs["sseq"] as? Array<Array<Any>> {
+                         for resul in nestedDictionary {
+                             if let POS = resul[1] as? String {
+                                print(POS)
+                            }
+//
+                                 }
+//
+                             }
+                         }
+                     }
+                    }
+                }
+                
+            })
+       
+
+       dataTask2.resume()
         
     }
     
@@ -423,3 +479,5 @@ class CameraPageController: UIViewController, UIImagePickerControllerDelegate, U
                        dataTask2.resume()
     }
 }
+
+
