@@ -118,7 +118,7 @@ class ExerciseB: UIViewController{
             if(wrongOption == 1 && questionNumber != 0){
                 button1.setTitleColor(.green, for: .normal)
                 label.text = ("You got this one correct.")
-                if(questionNumber < 6){
+                if(questionNumber < 1+self.allQuestions.size){
                     totalScore += 1
                 }
                
@@ -154,7 +154,7 @@ class ExerciseB: UIViewController{
             if(wrongOption == 2 && questionNumber != 0){
                 button2.setTitleColor(.green, for: .normal)
                 label.text = ("You got this one correct.")
-                 if(questionNumber < 6){
+                 if(questionNumber < 1+self.allQuestions.size){
                                  totalScore += 1
                              }
             } else if (questionNumber != 0){
@@ -188,7 +188,7 @@ class ExerciseB: UIViewController{
             if(wrongOption == 3 && questionNumber != 0){
                 button3.setTitleColor(.green, for: .normal)
                 label.text = ("You got this one correct.")
-                  if(questionNumber < 6){
+                  if(questionNumber < 1+self.allQuestions.size){
                                  totalScore += 1
                              }
             } else if (questionNumber != 0){
@@ -223,7 +223,7 @@ class ExerciseB: UIViewController{
             if(wrongOption == 4 && questionNumber != 0){
                 button4.setTitleColor(.green, for: .normal)
                 label.text = ("You got this one correct.")
-                  if(questionNumber < 6){
+                  if(questionNumber < 1+self.allQuestions.size){
                                  totalScore += 1
                              }
             } else if (questionNumber != 0){
@@ -250,7 +250,7 @@ class ExerciseB: UIViewController{
     
     
     @IBAction func nextButtonAction(_ sender: Any) {
-        if(questionNumber < 5){
+        if(questionNumber < 1+self.allQuestions.size){
             updateQuestion()
         }
         else{
