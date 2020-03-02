@@ -50,7 +50,7 @@ class CameraPageController: UIViewController, UIImagePickerControllerDelegate, U
         
         
         //test
-        get_elementry_defi("flower")
+//        get_elementry_defi("book")
     }
     
      func textFieldShouldReturn(_ textField: UITextField) -> Bool {
@@ -90,23 +90,43 @@ class CameraPageController: UIViewController, UIImagePickerControllerDelegate, U
                let httpResponse = response as? HTTPURLResponse
                print("-----success2 new ----")
                 print(data)
-            if let json = try? JSONSerialization.jsonObject(with: data!, options: []) {
+            if let json = try? JSONSerialization.jsonObject(with: data!, options: .allowFragments) {
                 //                    print(json)
                 print("got it")
                 
-                if let dictionary = json as? [String: Any] {
-                    if let ssefs = dictionary["def"] as? [String: Any]{
-                     if let nestedDictionary = ssefs["sseq"] as? Array<Array<Any>> {
-                         for resul in nestedDictionary {
-                             if let POS = resul[1] as? String {
-                                print(POS)
+                if let dictionary = json as? [Any] {
+                    if let ssefs = dictionary[0] as? [String: Any]{
+                        if let def = ssefs["def"] as? [Any] {
+                            if let array = def[0] as? [String: Any]{
+                                if let sseq = array["sseq"] as? Array<Array<Any>>{
+                                    if let sense_top = sseq[0][0] as? [Any]{
+                                        if let sense = sense_top[1] as? [String: Any]{
+                                            if let sense_ele_top = sense["dt"] as? Array<Array<String>>{
+//                                        if let sense_ele = sense_ele_top[1]["dt"] as? Array<Array<String>>{
+                                            let definition = sense_ele_top[0][1]
+                                                let startIndex = definition.index(definition.startIndex, offsetBy: 4)
+                                                self.cue_dic["definition"] = String(definition[startIndex...])    // "String"
+                                                
+                                                print(self.cue_dic["definition"])
+//                                        }
+//                                            }}
+                                            }
+                                            }
+                                        }
+                                        
+                                    }
+                                }
+                                
                             }
+//                         for resul in nestedDictionary {
+//                             if let POS = resul[1] as? String {
+//                                print(POS)
+//                            }
 //
                                  }
 //
                              }
-                         }
-                     }
+                        
                     }
                 }
                 
@@ -149,6 +169,7 @@ class CameraPageController: UIViewController, UIImagePickerControllerDelegate, U
            exerciseBDissimilar = self.findDissimilar(word: text.lowercased())
          
            self.generate_cue_ex1(word: nameObjectLabel.text! )
+            self.get_elementry_defi(nameObjectLabel.text!)
            self.getRhyme(word: nameObjectLabel.text! )
            print("there will be CUES")
            print(self.cue_dic)
@@ -389,12 +410,12 @@ class CameraPageController: UIViewController, UIImagePickerControllerDelegate, U
                                          if let POS = resul["partOfSpeech"] as? String {
                                              if POS == "noun" {
                                                  //print(resul["definition"] ?? "") // this works resul[]- but need to selection the one correspond to noun
-                                                if let def = resul["definition"] as? String {
-//                                                    if let def0 = def[0] as? String {
-                                                        self.cue_dic["definition"] = def
-//                                                    }
-                                                    
-                                                }
+//                                                if let def = resul["definition"] as? String {
+////                                                    if let def0 = def[0] as? String {
+//                                                        self.cue_dic["definition"] = def
+////                                                    }
+//
+//                                                }
                                                   if let eg = resul["examples"] as? [Any] {
                                                         if let eg0 = eg[0] as? String {
                                                             let newString = eg0.replacingOccurrences(of: word, with: "___")
