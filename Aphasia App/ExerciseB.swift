@@ -17,8 +17,10 @@ class ExerciseB: UIViewController{
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var label: UILabel!
     
+    @IBOutlet weak var beginButton: UIButton!
     @IBOutlet weak var nextButton: UIButton!
     
+    @IBOutlet weak var finishButton: UIButton!
     var allQuestions = QuestionBank()
     var questionNumber = 0
     var totalScore = 0
@@ -38,11 +40,30 @@ class ExerciseB: UIViewController{
         button3.setTitle("That Does Not", for: UIControl.State.normal)
         button4.setTitle("Describe the Picture", for: UIControl.State.normal)
         nextButton.setTitle("Next Question", for: UIControl.State.normal)
+        
+        button1.isHidden = true
+            button2.isHidden = true
+            button3.isHidden = true
+            button4.isHidden = true
+            nextButton.isHidden = true
+            finishButton.isHidden = true
+            
     }
     
+    @IBAction func beginButtonAction(_ sender: UIButton) {
+        unHide()
+        updateQuestion()
+    }
     
     func updateQuestion (){
         hide()
+        beginButton.isHidden = true
+         finishButton.isHidden = false
+         button1.isHidden = false
+         button2.isHidden = false
+                button3.isHidden = false
+                button4.isHidden = false
+                nextButton.isHidden = false
     if let url = URL (string:allQuestions.list[questionNumber].questionImage) {
         DispatchQueue.main.async {
             do {
@@ -116,9 +137,9 @@ class ExerciseB: UIViewController{
         }
         else{
             if(wrongOption == 1 && questionNumber != 0){
-                button1.setTitleColor(.green, for: .normal)
+                button1.setTitleColor(correct_colour, for: .normal)
                 label.text = ("You got this one correct.")
-                if(questionNumber < 6){
+                if(questionNumber < 1+self.allQuestions.size){
                     totalScore += 1
                 }
                
@@ -152,9 +173,9 @@ class ExerciseB: UIViewController{
         }
         else{
             if(wrongOption == 2 && questionNumber != 0){
-                button2.setTitleColor(.green, for: .normal)
+                button2.setTitleColor(correct_colour, for: .normal)
                 label.text = ("You got this one correct.")
-                 if(questionNumber < 6){
+                 if(questionNumber < 1+self.allQuestions.size){
                                  totalScore += 1
                              }
             } else if (questionNumber != 0){
@@ -186,9 +207,9 @@ class ExerciseB: UIViewController{
         }
         else{
             if(wrongOption == 3 && questionNumber != 0){
-                button3.setTitleColor(.green, for: .normal)
+                button3.setTitleColor(correct_colour, for: .normal)
                 label.text = ("You got this one correct.")
-                  if(questionNumber < 6){
+                  if(questionNumber < 1+self.allQuestions.size){
                                  totalScore += 1
                              }
             } else if (questionNumber != 0){
@@ -221,9 +242,9 @@ class ExerciseB: UIViewController{
         }
         else{
             if(wrongOption == 4 && questionNumber != 0){
-                button4.setTitleColor(.green, for: .normal)
+                button4.setTitleColor(correct_colour, for: .normal)
                 label.text = ("You got this one correct.")
-                  if(questionNumber < 6){
+                  if(questionNumber < 1+self.allQuestions.size){
                                  totalScore += 1
                              }
             } else if (questionNumber != 0){
@@ -250,7 +271,7 @@ class ExerciseB: UIViewController{
     
     
     @IBAction func nextButtonAction(_ sender: Any) {
-        if(questionNumber < 5){
+        if(questionNumber < 1+self.allQuestions.size){
             updateQuestion()
         }
         else{
@@ -269,5 +290,9 @@ class ExerciseB: UIViewController{
         }
     }
     
+    // Locking orientation.
+     override open var supportedInterfaceOrientations: UIInterfaceOrientationMask {
+    return .portrait
+    }
 
 }

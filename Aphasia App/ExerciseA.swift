@@ -32,6 +32,9 @@ class ExerciseA: UIViewController, UITableViewDelegate, AVAudioRecorderDelegate,
     @IBOutlet weak var button3: UIButton!
     @IBOutlet weak var nextButton: UIButton!
     
+    @IBOutlet weak var exercise2Button: UIButton!
+    
+    @IBOutlet weak var beginButton: UIButton!
     @IBOutlet weak var labelEnd: UILabel!
     var allQuestions = QuestionBank()
     var questionNumber = 0
@@ -44,7 +47,6 @@ class ExerciseA: UIViewController, UITableViewDelegate, AVAudioRecorderDelegate,
     var cue4 = String()
     var pictureURL: String?
     var picture: UIImage?
-    var dog = "dog.jpeg"
     
     let correct_colour = UIColor.systemGreen
     
@@ -62,20 +64,34 @@ class ExerciseA: UIViewController, UITableViewDelegate, AVAudioRecorderDelegate,
         cueButton2.layer.cornerRadius = 30
         cueButton3.layer.cornerRadius = 30
         cueButton4.layer.cornerRadius = 30
-        button1.setTitle("Begin Now", for: UIControl.State.normal)
-        button2.setTitle("Begin Now", for: UIControl.State.normal)
-        button3.setTitle("Begin Now", for: UIControl.State.normal)
-        button4.setTitle("Begin Now", for: UIControl.State.normal)
-        cueButton.setTitle("Click 'Begin Now' to Start", for:UIControl.State.normal)
-        cueButton2.setTitle("Select the Option", for:UIControl.State.normal)
-        cueButton3.setTitle("that Best Describes ", for:UIControl.State.normal)
-        cueButton4.setTitle("the Picture", for:UIControl.State.normal)
-        nextButton.setTitle("Next Question", for: UIControl.State.normal)
+        
+        button1.isHidden = true
+        button2.isHidden = true
+        button3.isHidden = true
+        button4.isHidden = true
+        cueButton.isHidden = true
+        cueButton2.isHidden = true
+        cueButton3.isHidden = true
+        cueButton4.isHidden = true
+        nextButton.isHidden = true
+        exercise2Button.isHidden = true
+        
 
     }
   
     func updateQuestion (){
         hide()
+        beginButton.isHidden = true
+        exercise2Button.isHidden = false
+        button1.isHidden = false
+        button2.isHidden = false
+               button3.isHidden = false
+               button4.isHidden = false
+               cueButton.isHidden = false
+               cueButton2.isHidden = false
+               cueButton3.isHidden = false
+               cueButton4.isHidden = false
+               nextButton.isHidden = false
         if let url = URL (string:allQuestions.list[questionNumber].questionImage) {
             DispatchQueue.main.async {
                 do {
@@ -143,6 +159,11 @@ class ExerciseA: UIViewController, UITableViewDelegate, AVAudioRecorderDelegate,
         questionNumber += 1
     }
     
+    @IBAction func beginButtonAction(_ sender: UIButton) {
+        unHide()
+        updateQuestion()
+    }
+    
     @IBAction func button1Action(_ sender: AnyObject) {
         unHide()
         print("clicked1")
@@ -155,7 +176,7 @@ class ExerciseA: UIViewController, UITableViewDelegate, AVAudioRecorderDelegate,
         if(selectedAnswer == 1 && questionNumber != 0){
              button1.setTitleColor(correct_colour, for: .normal)
             labelEnd.text = ("You got this one correct")
-              if(questionNumber < 6){
+            if(questionNumber < ( 1+self.allQuestions.size)){
                              totalScore += 1
                          }
         } else if (questionNumber != 0){
@@ -189,9 +210,9 @@ class ExerciseA: UIViewController, UITableViewDelegate, AVAudioRecorderDelegate,
                }
                else{
         if(selectedAnswer == 2){
-             button2.setTitleColor(.green, for: .normal)
+             button2.setTitleColor(correct_colour, for: .normal)
               labelEnd.text =  ("You got this one correct.")
-                  if(questionNumber < 6){
+            if(questionNumber < (1+self.allQuestions.size)){
                                 totalScore += 1
                             }
               } else if (questionNumber != 0) {
@@ -223,9 +244,9 @@ class ExerciseA: UIViewController, UITableViewDelegate, AVAudioRecorderDelegate,
                }
                else{
         if(selectedAnswer == 3 && questionNumber != 0){
-            button3.setTitleColor(.green, for: .normal)
+            button3.setTitleColor(correct_colour, for: .normal)
             labelEnd.text = ("You got this one correct.")
-               if(questionNumber < 6){
+               if(questionNumber < (1+self.allQuestions.size)){
                              totalScore += 1
                          }
         } else if (questionNumber != 0){
@@ -258,9 +279,9 @@ class ExerciseA: UIViewController, UITableViewDelegate, AVAudioRecorderDelegate,
                }
                else{
         if(selectedAnswer == 4 && questionNumber != 0){
-            button4.setTitleColor(.green, for: .normal)
+            button4.setTitleColor(correct_colour, for: .normal)
             labelEnd.text = ("You got this one correct.")
-            if(questionNumber < 6){
+            if(questionNumber < (1+self.allQuestions.size)){
                              totalScore += 1
                          }
         } else if (questionNumber != 0){
@@ -286,7 +307,8 @@ class ExerciseA: UIViewController, UITableViewDelegate, AVAudioRecorderDelegate,
     
     
     @IBAction func nextButtonAction(_ sender: UIButton) {
-        if(questionNumber < 5){
+        
+        if(questionNumber < self.allQuestions.size){
             updateQuestion()
         }
         else{
@@ -422,4 +444,10 @@ class ExerciseA: UIViewController, UITableViewDelegate, AVAudioRecorderDelegate,
             print("Add to session information to exercise A database failed" )
         }
     }
+    
+    // Locking orientation.
+     override open var supportedInterfaceOrientations: UIInterfaceOrientationMask {
+    return .portrait
+    }
+    
 }

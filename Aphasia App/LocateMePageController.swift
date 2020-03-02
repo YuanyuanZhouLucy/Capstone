@@ -8,6 +8,10 @@
 import UIKit
 
 class LocateMePageController: UIViewController {
+    
+    //background color
+    
+    
 
     @IBOutlet weak var restaurantButton: UIButton!
     @IBOutlet weak var parkButton: UIButton!
@@ -37,4 +41,10 @@ class LocateMePageController: UIViewController {
         libraryButton.setTitle("Hospital", for: UIControl.State.normal)
         groceryButton.setTitle("Grocery Stores", for: UIControl.State.normal)
     }
+    
+    // Locking orientation.
+     override open var supportedInterfaceOrientations: UIInterfaceOrientationMask {
+    return .portrait
+    }
+    
 }

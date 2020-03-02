@@ -30,8 +30,11 @@ class CameraPageController: UIViewController, UIImagePickerControllerDelegate, U
 //    let options = VisionCloudImageLabelerOptions()
     let options = VisionOnDeviceImageLabelerOptions()
     lazy var vision = Vision.vision()
+
     var cue_dic : [String: String] = [:]
-    
+
+    var category = ""
+
     
     
     override func viewDidLoad() {
@@ -48,9 +51,20 @@ class CameraPageController: UIViewController, UIImagePickerControllerDelegate, U
         nameOfPhoto.delegate = self
         
         
-        
-        //test
-//        get_elementry_defi("book")
+
+        if(locationTypeGV == "food" || locationTypeGV == "restaurant" || locationTypeGV == "cafe"){
+            category = "Cafe"
+        }
+        else if(locationTypeGV == "grocery_or_supermarket"){
+            category = "GroceryStore"
+        }
+        else if(locationTypeGV == "hospital"){
+            category = "Hospital"
+        }
+        else if(locationTypeGV == "park"){
+            category = "Park"
+        }
+
     }
     
      func textFieldShouldReturn(_ textField: UITextField) -> Bool {
@@ -157,8 +171,12 @@ class CameraPageController: UIViewController, UIImagePickerControllerDelegate, U
         let text: String = nameObjectLabel.text!
 //        let text = "randdd333"
         let uid = SQLiteDataStore.instance.getUserUploadId()
+
         
         let isWord = self.checkName(word: text)
+
+        let location = category
+
         let existsInModel = self.inEmbeddingModel(word: text.lowercased())
         var exerciseBSimilar = [String]()
         var exerciseBDissimilar = [String]()
@@ -199,8 +217,8 @@ class CameraPageController: UIViewController, UIImagePickerControllerDelegate, U
             if existsInModel && !self.cue_dic.isEmpty {
                 
                  dict = [
-                    "imageURL": downloadURL.absoluteString,
-                    "Name": text,
+                    "ImageURL": downloadURL.absoluteString,
+                    "Answer": text,
                     "hasCues": existsInModel,
                     "Cue1": self.cue_dic["count"],
                     "Cue2": self.cue_dic["definition"],
@@ -357,6 +375,7 @@ class CameraPageController: UIViewController, UIImagePickerControllerDelegate, U
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
         dismiss(animated: true, completion: nil)
     }
+
     
     func checkName(word: String) -> Bool{
         var isWord = true
@@ -499,6 +518,13 @@ class CameraPageController: UIViewController, UIImagePickerControllerDelegate, U
 
                        dataTask2.resume()
     }
+
+    // Locking orientation.
+     override open var supportedInterfaceOrientations: UIInterfaceOrientationMask {
+    return .portrait
+    }
+    
+
 }
 
 

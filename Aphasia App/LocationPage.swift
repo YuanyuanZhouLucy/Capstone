@@ -76,7 +76,7 @@ class LocationPage: UIViewController {
                     locationTypeGV = self.locationType
                     
                    // locationTypeGV = "me"
-                    if locationTypeGV !=  "food" && locationTypeGV != "restaurant" && locationTypeGV != "cafe" && locationTypeGV != "hospital"  && locationTypeGV != "grocery_or_supermarket" && locationTypeGV != "park"{
+                    if (locationTypeGV !=  "food" && locationTypeGV != "restaurant" && locationTypeGV != "cafe" && locationTypeGV != "hospital"  && locationTypeGV != "grocery_or_supermarket" && locationTypeGV != "park"){
                         
                         self.defaultRequestLabel.isHidden = false
                         self.restaurantButton.isHidden = false
@@ -147,4 +147,11 @@ extension LocationPage: CLLocationManagerDelegate {
         locationManager.stopUpdatingLocation()
         print("Error: \(error)")
     }
+
+    // Locking orientation.
+     override open var supportedInterfaceOrientations: UIInterfaceOrientationMask {
+    return .portrait
+    }
+    
 }
+

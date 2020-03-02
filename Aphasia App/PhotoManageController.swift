@@ -223,8 +223,10 @@ class PhotoManageController: UIViewController, UICollectionViewDataSource, UICol
     }
     
    
-        
-        
+        // Locking orientation.
+         override open var supportedInterfaceOrientations: UIInterfaceOrientationMask {
+        return .portrait
+        }        
        
 }
         
