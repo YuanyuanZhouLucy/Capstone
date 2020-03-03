@@ -195,8 +195,8 @@ class CameraPageController: UIViewController, UIImagePickerControllerDelegate, U
        }
                
         
-        let location = "cafe"
-        let storageRef = Storage.storage().reference().child("userDefinedImages/\(text).jpg")
+        
+        let storageRef = Storage.storage().reference().child("userDefinedImages/\(uid)/\(text).jpg")
        
         
         let uploadTask = storageRef.putData(((image?.jpegData(compressionQuality: 1.0)!)!) , metadata: nil) { (metadata, error) in

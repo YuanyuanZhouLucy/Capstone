@@ -69,33 +69,36 @@ class PhotoManageController: UIViewController, UICollectionViewDataSource, UICol
            
             //Put code here to load songArray from the FireBase returned data
             let up_id = SQLiteDataStore.instance.getUserUploadId()
+            
         
-            let userRef = ref.child("userDefinedEx").child("uid\(up_id)").child("cafe")
+        self.img_arr = []
         
         DispatchQueue.main.async {
- 
-            userRef.observeSingleEvent(of: .value, with: { (snapshot) in
-                        
-                print("clubs: \(snapshot)")
-                self.img_arr = []
-                        
-                for child in snapshot.children {
-                    let snap = child as! DataSnapshot
-                    let placeDict = snap.value as! [String: Any]
-                    let imageURL = placeDict["imageURL"] as! String
-                    let name = placeDict["Name"] as! String
-                    self.img_arr.append(ImageData(img_url_: imageURL, img_name_: name, fb_key_: snap.key))
-                    print(imageURL, name)
-                    print("-----------------finish loop --------------------")
-                }
-                self.myCollectionView.reloadData()
-                        
-                print("-------------check error------------------")
-                        
-            })
-        }
-                    
+           
             
+            let locs = ["Cafe", "GroceryStore", "Hospital", "Park"]
+            
+            for loc in locs{
+                let userRef = ref.child("userDefinedEx").child("uid\(up_id)").child(loc)
+                userRef.observeSingleEvent(of: .value, with: { (snapshot) in
+                
+                       for child in snapshot.children {
+                           let snap = child as! DataSnapshot
+                           let placeDict = snap.value as! [String: Any]
+                           let imageURL = placeDict["imageURL"] as! String
+                           let name = placeDict["Name"] as! String
+                           self.img_arr.append(ImageData(img_url_: imageURL, img_name_: name, fb_key_: snap.key, location_: loc))
+                           print(imageURL, name)
+                           print("-----------------finish loop --------------------")
+                       }
+                       self.myCollectionView.reloadData()
+                               
+                       print("-------------check error------------------")
+                               
+                   })
+                
+            }
+        }
 
     }
    
@@ -195,7 +198,7 @@ class PhotoManageController: UIViewController, UICollectionViewDataSource, UICol
                 let ref = Database.database().reference()
                 
                 let up_id = SQLiteDataStore.instance.getUserUploadId()
-                let refDel = ref.child("userDefinedEx").child("uid\(up_id)").child("cafe").child(img_arr[i].fb_key)
+                let refDel = ref.child("userDefinedEx").child("uid\(up_id)").child(img_arr[i].location).child(img_arr[i].fb_key)
                 
                 refDel.removeValue { error, _ in
                     print("deleted from db error")
