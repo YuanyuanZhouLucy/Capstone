@@ -12,7 +12,7 @@ import UIKit
 class ImageData{
     
     let img_url: String
-    let img_name: String
+    var img_name: String!
     var img: UIImage!
     let fb_key: String
     let location: String

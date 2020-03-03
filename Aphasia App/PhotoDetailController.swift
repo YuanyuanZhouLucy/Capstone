@@ -54,11 +54,14 @@ class PhotoDetailController: UIViewController, UITextFieldDelegate
         
             let ref = Database.database().reference()
             let up_id = SQLiteDataStore.instance.getUserUploadId()
-        var refRename = ref.child("userDefinedEx").child("uid\(up_id)").child(self.image.location).child(self.image.fb_key)
+            var refRename = ref.child("userDefinedEx").child("uid\(up_id)").child(self.image.location).child(self.image.fb_key)
 
             refRename.updateChildValues(["Name": rename_textf.text])
             rename_textf.isHidden = true
             self.title = rename_textf.text
+        
+            let rename = rename_textf.text as! String
+            self.photoManageController?.rename(self.imageId, rename)
                 
   
            

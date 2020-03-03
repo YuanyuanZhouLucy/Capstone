@@ -196,6 +196,7 @@ class CameraPageController: UIViewController, UIImagePickerControllerDelegate, U
                 if existsInModel && !self.cue_dic.isEmpty {
                     
                     dict = [
+                        "Name": text,
                         "ImageURL": downloadURL.absoluteString,
                         "Answer": text,
                         "hasCues": existsInModel,

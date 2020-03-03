@@ -86,22 +86,25 @@ class PhotoManageController: UIViewController, UICollectionViewDataSource, UICol
                            let snap = child as! DataSnapshot
                            let placeDict = snap.value as! [String: Any]
                         
-                            if (placeDict["imageURL"] == nil || placeDict["name"] == nil){
+                            if (placeDict["ImageURL"] == nil || placeDict["Name"] == nil){
                                 continue
                             }
-                           let imageURL = placeDict["imageURL"] as! String
+                           let imageURL = placeDict["ImageURL"] as! String
                            let name = placeDict["Name"] as! String
                            self.img_arr.append(ImageData(img_url_: imageURL, img_name_: name, fb_key_: snap.key, location_: loc))
                            print(imageURL, name)
                            print("-----------------finish loop --------------------")
+                        
                        }
-                       self.myCollectionView.reloadData()
-                               
+                       
+                        self.myCollectionView.reloadData()
+                                          
                        print("-------------check error------------------")
                                
                    })
                 
             }
+           
         }
 
     }
@@ -191,10 +194,26 @@ class PhotoManageController: UIViewController, UICollectionViewDataSource, UICol
         
         self.performSegue(withIdentifier: seg_id, sender: indexPath.row)
     }
+    
+    func rename(_ id: Int, _ name: String ){
+        
+        
+        let url = self.img_arr[id].img_url
+       
+        
+        
+        self.img_arr[id].img_name = name
+          
+       
+        
+        
+        self.myCollectionView.reloadData()
+    }
     func delete(_ id: Int){
         
         
         let url = self.img_arr[id].img_url
+        self.img_arr.remove(at: id)
         
         for (i, element) in img_arr.enumerated().reversed(){
             if img_arr[i].img_url == url {
@@ -212,7 +231,7 @@ class PhotoManageController: UIViewController, UICollectionViewDataSource, UICol
           
         }
         
-        self.img_arr.remove(at: id)
+        
         self.myCollectionView.reloadData()
     }
     // MARK: - Navigation
