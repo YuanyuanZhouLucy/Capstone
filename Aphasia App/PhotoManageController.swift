@@ -76,7 +76,7 @@ class PhotoManageController: UIViewController, UICollectionViewDataSource, UICol
         DispatchQueue.main.async {
            
             
-            let locs = ["Cafe", "GroceryStore", "Hospital", "Park"]
+            let locs = ["Cafe", "GroceryStore", "Hospital", "Park", "hello"]
             
             for loc in locs{
                 let userRef = ref.child("userDefinedEx").child("uid\(up_id)").child(loc)
@@ -85,6 +85,10 @@ class PhotoManageController: UIViewController, UICollectionViewDataSource, UICol
                        for child in snapshot.children {
                            let snap = child as! DataSnapshot
                            let placeDict = snap.value as! [String: Any]
+                        
+                            if (placeDict["imageURL"] == nil || placeDict["name"] == nil){
+                                continue
+                            }
                            let imageURL = placeDict["imageURL"] as! String
                            let name = placeDict["Name"] as! String
                            self.img_arr.append(ImageData(img_url_: imageURL, img_name_: name, fb_key_: snap.key, location_: loc))
