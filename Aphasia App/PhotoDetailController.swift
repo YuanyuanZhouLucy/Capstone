@@ -20,6 +20,8 @@ class PhotoDetailController: UIViewController, UITextFieldDelegate
 //    @IBOutlet weak var nav: UINavigationItem!
 //    @IBOutlet weak var title: UINavigationItem!
     var image: ImageData!
+    var photoManageController:PhotoManageController?
+    var imageId: Int = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -52,11 +54,14 @@ class PhotoDetailController: UIViewController, UITextFieldDelegate
         
             let ref = Database.database().reference()
             let up_id = SQLiteDataStore.instance.getUserUploadId()
-            var refRename = ref.child("userDefinedEx").child("uid\(up_id)").child("cafe").child(self.image.fb_key)
+            var refRename = ref.child("userDefinedEx").child("uid\(up_id)").child(self.image.location).child(self.image.fb_key)
 
             refRename.updateChildValues(["Name": rename_textf.text])
             rename_textf.isHidden = true
             self.title = rename_textf.text
+        
+            let rename = rename_textf.text as! String
+            self.photoManageController?.rename(self.imageId, rename)
                 
   
            
@@ -79,14 +84,14 @@ class PhotoDetailController: UIViewController, UITextFieldDelegate
             let ref = Database.database().reference()
             
             let up_id = SQLiteDataStore.instance.getUserUploadId()
-            let refDel = ref.child("userDefinedEx").child("uid\(up_id)").child("cafe").child(self.image.fb_key)
+            let refDel = ref.child("userDefinedEx").child("uid\(up_id)").child(self.image.location).child(self.image.fb_key)
 
             refDel.removeValue { error, _ in
 
                 print("deleted from db error")
             }
             
-            
+            self.photoManageController?.delete(self.imageId)
             
           }
         }

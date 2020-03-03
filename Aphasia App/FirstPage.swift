@@ -60,14 +60,8 @@ class FirstPage: UIViewController {
         
         
         
-        
-        ref.child("Cafe").child("Exercise1").observeSingleEvent(of: .value, with:{(snapshot) in
-            let value  = snapshot.value as? NSDictionary
-            let URL = value?["ImageURL"] as? String ?? "none"
-            print("URL")
-            print(URL)
             
-        })
+        
     }
     
     // Locking orientation.
