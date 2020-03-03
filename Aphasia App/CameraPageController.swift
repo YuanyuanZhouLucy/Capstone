@@ -119,7 +119,7 @@ class CameraPageController: UIViewController, UIImagePickerControllerDelegate, U
 //                                        if let sense_ele = sense_ele_top[1]["dt"] as? Array<Array<String>>{
                                             let definition = sense_ele_top[0][1]
                                                 let startIndex = definition.index(definition.startIndex, offsetBy: 4)
-                                                self.cue_dic["definition"] = String(definition[startIndex...])    // "String"
+                                                self.cue_dic["definition"] = self.makeFirebaseString(string:String(definition[startIndex...]))    // "String"
                                                 
                                                 print(self.cue_dic["definition"])
 //                                        }
@@ -162,14 +162,9 @@ class CameraPageController: UIViewController, UIImagePickerControllerDelegate, U
             
             return
         }
-       
-       
-        
-        
-        
+     
         let image = imageView.image
         let text: String = nameObjectLabel.text!
-//        let text = "randdd333"
         let uid = SQLiteDataStore.instance.getUserUploadId()
 
         
@@ -217,23 +212,22 @@ class CameraPageController: UIViewController, UIImagePickerControllerDelegate, U
             if existsInModel && !self.cue_dic.isEmpty {
                 
                  dict = [
-                    "ImageURL": downloadURL.absoluteString,
-                    "Answer": text,
-                    "hasCues": existsInModel,
-                    "Cue1": self.cue_dic["count"],
-                    "Cue2": self.cue_dic["definition"],
-//                    "Cue3": self.cue_dic["example"],
-                    "Cue4": self.cue_dic["rhymes"],
-                    "Opt1": exerciseBDissimilar[0],
-                    "Opt2": exerciseBSimilar[1],
-                    "Opt3": exerciseBSimilar[2],
-                    "Opt4": exerciseBSimilar[3],
-                    "Wrong1": exerciseBDissimilar[0],
-                    "Wrong2": exerciseBDissimilar[1],
-                    "Wrong3": exerciseBDissimilar[2],
-                    "WrongOpt": 1
+                    "ImageURL": self.makeFirebaseString(string:downloadURL.absoluteString),
+                    "Answer": self.makeFirebaseString(string: text),
+                    "hasCues": String(existsInModel),
+                    "Cue1": self.cue_dic["count"] ?? "0 syllables",
+                    "Cue2": self.cue_dic["definition"] ?? "hi",
+                    "Cue4": self.cue_dic["rhymes"] ?? "no rhyme",
+                    "Opt1": self.makeFirebaseString(string:exerciseBDissimilar[0]),
+                    "Opt2": self.makeFirebaseString(string:exerciseBSimilar[1]),
+                    "Opt3": self.makeFirebaseString(string:exerciseBSimilar[2]),
+                    "Opt4": self.makeFirebaseString(string:exerciseBSimilar[3]),
+                    "Wrong1": self.makeFirebaseString(string:exerciseBDissimilar[0]),
+                    "Wrong2": self.makeFirebaseString(string:exerciseBDissimilar[1]),
+                    "Wrong3": self.makeFirebaseString(string:exerciseBDissimilar[2]),
+                    "WrongOpt": String(1)
                     ]
-                
+                print(dict)
                 
                 if (self.cue_dic["example"] != nil){
                     dict["cue3"] = self.cue_dic["example"]
@@ -443,7 +437,7 @@ class CameraPageController: UIViewController, UIImagePickerControllerDelegate, U
                                                   if let eg = resul["examples"] as? [Any] {
                                                         if let eg0 = eg[0] as? String {
                                                             let newString = eg0.replacingOccurrences(of: word, with: "___")
-                                                            self.cue_dic["example"] = newString
+                                                            self.cue_dic["example"] = self.makeFirebaseString(string:newString)
                                                             break
                                                         }
                                                         
@@ -458,7 +452,7 @@ class CameraPageController: UIViewController, UIImagePickerControllerDelegate, U
                                  if let syl = dictionary["syllables"] as? [String: Any] {
                                      if let count = syl["count"] as? Int {
                                          //print(count)
-                                        self.cue_dic["count"] = String(count) + " Syllables"
+                                        self.cue_dic["count"] = self.makeFirebaseString(string: (String(count) + " Syllables"))
                                      
                                      }
                                  }
@@ -507,7 +501,7 @@ class CameraPageController: UIViewController, UIImagePickerControllerDelegate, U
                                        if let nestedDictionary = dictionary["rhymes"] as? Dictionary<String, Any>{
                                           
                                                if let r_words = nestedDictionary["all"] as? [String] {
-                                                   self.cue_dic["rhymes"] = "Rhymes with " + r_words[0]
+                                                   self.cue_dic["rhymes"] = self.makeFirebaseString(string:"Rhymes with " + r_words[0])
                                                    
                                                }
                                                    
@@ -529,6 +523,16 @@ class CameraPageController: UIViewController, UIImagePickerControllerDelegate, U
     return .portrait
     }
     
+    func makeFirebaseString(string:String)->String{
+        let arrCharacterToReplace = [".","#","$","[","]"]
+        var finalString = string
+
+        for character in arrCharacterToReplace{
+            finalString = finalString.replacingOccurrences(of: character, with: " ")
+        }
+
+        return finalString
+    }
 
 }
 
