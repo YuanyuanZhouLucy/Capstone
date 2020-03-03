@@ -222,7 +222,7 @@ class CameraPageController: UIViewController, UIImagePickerControllerDelegate, U
                     "hasCues": existsInModel,
                     "Cue1": self.cue_dic["count"],
                     "Cue2": self.cue_dic["definition"],
-                    "Cue3": self.cue_dic["example"],
+//                    "Cue3": self.cue_dic["example"],
                     "Cue4": self.cue_dic["rhymes"],
                     "Opt1": exerciseBDissimilar[0],
                     "Opt2": exerciseBSimilar[1],
@@ -233,6 +233,11 @@ class CameraPageController: UIViewController, UIImagePickerControllerDelegate, U
                     "Wrong3": exerciseBDissimilar[2],
                     "WrongOpt": 1
                     ]
+                
+                
+                if (self.cue_dic["example"] != nil){
+                    dict["cue3"] = self.cue_dic["example"]
+                }
             }
             else {
                 dict = [
