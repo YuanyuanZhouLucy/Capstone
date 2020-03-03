@@ -220,7 +220,7 @@ class CameraPageController: UIViewController, UIImagePickerControllerDelegate, U
                 }
                 else {
                     dict = [
-                        "imageURL": downloadURL.absoluteString,
+                        "ImageURL": downloadURL.absoluteString,
                         "Name": text,
                         "hasCues": existsInModel,
                     ]

@@ -22,11 +22,11 @@ class ProjectHistoryViewController: UIViewController, UITableViewDataSource, UIT
         historyTable.delegate = self
         
         if whichExercise == "B" {
-            tableTitle.text = "Exercise B History"
+            tableTitle.text = "Exercise 2 History"
             sessions = SQLiteDataStore.instance.getExerciseBSessionProgress()
         }
         else{
-            tableTitle.text = "Exercise A History"
+            tableTitle.text = "Exercise 1 History"
             sessions = SQLiteDataStore.instance.getExerciseASessionProgress()
         }
     }

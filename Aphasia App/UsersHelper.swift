@@ -38,7 +38,7 @@ class UsersHelper {
                 table.column(slpEmail)
                 })
             if firstTime {
-                self.addUser(db:db, cuserName: "default", cslpName: "", cslpEmail: "")
+                self.addUser(db:db, cuserName: "", cslpName: "", cslpEmail: "")
             }
         } catch {
             print("Unable to create table")

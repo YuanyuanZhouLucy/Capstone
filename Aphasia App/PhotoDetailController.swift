@@ -15,6 +15,7 @@ class PhotoDetailController: UIViewController, UITextFieldDelegate
 {
     @IBOutlet weak var bigImageView: UIImageView!
     
+    @IBOutlet weak var notif: UITextView!
     @IBOutlet weak var rename_textf: UITextField!
     
 //    @IBOutlet weak var nav: UINavigationItem!
@@ -31,11 +32,14 @@ class PhotoDetailController: UIViewController, UITextFieldDelegate
         rename_textf.isHidden = true
         
         rename_textf.delegate = self
+        self.notif.isHidden = true
     }
     
     @IBAction func renameImage(_ sender: Any) {
         
         rename_textf.isHidden = false
+        self.notif.isHidden = false
+        self.notif.text = "Rename to:"
         
         
         
@@ -63,7 +67,8 @@ class PhotoDetailController: UIViewController, UITextFieldDelegate
             let rename = rename_textf.text as! String
             self.photoManageController?.rename(self.imageId, rename)
                 
-  
+        self.notif.isHidden = false
+        self.notif.text = "Renamed to \(rename)"
            
        }
     @IBAction func deleteImage(_ sender: Any) {
@@ -89,6 +94,7 @@ class PhotoDetailController: UIViewController, UITextFieldDelegate
             refDel.removeValue { error, _ in
 
                 print("deleted from db error")
+                self.notif.isHidden = false
             }
             
             self.photoManageController?.delete(self.imageId)
