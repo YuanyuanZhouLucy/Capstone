@@ -484,7 +484,7 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="FirstPage" customModule="Aphasia_App" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.59999999999999998" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="BackgroundSky.png" translatesAutoresizingMaskIntoConstraints="NO" id="blg-cQ-HgG">
@@ -2435,16 +2435,15 @@ My4gVGhlIGNvcnJlY3QgYW5zd2VyIHdpbGwgYmUgCA
         <image name="speaker.3.fill" catalog="system" width="64" height="44"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="1ZP-rP-Jjm"/>
         <segue reference="78n-zL-gap"/>
         <segue reference="YGE-xh-zCx"/>
         <segue reference="B0A-qF-Xyd"/>
-        <segue reference="1hr-8j-JzH"/>
+        <segue reference="F1W-fL-hJq"/>
         <segue reference="LYt-S8-wU2"/>
-        <segue reference="Qjy-ye-R4t"/>
+        <segue reference="1Ht-Vq-kOW"/>
         <segue reference="SVC-su-jJT"/>
         <segue reference="lYL-A8-tRw"/>
-        <segue reference="24r-54-SZO"/>
+        <segue reference="xCf-zj-QOY"/>
         <segue reference="Lmf-nV-rtC"/>
     </inferredMetricsTieBreakers>
 </document>
