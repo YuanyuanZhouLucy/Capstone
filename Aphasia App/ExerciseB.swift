@@ -299,11 +299,7 @@ class ExerciseB: UIViewController{
         
     }
     
-    
-    
-    
-    
-    @IBAction func homeButton(_ sender: Any) {
+    @IBAction func updateScore(_ sender: Any) {
         let id = SQLiteDataStore.instance.addExerciseBSession(date: Date(), exercisesAttempted: questionNumber, exercisesCorrect: totalScore)
         if id! == nil {
             print("Add to session information to exercise B database failed" )
