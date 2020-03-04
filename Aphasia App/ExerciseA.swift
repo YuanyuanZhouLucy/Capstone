@@ -23,6 +23,8 @@ class ExerciseA: UIViewController, UITableViewDelegate, AVAudioRecorderDelegate,
     @IBOutlet weak var cueButton3: UIButton!
     @IBOutlet weak var cueButton4: UIButton!
     
+    
+    
     var soundRecorder : AVAudioRecorder!
     var soundPlayer : AVAudioPlayer!
     var fileName:String = "1.m4a"
@@ -50,6 +52,8 @@ class ExerciseA: UIViewController, UITableViewDelegate, AVAudioRecorderDelegate,
     
     let correct_colour = UIColor.systemGreen
     
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         hide()
@@ -75,6 +79,8 @@ class ExerciseA: UIViewController, UITableViewDelegate, AVAudioRecorderDelegate,
         cueButton4.isHidden = true
         nextButton.isHidden = true
         exercise2Button.isHidden = true
+        
+//        cueButton.scroll
         
 
     }
