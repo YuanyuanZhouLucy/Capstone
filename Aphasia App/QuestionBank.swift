@@ -9,6 +9,16 @@
 import Foundation
 import FirebaseDatabase
 
+extension String {
+    func capitalizingFirstLetter() -> String {
+        return prefix(1).capitalized + dropFirst()
+    }
+
+    mutating func capitalizeFirstLetter() {
+        self = self.capitalizingFirstLetter()
+    }
+}
+
 class QuestionBank {
     var list = [Question] ()
     var category = ""
@@ -272,22 +282,22 @@ class QuestionBank {
                         let snap = individualSnap as! DataSnapshot
                         print(snap)
                         let imageURL = (snap.value as? NSDictionary)?["ImageURL"] as? String ?? ""
-                        let answer = (snap.value as? NSDictionary)?["Answer"] as? String ?? ""
-                        let wrong11=(snap.value as? NSDictionary)?["Wrong1"] as? String ?? ""
-                        let wrong12=(snap.value as? NSDictionary)?["Wrong2"] as? String ?? ""
-                        let wrong13=(snap.value as? NSDictionary)?["Wrong3"] as? String ?? ""
-                        let cue11 = (snap.value as? NSDictionary)?["Cue1"] as? String ?? ""
-                        let cue12 = (snap.value as? NSDictionary)?["Cue2"] as? String ?? ""
-                        let cue13 = (snap.value as? NSDictionary)?["Cue3"] as? String ?? ""
-                        let cue14 = (snap.value as? NSDictionary)?["Cue4"] as? String ?? ""
-                        let r11 = (snap.value as? NSDictionary)?["Opt1"] as? String ?? ""
-                        let r12 = (snap.value as? NSDictionary)?["Opt2"] as? String ?? ""
-                        let r13 = (snap.value as? NSDictionary)?["Opt3"] as? String ?? ""
-                        let r14 = (snap.value as? NSDictionary)?["Opt4"] as? String ?? ""
+                        let answer = ((snap.value as? NSDictionary)?["Answer"] as? String ?? "").capitalizingFirstLetter()
+                        let wrong11=((snap.value as? NSDictionary)?["Wrong1"] as? String ?? "").capitalizingFirstLetter()
+                        let wrong12=((snap.value as? NSDictionary)?["Wrong2"] as? String ?? "").capitalizingFirstLetter()
+                        let wrong13=((snap.value as? NSDictionary)?["Wrong3"] as? String ?? "").capitalizingFirstLetter()
+                        let cue11 = ((snap.value as? NSDictionary)?["Cue1"] as? String ?? "").capitalizingFirstLetter()
+                        let cue12 = ((snap.value as? NSDictionary)?["Cue2"] as? String ?? "").capitalizingFirstLetter()
+                        let cue13 = ((snap.value as? NSDictionary)?["Cue3"] as? String ?? "").capitalizingFirstLetter()
+                        let cue14 = ((snap.value as? NSDictionary)?["Cue4"] as? String ?? "").capitalizingFirstLetter()
+                        let r11 = ((snap.value as? NSDictionary)?["Opt1"] as? String ?? "").capitalizingFirstLetter()
+                        let r12 = ((snap.value as? NSDictionary)?["Opt2"] as? String ?? "").capitalizingFirstLetter()
+                        let r13 = ((snap.value as? NSDictionary)?["Opt3"] as? String ?? "").capitalizingFirstLetter()
+                        let r14 = ((snap.value as? NSDictionary)?["Opt4"] as? String ?? "").capitalizingFirstLetter()
                         let wrongOpt1 = (snap.value as? NSDictionary)?["WrongOpt"] as? Int ?? 1
                         self.list.append(Question(image: imageURL, optA: answer, optB: wrong11,optC:wrong12,optD:wrong13, answer: 1,q1:cue11,q2:cue12,q3:cue13,q4:cue14,r1:r11,r2:r12,r3:r13,r4:r14,wrongOption: wrongOpt1))
                         
-                        self.size = 11
+                        self.size += 1
                     }
                 })
             }

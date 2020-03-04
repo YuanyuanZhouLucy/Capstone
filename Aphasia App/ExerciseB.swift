@@ -10,6 +10,16 @@ import AVFoundation
 
 class ExerciseB: UIViewController{
     
+    @IBOutlet weak var instr6: UILabel!
+    
+    @IBOutlet weak var instr8: UILabel!
+    @IBOutlet weak var instr7: UILabel!
+    @IBOutlet weak var instr1: UILabel!
+    @IBOutlet weak var instr5: UILabel!
+    
+    @IBOutlet weak var instr4: UILabel!
+    @IBOutlet weak var instr3: UILabel!
+    @IBOutlet weak var instr2: UILabel!
     @IBOutlet weak var button1: UIButton!
     @IBOutlet weak var button2: UIButton!
     @IBOutlet weak var button3: UIButton!
@@ -57,6 +67,14 @@ class ExerciseB: UIViewController{
     
     func updateQuestion (){
         hide()
+        instr1.isHidden = true
+           instr2.isHidden = true
+           instr3.isHidden = true
+           instr4.isHidden = true
+           instr5.isHidden = true
+           instr6.isHidden = true
+           instr7.isHidden = true
+           instr8.isHidden = true
         beginButton.isHidden = true
          finishButton.isHidden = false
          button1.isHidden = false
@@ -123,6 +141,7 @@ class ExerciseB: UIViewController{
     
     func hide() {
         label.isHidden = true
+        
     }
     func unHide() {
         label.isHidden = false
@@ -280,10 +299,7 @@ class ExerciseB: UIViewController{
         
     }
     
-    
-  
-    
-    @IBAction func homeButton(_ sender: Any) {
+    @IBAction func updateScore(_ sender: Any) {
         let id = SQLiteDataStore.instance.addExerciseBSession(date: Date(), exercisesAttempted: questionNumber, exercisesCorrect: totalScore)
         if id! == nil {
             print("Add to session information to exercise B database failed" )

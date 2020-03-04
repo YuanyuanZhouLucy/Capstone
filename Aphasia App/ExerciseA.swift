@@ -16,12 +16,31 @@ class ExerciseA: UIViewController, UITableViewDelegate, AVAudioRecorderDelegate,
     @IBOutlet weak var recordButton: UIButton!
     @IBOutlet weak var playButton: UIButton!
     
+    
+    @IBOutlet weak var instructions: UILabel!
+    
+    @IBOutlet weak var instr2: UILabel!
+    
+    @IBOutlet weak var instr14: UILabel!
+    @IBOutlet weak var instr13: UILabel!
+    @IBOutlet weak var instr12: UILabel!
+    @IBOutlet weak var instr11: UILabel!
+    @IBOutlet weak var instr10: UILabel!
+    @IBOutlet weak var instr9: UILabel!
+    @IBOutlet weak var instr8: UILabel!
+    @IBOutlet weak var instr7: UILabel!
+    @IBOutlet weak var instr6: UILabel!
+    @IBOutlet weak var instr5: UILabel!
+    @IBOutlet weak var instr4: UILabel!
+    @IBOutlet weak var instr3: UILabel!
     @IBOutlet weak var pronounceButton: UIButton!
     
     @IBOutlet weak var cueButton: UIButton!
     @IBOutlet weak var cueButton2: UIButton!
     @IBOutlet weak var cueButton3: UIButton!
     @IBOutlet weak var cueButton4: UIButton!
+    
+    
     
     var soundRecorder : AVAudioRecorder!
     var soundPlayer : AVAudioPlayer!
@@ -34,7 +53,12 @@ class ExerciseA: UIViewController, UITableViewDelegate, AVAudioRecorderDelegate,
     
     @IBOutlet weak var exercise2Button: UIButton!
     
+    @IBOutlet weak var recordButtonImage: UIButton!
+    
+    @IBOutlet weak var pronounceButtonImage: UIButton!
+    @IBOutlet weak var playButtonImage: UIButton!
     @IBOutlet weak var beginButton: UIButton!
+    
     @IBOutlet weak var labelEnd: UILabel!
     var allQuestions = QuestionBank()
     var questionNumber = 0
@@ -49,6 +73,8 @@ class ExerciseA: UIViewController, UITableViewDelegate, AVAudioRecorderDelegate,
     var picture: UIImage?
     
     let correct_colour = UIColor.systemGreen
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -75,12 +101,44 @@ class ExerciseA: UIViewController, UITableViewDelegate, AVAudioRecorderDelegate,
         cueButton4.isHidden = true
         nextButton.isHidden = true
         exercise2Button.isHidden = true
+        pronounceButtonImage.isHidden = true
+        playButtonImage.isHidden = true
+        recordButton.isHidden = true
+        recordButtonImage.isHidden = true
+        pronounceButton.isHidden = true
+        playButton.isHidden = true
+        pronounceButton.isHidden = true
+        
+        
+        
+//        cueButton.scroll
         
 
     }
   
     func updateQuestion (){
         hide()
+        instructions.isHidden = true
+             instr2.isHidden = true
+              instr3.isHidden = true
+              instr4.isHidden = true
+              instr5.isHidden = true
+              instr6.isHidden = true
+              instr7.isHidden = true
+              instr8.isHidden = true
+              instr9.isHidden = true
+              instr10.isHidden = true
+              instr11.isHidden = true
+              instr12.isHidden = true
+              instr13.isHidden = true
+              instr14.isHidden = true
+        pronounceButtonImage.isHidden = false
+             playButtonImage.isHidden = false
+             recordButton.isHidden = false
+             recordButtonImage.isHidden = false
+             pronounceButton.isHidden = false
+             playButton.isHidden = false
+             pronounceButton.isHidden = false
         beginButton.isHidden = true
         exercise2Button.isHidden = false
         button1.isHidden = false
@@ -335,6 +393,8 @@ class ExerciseA: UIViewController, UITableViewDelegate, AVAudioRecorderDelegate,
     
     func hide() {
         labelEnd.isHidden = true
+     
+        
     }
     func unHide() {
         labelEnd.isHidden = false

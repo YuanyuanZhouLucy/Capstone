@@ -92,17 +92,29 @@ class LocationPage: UIViewController {
     
     @IBAction func restaurantAct(_ sender: UIButton) {
      locationTypeGV = "restaurant"
+        parkButton.isHidden = true
+        groceryButton.isHidden = true
+        hospitalButton.isHidden = true
     }
     @IBAction func parkAct(_ sender: UIButton) {
         locationTypeGV = "park"
+        restaurantButton.isHidden = true
+        groceryButton.isHidden = true
+        hospitalButton.isHidden = true
     }
     
     @IBAction func groceryAct(_ sender: UIButton) {
         locationTypeGV="grocery_or_supermarket"
+        parkButton.isHidden = true
+        restaurantButton.isHidden = true
+        hospitalButton.isHidden = true
     }
     
     @IBAction func hospitalAct(_ sender: UIButton) {
           locationTypeGV="hospital"
+        parkButton.isHidden = true
+        groceryButton.isHidden = true
+        restaurantButton.isHidden = true
     }
 }
 
