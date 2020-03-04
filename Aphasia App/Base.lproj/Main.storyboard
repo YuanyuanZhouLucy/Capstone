@@ -79,7 +79,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wLq-ra-aV2">
-                                <rect key="frame" x="54" y="28" width="33" height="30"/>
+                                <rect key="frame" x="40" y="27" width="33" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="arrowtriangle.left" catalog="system">
                                     <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="25" scale="large" weight="heavy"/>
@@ -96,6 +96,11 @@
                                 <state key="normal" title="Choose Photo">
                                     <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="default"/>
                                 </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="choosePhoto:" destination="lqm-tz-eCN" eventType="touchUpInside" id="63x-O7-Z0s"/>
                                 </connections>
@@ -2429,10 +2434,10 @@ My4gVGhlIGNvcnJlY3QgYW5zd2VyIHdpbGwgYmUgCA
         <segue reference="78n-zL-gap"/>
         <segue reference="YGE-xh-zCx"/>
         <segue reference="B0A-qF-Xyd"/>
-        <segue reference="F1W-fL-hJq"/>
+        <segue reference="1hr-8j-JzH"/>
         <segue reference="LYt-S8-wU2"/>
-        <segue reference="OKw-Ga-Ygf"/>
-        <segue reference="hoE-eN-bqb"/>
+        <segue reference="8BQ-Gp-cD6"/>
+        <segue reference="Gwf-X0-uLB"/>
         <segue reference="xCf-zj-QOY"/>
         <segue reference="Lmf-nV-rtC"/>
     </inferredMetricsTieBreakers>
