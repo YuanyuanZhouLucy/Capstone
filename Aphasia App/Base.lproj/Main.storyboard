@@ -1899,6 +1899,7 @@ My4gVGhlIGNvcnJlY3QgYW5zd2VyIHdpbGwgYmUgCA
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
+                                    <action selector="nextExerciseButton2:" destination="hek-tG-wFt" eventType="touchUpInside" id="gll-j3-e20"/>
                                     <segue destination="O7h-XB-vbj" kind="show" id="4Vh-46-CuR"/>
                                 </connections>
                             </button>
@@ -1917,7 +1918,6 @@ My4gVGhlIGNvcnJlY3QgYW5zd2VyIHdpbGwgYmUgCA
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="nextButtonAction:" destination="hek-tG-wFt" eventType="touchUpInside" id="jC0-sw-gDd"/>
-                                    <action selector="nextExerciseButton:" destination="hek-tG-wFt" eventType="touchUpInside" id="n7T-e6-UL8"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JXF-hG-cH2">
@@ -2442,7 +2442,7 @@ My4gVGhlIGNvcnJlY3QgYW5zd2VyIHdpbGwgYmUgCA
         <segue reference="LYt-S8-wU2"/>
         <segue reference="1Ht-Vq-kOW"/>
         <segue reference="crZ-Nm-AKT"/>
-        <segue reference="lYL-A8-tRw"/>
+        <segue reference="PSt-JU-lfT"/>
         <segue reference="xCf-zj-QOY"/>
         <segue reference="Lmf-nV-rtC"/>
     </inferredMetricsTieBreakers>

@@ -439,8 +439,7 @@ class ExerciseA: UIViewController, UITableViewDelegate, AVAudioRecorderDelegate,
     @IBAction func homeButton(_ sender: Any) {
         self.addSessionProgress()
     }
-    
-    @IBAction func nextExerciseButton(_ sender: Any) {
+    @IBAction func nextExerciseButton2(_ sender: Any) {
         self.addSessionProgress()
     }
     
