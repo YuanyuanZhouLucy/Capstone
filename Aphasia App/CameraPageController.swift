@@ -114,8 +114,7 @@ class CameraPageController: UIViewController, UIImagePickerControllerDelegate, U
                                                     self.cue_dic["definition"] = String(definition[startIndex...])    // "String"
                                                     
                                                     print(self.cue_dic["definition"])
-                                                    //                                        }
-                                                    //                                            }}
+                                             
                                                 }
                                             }
                                         }
@@ -124,13 +123,8 @@ class CameraPageController: UIViewController, UIImagePickerControllerDelegate, U
                                 }
                                 
                             }
-                            //                         for resul in nestedDictionary {
-                            //                             if let POS = resul[1] as? String {
-                            //                                print(POS)
-                            //                            }
-                            //
+    
                         }
-                        //
                     }
                     
                 }
@@ -200,9 +194,9 @@ class CameraPageController: UIViewController, UIImagePickerControllerDelegate, U
                         "ImageURL": downloadURL.absoluteString,
                         "Answer": text,
                         "hasCues": existsInModel,
-                        "Cue1": self.cue_dic["count"] ?? "0 syllables",
-                        "Cue2": self.cue_dic["definition"] ?? "hi",
-                        "Cue4": self.cue_dic["rhymes"] ?? "no rhyme",
+                        "Cue1": self.cue_dic["count"] as! String ?? "0 syllables",
+                        "Cue2": self.cue_dic["definition"] as! String ?? "hi",
+                        "Cue4": self.cue_dic["rhymes"] as! String ?? "no rhyme",
                         "Opt1": exerciseBDissimilar[0],
                         "Opt2": exerciseBSimilar[1],
                         "Opt3": exerciseBSimilar[2],
@@ -215,12 +209,17 @@ class CameraPageController: UIViewController, UIImagePickerControllerDelegate, U
                     print(dict)
                     
                     if (self.cue_dic["example"] != nil){
-                        dict["cue3"] = self.cue_dic["example"]
+                        let example = self.cue_dic["example"] as! String
+                        let str1 = example.replacingOccurrences(of: text.lowercased(), with: "__")
+                        let str = str1.replacingOccurrences(of: text, with: "__")
+                        dict["Cue3"] = str
+                    } else{
+                        dict["Cue3"] = "no example"
                     }
                 }
                 else {
                     dict = [
-                        "imageURL": downloadURL.absoluteString,
+                        "ImageURL": downloadURL.absoluteString,
                         "Name": text,
                         "hasCues": existsInModel,
                     ]

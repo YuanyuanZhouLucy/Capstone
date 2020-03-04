@@ -277,7 +277,7 @@
                                 </items>
                             </navigationBar>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hcc-PS-dUv">
-                                <rect key="frame" x="267" y="759" width="102" height="50"/>
+                                <rect key="frame" x="267" y="750" width="102" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Delete"/>
                                 <connections>
@@ -293,7 +293,7 @@
                                 </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="h54-v5-oyC">
-                                <rect key="frame" x="159" y="687" width="97" height="34"/>
+                                <rect key="frame" x="137" y="711" width="157" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -302,6 +302,14 @@
                                 <rect key="frame" x="23" y="79" width="369" height="568"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Photo Deleted!" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="b2I-sk-W4g">
+                                <rect key="frame" x="86" y="671" width="245" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <color key="tintColor" red="0.71830985920000001" green="0.85896161280000005" blue="0.85211267609999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -310,6 +318,7 @@
                     <navigationItem key="navigationItem" id="GHD-1v-7Sq"/>
                     <connections>
                         <outlet property="bigImageView" destination="hSU-oP-bYV" id="6zR-lB-TaA"/>
+                        <outlet property="notif" destination="b2I-sk-W4g" id="zih-Tk-4hh"/>
                         <outlet property="rename_textf" destination="h54-v5-oyC" id="N2l-IT-OpT"/>
                     </connections>
                 </viewController>
@@ -475,7 +484,7 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="FirstPage" customModule="Aphasia_App" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.59999999999999998" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="BackgroundSky.png" translatesAutoresizingMaskIntoConstraints="NO" id="blg-cQ-HgG">
@@ -958,6 +967,9 @@
                                 <state key="normal" title="restaurant">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="restaurantAct:" destination="97g-j6-szU" eventType="touchUpInside" id="sCR-fw-4l6"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6LQ-ob-64U">
                                 <rect key="frame" x="142" y="724" width="31" height="30"/>
@@ -965,6 +977,9 @@
                                 <state key="normal" title="park">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="parkAct:" destination="97g-j6-szU" eventType="touchUpInside" id="rsh-nh-KX0"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YEi-cN-kri">
                                 <rect key="frame" x="216" y="724" width="92" height="30"/>
@@ -972,6 +987,9 @@
                                 <state key="normal" title="grocery store">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="groceryAct:" destination="97g-j6-szU" eventType="touchUpInside" id="VFY-Sq-uPI"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YWG-b3-vus">
                                 <rect key="frame" x="324" y="724" width="55" height="30"/>
@@ -979,6 +997,9 @@
                                 <state key="normal" title="hospital">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="hospitalAct:" destination="97g-j6-szU" eventType="touchUpInside" id="5wt-cJ-RhL"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="The location is not in the default list" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3ML-Hb-Qsd">
                                 <rect key="frame" x="20" y="713" width="272" height="21"/>
@@ -2312,6 +2333,9 @@ My4gVGhlIGNvcnJlY3QgYW5zd2VyIHdpbGwgYmUgCA
                                         <integer key="value" value="10"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="restaurantAct:" destination="JmK-aW-DfZ" eventType="touchUpInside" id="WaT-Ok-b8D"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dtl-tn-ZRQ">
                                 <rect key="frame" x="127" y="694" width="45" height="36"/>
@@ -2326,6 +2350,9 @@ My4gVGhlIGNvcnJlY3QgYW5zd2VyIHdpbGwgYmUgCA
                                         <integer key="value" value="10"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="parkAct:" destination="JmK-aW-DfZ" eventType="touchUpInside" id="Ely-5G-dbr"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vPz-ns-md5">
                                 <rect key="frame" x="183" y="694" width="124" height="36"/>
@@ -2340,6 +2367,9 @@ My4gVGhlIGNvcnJlY3QgYW5zd2VyIHdpbGwgYmUgCA
                                         <integer key="value" value="10"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="groceryAct:" destination="JmK-aW-DfZ" eventType="touchUpInside" id="uhE-1q-9Zs"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="The location is not a part of the categories" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7g1-Rc-b8l">
                                 <rect key="frame" x="0.0" y="649" width="414" height="28"/>
@@ -2361,6 +2391,9 @@ My4gVGhlIGNvcnJlY3QgYW5zd2VyIHdpbGwgYmUgCA
                                         <integer key="value" value="10"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="hospitalAct:" destination="JmK-aW-DfZ" eventType="touchUpInside" id="Twe-O0-XhG"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.90845070419999996" green="0.95070422539999999" blue="0.7746478873" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -2402,15 +2435,15 @@ My4gVGhlIGNvcnJlY3QgYW5zd2VyIHdpbGwgYmUgCA
         <image name="speaker.3.fill" catalog="system" width="64" height="44"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="78n-zL-gap"/>
+        <segue reference="4Vh-46-CuR"/>
         <segue reference="YGE-xh-zCx"/>
         <segue reference="B0A-qF-Xyd"/>
-        <segue reference="1hr-8j-JzH"/>
+        <segue reference="F1W-fL-hJq"/>
         <segue reference="LYt-S8-wU2"/>
-        <segue reference="Qjy-ye-R4t"/>
-        <segue reference="SVC-su-jJT"/>
-        <segue reference="B65-WK-EpN"/>
-        <segue reference="24r-54-SZO"/>
+        <segue reference="1Ht-Vq-kOW"/>
+        <segue reference="crZ-Nm-AKT"/>
+        <segue reference="lYL-A8-tRw"/>
+        <segue reference="xCf-zj-QOY"/>
         <segue reference="Lmf-nV-rtC"/>
     </inferredMetricsTieBreakers>
 </document>
