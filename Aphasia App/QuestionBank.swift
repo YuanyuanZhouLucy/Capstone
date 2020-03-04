@@ -287,7 +287,7 @@ class QuestionBank {
                         let wrongOpt1 = (snap.value as? NSDictionary)?["WrongOpt"] as? Int ?? 1
                         self.list.append(Question(image: imageURL, optA: answer, optB: wrong11,optC:wrong12,optD:wrong13, answer: 1,q1:cue11,q2:cue12,q3:cue13,q4:cue14,r1:r11,r2:r12,r3:r13,r4:r14,wrongOption: wrongOpt1))
                         
-                        self.size = 11
+                        self.size += 1
                     }
                 })
             }
