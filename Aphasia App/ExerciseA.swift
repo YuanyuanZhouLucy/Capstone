@@ -110,6 +110,9 @@ class ExerciseA: UIViewController, UITableViewDelegate, AVAudioRecorderDelegate,
         pronounceButton.isHidden = true
         
         
+       
+        
+        
         
 //        cueButton.scroll
         
@@ -185,6 +188,13 @@ class ExerciseA: UIViewController, UITableViewDelegate, AVAudioRecorderDelegate,
         cue2 = allQuestions.list[questionNumber].cue2
         cue3 = allQuestions.list[questionNumber].cue3
         cue4 = allQuestions.list[questionNumber].cue4
+        
+        if cue3 == "No example"{
+                   cueButton4.isHidden = true
+                   cue3 = cue4
+                   
+               }
+        
         print("for this question \(questionNumber), the cue is \(cue1)")
         if(questionNumber != 0 ){
             if( allQuestions.list[questionNumber].correctAnswer  == 1){
@@ -384,7 +394,10 @@ class ExerciseA: UIViewController, UITableViewDelegate, AVAudioRecorderDelegate,
     }
     
     @IBAction func cueButtonAction3(_ sender: Any) {
-           cueButton3.setTitle(cue3, for: UIControl.State.normal)
+        
+            cueButton3.setTitle(cue3, for: UIControl.State.normal)
+        
+           
     }
     
     @IBAction func cueButtonAction4(_ sender: Any) {

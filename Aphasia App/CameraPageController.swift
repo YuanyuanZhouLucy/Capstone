@@ -29,7 +29,7 @@ class CameraPageController: UIViewController, UIImagePickerControllerDelegate, U
     lazy var vision = Vision.vision()
     
     var cue_dic : [String: String] = [:]
-    var category = "hello"
+    var category = "Cafe"
     
     override func viewDidLoad() {
         super.viewDidLoad()
