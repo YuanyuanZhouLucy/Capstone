@@ -2654,5 +2654,6 @@ My4gVGhlIGNvcnJlY3QgYW5zd2VyIHdpbGwgYmUgCA
         <image name="speaker.3.fill" catalog="system" width="64" height="44"/>
     </resources>
     <inferredMetricsTieBreakers>
+    </inferredMetricsTieBreakers>
 
 </document>
