@@ -207,7 +207,7 @@ class PhotoManageController: UIViewController, UICollectionViewDataSource, UICol
        
         
         
-        self.myCollectionView.reloadData()
+        //self.myCollectionView.reloadData()
     }
     func delete(_ id: Int){
         
