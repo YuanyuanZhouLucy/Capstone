@@ -12,6 +12,7 @@ class ProjectHistoryViewController: UIViewController, UITableViewDataSource, UIT
 
     @IBOutlet weak var tableTitle: UILabel!
     @IBOutlet weak var historyTable: UITableView!
+    @IBOutlet weak var clearHistoryButton: UIButton!
     
     private var sessions = [SessionProgress]()
     var whichExercise = "A"
@@ -23,16 +24,21 @@ class ProjectHistoryViewController: UIViewController, UITableViewDataSource, UIT
         
         if whichExercise == "B" {
             tableTitle.text = "Exercise 2 History"
-            sessions = SQLiteDataStore.instance.getExerciseBSessionProgress()
         }
         else{
             tableTitle.text = "Exercise 1 History"
-            sessions = SQLiteDataStore.instance.getExerciseASessionProgress()
         }
     }
     
     //MARK: TableView functions
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        
+        if whichExercise == "B" {
+            sessions = SQLiteDataStore.instance.getExerciseBSessionProgress()
+        }
+        else{
+            sessions = SQLiteDataStore.instance.getExerciseASessionProgress()
+        }
         return sessions.count
     }
     
@@ -55,6 +61,14 @@ class ProjectHistoryViewController: UIViewController, UITableViewDataSource, UIT
     // Locking orientation.
      override open var supportedInterfaceOrientations: UIInterfaceOrientationMask {
     return .portrait
+    }
+    @IBAction func clearProgressHistory(_ sender: Any) {
+        if whichExercise == "B" { SQLiteDataStore.instance.deleteExerciseBProgress()
+        }
+        else{
+            SQLiteDataStore.instance.deleteExerciseAProgress()
+        }
+        historyTable.reloadData()
     }
     
 }

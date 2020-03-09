@@ -85,4 +85,12 @@ class SQLiteDataStore {
     func addExerciseBSession(date:Date, exercisesAttempted:Int, exercisesCorrect:Int) -> Int64? {
         return ExerciseBProgressHelper.insertSession(db: db, date: date, cexercisesAttempted: exercisesAttempted, cexercisesCorrect:exercisesCorrect)
     }
+    
+    func deleteExerciseAProgress() {
+        ExerciseAProgressHelper.deleteProgressTable(db: db)
+    }
+    
+    func deleteExerciseBProgress(){
+        ExerciseBProgressHelper.deleteProgressTable(db: db)
+    }
 }
