@@ -251,7 +251,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="541-Tk-ppk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1602.8985507246377" y="-683.03571428571422"/>
+            <point key="canvasLocation" x="1509" y="-735"/>
         </scene>
         <!--Photo Detail Controller-->
         <scene sceneID="aTO-26-kGi">
@@ -331,7 +331,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Uyv-8Y-Syz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2302.898550724638" y="-676.33928571428567"/>
+            <point key="canvasLocation" x="2216" y="-735"/>
         </scene>
         <!--Manage Images View Controller-->
         <scene sceneID="QtN-yE-aHs">
@@ -491,7 +491,7 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="FirstPage" customModule="Aphasia_App" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wQf-Tn-hdT">
@@ -2632,10 +2632,10 @@ My4gVGhlIGNvcnJlY3QgYW5zd2VyIHdpbGwgYmUgCA
             </objects>
             <point key="canvasLocation" x="-875.36231884057975" y="-676.33928571428567"/>
         </scene>
-        <!--Current Location View Controller-->
+        <!--Location Now View Controller-->
         <scene sceneID="hK9-gA-Ona">
             <objects>
-                <viewController id="cKK-A5-Wa1" customClass="CurrentLocationViewController" customModule="Aphasia_App" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="cKK-A5-Wa1" customClass="LocationNowViewController" customModule="Aphasia_App" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="9vX-zB-VqP">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -2704,12 +2704,12 @@ My4gVGhlIGNvcnJlY3QgYW5zd2VyIHdpbGwgYmUgCA
                     </view>
                     <navigationItem key="navigationItem" id="kAe-J7-0ah"/>
                     <connections>
-                        <outlet property="locationNow" destination="2uM-Gz-OIs" id="dec-m1-8PL"/>
+                        <outlet property="locationNow" destination="2uM-Gz-OIs" id="oUN-g9-x0y"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hwk-fR-la0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2905.7971014492755" y="-683.03571428571422"/>
+            <point key="canvasLocation" x="2886" y="-735"/>
         </scene>
     </scenes>
     <resources>
@@ -2725,13 +2725,13 @@ My4gVGhlIGNvcnJlY3QgYW5zd2VyIHdpbGwgYmUgCA
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="nUe-J7-NgF"/>
-        <segue reference="Xmc-Tm-KFv"/>
+        <segue reference="5jH-y6-isu"/>
         <segue reference="hVP-kl-bgW"/>
         <segue reference="B0A-qF-Xyd"/>
         <segue reference="F1W-fL-hJq"/>
         <segue reference="CYj-2O-D4Y"/>
         <segue reference="CFA-1p-zGA"/>
-        <segue reference="xCf-zj-QOY"/>
+        <segue reference="24r-54-SZO"/>
         <segue reference="Uc0-Lk-lKo"/>
     </inferredMetricsTieBreakers>
 </document>
