@@ -73,6 +73,7 @@ class ExerciseA: UIViewController, UITableViewDelegate, AVAudioRecorderDelegate,
     var picture: UIImage?
     
     let correct_colour = UIColor.systemGreen
+    let red_colour = UIColor.systemRed
     
     
     
@@ -462,32 +463,34 @@ class ExerciseA: UIViewController, UITableViewDelegate, AVAudioRecorderDelegate,
     
     func audioPlayerDidFinishPlaying (_ player: AVAudioPlayer, successfully flag: Bool){
         recordButton.isEnabled = true
-        playButton.setTitle("Play", for: .normal)
+        playButton.setTitle("   ", for: .normal)
     }
     @IBAction func recordAct(_ sender: Any) {
-        if recordButton.titleLabel?.text == "Record" {
+        if recordButton.titleLabel?.text == "   " {
             soundRecorder.record()
-            print("done recording")
-            recordButton.setTitle("Stop", for: .normal)
+            recordButton.setTitle("Press to stop", for: .normal)
+             recordButton.setTitleColor(red_colour, for: .normal)
             playButton.isEnabled = false
         }
         else{
             soundRecorder.stop()
-            recordButton.setTitle("Record", for: .normal)
+            recordButton.setTitle("   ", for: .normal)
             playButton.isEnabled = false
         }
     }
     
     @IBAction func playAct(_ sender: Any) {
-        if playButton.titleLabel?.text == "Play" {
-            playButton.setTitle("Stop", for: .normal)
+        if playButton.titleLabel?.text == "   " {
+            playButton.setTitle("  ", for: .normal)
+          
             recordButton.isEnabled = false
             setupPlayer()
+            soundPlayer.setVolume(1.0,fadeDuration: 4.0)
             soundPlayer.play()
         }
         else{
             soundPlayer.stop()
-            playButton.setTitle("Play", for: .normal)
+            playButton.setTitle("   ", for: .normal)
             recordButton.isEnabled = false
         }
     }
