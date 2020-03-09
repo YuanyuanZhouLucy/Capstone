@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="0Ox-jI-vch">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="0Ox-jI-vch">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -521,7 +521,7 @@
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="beginButton:" destination="dHq-PV-Qsc" eventType="touchUpInside" id="GSK-Ua-UCZ"/>
-                                    <segue destination="Pcn-Nu-4fx" kind="show" id="d07-UN-16X"/>
+                                    <segue destination="JmK-aW-DfZ" kind="show" id="xTg-Y0-kpT"/>
                                 </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Image-5" translatesAutoresizingMaskIntoConstraints="NO" id="asP-Va-gIJ">
@@ -591,7 +591,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <segue destination="JmK-aW-DfZ" kind="show" id="FHo-yf-JYb"/>
+                                    <segue destination="lqm-tz-eCN" kind="show" id="IAK-Vp-Y6F"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xVJ-hj-W4W">
@@ -810,16 +810,23 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="48t-uR-5JA">
-                                <rect key="frame" x="0.0" y="100" width="414" height="97"/>
+                                <rect key="frame" x="-2" y="100" width="418" height="97"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="31"/>
-                                <state key="normal" title="Click for Live Location">
+                                <state key="normal" title="Your Current Location Category">
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                 </state>
                                 <connections>
                                     <segue destination="97g-j6-szU" kind="show" id="LYt-S8-wU2"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="&quot;Locatrion&quot;" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uxu-UY-zmV">
+                                <rect key="frame" x="20" y="160" width="150" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="31"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kum-B3-Xkr">
                                 <rect key="frame" x="320" y="0.0" width="77" height="96"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -846,7 +853,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemGroupedBackgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="26"/>
-                                <state key="normal" title="Locate"/>
+                                <state key="normal" title="Relocate"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                                         <integer key="value" value="10"/>
@@ -854,6 +861,23 @@
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <segue destination="97g-j6-szU" kind="show" id="RtN-Eo-reh"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rF5-NA-nKg">
+                                <rect key="frame" x="113" y="760" width="206" height="48"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemGroupedBackgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="27"/>
+                                <state key="normal" title="Go to Exercises">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="lcO-d1-bLy" kind="show" id="FjQ-Xa-t9D"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -864,6 +888,7 @@
                     <connections>
                         <outlet property="groceryButton" destination="ILF-YQ-XVC" id="F8b-E2-v5Y"/>
                         <outlet property="libraryButton" destination="nms-gz-nXO" id="44A-fA-rNH"/>
+                        <outlet property="locationNow" destination="Uxu-UY-zmV" id="2X5-AW-a8h"/>
                         <outlet property="parkButton" destination="u0g-Tn-oRk" id="pJV-np-2D9"/>
                         <outlet property="restaurantButton" destination="g25-VV-ZuQ" id="HT5-cl-nzg"/>
                     </connections>
@@ -964,7 +989,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <action selector="restaurantAct:" destination="97g-j6-szU" eventType="touchUpInside" id="sCR-fw-4l6"/>
+                                    <action selector="restaurantAct:" destination="97g-j6-szU" eventType="touchUpInside" id="jm8-Cc-H8b"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YEi-cN-kri">
@@ -981,6 +1006,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
+                                    <action selector="groceryAct:" destination="97g-j6-szU" eventType="touchUpInside" id="CZQ-Lm-8NB"/>
                                     <action selector="parkAct:" destination="97g-j6-szU" eventType="touchUpInside" id="rsh-nh-KX0"/>
                                 </connections>
                             </button>
@@ -999,6 +1025,7 @@
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="groceryAct:" destination="97g-j6-szU" eventType="touchUpInside" id="VFY-Sq-uPI"/>
+                                    <action selector="hospitalAct:" destination="97g-j6-szU" eventType="touchUpInside" id="Ino-jJ-wez"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="This location is not in the default categories" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3ML-Hb-Qsd">
@@ -1023,6 +1050,7 @@
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="hospitalAct:" destination="97g-j6-szU" eventType="touchUpInside" id="5wt-cJ-RhL"/>
+                                    <action selector="parkAct:" destination="97g-j6-szU" eventType="touchUpInside" id="LwK-m4-ogx"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Your Live Location" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GPd-3Q-J1D">
@@ -1041,13 +1069,14 @@
                     <connections>
                         <outlet property="addressLabel" destination="f8V-DQ-He4" id="1HA-fh-8X1"/>
                         <outlet property="defaultRequestLabel" destination="3ML-Hb-Qsd" id="kXa-zC-eUF"/>
-                        <outlet property="groceryButton" destination="YEi-cN-kri" id="Csk-Q9-q77"/>
-                        <outlet property="hospitalButton" destination="YWG-b3-vus" id="9EL-FO-ssi"/>
+                        <outlet property="goToExerciseButton" destination="077-vl-xqK" id="MGT-lg-F6y"/>
+                        <outlet property="groceryButton" destination="YEi-cN-kri" id="41Q-eg-9R9"/>
+                        <outlet property="hospitalButton" destination="YWG-b3-vus" id="WLV-R7-cUC"/>
                         <outlet property="locateButton" destination="tbU-7n-R5b" id="FiH-97-ZW7"/>
                         <outlet property="mapView" destination="zdr-tK-oQf" id="HpO-d8-aks"/>
                         <outlet property="nameLabel" destination="UGq-rP-Q4R" id="qXy-1n-xzD"/>
-                        <outlet property="parkButton" destination="6LQ-ob-64U" id="M6Y-5U-BgD"/>
-                        <outlet property="restaurantButton" destination="dIj-BR-xvh" id="I42-NQ-orc"/>
+                        <outlet property="parkButton" destination="6LQ-ob-64U" id="Szn-M5-YRi"/>
+                        <outlet property="restaurantButton" destination="dIj-BR-xvh" id="AcT-zr-39z"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dgn-BK-xox" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -1826,23 +1855,6 @@ My4gVGhlIGNvcnJlY3QgYW5zd2VyIHdpbGwgYmUgCA
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UWL-ql-wvV">
-                                <rect key="frame" x="130" y="67" width="45" height="32"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="systemGroupedBackgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                <state key="normal" title="Play">
-                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
-                                </state>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                        <integer key="value" value="10"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <action selector="playAct:" destination="hek-tG-wFt" eventType="touchUpInside" id="W1k-1c-pcq"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="0eZ-Ah-YXl">
                                 <rect key="frame" x="10" y="580" width="400" height="53"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -1929,40 +1941,6 @@ My4gVGhlIGNvcnJlY3QgYW5zd2VyIHdpbGwgYmUgCA
                                     <action selector="nextButtonAction:" destination="hek-tG-wFt" eventType="touchUpInside" id="jC0-sw-gDd"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JXF-hG-cH2">
-                                <rect key="frame" x="208" y="67" width="84" height="32"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="systemGroupedBackgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                <state key="normal" title="Pronounce">
-                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                        <integer key="value" value="10"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <action selector="pronounceAct:" destination="hek-tG-wFt" eventType="touchUpInside" id="aha-bM-OHQ"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5i8-lp-d0W">
-                                <rect key="frame" x="32" y="66" width="65" height="32"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="systemGroupedBackgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                <state key="normal" title="Record">
-                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
-                                </state>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                        <integer key="value" value="10"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <action selector="recordAct:" destination="hek-tG-wFt" eventType="touchUpInside" id="9ZU-zi-RLD"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3VA-wW-mYQ">
                                 <rect key="frame" x="46" y="20" width="35" height="40"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -1983,6 +1961,38 @@ My4gVGhlIGNvcnJlY3QgYW5zd2VyIHdpbGwgYmUgCA
                                 <state key="normal" image="speaker.3.fill" catalog="system">
                                     <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="25" scale="large" weight="heavy"/>
                                 </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JXF-hG-cH2">
+                                <rect key="frame" x="210" y="12" width="79" height="59"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <state key="normal" title="   ">
+                                    <color key="titleColor" red="0.62745098040000002" green="0.73862161380000002" blue="0.90140845069999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="pronounceAct:" destination="hek-tG-wFt" eventType="touchUpInside" id="aha-bM-OHQ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UWL-ql-wvV">
+                                <rect key="frame" x="127" y="12" width="54" height="59"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <state key="normal" title="   ">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="playAct:" destination="hek-tG-wFt" eventType="touchUpInside" id="W1k-1c-pcq"/>
+                                </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TLh-bH-c6l">
                                 <rect key="frame" x="29" y="165" width="358" height="234"/>
@@ -2119,6 +2129,22 @@ My4gVGhlIGNvcnJlY3QgYW5zd2VyIHdpbGwgYmUgCA
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="cueButtonAction3:" destination="hek-tG-wFt" eventType="touchUpInside" id="liQ-ry-Auz"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5i8-lp-d0W">
+                                <rect key="frame" x="0.0" y="11" width="119" height="59"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <state key="normal" title="   ">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="recordAct:" destination="hek-tG-wFt" eventType="touchUpInside" id="9ZU-zi-RLD"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -2474,7 +2500,7 @@ My4gVGhlIGNvcnJlY3QgYW5zd2VyIHdpbGwgYmUgCA
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemGroupedBackgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="28"/>
-                                <state key="normal" title="Take Photo">
+                                <state key="normal" title="Main Page">
                                     <color key="titleColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <userDefinedRuntimeAttributes>
@@ -2483,7 +2509,7 @@ My4gVGhlIGNvcnJlY3QgYW5zd2VyIHdpbGwgYmUgCA
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <segue destination="lqm-tz-eCN" kind="show" id="tYo-7o-xJE"/>
+                                    <segue destination="Pcn-Nu-4fx" kind="show" id="EhM-Gh-PdE"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T24-it-jAj">
@@ -2495,7 +2521,7 @@ My4gVGhlIGNvcnJlY3QgYW5zd2VyIHdpbGwgYmUgCA
                                     <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="25" scale="large" weight="heavy"/>
                                 </state>
                                 <connections>
-                                    <segue destination="Pcn-Nu-4fx" kind="show" id="B65-WK-EpN"/>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="yQW-je-oR9"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qr7-68-QKC">
@@ -2517,7 +2543,7 @@ My4gVGhlIGNvcnJlY3QgYW5zd2VyIHdpbGwgYmUgCA
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <action selector="restaurantAct:" destination="JmK-aW-DfZ" eventType="touchUpInside" id="WaT-Ok-b8D"/>
+                                    <action selector="restaurantAct:" destination="JmK-aW-DfZ" eventType="touchUpInside" id="OAO-4J-HM1"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dtl-tn-ZRQ">
@@ -2534,7 +2560,7 @@ My4gVGhlIGNvcnJlY3QgYW5zd2VyIHdpbGwgYmUgCA
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <action selector="parkAct:" destination="JmK-aW-DfZ" eventType="touchUpInside" id="Ely-5G-dbr"/>
+                                    <action selector="parkAct:" destination="JmK-aW-DfZ" eventType="touchUpInside" id="MHG-ya-qeP"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vPz-ns-md5">
@@ -2551,7 +2577,7 @@ My4gVGhlIGNvcnJlY3QgYW5zd2VyIHdpbGwgYmUgCA
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <action selector="groceryAct:" destination="JmK-aW-DfZ" eventType="touchUpInside" id="uhE-1q-9Zs"/>
+                                    <action selector="groceryAct:" destination="JmK-aW-DfZ" eventType="touchUpInside" id="CXd-5k-Prk"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="This location is not a part of the categories" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7g1-Rc-b8l">
@@ -2575,7 +2601,7 @@ My4gVGhlIGNvcnJlY3QgYW5zd2VyIHdpbGwgYmUgCA
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <action selector="hospitalAct:" destination="JmK-aW-DfZ" eventType="touchUpInside" id="Twe-O0-XhG"/>
+                                    <action selector="hospitalAct:" destination="JmK-aW-DfZ" eventType="touchUpInside" id="d4M-YH-N4P"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Your Live Location" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tOj-Fv-Beo">
@@ -2611,13 +2637,14 @@ My4gVGhlIGNvcnJlY3QgYW5zd2VyIHdpbGwgYmUgCA
                     <connections>
                         <outlet property="addressLabel" destination="IZw-ct-gFm" id="roC-B6-Fk2"/>
                         <outlet property="defaultRequestLabel" destination="7g1-Rc-b8l" id="xyk-ss-Ak8"/>
-                        <outlet property="groceryButton" destination="vPz-ns-md5" id="lP2-fC-lNr"/>
-                        <outlet property="hospitalButton" destination="aR4-B9-8j2" id="PS0-Hx-Aco"/>
+                        <outlet property="goToExerciseButton" destination="A9x-eh-aPq" id="jx4-7V-fX0"/>
+                        <outlet property="groceryButton" destination="vPz-ns-md5" id="7qf-c4-q3O"/>
+                        <outlet property="hospitalButton" destination="aR4-B9-8j2" id="DtN-Bl-7CC"/>
                         <outlet property="locateButton" destination="Vti-hu-Bej" id="k1g-do-iP0"/>
                         <outlet property="mapView" destination="H81-7N-uts" id="BMP-kF-Es4"/>
                         <outlet property="nameLabel" destination="S9K-s6-56k" id="83d-I0-ECC"/>
-                        <outlet property="parkButton" destination="Dtl-tn-ZRQ" id="DKF-Dk-TNJ"/>
-                        <outlet property="restaurantButton" destination="jqd-Cy-n8Q" id="1MO-iP-JSX"/>
+                        <outlet property="parkButton" destination="Dtl-tn-ZRQ" id="yww-Cx-zis"/>
+                        <outlet property="restaurantButton" destination="jqd-Cy-n8Q" id="JNH-6O-lnE"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZEw-0w-isJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -2643,8 +2670,8 @@ My4gVGhlIGNvcnJlY3QgYW5zd2VyIHdpbGwgYmUgCA
         <segue reference="B0A-qF-Xyd"/>
         <segue reference="F1W-fL-hJq"/>
         <segue reference="LYt-S8-wU2"/>
-        <segue reference="crZ-Nm-AKT"/>
-        <segue reference="PSt-JU-lfT"/>
+        <segue reference="OKw-Ga-Ygf"/>
+        <segue reference="amK-dg-EQH"/>
         <segue reference="xCf-zj-QOY"/>
         <segue reference="Lmf-nV-rtC"/>
     </inferredMetricsTieBreakers>
