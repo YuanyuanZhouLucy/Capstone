@@ -77,8 +77,9 @@ class LocationPage: UIViewController {
                     print("address")
                     print(self.address)
                     locationTypeGV = self.locationType
+                    self.goToExerciseButton.isHidden = false
                     
-                    locationTypeGV = "me"
+                   // locationTypeGV = "me"
                     if (locationTypeGV !=  "food" && locationTypeGV != "restaurant" && locationTypeGV != "cafe" && locationTypeGV != "hospital"  && locationTypeGV != "grocery_or_supermarket" && locationTypeGV != "park"){
                         
                         self.defaultRequestLabel.isHidden = false
