@@ -12,8 +12,6 @@ class LocateMePageController: UIViewController {
     //background color
     
     
-    @IBOutlet weak var locationNow: UILabel!
-    
     @IBOutlet weak var restaurantButton: UIButton!
     @IBOutlet weak var parkButton: UIButton!
     @IBOutlet weak var libraryButton: UIButton!
@@ -36,7 +34,6 @@ class LocateMePageController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        locationNow.text = locationTypeGV
         restaurantButton.setTitle("Restaurant", for: UIControl.State.normal)
         parkButton.setTitle("Park", for: UIControl.State.normal)
         libraryButton.setTitle("Hospital", for: UIControl.State.normal)
