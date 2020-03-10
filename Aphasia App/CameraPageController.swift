@@ -160,6 +160,12 @@ class CameraPageController: UIViewController, UIImagePickerControllerDelegate, U
         return str1.replacingOccurrences(of: text, with: "__")
     }
     
+    func runAPICalls(text:String){
+        self.generate_cue_ex1(word: text)
+        self.get_elementry_defi(text)
+        self.getRhyme(word: text)
+    }
+    
     func generateCues(text: String) -> ([String:Any]) {
         let isWord = self.checkName(word: text)
         let existsInModel = self.inEmbeddingModel(word: text.lowercased())
@@ -171,15 +177,10 @@ class CameraPageController: UIViewController, UIImagePickerControllerDelegate, U
             
             exerciseBSimilar = self.findSemanticNeighbours(word: text.lowercased())
             exerciseBDissimilar = self.findDissimilar(word: text.lowercased())
-            
-            self.generate_cue_ex1(word: nameObjectLabel.text! )
-            self.get_elementry_defi(nameObjectLabel.text!)
-            self.getRhyme(word: nameObjectLabel.text! )
+        
             print("there will be CUES")
             print(self.cue_dic)
         }
-        print("exists in model", existsInModel)
-        print(self.cue_dic)
         
         if existsInModel && !self.cue_dic.isEmpty {
             
@@ -230,6 +231,8 @@ class CameraPageController: UIViewController, UIImagePickerControllerDelegate, U
         
         let image = imageView.image
         let text: String = nameObjectLabel.text!
+        self.runAPICalls(text: text) // need this early in fn cause async 
+        
         let uid = SQLiteDataStore.instance.getUserUploadId()
         let location = category
         
@@ -433,13 +436,14 @@ class CameraPageController: UIViewController, UIImagePickerControllerDelegate, U
                                         //print(resul["definition"] ?? "") // this works resul[]- but need to selection the one correspond to noun
                                         //                                                if let def = resul["definition"] as? String {
                                         ////                                                    if let def0 = def[0] as? String {
-                                        //                                                        self.cue_dic["definition"] = def
+                                        //                                                        selfxs.cue_dic["definition"] = def
                                         ////                                                    }
                                         //
                                         //                                                }
                                         if let eg = resul["examples"] as? [Any] {
                                             if let eg0 = eg[0] as? String {
                                                 let newString = eg0.replacingOccurrences(of: word, with: "___")
+                                                print("Example", newString)
                                                 self.cue_dic["example"] = newString
                                                 break
                                             }
