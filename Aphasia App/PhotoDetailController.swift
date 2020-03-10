@@ -69,8 +69,6 @@ class PhotoDetailController: UIViewController, UITextFieldDelegate
                 print("Dict updated with", dict)
             }
         }
-        
-        refRename.updateChildValues(["Name": rename_textf.text])
         updateCues()
         rename_textf.isHidden = true
         self.title = rename_textf.text
