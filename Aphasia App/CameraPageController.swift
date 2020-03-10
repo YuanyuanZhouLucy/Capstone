@@ -231,7 +231,7 @@ class CameraPageController: UIViewController, UIImagePickerControllerDelegate, U
         
         let image = imageView.image
         let text: String = nameObjectLabel.text!
-        self.runAPICalls(text: text) // need this early in fn cause async 
+        self.runAPICalls(text: text) // need this early in fn cause async
         
         let uid = SQLiteDataStore.instance.getUserUploadId()
         let location = category
