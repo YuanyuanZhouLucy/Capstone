@@ -22,6 +22,15 @@ class CueGenerator {
     func getCues() -> [String:Any]{
         return self.generateCues()
     }
+    
+    func getCuesDelayed() -> [String:Any]{
+        //the whole thing needs to be async
+        var cues: [String:Any] = [:]
+        let seconds = 2
+        sleep(UInt32(UInt32(seconds)))
+        return self.generateCues()
+    }
+    
     func runAPICalls(text:String){
         self.generate_cue_ex1(word: text)
         self.get_elementry_defi(text)
