@@ -155,6 +155,67 @@ class CameraPageController: UIViewController, UIImagePickerControllerDelegate, U
         
     }
     
+    func prepareExample(text: String, example:String) -> String{
+        let str1 = example.replacingOccurrences(of: text.lowercased(), with: "__")
+        return str1.replacingOccurrences(of: text, with: "__")
+    }
+    
+    func generateCues(text: String) -> ([String:Any]) {
+        let isWord = self.checkName(word: text)
+        let existsInModel = self.inEmbeddingModel(word: text.lowercased())
+        var exerciseBSimilar = [String]()
+        var exerciseBDissimilar = [String]()
+        var dict = [String:Any]()
+        
+        if isWord && existsInModel {
+            
+            exerciseBSimilar = self.findSemanticNeighbours(word: text.lowercased())
+            exerciseBDissimilar = self.findDissimilar(word: text.lowercased())
+            
+            self.generate_cue_ex1(word: nameObjectLabel.text! )
+            self.get_elementry_defi(nameObjectLabel.text!)
+            self.getRhyme(word: nameObjectLabel.text! )
+            print("there will be CUES")
+            print(self.cue_dic)
+        }
+        print("exists in model", existsInModel)
+        print(self.cue_dic)
+        
+        if existsInModel && !self.cue_dic.isEmpty {
+            
+            dict = [
+                "Name": text,
+                "Answer": text,
+                "hasCues": existsInModel,
+                "Cue1": String(self.cue_dic["count"] ?? "no syllables available"),
+                "Cue2": String(self.cue_dic["definition"] ?? "no def available"),
+                "Cue4": String(self.cue_dic["rhymes"] ?? "no rhyme available"),
+                "Opt1": exerciseBDissimilar[0],
+                "Opt2": exerciseBSimilar[1],
+                "Opt3": exerciseBSimilar[2],
+                "Opt4": exerciseBSimilar[3],
+                "Wrong1": exerciseBDissimilar[0],
+                "Wrong2": exerciseBDissimilar[1],
+                "Wrong3": exerciseBDissimilar[2],
+                "WrongOpt": 1
+            ]
+            
+            if (self.cue_dic["example"] != nil){
+                dict["Cue3"] = self.prepareExample(text: text, example: self.cue_dic["example"] as! String)
+            } else{
+                dict["Cue3"] = "no example"
+            }
+        }
+        else {
+            dict = [
+                "Name": text,
+                "hasCues": existsInModel,
+            ]
+        }
+        
+        return dict
+    }
+    
     
     @IBAction func saveDatabase(_ sender: Any) {
         if nameObjectLabel.text == "Image Saved!"{
@@ -170,26 +231,9 @@ class CameraPageController: UIViewController, UIImagePickerControllerDelegate, U
         let image = imageView.image
         let text: String = nameObjectLabel.text!
         let uid = SQLiteDataStore.instance.getUserUploadId()
-        let isWord = self.checkName(word: text)
         let location = category
-        let existsInModel = self.inEmbeddingModel(word: text.lowercased())
-        var exerciseBSimilar = [String]()
-        var exerciseBDissimilar = [String]()
-        
-        if isWord && existsInModel {
-            
-            exerciseBSimilar = self.findSemanticNeighbours(word: text.lowercased())
-            exerciseBDissimilar = self.findDissimilar(word: text.lowercased())
-            
-            self.generate_cue_ex1(word: nameObjectLabel.text! )
-            self.get_elementry_defi(nameObjectLabel.text!)
-            self.getRhyme(word: nameObjectLabel.text! )
-            print("there will be CUES")
-            print(self.cue_dic)
-        }
         
         let storageRef = Storage.storage().reference().child("userDefinedImages/\(uid)/\(text).jpg")
-        
         let uploadTask = storageRef.putData(((image?.jpegData(compressionQuality: 1.0)!)!) , metadata: nil) { (metadata, error) in
             guard let metadata = metadata else {
                 print(error?.localizedDescription)
@@ -198,55 +242,22 @@ class CameraPageController: UIViewController, UIImagePickerControllerDelegate, U
             // Metadata contains file metadata such as size, content-type.
             let size = metadata.size
             // You can also access to download URL after upload.
-            storageRef.downloadURL { (url, error) in
+            storageRef.downloadURL {
+                (url, error) in
                 guard let downloadURL = url else {
                     print(error?.localizedDescription)
                     return
                 }
                 let ref = Database.database().reference()
-                var dict = [String:Any]()
-                if existsInModel && !self.cue_dic.isEmpty {
-                    
-                    dict = [
-                        "Name": text,
-                        "ImageURL": downloadURL.absoluteString,
-                        "Answer": text,
-                        "hasCues": existsInModel,
-                        "Cue1": String(self.cue_dic["count"] ?? "no syllables available"),
-                        "Cue2": String(self.cue_dic["definition"] ?? "no def available"),
-                        "Cue4": String(self.cue_dic["rhymes"] ?? "no rhyme available"),
-                        "Opt1": exerciseBDissimilar[0],
-                        "Opt2": exerciseBSimilar[1],
-                        "Opt3": exerciseBSimilar[2],
-                        "Opt4": exerciseBSimilar[3],
-                        "Wrong1": exerciseBDissimilar[0],
-                        "Wrong2": exerciseBDissimilar[1],
-                        "Wrong3": exerciseBDissimilar[2],
-                        "WrongOpt": 1
-                    ]
-                    print(dict)
-                    
-                    if (self.cue_dic["example"] != nil){
-                        let example = self.cue_dic["example"] as! String
-                        let str1 = example.replacingOccurrences(of: text.lowercased(), with: "__")
-                        let str = str1.replacingOccurrences(of: text, with: "__")
-                        dict["Cue3"] = str
-                    } else{
-                        dict["Cue3"] = "no example"
-                    }
-                }
-                else {
-                    dict = [
-                        "ImageURL": downloadURL.absoluteString,
-                        "Name": text,
-                        "hasCues": existsInModel,
-                    ]
-                }
+                var dict = self.generateCues(text: text)
+                dict["ImageURL"] = downloadURL.absoluteString
+
                 print("location", self.category)
                 
                 ref.child("userDefinedEx").child("uid\(uid)").child("\(self.category)").childByAutoId().setValue(dict)
                 print("upload \(text)")
                 self.nameObjectLabel.text = "Image Saved!"
+                print(dict)
             }
         }
     }
