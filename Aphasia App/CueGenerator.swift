@@ -1,5 +1,5 @@
 //
-//  GeneratedCues.swift
+//  CueGenerator.swift
 //  Aphasia App
 //
 //  Created by Katherine Bancroft on 2020-03-10.
