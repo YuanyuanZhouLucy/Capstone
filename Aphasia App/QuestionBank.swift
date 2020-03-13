@@ -38,7 +38,7 @@ class QuestionBank {
         if(locationTypeGV == "food" || locationTypeGV == "restaurant" || locationTypeGV == "cafe"){
             category = "Cafe"
         }
-        else if(locationTypeGV == "grocery_or_supermarket"){
+        else if(locationTypeGV == "grocery_or_supermarket" || locationTypeGV == "supermarket"){
             category = "GroceryStore"
         }
         else if(locationTypeGV == "hospital"){

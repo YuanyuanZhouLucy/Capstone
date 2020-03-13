@@ -80,7 +80,7 @@ class LocationPage: UIViewController {
                     
                     
                   //  locationTypeGV = "me"
-                    if (locationTypeGV !=  "food" && locationTypeGV != "restaurant" && locationTypeGV != "cafe" && locationTypeGV != "hospital"  && locationTypeGV != "grocery_or_supermarket" && locationTypeGV != "park"){
+                    if (locationTypeGV !=  "food" && locationTypeGV != "restaurant" && locationTypeGV != "cafe" && locationTypeGV != "hospital"  && locationTypeGV != "grocery_or_supermarket" && locationTypeGV != "park" && locationTypeGV != "supermarket"){
                         
                         self.defaultRequestLabel.isHidden = false
                         self.restaurantButton.isHidden = false

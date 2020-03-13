@@ -117,7 +117,7 @@
 		9179C6DB168130C1EF2E53DE /* Pods-Aphasia App.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Aphasia App.debug.xcconfig"; path = "Target Support Files/Pods-Aphasia App/Pods-Aphasia App.debug.xcconfig"; sourceTree = "<group>"; };
 		920E94352757A10A73F350BA /* libPods-Aphasia AppTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Aphasia AppTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F1B600DB353BC75CA312F1F /* Pods-Aphasia App-Aphasia AppUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Aphasia App-Aphasia AppUITests.release.xcconfig"; path = "Target Support Files/Pods-Aphasia App-Aphasia AppUITests/Pods-Aphasia App-Aphasia AppUITests.release.xcconfig"; sourceTree = "<group>"; };
-		D52B696D241AE9A900AC7421 /* LocationNowViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LocationNowViewController.swift; path = "Aphasia App/LocationNowViewController.swift"; sourceTree = "<group>"; };
+		D52B696D241AE9A900AC7421 /* LocationNowViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationNowViewController.swift; sourceTree = "<group>"; };
 		D55F8B1424181B8300C5B229 /* CueGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CueGenerator.swift; sourceTree = "<group>"; };
 		D5DDC1F323C2D35B00839740 /* EmailInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailInfoViewController.swift; sourceTree = "<group>"; };
 		D5DDC1F523C3326600839740 /* SaveInformationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveInformationViewController.swift; sourceTree = "<group>"; };
@@ -164,7 +164,6 @@
 		16CFA1972374ADD00022C95F = {
 			isa = PBXGroup;
 			children = (
-				D52B696D241AE9A900AC7421 /* LocationNowViewController.swift */,
 				16CFA1A22374ADD00022C95F /* Aphasia App */,
 				16CFA1B92374ADD20022C95F /* Aphasia AppTests */,
 				16CFA1C42374ADD20022C95F /* Aphasia AppUITests */,
@@ -193,6 +192,7 @@
 				16D0E48323A1359C00BAEC8C /* GooglePlace.swift */,
 				16CFA1E32374C7CC0022C95F /* FirstPage.swift */,
 				163E1DBD23C7F78F00CCC02C /* LocateMePageController.swift */,
+				D52B696D241AE9A900AC7421 /* LocationNowViewController.swift */,
 				161AAF71237B5E5D00D505E7 /* LocationPage.swift */,
 				16FE530923864219009FC96F /* ExerciseA.swift */,
 				16EEACC12395B72C00C09534 /* ExerciseB.swift */,
