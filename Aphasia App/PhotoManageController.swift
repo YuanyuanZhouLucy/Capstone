@@ -31,10 +31,6 @@ class PhotoManageController: UIViewController, UICollectionViewDataSource, UICol
         
         
         loadFromFireBase()
-        
-        
-        print("-----------------finish loading --------------------")
-        
         let itemSize = UIScreen.main.bounds.width/3 - 2
                
         let layout = UICollectionViewFlowLayout()
@@ -74,13 +70,13 @@ class PhotoManageController: UIViewController, UICollectionViewDataSource, UICol
         self.img_arr = []
         
         DispatchQueue.main.async {
-           
             
             let locs = ["Cafe", "GroceryStore", "Hospital", "Park", "hello"]
             
             for loc in locs{
                 let userRef = ref.child("userDefinedEx").child("uid\(up_id)").child(loc)
                 userRef.observeSingleEvent(of: .value, with: { (snapshot) in
+                print("---" + loc)
                 
                        for child in snapshot.children {
                            let snap = child as! DataSnapshot
@@ -91,15 +87,25 @@ class PhotoManageController: UIViewController, UICollectionViewDataSource, UICol
                             }
                            let imageURL = placeDict["ImageURL"] as! String
                            let name = placeDict["Name"] as! String
-                           self.img_arr.append(ImageData(img_url_: imageURL, img_name_: name, fb_key_: snap.key, location_: loc))
-                           print(imageURL, name)
-                           print("-----------------finish loop --------------------")
+                            
+                         print("-**--" + name + "---" + loc)
+                            let gsReference = Storage.storage().reference(forURL:imageURL)
+                            gsReference.getData(maxSize: 1 * 1024 * 114096) { data, error in
+                              if let error = error {
+                                print(error)
+                                // Uh-oh, an error occurred!
+                              } else {
+                                // Data for "images/island.jpg" is returned
+                                 print("---" + name + "---" + loc)
+                                let image = UIImage(data: data!) ?? UIImage()
+                                self.img_arr.append(ImageData(img_url_: imageURL, img_name_: name, fb_key_: snap.key, location_: loc, img_: image))
+                                self.myCollectionView.reloadData()
+                                }
+                            }
                         
                        }
                        
-                        self.myCollectionView.reloadData()
-                                          
-                       print("-------------check error------------------")
+                        
                                
                    })
                 
@@ -142,23 +148,20 @@ class PhotoManageController: UIViewController, UICollectionViewDataSource, UICol
         print(image_url)
         print(img_arr[indexPath.row].img_name)
         
-         cell.myImageView.image = UIImage()
-         if let url = URL (string:image_url) {
-                DispatchQueue.global().async {
-                    let data = try? Data(contentsOf: url)
+       
+        
+        cell.myImageView.image = self.img_arr[indexPath.row].img
+        cell.myImageView.contentMode = .scaleAspectFill
+        cell.clipsToBounds = true
+                            
+                            
+                            
+                            
+                       
                     
-                    if let data = data, let image = UIImage(data: data) {
-                        DispatchQueue.main.async {
-                            cell.myImageView.image = UIImage(data: data)
-                            cell.myImageView.contentMode = .scaleAspectFill
-                            cell.clipsToBounds = true
-                                self.img_arr[indexPath.row].img = UIImage(data: data)
-                            
-                            
-                        }
-                    }
-                }
-        }
+      
+            
+     
         
 //        if let url = URL (string:image_url) {
 //                          DispatchQueue.main.async {
@@ -203,10 +206,6 @@ class PhotoManageController: UIViewController, UICollectionViewDataSource, UICol
         
         
         self.img_arr[id].img_name = name
-          
-       
-        
-        
         self.myCollectionView.reloadData()
     }
     func delete(_ id: Int){

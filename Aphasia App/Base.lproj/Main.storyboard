@@ -278,8 +278,7 @@
                                 </items>
                             </navigationBar>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hcc-PS-dUv">
-                               <rect key="frame" x="265" y="745" width="102" height="50"/>
-
+                                <rect key="frame" x="265" y="745" width="102" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Delete">
@@ -301,9 +300,7 @@
                                 </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="h54-v5-oyC">
-
                                 <rect key="frame" x="127" y="687" width="161" height="34"/>
-
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -856,9 +853,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-
                                     <segue destination="97g-j6-szU" kind="show" id="RtN-Eo-reh"/>
-
                                 </connections>
                             </button>
                         </subviews>
@@ -963,17 +958,14 @@
                                 <state key="normal" title="Restaurant ">
                                     <color key="titleColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
-
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                                         <integer key="value" value="10"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
-
                                 <connections>
                                     <action selector="restaurantAct:" destination="97g-j6-szU" eventType="touchUpInside" id="sCR-fw-4l6"/>
                                 </connections>
-
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YEi-cN-kri">
                                 <rect key="frame" x="184" y="701" width="126" height="36"/>
@@ -983,17 +975,14 @@
                                 <state key="normal" title="Grocery Store">
                                     <color key="titleColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
-
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                                         <integer key="value" value="10"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
-
                                 <connections>
                                     <action selector="parkAct:" destination="97g-j6-szU" eventType="touchUpInside" id="rsh-nh-KX0"/>
                                 </connections>
-
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YWG-b3-vus">
                                 <rect key="frame" x="318" y="701" width="77" height="36"/>
@@ -1003,17 +992,14 @@
                                 <state key="normal" title="Hospital">
                                     <color key="titleColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
-
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                                         <integer key="value" value="10"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
-
                                 <connections>
                                     <action selector="groceryAct:" destination="97g-j6-szU" eventType="touchUpInside" id="VFY-Sq-uPI"/>
                                 </connections>
-
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="This location is not in the default categories" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3ML-Hb-Qsd">
                                 <rect key="frame" x="14" y="663" width="392" height="26"/>
@@ -1030,17 +1016,14 @@
                                 <state key="normal" title="Park">
                                     <color key="titleColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
-
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                                         <integer key="value" value="10"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
-
                                 <connections>
                                     <action selector="hospitalAct:" destination="97g-j6-szU" eventType="touchUpInside" id="5wt-cJ-RhL"/>
                                 </connections>
-
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Your Live Location" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GPd-3Q-J1D">
                                 <rect key="frame" x="89" y="82" width="243" height="37"/>
@@ -2654,6 +2637,15 @@ My4gVGhlIGNvcnJlY3QgYW5zd2VyIHdpbGwgYmUgCA
         <image name="speaker.3.fill" catalog="system" width="64" height="44"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="6Rb-Yk-dh5"/>
+        <segue reference="Xmc-Tm-KFv"/>
+        <segue reference="YGE-xh-zCx"/>
+        <segue reference="B0A-qF-Xyd"/>
+        <segue reference="F1W-fL-hJq"/>
+        <segue reference="LYt-S8-wU2"/>
+        <segue reference="6rd-Xs-jze"/>
+        <segue reference="9pj-5F-1UY"/>
+        <segue reference="xCf-zj-QOY"/>
+        <segue reference="Lmf-nV-rtC"/>
     </inferredMetricsTieBreakers>
-
 </document>
