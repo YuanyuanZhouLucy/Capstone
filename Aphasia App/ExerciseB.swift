@@ -157,13 +157,13 @@ class ExerciseB: UIViewController{
         else{
             if(wrongOption == 1 && questionNumber != 0){
                 button1.setTitleColor(correct_colour, for: .normal)
-                label.text = ("You got this one correct.")
+                label.text = ("You got this correct.")
                 if(questionNumber < self.allQuestions.size){
                     totalScore += 1
                 }
                
             } else if (questionNumber != 0){
-                label.text =  ("You got this one wrong.")
+                label.text =  ("Good try, but this is incorrect.")
                 if (wrongOption == 1){
                     button1.setTitleColor(correct_colour, for: .normal)
                 }
@@ -193,12 +193,12 @@ class ExerciseB: UIViewController{
         else{
             if(wrongOption == 2 && questionNumber != 0){
                 button2.setTitleColor(correct_colour, for: .normal)
-                label.text = ("You got this one correct.")
+                label.text = ("You got this correct.")
                  if(questionNumber < self.allQuestions.size){
                                  totalScore += 1
                              }
             } else if (questionNumber != 0){
-                label.text =  ("You got this one wrong.")
+                label.text =  ("Good try, but this is incorrect.")
                 if (wrongOption == 1){
                     button1.setTitleColor(correct_colour, for: .normal)
                 }
@@ -227,12 +227,12 @@ class ExerciseB: UIViewController{
         else{
             if(wrongOption == 3 && questionNumber != 0){
                 button3.setTitleColor(correct_colour, for: .normal)
-                label.text = ("You got this one correct.")
+                label.text = ("You got this correct.")
                   if(questionNumber < self.allQuestions.size){
                                  totalScore += 1
                              }
             } else if (questionNumber != 0){
-                label.text =  ("You got this one wrong.")
+                label.text =  ("Good try, but this is incorrect.")
                 if (wrongOption == 1){
                     button1.setTitleColor(correct_colour, for: .normal)
                 }
@@ -262,12 +262,12 @@ class ExerciseB: UIViewController{
         else{
             if(wrongOption == 4 && questionNumber != 0){
                 button4.setTitleColor(correct_colour, for: .normal)
-                label.text = ("You got this one correct.")
+                label.text = ("You got this correct.")
                   if(questionNumber < self.allQuestions.size){
                                  totalScore += 1
                              }
             } else if (questionNumber != 0){
-                label.text =  ("You got this one wrong.")
+                label.text =  ("Good try, but this is incorrect.")
                 if (wrongOption == 1){
                     button1.setTitleColor(correct_colour, for: .normal)
                 }

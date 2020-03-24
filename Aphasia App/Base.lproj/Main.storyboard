@@ -278,9 +278,9 @@
                                 </items>
                             </navigationBar>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hcc-PS-dUv">
-                                <rect key="frame" x="265" y="745" width="102" height="50"/>
+                                <rect key="frame" x="265" y="746" width="102" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <state key="normal" title="Delete">
                                     <color key="titleColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
@@ -289,9 +289,9 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JIV-AV-v5q">
-                                <rect key="frame" x="64" y="752" width="72" height="36"/>
+                                <rect key="frame" x="58" y="751" width="86" height="41"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <state key="normal" title="Rename">
                                     <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
@@ -300,7 +300,7 @@
                                 </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="h54-v5-oyC">
-                                <rect key="frame" x="127" y="687" width="161" height="34"/>
+                                <rect key="frame" x="64" y="687" width="287" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -314,7 +314,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                         </subviews>
@@ -331,7 +331,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Uyv-8Y-Syz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2216" y="-735"/>
+            <point key="canvasLocation" x="2215.9420289855075" y="-735.26785714285711"/>
         </scene>
         <!--Manage Images View Controller-->
         <scene sceneID="QtN-yE-aHs">
@@ -668,11 +668,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v5i-Qa-gYy">
-                                <rect key="frame" x="53" y="450" width="309" height="81"/>
+                                <rect key="frame" x="33" y="452" width="356" height="81"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemGroupedBackgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="50"/>
-                                <state key="normal" title="Exercise 2">
+                                <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="34"/>
+                                <state key="normal" title="Ex2: Pick the odd one">
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                 </state>
                                 <userDefinedRuntimeAttributes>
@@ -685,11 +685,11 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y01-zM-P5y">
-                                <rect key="frame" x="53" y="275" width="309" height="79"/>
+                                <rect key="frame" x="33" y="309" width="356" height="75"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemGroupedBackgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="50"/>
-                                <state key="normal" title="Exercise 1">
+                                <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="34"/>
+                                <state key="normal" title="Ex1: Idetify the Object">
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                 </state>
                                 <userDefinedRuntimeAttributes>
@@ -711,6 +711,13 @@
                                     <segue destination="Pcn-Nu-4fx" kind="show" id="hoE-eN-bqb"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Choose an Exercise" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PyQ-hJ-0eO">
+                                <rect key="frame" x="68" y="215" width="286" height="41"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="34"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.50768981706091953" green="0.90140845069999997" blue="0.90140845069999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="cxd-HZ-SMn"/>
@@ -730,14 +737,14 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Or choose:" textAlignment="justified" lineBreakMode="tailTruncation" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gi4-mx-uka">
-                                <rect key="frame" x="113" y="467" width="146" height="37"/>
+                                <rect key="frame" x="134" y="281" width="146" height="37"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="31"/>
                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ILF-YQ-XVC">
-                                <rect key="frame" x="198" y="613" width="218" height="53"/>
+                                <rect key="frame" x="106" y="505" width="203" height="53"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemGroupedBackgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="30"/>
@@ -755,7 +762,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nms-gz-nXO">
-                                <rect key="frame" x="211" y="526" width="203" height="53"/>
+                                <rect key="frame" x="106" y="597" width="203" height="53"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemGroupedBackgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="30"/>
@@ -774,7 +781,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g25-VV-ZuQ">
-                                <rect key="frame" x="3" y="526" width="203" height="53"/>
+                                <rect key="frame" x="106" y="340" width="203" height="53"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemGroupedBackgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="30"/>
@@ -792,7 +799,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u0g-Tn-oRk">
-                                <rect key="frame" x="3" y="613" width="203" height="53"/>
+                                <rect key="frame" x="106" y="422" width="203" height="53"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemGroupedBackgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="30"/>
@@ -820,7 +827,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C0y-gP-CDs">
-                                <rect key="frame" x="158" y="185" width="56" height="103"/>
+                                <rect key="frame" x="176" y="106" width="56" height="103"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <rect key="contentStretch" x="1" y="0.0" width="1" height="1"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="34"/>
@@ -830,8 +837,23 @@
                                     </preferredSymbolConfiguration>
                                 </state>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="955-LA-KM0">
+                                <rect key="frame" x="144" y="195" width="122" height="48"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemGroupedBackgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="30"/>
+                                <state key="normal" title="Relocate"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="97g-j6-szU" kind="show" id="RtN-Eo-reh"/>
+                                </connections>
+                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rF5-NA-nKg">
-                                <rect key="frame" x="113" y="760" width="206" height="48"/>
+                                <rect key="frame" x="102" y="721" width="206" height="48"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemGroupedBackgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="27"/>
@@ -845,21 +867,6 @@
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <segue destination="lcO-d1-bLy" kind="show" id="FjQ-Xa-t9D"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="955-LA-KM0">
-                                <rect key="frame" x="131" y="268" width="110" height="43"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="systemGroupedBackgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="26"/>
-                                <state key="normal" title="Relocate"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                        <integer key="value" value="10"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <segue destination="97g-j6-szU" kind="show" id="RtN-Eo-reh"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -887,7 +894,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zdr-tK-oQf" customClass="GMSMapView">
-                                <rect key="frame" x="47" y="124" width="324" height="461"/>
+                                <rect key="frame" x="47" y="119" width="324" height="461"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                             </view>
@@ -906,7 +913,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="077-vl-xqK">
-                                <rect key="frame" x="100" y="754" width="206" height="48"/>
+                                <rect key="frame" x="104" y="756" width="206" height="48"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemGroupedBackgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="27"/>
@@ -923,7 +930,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tbU-7n-R5b">
-                                <rect key="frame" x="30" y="595" width="153" height="52"/>
+                                <rect key="frame" x="47" y="595" width="153" height="52"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemGroupedBackgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="28"/>
@@ -957,7 +964,7 @@
                                 <state key="normal" title="Button"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dIj-BR-xvh">
-                                <rect key="frame" x="16" y="701" width="103" height="36"/>
+                                <rect key="frame" x="15" y="701" width="103" height="45"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemGroupedBackgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="20"/>
@@ -974,7 +981,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YEi-cN-kri">
-                                <rect key="frame" x="184" y="701" width="126" height="36"/>
+                                <rect key="frame" x="184" y="701" width="126" height="45"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemGroupedBackgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="20"/>
@@ -992,7 +999,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YWG-b3-vus">
-                                <rect key="frame" x="318" y="701" width="77" height="36"/>
+                                <rect key="frame" x="319" y="701" width="77" height="45"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemGroupedBackgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="20"/>
@@ -1017,7 +1024,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6LQ-ob-64U">
-                                <rect key="frame" x="127" y="701" width="46" height="36"/>
+                                <rect key="frame" x="127" y="701" width="46" height="45"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemGroupedBackgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="20"/>
@@ -1035,7 +1042,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Your Live Location" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GPd-3Q-J1D">
-                                <rect key="frame" x="89" y="82" width="243" height="37"/>
+                                <rect key="frame" x="89" y="76" width="243" height="37"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="31"/>
                                 <nil key="textColor"/>
@@ -1285,6 +1292,11 @@
                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="31"/>
                                 <state key="normal" title="Clear History"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="clearProgressHistory:" destination="S32-6g-l5Y" eventType="touchUpInside" id="MQb-4L-lS0"/>
                                 </connections>
@@ -1840,7 +1852,7 @@ My4gVGhlIGNvcnJlY3QgYW5zd2VyIHdpbGwgYmUgCA
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l1t-mr-nj3">
-                                <rect key="frame" x="5" y="108" width="409" height="45"/>
+                                <rect key="frame" x="5" y="103" width="409" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="tertiarySystemBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
@@ -2085,9 +2097,9 @@ My4gVGhlIGNvcnJlY3QgYW5zd2VyIHdpbGwgYmUgCA
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Green" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N6F-cy-CCz">
-                                <rect key="frame" x="170" y="454" width="66" height="28"/>
+                                <rect key="frame" x="173" y="454" width="61" height="28"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="23"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -2281,7 +2293,7 @@ My4gVGhlIGNvcnJlY3QgYW5zd2VyIHdpbGwgYmUgCA
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IdM-4X-eMa">
-                                <rect key="frame" x="5" y="120" width="409" height="45"/>
+                                <rect key="frame" x="2" y="116" width="412" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="tertiarySystemGroupedBackgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="21"/>
@@ -2293,7 +2305,7 @@ My4gVGhlIGNvcnJlY3QgYW5zd2VyIHdpbGwgYmUgCA
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemGroupedBackgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="27"/>
-                                <state key="normal" title="Finish">
+                                <state key="normal" title="Exit">
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                 </state>
                                 <userDefinedRuntimeAttributes>
@@ -2373,7 +2385,7 @@ My4gVGhlIGNvcnJlY3QgYW5zd2VyIHdpbGwgYmUgCA
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="in Green" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2uJ-P8-7Ba">
-                                <rect key="frame" x="39" y="462" width="83" height="28"/>
+                                <rect key="frame" x="40" y="462" width="83" height="28"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="23"/>
                                 <nil key="textColor"/>
@@ -2394,6 +2406,13 @@ My4gVGhlIGNvcnJlY3QgYW5zd2VyIHdpbGwgYmUgCA
                                     <action selector="beginButtonAction:" destination="nuc-qc-SU7" eventType="touchUpInside" id="uol-qy-hsh"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Pick the odd one" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9fm-by-pQX">
+                                <rect key="frame" x="97" y="71" width="222" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="31"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.62676056338028174" green="0.73943661971830987" blue="0.90140845070422537" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="dQA-aH-FXf"/>
@@ -2421,7 +2440,7 @@ My4gVGhlIGNvcnJlY3QgYW5zd2VyIHdpbGwgYmUgCA
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lfk-bz-yxH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3205.7971014492755" y="811.60714285714278"/>
+            <point key="canvasLocation" x="3240.579710144928" y="959.59821428571422"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="dhH-pn-Iir">
@@ -2469,7 +2488,7 @@ My4gVGhlIGNvcnJlY3QgYW5zd2VyIHdpbGwgYmUgCA
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="H81-7N-uts" customClass="GMSMapView">
-                                <rect key="frame" x="52" y="107" width="310" height="463"/>
+                                <rect key="frame" x="52" y="105" width="310" height="463"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                             </view>
@@ -2522,7 +2541,7 @@ My4gVGhlIGNvcnJlY3QgYW5zd2VyIHdpbGwgYmUgCA
                                 <state key="normal" title="Button"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jqd-Cy-n8Q">
-                                <rect key="frame" x="20" y="690" width="97" height="36"/>
+                                <rect key="frame" x="18" y="688" width="103" height="45"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemGroupedBackgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="20"/>
@@ -2539,7 +2558,7 @@ My4gVGhlIGNvcnJlY3QgYW5zd2VyIHdpbGwgYmUgCA
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dtl-tn-ZRQ">
-                                <rect key="frame" x="127" y="690" width="45" height="36"/>
+                                <rect key="frame" x="128" y="688" width="45" height="45"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemGroupedBackgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="20"/>
@@ -2556,7 +2575,7 @@ My4gVGhlIGNvcnJlY3QgYW5zd2VyIHdpbGwgYmUgCA
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vPz-ns-md5">
-                                <rect key="frame" x="183" y="690" width="124" height="36"/>
+                                <rect key="frame" x="184" y="688" width="124" height="45"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemGroupedBackgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="20"/>
@@ -2580,7 +2599,7 @@ My4gVGhlIGNvcnJlY3QgYW5zd2VyIHdpbGwgYmUgCA
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aR4-B9-8j2">
-                                <rect key="frame" x="317" y="690" width="74" height="36"/>
+                                <rect key="frame" x="319" y="688" width="74" height="45"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemGroupedBackgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="20"/>
@@ -2597,14 +2616,14 @@ My4gVGhlIGNvcnJlY3QgYW5zd2VyIHdpbGwgYmUgCA
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Your Live Location" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tOj-Fv-Beo">
-                                <rect key="frame" x="93" y="64" width="235" height="36"/>
+                                <rect key="frame" x="93" y="62" width="235" height="36"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vti-hu-Bej">
-                                <rect key="frame" x="36" y="574" width="153" height="52"/>
+                                <rect key="frame" x="52" y="573" width="153" height="52"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemGroupedBackgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="28"/>
@@ -2661,28 +2680,11 @@ My4gVGhlIGNvcnJlY3QgYW5zd2VyIHdpbGwgYmUgCA
                                     <segue destination="Pcn-Nu-4fx" kind="show" id="CFA-1p-zGA"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="czW-5e-sJj">
-                                <rect key="frame" x="113" y="760" width="206" height="48"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="systemGroupedBackgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="27"/>
-                                <state key="normal" title="Go to Exercises">
-                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
-                                </state>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                        <integer key="value" value="10"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <segue destination="lcO-d1-bLy" kind="show" id="CYj-2O-D4Y"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OPs-lg-3fB">
-                                <rect key="frame" x="113" y="671" width="206" height="48"/>
+                                <rect key="frame" x="106" y="641" width="212" height="48"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemGroupedBackgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="27"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="31"/>
                                 <state key="normal" title="Relocate">
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                 </state>
@@ -2695,20 +2697,37 @@ My4gVGhlIGNvcnJlY3QgYW5zd2VyIHdpbGwgYmUgCA
                                     <segue destination="ECI-DZ-kPG" kind="show" id="DVc-hF-OGp"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="The current location is:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RNM-x1-jHa">
-                                <rect key="frame" x="28" y="267" width="359" height="45"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Your Current Location is:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RNM-x1-jHa">
+                                <rect key="frame" x="19" y="261" width="386" height="45"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="37"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="&quot; &quot;" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2uM-Gz-OIs">
-                                <rect key="frame" x="28" y="320" width="274" height="45"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="&quot; &quot;" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2uM-Gz-OIs">
+                                <rect key="frame" x="28" y="320" width="366" height="45"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="37"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="czW-5e-sJj">
+                                <rect key="frame" x="105" y="723" width="212" height="48"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemGroupedBackgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="31"/>
+                                <state key="normal" title="Go to Exercises">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="lcO-d1-bLy" kind="show" id="CYj-2O-D4Y"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.91695088150000004" green="0.94694751499999996" blue="0.77672499419999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="5CM-E9-GOv"/>
@@ -2720,7 +2739,7 @@ My4gVGhlIGNvcnJlY3QgYW5zd2VyIHdpbGwgYmUgCA
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hwk-fR-la0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2886" y="-735"/>
+            <point key="canvasLocation" x="2885.507246376812" y="-735.26785714285711"/>
         </scene>
     </scenes>
     <resources>
@@ -2736,12 +2755,12 @@ My4gVGhlIGNvcnJlY3QgYW5zd2VyIHdpbGwgYmUgCA
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="nUe-J7-NgF"/>
-        <segue reference="5jH-y6-isu"/>
+        <segue reference="Xmc-Tm-KFv"/>
         <segue reference="hVP-kl-bgW"/>
         <segue reference="B0A-qF-Xyd"/>
-        <segue reference="49C-gd-tnO"/>
-        <segue reference="CYj-2O-D4Y"/>
-        <segue reference="EhM-Gh-PdE"/>
+        <segue reference="kGc-jz-b4r"/>
+        <segue reference="crZ-Nm-AKT"/>
+        <segue reference="idU-7z-TcR"/>
         <segue reference="yQW-je-oR9"/>
         <segue reference="Uc0-Lk-lKo"/>
     </inferredMetricsTieBreakers>
