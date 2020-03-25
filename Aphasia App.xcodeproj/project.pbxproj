@@ -36,6 +36,7 @@
 		519487AA23CB699B00C9B052 /* PhotoManageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 519487A923CB699B00C9B052 /* PhotoManageController.swift */; };
 		519487AE23CB8BD700C9B052 /* myCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 519487AD23CB8BD700C9B052 /* myCell.swift */; };
 		519FD86523D8E22B00C25DC5 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 519FD86423D8E22B00C25DC5 /* GoogleService-Info.plist */; };
+		51C4D9ED242BFC5100A31BDA /* IMG-8465.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 51C4D9EC242BFC5100A31BDA /* IMG-8465.mp4 */; };
 		51CF582F23CBD3EE0098D64F /* ImageData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51CF582E23CBD3EE0098D64F /* ImageData.swift */; };
 		51CFF37623D4C86B001C9654 /* PhotoDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51CFF37523D4C86B001C9654 /* PhotoDetailController.swift */; };
 		B9076C415183D2781B72125A /* libPods-Aphasia App-Aphasia AppUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FB5C4F16AEE028772993C37A /* libPods-Aphasia App-Aphasia AppUITests.a */; };
@@ -111,6 +112,8 @@
 		519487A923CB699B00C9B052 /* PhotoManageController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoManageController.swift; sourceTree = "<group>"; };
 		519487AD23CB8BD700C9B052 /* myCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = myCell.swift; sourceTree = "<group>"; };
 		519FD86423D8E22B00C25DC5 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		51C4D9EA242BF57A00A31BDA /* IMG-8465.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = "IMG-8465.mov"; sourceTree = "<group>"; };
+		51C4D9EC242BFC5100A31BDA /* IMG-8465.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "IMG-8465.mp4"; sourceTree = "<group>"; };
 		51CF582E23CBD3EE0098D64F /* ImageData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageData.swift; sourceTree = "<group>"; };
 		51CFF37523D4C86B001C9654 /* PhotoDetailController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoDetailController.swift; sourceTree = "<group>"; };
 		636BE746E4BC251B396BCD6F /* Pods-Aphasia App-Aphasia AppUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Aphasia App-Aphasia AppUITests.debug.xcconfig"; path = "Target Support Files/Pods-Aphasia App-Aphasia AppUITests/Pods-Aphasia App-Aphasia AppUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -164,6 +167,8 @@
 		16CFA1972374ADD00022C95F = {
 			isa = PBXGroup;
 			children = (
+				51C4D9EC242BFC5100A31BDA /* IMG-8465.mp4 */,
+				51C4D9EA242BF57A00A31BDA /* IMG-8465.mov */,
 				16CFA1A22374ADD00022C95F /* Aphasia App */,
 				16CFA1B92374ADD20022C95F /* Aphasia AppTests */,
 				16CFA1C42374ADD20022C95F /* Aphasia AppUITests */,
@@ -389,6 +394,7 @@
 				16A985312380E3C2000C92E6 /* play.jpeg in Resources */,
 				161CB39A23949AF80083A0CF /* BackgroundSky.png in Resources */,
 				51114ABE2383B4630023788F /* map.png in Resources */,
+				51C4D9ED242BFC5100A31BDA /* IMG-8465.mp4 in Resources */,
 				16A985322380E3C2000C92E6 /* dog.jpeg in Resources */,
 				51114AC02383B9C50023788F /* bench.jpeg in Resources */,
 				16CFA1AB2374ADD00022C95F /* Main.storyboard in Resources */,

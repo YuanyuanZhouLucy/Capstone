@@ -11,13 +11,33 @@ import FirebaseDatabase
 import FirebaseStorage
 import Firebase
 
+import AVFoundation
+import AVKit
+
 class FirstPage: UIViewController {
     
-   
+    var  avPlayer: AVPlayer!
     @IBOutlet weak var appRehabButton: UIButton!
     @IBOutlet weak var exerciseButton: UIButton!
     @IBOutlet weak var letsBeginButton: UIButton!
+    @IBOutlet weak var PlayButton: UIButton!
     
+    @IBAction func PlayButtonAction(_sender: Any)
+    {
+        if let path = Bundle.main.path(forResource: "IMG-8465", ofType:"mp4")
+            
+            {
+                let video = AVPlayer(url:URL(fileURLWithPath: path))
+                let videoPlayer = AVPlayerViewController()
+                videoPlayer.player = video
+                
+                present(videoPlayer, animated: true) {
+                    video.play()
+                }
+                
+        }
+        
+    }
     override func viewDidLoad() {
         print("first page")
         super.viewDidLoad()
@@ -55,18 +75,6 @@ class FirstPage: UIViewController {
          //       print(error?.localizedDescription)
         //    }
             
-        //}
-        
-        
-        
-        
-            
-        
-    }
-    
-    // Locking orientation.
-     override open var supportedInterfaceOrientations: UIInterfaceOrientationMask {
-    return .portrait
-    }
-    
+  
+}
 }
