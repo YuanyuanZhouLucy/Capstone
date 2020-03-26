@@ -107,8 +107,13 @@ class CameraPageController: UIViewController, UIImagePickerControllerDelegate, U
         
         let uid = SQLiteDataStore.instance.getUserUploadId()
         let location = category
-        
+
+       
+        self.nameObjectLabel.text = "Image Saved!"
         let storageRef = Storage.storage().reference().child("userDefinedImages/\(uid)/\(text).jpg")
+         DispatchQueue.main.async {
+            
+            
         let uploadTask = storageRef.putData(((image?.jpegData(compressionQuality: 1.0)!)!) , metadata: nil) { (metadata, error) in
             guard let metadata = metadata else {
                 print(error?.localizedDescription)
@@ -134,6 +139,9 @@ class CameraPageController: UIViewController, UIImagePickerControllerDelegate, U
                 self.nameObjectLabel.text = "Image Saved!"
                 print(dict)
             }
+            
+            }
+            
         }
     }
     
@@ -162,7 +170,10 @@ class CameraPageController: UIViewController, UIImagePickerControllerDelegate, U
     
     @IBAction func detectObject(_ sender: Any) {
         //        let landmarkDetector = vision.cloudImageLabeler(options: options)
-        let landmarkDetector = vision.onDeviceImageLabeler(options: options)
+         let options = VisionCloudImageLabelerOptions()
+         options.confidenceThreshold = 0.7
+         let landmarkDetector = Vision.vision().cloudImageLabeler(options: options)
+        //let landmarkDetector = vision.onDeviceImageLabeler(options: options)
         let visionImage = VisionImage(image: imageView.image!)
         
         //                    self.resultView.text = "Done"

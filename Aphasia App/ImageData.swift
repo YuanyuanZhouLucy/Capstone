@@ -17,11 +17,11 @@ class ImageData{
     let fb_key: String
     let location: String
     
-    init(img_url_ :String, img_name_:String, fb_key_:String, location_:String){
+    init(img_url_ :String, img_name_:String, fb_key_:String, location_:String, img_:UIImage ){
         
         img_url = img_url_
         img_name = img_name_
-        img = UIImage()
+        img = img_
         fb_key = fb_key_
         location = location_
     }
