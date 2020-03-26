@@ -2172,6 +2172,7 @@ My4gVGhlIGNvcnJlY3QgYW5zd2VyIHdpbGwgYmUgCA
                     </view>
                     <navigationItem key="navigationItem" id="UUF-Zf-YMn"/>
                     <connections>
+                        <outlet property="PlayTutorialButton" destination="pNb-HZ-78n" id="rXv-pz-Nwi"/>
                         <outlet property="beginButton" destination="1hQ-1f-8KK" id="syH-Pq-Kge"/>
                         <outlet property="button1" destination="9mG-Vy-MFH" id="Hnp-OC-N6m"/>
                         <outlet property="button2" destination="waA-va-eLC" id="XJd-jz-ryi"/>
@@ -2449,6 +2450,7 @@ My4gVGhlIGNvcnJlY3QgYW5zd2VyIHdpbGwgYmUgCA
                     </view>
                     <navigationItem key="navigationItem" id="Xfn-Q9-e0v"/>
                     <connections>
+                        <outlet property="PlayTutorial2Button" destination="S0b-al-nQB" id="dFG-BE-mcQ"/>
                         <outlet property="beginButton" destination="fQ2-Is-gUv" id="3dr-12-alI"/>
                         <outlet property="button1" destination="zW6-Qm-3gU" id="MNa-pr-AEG"/>
                         <outlet property="button2" destination="RL1-bY-e5H" id="G9Q-dn-Mcx"/>
@@ -2784,7 +2786,6 @@ My4gVGhlIGNvcnJlY3QgYW5zd2VyIHdpbGwgYmUgCA
         <image name="speaker.3.fill" catalog="system" width="64" height="44"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="xTg-Y0-kpT"/>
         <segue reference="nUe-J7-NgF"/>
         <segue reference="Xmc-Tm-KFv"/>
         <segue reference="hVP-kl-bgW"/>

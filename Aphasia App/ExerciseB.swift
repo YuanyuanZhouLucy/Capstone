@@ -80,6 +80,7 @@ class ExerciseB: UIViewController{
            instr6.isHidden = true
            instr7.isHidden = true
            instr8.isHidden = true
+        PlayTutorial2Button.isHidden = true
         beginButton.isHidden = true
          finishButton.isHidden = false
          button1.isHidden = false

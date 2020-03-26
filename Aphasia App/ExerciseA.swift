@@ -139,6 +139,7 @@ class ExerciseA: UIViewController, UITableViewDelegate, AVAudioRecorderDelegate,
               instr12.isHidden = true
               instr13.isHidden = true
               instr14.isHidden = true
+        PlayTutorialButton.isHidden = true
         pronounceButtonImage.isHidden = false
              playButtonImage.isHidden = false
              recordButton.isHidden = false
