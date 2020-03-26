@@ -51,26 +51,37 @@ class PhotoDetailController: UIViewController, UITextFieldDelegate
            return true
        }
        
-       func textFieldDidEndEditing(_ textField: UITextField) {
-//           nameObjectLabel.text = nameOfPhoto.text
-//           nameOfPhoto.isHidden = true
-//           saveButton.isHidden = false
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        //           nameObjectLabel.text = nameOfPhoto.text
+        //           nameOfPhoto.isHidden = true
+        //           saveButton.isHidden = false
         
-            let ref = Database.database().reference()
-            let up_id = SQLiteDataStore.instance.getUserUploadId()
-            var refRename = ref.child("userDefinedEx").child("uid\(up_id)").child(self.image.location).child(self.image.fb_key)
-
-            refRename.updateChildValues(["Name": rename_textf.text])
-            rename_textf.isHidden = true
-            self.title = rename_textf.text
+        let ref = Database.database().reference()
+        let up_id = SQLiteDataStore.instance.getUserUploadId()
+        let cueGen = CueGenerator(word: rename_textf.text!)
+        var refRename = ref.child("userDefinedEx").child("uid\(up_id)").child(self.image.location).child(self.image.fb_key)
         
-            let rename = rename_textf.text as! String
-            self.photoManageController?.rename(self.imageId, rename)
-                
+        func updateCues() {
+            let serialQueue = DispatchQueue(label: "queuename")
+            serialQueue.async {
+                let dict = cueGen.getCuesDelayed()
+                refRename.updateChildValues(dict)
+                print("Dict updated with", dict)
+            }
+        }
+        updateCues()
+        rename_textf.isHidden = true
+        self.title = rename_textf.text
+        
+        let rename = rename_textf.text as! String
+        self.photoManageController?.rename(self.imageId, rename)
+        
         self.notif.isHidden = false
         self.notif.text = "Renamed to \(rename)"
-           
-       }
+        
+    }
+    
+    
     @IBAction func deleteImage(_ sender: Any) {
     
         

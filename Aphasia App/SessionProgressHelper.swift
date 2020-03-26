@@ -70,6 +70,15 @@ class ExerciseAProgressHelper {
         return nil
     }
     
+    static func deleteProgressTable(db:Connection?){
+        do {
+            try db!.run(exerciseAProgress.drop(ifExists: true))
+            print("exerciseA table deleted")
+        } catch {
+            print("Unable to delete exerciseA table")
+        }
+    }
+    
 }
 
 class ExerciseBProgressHelper {
@@ -130,5 +139,14 @@ class ExerciseBProgressHelper {
             return sessions.last
         }
         return nil
+    }
+    
+    static func deleteProgressTable(db:Connection?){
+        do {
+            try db!.run(exerciseBProgress.drop(ifExists: true))
+            print("exerciseB table deleted")
+        } catch {
+            print("Unable to delete exerciseB table")
+        }
     }
 }

@@ -73,6 +73,7 @@ class ExerciseA: UIViewController, UITableViewDelegate, AVAudioRecorderDelegate,
     var picture: UIImage?
     
     let correct_colour = UIColor.systemGreen
+    let red_colour = UIColor.systemRed
     
     
     
@@ -108,6 +109,9 @@ class ExerciseA: UIViewController, UITableViewDelegate, AVAudioRecorderDelegate,
         pronounceButton.isHidden = true
         playButton.isHidden = true
         pronounceButton.isHidden = true
+        
+        
+       
         
         
         
@@ -185,6 +189,13 @@ class ExerciseA: UIViewController, UITableViewDelegate, AVAudioRecorderDelegate,
         cue2 = allQuestions.list[questionNumber].cue2
         cue3 = allQuestions.list[questionNumber].cue3
         cue4 = allQuestions.list[questionNumber].cue4
+        
+        if cue3 == "No example"{
+                   cueButton4.isHidden = true
+                   cue3 = cue4
+                   
+               }
+        
         print("for this question \(questionNumber), the cue is \(cue1)")
         if(questionNumber != 0 ){
             if( allQuestions.list[questionNumber].correctAnswer  == 1){
@@ -384,7 +395,10 @@ class ExerciseA: UIViewController, UITableViewDelegate, AVAudioRecorderDelegate,
     }
     
     @IBAction func cueButtonAction3(_ sender: Any) {
-           cueButton3.setTitle(cue3, for: UIControl.State.normal)
+        
+            cueButton3.setTitle(cue3, for: UIControl.State.normal)
+        
+           
     }
     
     @IBAction func cueButtonAction4(_ sender: Any) {
@@ -449,32 +463,34 @@ class ExerciseA: UIViewController, UITableViewDelegate, AVAudioRecorderDelegate,
     
     func audioPlayerDidFinishPlaying (_ player: AVAudioPlayer, successfully flag: Bool){
         recordButton.isEnabled = true
-        playButton.setTitle("Play", for: .normal)
+        playButton.setTitle("   ", for: .normal)
     }
     @IBAction func recordAct(_ sender: Any) {
-        if recordButton.titleLabel?.text == "Record" {
+        if recordButton.titleLabel?.text == "   " {
             soundRecorder.record()
-            print("done recording")
-            recordButton.setTitle("Stop", for: .normal)
+            recordButton.setTitle("Press to stop", for: .normal)
+             recordButton.setTitleColor(red_colour, for: .normal)
             playButton.isEnabled = false
         }
         else{
             soundRecorder.stop()
-            recordButton.setTitle("Record", for: .normal)
+            recordButton.setTitle("   ", for: .normal)
             playButton.isEnabled = false
         }
     }
     
     @IBAction func playAct(_ sender: Any) {
-        if playButton.titleLabel?.text == "Play" {
-            playButton.setTitle("Stop", for: .normal)
+        if playButton.titleLabel?.text == "   " {
+            playButton.setTitle("  ", for: .normal)
+          
             recordButton.isEnabled = false
             setupPlayer()
+            soundPlayer.setVolume(1.0,fadeDuration: 4.0)
             soundPlayer.play()
         }
         else{
             soundPlayer.stop()
-            playButton.setTitle("Play", for: .normal)
+            playButton.setTitle("   ", for: .normal)
             recordButton.isEnabled = false
         }
     }

@@ -14,63 +14,62 @@ import Firebase
 class PhotoManageController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
     
     @IBOutlet weak var myCollectionView: UICollectionView!
-     var img_arr : [ImageData] = []
+    var img_arr : [ImageData] = []
     var seg_id : String = "detailPhoto"
     @IBOutlet weak var backButton: UIBarButtonItem!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-       
+        
+        
         let ref = Database.database().reference()
         let up_id = SQLiteDataStore.instance.getUserUploadId()
         let location = "cafe"
-//        var img_arr: [ImageData] = []
+        //        var img_arr: [ImageData] = []
         print(up_id)
         
-        
-        
         loadFromFireBase()
+
+
         let itemSize = UIScreen.main.bounds.width/3 - 2
-               
+        
         let layout = UICollectionViewFlowLayout()
         layout.itemSize = CGSize(width: itemSize, height: itemSize)
-               
+        
         layout.minimumInteritemSpacing = 2
         layout.minimumLineSpacing = 2
-               
+        
         myCollectionView.collectionViewLayout = layout
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated) // No need for semicolon
-//        loadFromFireBase()
+        //        loadFromFireBase()
         print("load again")
     }
-        
-//    @IBAction func backToMainScreen(_ sender: Any) {
-//        
-//        DispatchQueue.main.async(){
-//         
-//            self.performSegue(withIdentifier: "backToMain", sender: self)
-//
-//        }
-//        
-//    }
+    
+    //    @IBAction func backToMainScreen(_ sender: Any) {
+    //
+    //        DispatchQueue.main.async(){
+    //
+    //            self.performSegue(withIdentifier: "backToMain", sender: self)
+    //
+    //        }
+    //
+    //    }
     //    typealias ArrayClosure = (Array<ImageData>?) -> Void
-
+    
     func loadFromFireBase() {
         let ref = Database.database().reference()
         
-           
-            //Put code here to load songArray from the FireBase returned data
-            let up_id = SQLiteDataStore.instance.getUserUploadId()
-            
+        //Put code here to load songArray from the FireBase returned data
+        let up_id = SQLiteDataStore.instance.getUserUploadId()
+        
         
         self.img_arr = []
         
         DispatchQueue.main.async {
-            
+
             let locs = ["Cafe", "GroceryStore", "Hospital", "Park", "hello"]
             
             for loc in locs{
@@ -110,9 +109,9 @@ class PhotoManageController: UIViewController, UICollectionViewDataSource, UICol
                    })
                 
             }
-           
+            
         }
-
+        
     }
    
 
@@ -142,18 +141,16 @@ class PhotoManageController: UIViewController, UICollectionViewDataSource, UICol
     {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! myCell
         
-        
-        
         let image_url = img_arr[indexPath.row].img_url
         print(image_url)
         print(img_arr[indexPath.row].img_name)
         
-       
+
         
         cell.myImageView.image = self.img_arr[indexPath.row].img
         cell.myImageView.contentMode = .scaleAspectFill
         cell.clipsToBounds = true
-                            
+
                             
                             
                             
@@ -200,13 +197,11 @@ class PhotoManageController: UIViewController, UICollectionViewDataSource, UICol
     
     func rename(_ id: Int, _ name: String ){
         
-        
         let url = self.img_arr[id].img_url
-       
-        
-        
         self.img_arr[id].img_name = name
-        self.myCollectionView.reloadData()
+
+        //self.myCollectionView.reloadData()
+
     }
     func delete(_ id: Int){
         

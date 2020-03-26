@@ -39,6 +39,8 @@
 		51CF582F23CBD3EE0098D64F /* ImageData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51CF582E23CBD3EE0098D64F /* ImageData.swift */; };
 		51CFF37623D4C86B001C9654 /* PhotoDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51CFF37523D4C86B001C9654 /* PhotoDetailController.swift */; };
 		B9076C415183D2781B72125A /* libPods-Aphasia App-Aphasia AppUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FB5C4F16AEE028772993C37A /* libPods-Aphasia App-Aphasia AppUITests.a */; };
+		D52B696E241AE9A900AC7421 /* LocationNowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D52B696D241AE9A900AC7421 /* LocationNowViewController.swift */; };
+		D55F8B1524181B8300C5B229 /* CueGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D55F8B1424181B8300C5B229 /* CueGenerator.swift */; };
 		D5B9DECC23C0E324004B2B53 /* ExerciseB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16EEACC12395B72C00C09534 /* ExerciseB.swift */; };
 		D5DDC1F423C2D35B00839740 /* EmailInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5DDC1F323C2D35B00839740 /* EmailInfoViewController.swift */; };
 		D5DDC1F623C3326600839740 /* SaveInformationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5DDC1F523C3326600839740 /* SaveInformationViewController.swift */; };
@@ -115,6 +117,8 @@
 		9179C6DB168130C1EF2E53DE /* Pods-Aphasia App.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Aphasia App.debug.xcconfig"; path = "Target Support Files/Pods-Aphasia App/Pods-Aphasia App.debug.xcconfig"; sourceTree = "<group>"; };
 		920E94352757A10A73F350BA /* libPods-Aphasia AppTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Aphasia AppTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F1B600DB353BC75CA312F1F /* Pods-Aphasia App-Aphasia AppUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Aphasia App-Aphasia AppUITests.release.xcconfig"; path = "Target Support Files/Pods-Aphasia App-Aphasia AppUITests/Pods-Aphasia App-Aphasia AppUITests.release.xcconfig"; sourceTree = "<group>"; };
+		D52B696D241AE9A900AC7421 /* LocationNowViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationNowViewController.swift; sourceTree = "<group>"; };
+		D55F8B1424181B8300C5B229 /* CueGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CueGenerator.swift; sourceTree = "<group>"; };
 		D5DDC1F323C2D35B00839740 /* EmailInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailInfoViewController.swift; sourceTree = "<group>"; };
 		D5DDC1F523C3326600839740 /* SaveInformationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveInformationViewController.swift; sourceTree = "<group>"; };
 		D5DDC1F723C75D9500839740 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
@@ -183,11 +187,12 @@
 			isa = PBXGroup;
 			children = (
 				16CFA1A92374ADD00022C95F /* Main.storyboard */,
-				D5DDC1F323C2D35B00839740 /* EmailInfoViewController.swift */,
+				D55F8B1424181B8300C5B229 /* CueGenerator.swift */,
 				D5DDC1F523C3326600839740 /* SaveInformationViewController.swift */,
 				16D0E48323A1359C00BAEC8C /* GooglePlace.swift */,
 				16CFA1E32374C7CC0022C95F /* FirstPage.swift */,
 				163E1DBD23C7F78F00CCC02C /* LocateMePageController.swift */,
+				D52B696D241AE9A900AC7421 /* LocationNowViewController.swift */,
 				161AAF71237B5E5D00D505E7 /* LocationPage.swift */,
 				16FE530923864219009FC96F /* ExerciseA.swift */,
 				16EEACC12395B72C00C09534 /* ExerciseB.swift */,
@@ -206,6 +211,7 @@
 				D5DDC20C23CBDD3400839740 /* ProgressReportViewController.swift */,
 				D5DDC20E23CBE3EF00839740 /* ProjectHistoryViewController.swift */,
 				D5DDC21023CBE57F00839740 /* HistoryTableViewCell.swift */,
+				D5DDC1F323C2D35B00839740 /* EmailInfoViewController.swift */,
 				16F57C8523804DC800ED7422 /* background.jpeg */,
 				161CB39923949AF70083A0CF /* BackgroundSky.png */,
 				51114ABF2383B9C50023788F /* bench.jpeg */,
@@ -517,6 +523,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D52B696E241AE9A900AC7421 /* LocationNowViewController.swift in Sources */,
 				51CF582F23CBD3EE0098D64F /* ImageData.swift in Sources */,
 				D5DDC20B23CBAD6100839740 /* SessionProgress.swift in Sources */,
 				D5DDC1F823C75D9500839740 /* User.swift in Sources */,
@@ -540,6 +547,7 @@
 				16FE531223876C08009FC96F /* Question.swift in Sources */,
 				D5DDC1F623C3326600839740 /* SaveInformationViewController.swift in Sources */,
 				519487AE23CB8BD700C9B052 /* myCell.swift in Sources */,
+				D55F8B1524181B8300C5B229 /* CueGenerator.swift in Sources */,
 				D5DDC1F423C2D35B00839740 /* EmailInfoViewController.swift in Sources */,
 				D5DDC20F23CBE3EF00839740 /* ProjectHistoryViewController.swift in Sources */,
 			);

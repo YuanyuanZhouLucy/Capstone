@@ -29,11 +29,14 @@ class LocationPage: UIViewController {
     
     @IBOutlet weak var restaurantButton: UIButton!
     @IBOutlet weak var parkButton: UIButton!
+    
     @IBOutlet weak var groceryButton: UIButton!
     @IBOutlet weak var hospitalButton: UIButton!
+    
+    @IBOutlet weak var goToExerciseButton: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        goToExerciseButton.isHidden = true
         restaurantButton.isHidden = true
         parkButton.isHidden = true
         groceryButton.isHidden = true
@@ -75,8 +78,9 @@ class LocationPage: UIViewController {
                     print(self.address)
                     locationTypeGV = self.locationType
                     
-                   // locationTypeGV = "me"
-                    if (locationTypeGV !=  "food" && locationTypeGV != "restaurant" && locationTypeGV != "cafe" && locationTypeGV != "hospital"  && locationTypeGV != "grocery_or_supermarket" && locationTypeGV != "park"){
+                    
+                  //  locationTypeGV = "me"
+                    if (locationTypeGV !=  "food" && locationTypeGV != "restaurant" && locationTypeGV != "cafe" && locationTypeGV != "hospital"  && locationTypeGV != "grocery_or_supermarket" && locationTypeGV != "park" && locationTypeGV != "supermarket"){
                         
                         self.defaultRequestLabel.isHidden = false
                         self.restaurantButton.isHidden = false
@@ -84,6 +88,7 @@ class LocationPage: UIViewController {
                         self.groceryButton.isHidden = false
                         self.hospitalButton.isHidden = false
                     }
+                    else{ self.goToExerciseButton.isHidden = false}
                 }
             }
         })
@@ -95,19 +100,27 @@ class LocationPage: UIViewController {
         parkButton.isHidden = true
         groceryButton.isHidden = true
         hospitalButton.isHidden = true
+        restaurantButton.isHidden = false
+        goToExerciseButton.isHidden = false
     }
     @IBAction func parkAct(_ sender: UIButton) {
         locationTypeGV = "park"
         restaurantButton.isHidden = true
         groceryButton.isHidden = true
         hospitalButton.isHidden = true
+        parkButton.isHidden = false
+          goToExerciseButton.isHidden = false
     }
     
-    @IBAction func groceryAct(_ sender: UIButton) {
-        locationTypeGV="grocery_or_supermarket"
-        parkButton.isHidden = true
-        restaurantButton.isHidden = true
-        hospitalButton.isHidden = true
+
+    @IBAction func groceryAct(_ sender: Any) {
+        locationTypeGV = "grocery_or_supermarket"
+              restaurantButton.isHidden = true
+              groceryButton.isHidden = false
+              hospitalButton.isHidden = true
+              parkButton.isHidden = true
+                goToExerciseButton.isHidden = false
+        
     }
     
     @IBAction func hospitalAct(_ sender: UIButton) {
@@ -115,6 +128,8 @@ class LocationPage: UIViewController {
         parkButton.isHidden = true
         groceryButton.isHidden = true
         restaurantButton.isHidden = true
+        hospitalButton.isHidden = false
+          goToExerciseButton.isHidden = false
     }
 }
 
