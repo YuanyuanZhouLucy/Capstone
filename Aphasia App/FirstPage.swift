@@ -11,12 +11,15 @@ import FirebaseDatabase
 import FirebaseStorage
 import Firebase
 
+import AVFoundation
+
+
 class FirstPage: UIViewController {
-    
-   
     @IBOutlet weak var appRehabButton: UIButton!
     @IBOutlet weak var exerciseButton: UIButton!
     @IBOutlet weak var letsBeginButton: UIButton!
+    
+    
     
     override func viewDidLoad() {
         print("first page")
@@ -55,18 +58,6 @@ class FirstPage: UIViewController {
          //       print(error?.localizedDescription)
         //    }
             
-        //}
-        
-        
-        
-        
-            
-        
-    }
-    
-    // Locking orientation.
-     override open var supportedInterfaceOrientations: UIInterfaceOrientationMask {
-    return .portrait
-    }
-    
+  
+}
 }

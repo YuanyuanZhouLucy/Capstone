@@ -7,8 +7,13 @@
 
 import UIKit
 import AVFoundation
+import AVKit
+
+var  av2Player: AVPlayer!
 
 class ExerciseB: UIViewController{
+    
+    @IBOutlet weak var PlayTutorial2Button: UIButton!
     
     @IBOutlet weak var instr6: UILabel!
     
@@ -75,6 +80,7 @@ class ExerciseB: UIViewController{
            instr6.isHidden = true
            instr7.isHidden = true
            instr8.isHidden = true
+        PlayTutorial2Button.isHidden = true
         beginButton.isHidden = true
          finishButton.isHidden = false
          button1.isHidden = false
@@ -157,13 +163,13 @@ class ExerciseB: UIViewController{
         else{
             if(wrongOption == 1 && questionNumber != 0){
                 button1.setTitleColor(correct_colour, for: .normal)
-                label.text = ("You got this one correct.")
+                label.text = ("You got this correct.")
                 if(questionNumber < self.allQuestions.size){
                     totalScore += 1
                 }
                
             } else if (questionNumber != 0){
-                label.text =  ("You got this one wrong.")
+                label.text =  ("Good try, but this is incorrect.")
                 if (wrongOption == 1){
                     button1.setTitleColor(correct_colour, for: .normal)
                 }
@@ -193,12 +199,12 @@ class ExerciseB: UIViewController{
         else{
             if(wrongOption == 2 && questionNumber != 0){
                 button2.setTitleColor(correct_colour, for: .normal)
-                label.text = ("You got this one correct.")
+                label.text = ("You got this correct.")
                  if(questionNumber < self.allQuestions.size){
                                  totalScore += 1
                              }
             } else if (questionNumber != 0){
-                label.text =  ("You got this one wrong.")
+                label.text =  ("Good try, but this is incorrect.")
                 if (wrongOption == 1){
                     button1.setTitleColor(correct_colour, for: .normal)
                 }
@@ -227,12 +233,12 @@ class ExerciseB: UIViewController{
         else{
             if(wrongOption == 3 && questionNumber != 0){
                 button3.setTitleColor(correct_colour, for: .normal)
-                label.text = ("You got this one correct.")
+                label.text = ("You got this correct.")
                   if(questionNumber < self.allQuestions.size){
                                  totalScore += 1
                              }
             } else if (questionNumber != 0){
-                label.text =  ("You got this one wrong.")
+                label.text =  ("Good try, but this is incorrect.")
                 if (wrongOption == 1){
                     button1.setTitleColor(correct_colour, for: .normal)
                 }
@@ -262,12 +268,12 @@ class ExerciseB: UIViewController{
         else{
             if(wrongOption == 4 && questionNumber != 0){
                 button4.setTitleColor(correct_colour, for: .normal)
-                label.text = ("You got this one correct.")
+                label.text = ("You got this correct.")
                   if(questionNumber < self.allQuestions.size){
                                  totalScore += 1
                              }
             } else if (questionNumber != 0){
-                label.text =  ("You got this one wrong.")
+                label.text =  ("Good try, but this is incorrect.")
                 if (wrongOption == 1){
                     button1.setTitleColor(correct_colour, for: .normal)
                 }
@@ -310,5 +316,23 @@ class ExerciseB: UIViewController{
      override open var supportedInterfaceOrientations: UIInterfaceOrientationMask {
     return .portrait
     }
-
+    
+    
+    @IBAction func PlayTutorial2ButtonAction(_sender: Any)
+    {
+        if let path = Bundle.main.path(forResource: "IMG-8465", ofType:"mp4")
+            
+            {
+                let video = AVPlayer(url:URL(fileURLWithPath: path))
+                let videoPlayer = AVPlayerViewController()
+                videoPlayer.player = video
+                
+                present(videoPlayer, animated: true) {
+                    video.play()
+                }
+                
+        }
+        
+    }
+    
 }

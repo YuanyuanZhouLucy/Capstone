@@ -10,12 +10,15 @@ import UIKit
 import FirebaseDatabase
 import AVFoundation
 
+import AVKit
+var  avPlayer: AVPlayer!
+
 class ExerciseA: UIViewController, UITableViewDelegate, AVAudioRecorderDelegate, AVAudioPlayerDelegate {
     let ref = Database.database().reference()
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var recordButton: UIButton!
     @IBOutlet weak var playButton: UIButton!
-    
+    @IBOutlet weak var PlayTutorialButton: UIButton!
     
     @IBOutlet weak var instructions: UILabel!
     
@@ -136,6 +139,7 @@ class ExerciseA: UIViewController, UITableViewDelegate, AVAudioRecorderDelegate,
               instr12.isHidden = true
               instr13.isHidden = true
               instr14.isHidden = true
+        PlayTutorialButton.isHidden = true
         pronounceButtonImage.isHidden = false
              playButtonImage.isHidden = false
              recordButton.isHidden = false
@@ -244,12 +248,12 @@ class ExerciseA: UIViewController, UITableViewDelegate, AVAudioRecorderDelegate,
         
         if(selectedAnswer == 1 && questionNumber != 0){
              button1.setTitleColor(correct_colour, for: .normal)
-            labelEnd.text = ("You got this one correct")
+            labelEnd.text = ("You got this correct")
             if(questionNumber < ( self.allQuestions.size)){
                              totalScore += 1
                          }
         } else if (questionNumber != 0){
-            labelEnd.text =  ("You got this one wrong. \(previousAnswer) is the answer")
+            labelEnd.text =  ("Good try, but the correct answer is \(previousAnswer)")
             if (selectedAnswer == 1){
                 button1.setTitleColor(correct_colour, for: .normal)
             }
@@ -280,12 +284,12 @@ class ExerciseA: UIViewController, UITableViewDelegate, AVAudioRecorderDelegate,
                else{
         if(selectedAnswer == 2){
              button2.setTitleColor(correct_colour, for: .normal)
-              labelEnd.text =  ("You got this one correct.")
+              labelEnd.text =  ("You got this correct.")
             if(questionNumber < (self.allQuestions.size)){
                                 totalScore += 1
                             }
               } else if (questionNumber != 0) {
-                  labelEnd.text =  ("You got this one wrong. \(previousAnswer) is the answer")
+                  labelEnd.text =  ("Good try, but the correct answer is \(previousAnswer)")
                 if (selectedAnswer == 1){
                          button1.setTitleColor(correct_colour, for: .normal)
                      }
@@ -314,12 +318,12 @@ class ExerciseA: UIViewController, UITableViewDelegate, AVAudioRecorderDelegate,
                else{
         if(selectedAnswer == 3 && questionNumber != 0){
             button3.setTitleColor(correct_colour, for: .normal)
-            labelEnd.text = ("You got this one correct.")
+            labelEnd.text = ("You got this correct.")
                if(questionNumber < (self.allQuestions.size)){
                              totalScore += 1
                          }
         } else if (questionNumber != 0){
-            labelEnd.text =  ("You got this one wrong. \(previousAnswer) is the answer")
+            labelEnd.text =  ("Good try, but the correct answer is \(previousAnswer)")
             if (selectedAnswer == 1){
                          button1.setTitleColor(correct_colour, for: .normal)
                      }
@@ -349,12 +353,12 @@ class ExerciseA: UIViewController, UITableViewDelegate, AVAudioRecorderDelegate,
                else{
         if(selectedAnswer == 4 && questionNumber != 0){
             button4.setTitleColor(correct_colour, for: .normal)
-            labelEnd.text = ("You got this one correct.")
+            labelEnd.text = ("You got this correct.")
             if(questionNumber < (self.allQuestions.size)){
                              totalScore += 1
                          }
         } else if (questionNumber != 0){
-           labelEnd.text =  ("You got this one wrong. \(previousAnswer) is the answer")
+           labelEnd.text =  ("Good try but the correct answer is \(previousAnswer)")
             if (selectedAnswer == 1){
                          button1.setTitleColor(correct_colour, for: .normal)
                      }
@@ -468,7 +472,7 @@ class ExerciseA: UIViewController, UITableViewDelegate, AVAudioRecorderDelegate,
     @IBAction func recordAct(_ sender: Any) {
         if recordButton.titleLabel?.text == "   " {
             soundRecorder.record()
-            recordButton.setTitle("Press to stop", for: .normal)
+            recordButton.setTitle("Press to Stop", for: .normal)
              recordButton.setTitleColor(red_colour, for: .normal)
             playButton.isEnabled = false
         }
@@ -525,5 +529,23 @@ class ExerciseA: UIViewController, UITableViewDelegate, AVAudioRecorderDelegate,
      override open var supportedInterfaceOrientations: UIInterfaceOrientationMask {
     return .portrait
     }
+   
+    @IBAction func PlayTutorialButtonAction(_sender: Any)
+    {
+        if let path = Bundle.main.path(forResource: "IMG-8467", ofType:"mp4")
+            
+            {
+                let video = AVPlayer(url:URL(fileURLWithPath: path))
+                let videoPlayer = AVPlayerViewController()
+                videoPlayer.player = video
+                
+                present(videoPlayer, animated: true) {
+                    video.play()
+                }
+                
+        }
+        
+    }
+    
     
 }
