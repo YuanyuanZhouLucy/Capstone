@@ -108,84 +108,40 @@ class CameraPageController: UIViewController, UIImagePickerControllerDelegate, U
         let uid = SQLiteDataStore.instance.getUserUploadId()
         let location = category
 
-        let existsInModel = self.inEmbeddingModel(word: text.lowercased())
-        var exerciseBSimilar = [String]()
-        var exerciseBDissimilar = [String]()
-        
-        if isWord && existsInModel {
-            
-            exerciseBSimilar = self.findSemanticNeighbours(word: text.lowercased())
-            exerciseBDissimilar = self.findDissimilar(word: text.lowercased())
-            
-            self.generate_cue_ex1(word: nameObjectLabel.text! )
-            self.get_elementry_defi(nameObjectLabel.text!)
-            self.getRhyme(word: nameObjectLabel.text! )
-            print("there will be CUES")
-            print(self.cue_dic)
-        }
+       
         self.nameObjectLabel.text = "Image Saved!"
         let storageRef = Storage.storage().reference().child("userDefinedImages/\(uid)/\(text).jpg")
          DispatchQueue.main.async {
-            let uploadTask = storageRef.putData(((image?.jpegData(compressionQuality: 1.0)!)!) , metadata: nil) { (metadata, error) in
-                guard let metadata = metadata else {
+            
+            
+        let uploadTask = storageRef.putData(((image?.jpegData(compressionQuality: 1.0)!)!) , metadata: nil) { (metadata, error) in
+            guard let metadata = metadata else {
+                print(error?.localizedDescription)
+                return
+            }
+            // Metadata contains file metadata such as size, content-type.
+            let size = metadata.size
+            // You can also access to download URL after upload.
+            storageRef.downloadURL {
+                (url, error) in
+                guard let downloadURL = url else {
                     print(error?.localizedDescription)
                     return
                 }
-                // Metadata contains file metadata such as size, content-type.
-                let size = metadata.size
-                // You can also access to download URL after upload.
-                storageRef.downloadURL { (url, error) in
-                    guard let downloadURL = url else {
-                        print(error?.localizedDescription)
-                        return
-                    }
-                    let ref = Database.database().reference()
-                    var dict = [String:Any]()
-                    if existsInModel && !self.cue_dic.isEmpty {
-                        
-                        dict = [
-                            "Name": text,
-                            "ImageURL": downloadURL.absoluteString,
-                            "Answer": text,
-                            "hasCues": existsInModel,
-                            "Cue1": self.cue_dic["count"] as! String ?? "0 syllables",
-                            "Cue2": self.cue_dic["definition"] as! String ?? "hi",
-                            "Cue4": self.cue_dic["rhymes"] as! String ?? "no rhyme",
-                            "Opt1": exerciseBDissimilar[0],
-                            "Opt2": exerciseBSimilar[1],
-                            "Opt3": exerciseBSimilar[2],
-                            "Opt4": exerciseBSimilar[3],
-                            "Wrong1": exerciseBDissimilar[0],
-                            "Wrong2": exerciseBDissimilar[1],
-                            "Wrong3": exerciseBDissimilar[2],
-                            "WrongOpt": 1
-                        ]
-                        print(dict)
-                        
-                        if (self.cue_dic["example"] != nil){
-                            let example = self.cue_dic["example"] as! String
-                            let str1 = example.replacingOccurrences(of: text.lowercased(), with: "__")
-                            let str = str1.replacingOccurrences(of: text, with: "__")
-                            dict["Cue3"] = str
-                        } else{
-                            dict["Cue3"] = "no example"
-                        }
-                    }
-                    else {
-                        dict = [
-                            "ImageURL": downloadURL.absoluteString,
-                            "Name": text,
-                            "hasCues": existsInModel,
-                        ]
-                    }
-                    print("location", self.category)
-                    
-                    ref.child("userDefinedEx").child("uid\(uid)").child("\(self.category)").childByAutoId().setValue(dict)
-                    print("upload \(text)")
-                    
-                }
+                let ref = Database.database().reference()
+                var dict = cueGen.getCues()
+                dict["ImageURL"] = downloadURL.absoluteString
 
+                print("location", self.category)
+                
+                ref.child("userDefinedEx").child("uid\(uid)").child("\(self.category)").childByAutoId().setValue(dict)
+                print("upload \(text)")
+                self.nameObjectLabel.text = "Image Saved!"
+                print(dict)
             }
+            
+            }
+            
         }
     }
     
