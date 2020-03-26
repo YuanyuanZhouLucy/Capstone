@@ -528,29 +528,6 @@
                                 <rect key="frame" x="77" y="236" width="272" height="228"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="swc-iJ-kig">
-                                <rect key="frame" x="175" y="673" width="77" height="83"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
-                                <state key="normal">
-                                    <string key="title" base64-UTF8="YES">
-GVBMQVk
-</string>
-                                </state>
-                                <connections>
-                                    <action selector="PlayButtonActionWith_sender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ba7-ah-RZ2"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nt3-14-ziw">
-                                <rect key="frame" x="60" y="699" width="81" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <state key="normal" title="SHORTCUT"/>
-                                <connections>
-                                    <segue destination="ECI-DZ-kPG" kind="show" id="opX-nM-zlS"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.50768981710000005" green="0.90140845069999997" blue="0.90140845069999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -2807,12 +2784,12 @@ My4gVGhlIGNvcnJlY3QgYW5zd2VyIHdpbGwgYmUgCA
         <image name="speaker.3.fill" catalog="system" width="64" height="44"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="xTg-Y0-kpT"/>
         <segue reference="nUe-J7-NgF"/>
         <segue reference="Xmc-Tm-KFv"/>
         <segue reference="hVP-kl-bgW"/>
         <segue reference="B0A-qF-Xyd"/>
         <segue reference="kGc-jz-b4r"/>
-        <segue reference="opX-nM-zlS"/>
         <segue reference="crZ-Nm-AKT"/>
         <segue reference="idU-7z-TcR"/>
         <segue reference="yQW-je-oR9"/>
