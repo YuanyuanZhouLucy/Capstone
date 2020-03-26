@@ -32,6 +32,7 @@
 		51114ABC2383B29F0023788F /* tree.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 51114ABB2383B29F0023788F /* tree.jpeg */; };
 		51114ABE2383B4630023788F /* map.png in Resources */ = {isa = PBXBuildFile; fileRef = 51114ABD2383B4630023788F /* map.png */; };
 		51114AC02383B9C50023788F /* bench.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 51114ABF2383B9C50023788F /* bench.jpeg */; };
+		51263488242C47F400F5ADFC /* IMG-8467.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 51263487242C47F300F5ADFC /* IMG-8467.mp4 */; };
 		5163119523CBAAC5007A84D9 /* (null) in Resources */ = {isa = PBXBuildFile; };
 		519487AA23CB699B00C9B052 /* PhotoManageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 519487A923CB699B00C9B052 /* PhotoManageController.swift */; };
 		519487AE23CB8BD700C9B052 /* myCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 519487AD23CB8BD700C9B052 /* myCell.swift */; };
@@ -109,6 +110,7 @@
 		51114ABD2383B4630023788F /* map.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = map.png; sourceTree = "<group>"; };
 		51114ABF2383B9C50023788F /* bench.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bench.jpeg; sourceTree = "<group>"; };
 		511D976B240EFDD60090F998 /* default_marker@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "default_marker@2x.png"; path = "Pods/GoogleMaps/Maps/Frameworks/GoogleMaps.framework/Resources/GoogleMaps.bundle/default_marker@2x.png"; sourceTree = SOURCE_ROOT; };
+		51263487242C47F300F5ADFC /* IMG-8467.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "IMG-8467.mp4"; sourceTree = "<group>"; };
 		519487A923CB699B00C9B052 /* PhotoManageController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoManageController.swift; sourceTree = "<group>"; };
 		519487AD23CB8BD700C9B052 /* myCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = myCell.swift; sourceTree = "<group>"; };
 		519FD86423D8E22B00C25DC5 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -167,6 +169,7 @@
 		16CFA1972374ADD00022C95F = {
 			isa = PBXGroup;
 			children = (
+				51263487242C47F300F5ADFC /* IMG-8467.mp4 */,
 				51C4D9EC242BFC5100A31BDA /* IMG-8465.mp4 */,
 				51C4D9EA242BF57A00A31BDA /* IMG-8465.mov */,
 				16CFA1A22374ADD00022C95F /* Aphasia App */,
@@ -396,6 +399,7 @@
 				51114ABE2383B4630023788F /* map.png in Resources */,
 				51C4D9ED242BFC5100A31BDA /* IMG-8465.mp4 in Resources */,
 				16A985322380E3C2000C92E6 /* dog.jpeg in Resources */,
+				51263488242C47F400F5ADFC /* IMG-8467.mp4 in Resources */,
 				51114AC02383B9C50023788F /* bench.jpeg in Resources */,
 				16CFA1AB2374ADD00022C95F /* Main.storyboard in Resources */,
 				16A985332380E3C2000C92E6 /* microphone.jpeg in Resources */,

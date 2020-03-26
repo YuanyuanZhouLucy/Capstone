@@ -7,8 +7,13 @@
 
 import UIKit
 import AVFoundation
+import AVKit
+
+var  av2Player: AVPlayer!
 
 class ExerciseB: UIViewController{
+    
+    @IBOutlet weak var PlayTutorial2Button: UIButton!
     
     @IBOutlet weak var instr6: UILabel!
     
@@ -310,5 +315,23 @@ class ExerciseB: UIViewController{
      override open var supportedInterfaceOrientations: UIInterfaceOrientationMask {
     return .portrait
     }
-
+    
+    
+    @IBAction func PlayTutorial2ButtonAction(_sender: Any)
+    {
+        if let path = Bundle.main.path(forResource: "IMG-8465", ofType:"mp4")
+            
+            {
+                let video = AVPlayer(url:URL(fileURLWithPath: path))
+                let videoPlayer = AVPlayerViewController()
+                videoPlayer.player = video
+                
+                present(videoPlayer, animated: true) {
+                    video.play()
+                }
+                
+        }
+        
+    }
+    
 }

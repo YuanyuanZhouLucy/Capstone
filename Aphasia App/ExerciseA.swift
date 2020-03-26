@@ -10,12 +10,15 @@ import UIKit
 import FirebaseDatabase
 import AVFoundation
 
+import AVKit
+var  avPlayer: AVPlayer!
+
 class ExerciseA: UIViewController, UITableViewDelegate, AVAudioRecorderDelegate, AVAudioPlayerDelegate {
     let ref = Database.database().reference()
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var recordButton: UIButton!
     @IBOutlet weak var playButton: UIButton!
-    
+    @IBOutlet weak var PlayTutorialButton: UIButton!
     
     @IBOutlet weak var instructions: UILabel!
     
@@ -525,5 +528,23 @@ class ExerciseA: UIViewController, UITableViewDelegate, AVAudioRecorderDelegate,
      override open var supportedInterfaceOrientations: UIInterfaceOrientationMask {
     return .portrait
     }
+   
+    @IBAction func PlayTutorialButtonAction(_sender: Any)
+    {
+        if let path = Bundle.main.path(forResource: "IMG-8467", ofType:"mp4")
+            
+            {
+                let video = AVPlayer(url:URL(fileURLWithPath: path))
+                let videoPlayer = AVPlayerViewController()
+                videoPlayer.player = video
+                
+                present(videoPlayer, animated: true) {
+                    video.play()
+                }
+                
+        }
+        
+    }
+    
     
 }
