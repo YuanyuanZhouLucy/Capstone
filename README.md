@@ -7,7 +7,9 @@ Aphasia is an acquired language disorder that affects the production and compreh
 
 This app allows users to practice rehabilitation exercises without the aide of their therapist. Stimuli displayed in exercises is customized to the users location to bridge gap between clinical and real world improvements. The stimuli displayed in the app is personalizable; users can take photos of image and the app will classify the object and generate new exercises.
 
-> Here's the demo prepared for our Capstone final presentation
+> Here's the demo video prepared for our Capstone final presentation:
+[![IMAGE ALT TEXT HERE](http://img.youtube.com/vi/TNOzol8LLfs/0.jpg)](http://www.youtube.com/watch?v=TNOzol8LLfs)
+
 
 ## Installation
 Since the team didn't want to pay for an Apple Developers account... the only way to use this app is to:
