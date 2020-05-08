@@ -1,6 +1,6 @@
 # App for Aphasia
 
-UofT ECE Capstone project by: Yuanyuan (Lucy) Zhou ([YuanyuanZhouLucy](https://github.com/YuanyuanZhouLucy)), Katherine Bancroft ([kbanc](https://github.com/kbanc)), Sally Chen ([sally-chen](https://github.com/sally-chen)), Aishni Arora
+UofT ECE Capstone project by: Yuanyuan (Lucy) Zhou ([YuanyuanZhouLucy](https://github.com/YuanyuanZhouLucy)), Katherine Bancroft ([kbanc](https://github.com/kbanc)), Sally Chen ([sally-chen](https://github.com/sally-chen)), Aishni Arora ([aishniarora19](https://github.com/aishniarora19))
 
 ## Background: 
 Aphasia is an acquired language disorder that affects the production and comprehension of speech. Speech therapy to rehabilitate aphasia is expensive and not always accessible. People with aphasia may struggle to translate the improvements they make in speech therapy to real world environments.
